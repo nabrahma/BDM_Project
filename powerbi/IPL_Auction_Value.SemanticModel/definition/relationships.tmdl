@@ -1,0 +1,40 @@
+relationship 4b4f6023-57f2-5c73-bfcb-2194211764c8
+	fromColumn: FactPlayerSeason.PlayerID
+	toColumn: DimPlayer.PlayerID
+
+relationship cfc91370-c595-52db-a118-a4207ea9b152
+	fromColumn: FactPlayerSeason.TeamKey
+	toColumn: DimTeam.TeamKey
+
+relationship 92f08cc6-3820-59d9-b80b-6c3d091795ec
+	fromColumn: FactPlayerSeason.Season
+	toColumn: DimSeason.Season
+
+relationship 78ecfc21-e0f4-52ab-9de8-f059a75488c0
+	fromColumn: FactAuction.PlayerID
+	toColumn: DimPlayer.PlayerID
+
+relationship b0496c5d-fcee-5c19-bd28-7fabc21b968c
+	fromColumn: FactAuction.TeamKey
+	toColumn: DimTeam.TeamKey
+
+relationship 219b5254-9d5c-5c73-8c81-2804d3fd9294
+	fromColumn: FactAuction.Season
+	toColumn: DimSeason.Season
+
+relationship eee44363-c5cd-5c67-8dfb-8df5f71e6d53
+	fromColumn: FactTeamMatch.TeamKey
+	toColumn: DimTeam.TeamKey
+
+relationship 790cbe8a-d11f-5660-b4dc-7d529122aeaf
+	fromColumn: FactTeamMatch.Season
+	toColumn: DimSeason.Season
+
+relationship 0238712d-f84e-5fc5-9b0e-a29514e97b6c
+	fromColumn: FactPlayerSeason.TeamSeasonKey
+	toColumn: DimTeamSeason.TeamSeasonKey
+
+relationship 689ea441-92af-5dde-a7aa-19dfb4685281
+	fromColumn: FactTeamMatch.TeamSeasonKey
+	toColumn: DimTeamSeason.TeamSeasonKey
+

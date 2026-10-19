@@ -1,0 +1,1381 @@
+AuctionKey,PlayerID,TeamKey,Season,AuctionName,AuctionRole,Capped,BasePriceCr,PriceCr,PriceBracket,PriceBracketOrder,MatchPass,IsMatched,PlayerName
+2013|b681e71e|MI,b681e71e,MI,2013,Glenn Maxwell,All-Rounder,,,5.4,5 to 10 Cr,4,Exact,True,Glenn Maxwell
+2013|ea0cdc12|PWI,ea0cdc12,PWI,2013,Ajantha Mendis,Bowler,,,3.915,2 to 5 Cr,3,Exact,True,Ajantha Mendis
+2013|dfc4d8b5|PWI,dfc4d8b5,PWI,2013,Kane Richardson,Bowler,,,3.78,2 to 5 Cr,3,Exact,True,Kane Richardson
+2013|0f12f9df|SRH,0f12f9df,SRH,2013,Thisara Perera,All-Rounder,,,3.645,2 to 5 Cr,3,Exact,True,Thisara Perera
+2013|a45a5e8d|PWI,a45a5e8d,PWI,2013,Abhishek Nayar,All-Rounder,,,3.645,2 to 5 Cr,3,Exact,True,Abhishek Nayar
+2013|4c4fa80b|KKR,4c4fa80b,KKR,2013,Sachithra Senanayaka,All-Rounder,,,3.375,2 to 5 Cr,3,Manual,True,Sachithra Senanayake
+2013|fb66ce1f|CSK,fb66ce1f,CSK,2013,Christopher Morris,All-Rounder,,,3.375,2 to 5 Cr,3,Initials,True,Christopher Morris
+2013|c404f58a|CSK,c404f58a,CSK,2013,Dirk Nannes,Bowler,,,3.24,2 to 5 Cr,3,Initials,True,Dirk Nannes
+2013|1e66c162|RCB,1e66c162,RCB,2013,Jaydev Unadkat,Bowler,,,2.835,2 to 5 Cr,3,Exact,True,Jaydev Unadkat
+2013|ae78bc32|PBKS,ae78bc32,PBKS,2013,Manpreet Gony,Bowler,,,2.7,2 to 5 Cr,3,Initials,True,Manpreet Gony
+2013|7c503806|DC,7c503806,DC,2013,Johan Botha,All-Rounder,,,2.43,2 to 5 Cr,3,Exact,True,Johan Botha
+2013|56ab442f|MI,56ab442f,MI,2013,Nathan Coulter-Nile,Bowler,,,2.43,2 to 5 Cr,3,Exact,True,Nathan Coulter-Nile
+2013|c03c6200|SRH,c03c6200,SRH,2013,Darren Sammy,All-Rounder,,,2.295,2 to 5 Cr,3,Manual,True,Darren Sammy
+2013|808f425a|RR,808f425a,RR,2013,James Faulkner,All-Rounder,,,2.16,2 to 5 Cr,3,Exact,True,James Faulkner
+2013|f842c2cf|PWI,f842c2cf,PWI,2013,Michael Clarke,Batter,,,2.16,2 to 5 Cr,3,Exact (register),True,Michael Clarke
+2013|c3d1402f|RCB,c3d1402f,RCB,2013,Rudra Pratap Singh,Bowler,,,2.16,2 to 5 Cr,3,Initials,True,Rudra Pratap Singh
+2013|7d415ea5|MI,7d415ea5,MI,2013,Ricky Ponting,Batter,,,2.16,2 to 5 Cr,3,Exact,True,Ricky Ponting
+2013|32198ae0|RCB,32198ae0,RCB,2013,Moises Henriques,All-Rounder,,,1.62,Under 2 Cr,2,Exact,True,Moises Henriques
+2013|b63ab531|PBKS,b63ab531,PBKS,2013,Luke Pomersbach,Batter,,,1.62,Under 2 Cr,2,Initials,True,Luke Pomersbach
+2013|d68e7f48|RCB,d68e7f48,RCB,2013,Ravi Rampaul,Bowler,,,1.566,Under 2 Cr,2,Exact,True,Ravi Rampaul
+2013|91ffa6c6|DC,91ffa6c6,DC,2013,Jesse Ryder,All-Rounder,,,1.404,Under 2 Cr,2,Exact (register),True,Jesse Ryder
+2013|a7c226e1|RR,a7c226e1,RR,2013,Fidel Edwards,Bowler,,,1.134,Under 2 Cr,2,Exact (register),True,Fidel Edwards
+2013|e32d22f6|RCB,e32d22f6,RCB,2013,Pankaj Singh,Bowler,,,0.81,Under 2 Cr,2,Exact (register),True,Pankaj Singh
+2013|5673a3fc|SRH,5673a3fc,SRH,2013,Nathan McCullum,Bowler,,,0.54,Under 2 Cr,2,Manual,True,Nathan McCullum
+2013|2a2e6343|RCB,2a2e6343,RCB,2013,Daniel Christian,All-Rounder,,,0.54,Under 2 Cr,2,Exact,True,Dan Christian
+2013|94eac556|SRH,94eac556,SRH,2013,Clinton McKay,Bowler,,,0.54,Under 2 Cr,2,Exact (register),True,Clinton McKay
+2013|004c9e85|MI,004c9e85,MI,2013,Philip Hughes,Batter,,,0.54,Under 2 Cr,2,Manual,True,Philip Hughes
+2013|A_sudeep_tyagi|SRH,A_sudeep_tyagi,SRH,2013,Sudeep Tyagi,Bowler,,,0.54,Under 2 Cr,2,Unmatched,False,Sudeep Tyagi
+2013|c654af19|KKR,c654af19,KKR,2013,Ryan McLaren,Bowler,,,0.27,Under 2 Cr,2,Exact,True,Ryan McLaren
+2013|9868bc75|DC,9868bc75,DC,2013,Jeevan Mendis,All-Rounder,,,0.27,Under 2 Cr,2,Initials,True,Jeevan Mendis
+2013|A_christopher_barnwell|RCB,A_christopher_barnwell,RCB,2013,Christopher Barnwell,All-Rounder,,,0.27,Under 2 Cr,2,Unmatched,False,Christopher Barnwell
+2013|3eac9d95|MI,3eac9d95,MI,2013,Jacob Oram,All-Rounder,,,0.27,Under 2 Cr,2,Exact,True,Jacob Oram
+2013|372455c4|SRH,372455c4,SRH,2013,Quinton De Kock,Wicket-Keeper,,,0.108,Base price buy,1,Exact,True,Quinton De Kock
+2013|5b16a806|CSK,5b16a806,CSK,2013,Akila Dananjaya,All-Rounder,,,0.108,Base price buy,1,Exact,True,Akila Dananjaya
+2013|0f721006|CSK,0f721006,CSK,2013,Jason Holder,Bowler,,,0.108,Base price buy,1,Exact,True,Jason Holder
+2013|b2a79f17|CSK,b2a79f17,CSK,2013,Ben Laughlin,Bowler,,,0.108,Base price buy,1,Exact,True,Ben Laughlin
+2013|f21043a5|RR,f21043a5,RR,2013,Kusal Janith Perera,Wicket-Keeper,,,0.108,Base price buy,1,Initials,True,Kusal Janith Perera
+2014|1c914163|RCB,1c914163,RCB,2014,Yuvraj Singh,All-Rounder,,,14,10 Cr and above,5,Exact,True,Yuvraj Singh
+2014|c03f1114|DC,c03f1114,DC,2014,Dinesh Karthik,Wicket-Keeper,,,12.5,10 Cr and above,5,Exact,True,Dinesh Karthik
+2014|39f01cdb|DC,39f01cdb,DC,2014,Kevin Pietersen,Batter,,,9,5 to 10 Cr,4,Exact,True,Kevin Pietersen
+2014|f5180fe6|PBKS,f5180fe6,PBKS,2014,Mitchell Johnson,All-Rounder,,,6.5,5 to 10 Cr,4,Exact,True,Mitchell Johnson
+2014|b681e71e|PBKS,b681e71e,PBKS,2014,Glenn Maxwell,All-Rounder,,,6,5 to 10 Cr,4,Exact,True,Glenn Maxwell
+2014|86dc8f2e|KKR,86dc8f2e,KKR,2014,Jacques Kallis,All-Rounder,,,5.5,5 to 10 Cr,4,Exact,True,Jacques Kallis
+2014|dcce6f09|SRH,dcce6f09,SRH,2014,David Warner,Batter,,,5.5,5 to 10 Cr,4,Exact,True,David Warner
+2014|1c17e270|KKR,1c17e270,KKR,2014,Robin Uthappa,Batter,,,5,5 to 10 Cr,4,Initials,True,Robin Uthappa
+2014|48fd7349|MI,48fd7349,MI,2014,Michael Hussey,Batter,,,5,5 to 10 Cr,4,Exact,True,Michael Hussey
+2014|4b57e452|DC,4b57e452,DC,2014,Murali Vijay,Batter,,,5,5 to 10 Cr,4,Exact,True,Murali Vijay
+2014|3fb19989|RCB,3fb19989,RCB,2014,Mitchell Starc,Bowler,,,5,5 to 10 Cr,4,Exact,True,Mitchell Starc
+2014|6b19d823|SRH,6b19d823,SRH,2014,Amit Mishra,Bowler,,,4.75,2 to 5 Cr,3,Exact,True,Amit Mishra
+2014|3355b542|CSK,3355b542,CSK,2014,Faf Du Plessis,Batter,,,4.75,2 to 5 Cr,3,Exact,True,Faf Du Plessis
+2014|35205dfc|CSK,35205dfc,CSK,2014,Dwayne Smith,Batter,,,4.5,2 to 5 Cr,3,Exact,True,Dwayne Smith
+2014|8abdf100|MI,8abdf100,MI,2014,Corey Anderson,All-Rounder,,,4.5,2 to 5 Cr,3,Exact,True,Corey Anderson
+2014|2e81a32d|SRH,2e81a32d,SRH,2014,Bhuvneshwar Kumar,Bowler,,,4.25,2 to 5 Cr,3,Exact,True,Bhuvneshwar Kumar
+2014|8cf9814c|DC,8cf9814c,DC,2014,Mohammad Shami,Bowler,,,4.25,2 to 5 Cr,3,Initials,True,Mohammad Shami
+2014|56ab442f|DC,56ab442f,DC,2014,Nathan Coulter-Nile,Bowler,,,4.25,2 to 5 Cr,3,Exact,True,Nathan Coulter-Nile
+2014|98ae73b1|KKR,98ae73b1,KKR,2014,Piyush Chawla,Bowler,,,4.25,2 to 5 Cr,3,Exact,True,Piyush Chawla
+2014|30a45b23|RR,30a45b23,RR,2014,Steven Smith,All-Rounder,,,4,2 to 5 Cr,3,Exact,True,Steven Smith
+2014|b8d490fd|SRH,b8d490fd,SRH,2014,Aaron Finch,Batter,,,4,2 to 5 Cr,3,Exact,True,Aaron Finch
+2014|119678fd|SRH,119678fd,SRH,2014,Karn Sharma,Bowler,,,3.75,2 to 5 Cr,3,Exact,True,Karn Sharma
+2014|c03c6200|SRH,c03c6200,SRH,2014,Darren Sammy,All-Rounder,,,3.5,2 to 5 Cr,3,Manual,True,Darren Sammy
+2014|372455c4|DC,372455c4,DC,2014,Quinton De Kock,Wicket-Keeper,,,3.5,2 to 5 Cr,3,Exact,True,Quinton De Kock
+2014|5056011d|PBKS,5056011d,PBKS,2014,George Bailey,Batter,,,3.25,2 to 5 Cr,3,Exact,True,George Bailey
+2014|b8a55852|CSK,b8a55852,CSK,2014,Brendon McCullum,Wicket-Keeper,,,3.25,2 to 5 Cr,3,Exact,True,Brendon McCullum
+2014|6c6591ab|MI,6c6591ab,MI,2014,Pragyan Ojha,Bowler,,,3.25,2 to 5 Cr,3,Exact,True,Pragyan Ojha
+2014|3c6ffae8|KKR,3c6ffae8,KKR,2014,Yusuf Pathan,All-Rounder,,,3.25,2 to 5 Cr,3,Exact,True,Yusuf Pathan
+2014|8ba8195d|PBKS,8ba8195d,PBKS,2014,Virender Sehwag,Batter,,,3.2,2 to 5 Cr,3,Exact,True,Virender Sehwag
+2014|26a85969|PBKS,26a85969,PBKS,2014,Rishi Dhawan,All-Rounder,,,3,2 to 5 Cr,3,Manual,True,Rishi Dhawan
+2014|7dc35884|KKR,7dc35884,KKR,2014,Shakib Al Hasan,All-Rounder,,,2.8,2 to 5 Cr,3,Exact,True,Shakib Al Hasan
+2014|5bb5a915|KKR,5bb5a915,KKR,2014,Morne Morkel,Bowler,,,2.8,2 to 5 Cr,3,Exact,True,Morne Morkel
+2014|26e5cabf|DC,26e5cabf,DC,2014,Manoj Tiwary,Batter,,,2.8,2 to 5 Cr,3,Exact,True,Manoj Tiwary
+2014|41eb4a4f|KKR,41eb4a4f,KKR,2014,Ranganath Vinay Kumar,Bowler,,,2.8,2 to 5 Cr,3,Surname,True,Ranganath Vinay Kumar
+2014|1e66c162|DC,1e66c162,DC,2014,Jaydev Unadkat,Bowler,,,2.8,2 to 5 Cr,3,Exact,True,Jaydev Unadkat
+2014|5bb1a1c4|SRH,5bb1a1c4,SRH,2014,Ishant Sharma,Bowler,,,2.6,2 to 5 Cr,3,Exact,True,Ishant Sharma
+2014|cc1e8c68|KKR,cc1e8c68,KKR,2014,Umesh Yadav,Bowler,,,2.6,2 to 5 Cr,3,Exact,True,Umesh Yadav
+2014|91a4a398|MI,91a4a398,MI,2014,Zaheer Khan,Bowler,,,2.6,2 to 5 Cr,3,Exact,True,Zaheer Khan
+2014|c3d35165|RCB,c3d35165,RCB,2014,Albie Morkel,All-Rounder,,,2.4,2 to 5 Cr,3,Exact,True,Albie Morkel
+2014|5fa06777|SRH,5fa06777,SRH,2014,Irfan Pathan,All-Rounder,,,2.4,2 to 5 Cr,3,Exact,True,Irfan Pathan
+2014|b57f8a9a|RR,b57f8a9a,RR,2014,Brad Hodge,Batter,,,2.4,2 to 5 Cr,3,Initials,True,Brad Hodge
+2014|fe11caa6|PBKS,fe11caa6,PBKS,2014,Wriddhiman Saha,Wicket-Keeper,,,2.2,2 to 5 Cr,3,Exact,True,Wriddhiman Saha
+2014|2e8994e7|DC,2e8994e7,DC,2014,Jean-Paul Duminy,Batter,,,2.2,2 to 5 Cr,3,Exact,True,Jean-Paul Duminy
+2014|508a1ea7|PBKS,508a1ea7,PBKS,2014,Shaun Marsh,Batter,,,2.2,2 to 5 Cr,3,Exact,True,Shaun Marsh
+2014|0a3d54b9|RCB,0a3d54b9,RCB,2014,Varun Aaron,Bowler,,,2,2 to 5 Cr,3,Exact,True,Varun Aaron
+2014|96fd40ae|CSK,96fd40ae,CSK,2014,Ashish Nehra,Bowler,,,2,2 to 5 Cr,3,Exact,True,Ashish Nehra
+2014|99d63244|DC,99d63244,DC,2014,Kedar Jadhav,Batter,,,2,2 to 5 Cr,3,Initials,True,Kedar Jadhav
+2014|759ac88f|CSK,759ac88f,CSK,2014,Mohit Sharma,Bowler,,,2,2 to 5 Cr,3,Exact,True,Mohit Sharma
+2014|b61a3e1a|DC,b61a3e1a,DC,2014,Ross Taylor,Batter,,,2,2 to 5 Cr,3,Exact,True,Ross Taylor
+2014|714cf6e4|DC,714cf6e4,DC,2014,Rahul Sharma,Bowler,,,1.9,Under 2 Cr,2,Exact (register),True,Rahul Sharma
+2014|d4f9dbd4|PBKS,d4f9dbd4,PBKS,2014,Cheteshwar Pujara,Batter,,,1.9,Under 2 Cr,2,Exact,True,Cheteshwar Pujara
+2014|b56dc5f7|PBKS,b56dc5f7,PBKS,2014,Beuran Hendricks,Bowler,,,1.8,Under 2 Cr,2,Exact,True,Beuran Hendricks
+2014|b2b50355|PBKS,b2b50355,PBKS,2014,Lakshmipathy Balaji,Bowler,,,1.8,Under 2 Cr,2,Exact,True,Lakshmipathy Balaji
+2014|33a364a6|RR,33a364a6,RR,2014,Rajat Bhatia,All-Rounder,,,1.7,Under 2 Cr,2,Exact,True,Rajat Bhatia
+2014|93b4fc78|KKR,93b4fc78,KKR,2014,Manish Pandey,Batter,,,1.7,Under 2 Cr,2,Exact,True,Manish Pandey
+2014|0f12f9df|PBKS,0f12f9df,PBKS,2014,Thisara Perera,All-Rounder,,,1.6,Under 2 Cr,2,Exact,True,Thisara Perera
+2014|855a210c|MI,855a210c,MI,2014,Aditya Tare,Wicket-Keeper,,,1.6,Under 2 Cr,2,Exact,True,Aditya Tare
+2014|00ea847a|DC,00ea847a,DC,2014,Mayank Agarwal,Batter,,,1.6,Under 2 Cr,2,Exact,True,Mayank Agarwal
+2014|66b30f71|RCB,66b30f71,RCB,2014,Ashok Dinda,Bowler,,,1.5,Under 2 Cr,2,Initials,True,Ashok Dinda
+2014|b1451597|DC,b1451597,DC,2014,Laxmi Ratan Shukla,All-Rounder,,,1.5,Under 2 Cr,2,Manual,True,Laxmi Ratan Shukla
+2014|e0407c01|CSK,e0407c01,CSK,2014,Ishwar Chandra Pandey,Bowler,,,1.5,Under 2 Cr,2,Exact,True,Ishwar Chandra Pandey
+2014|b5da6c24|RCB,b5da6c24,RCB,2014,Parthiv Patel,Wicket-Keeper,,,1.4,Under 2 Cr,2,Exact,True,Parthiv Patel
+2014|45eda7c8|KKR,45eda7c8,KKR,2014,Chris Lynn,Batter,,,1.3,Under 2 Cr,2,Exact,True,Chris Lynn
+2014|6eb146d2|PBKS,6eb146d2,PBKS,2014,Gurkirat Singh Mann,Batter,,,1.3,Under 2 Cr,2,Surname,True,Gurkeerat Singh
+2014|462411b3|MI,462411b3,MI,2014,Jasprit Bumrah,Bowler,,,1.2,Under 2 Cr,2,Exact,True,Jasprit Bumrah
+2014|13c35c9e|RR,13c35c9e,RR,2014,Tim Southee,Bowler,,,1.2,Under 2 Cr,2,Exact,True,Tim Southee
+2014|d2a989fc|RR,d2a989fc,RR,2014,Dhawal Kulkarni,Bowler,,,1.1,Under 2 Cr,2,Exact,True,Dhawal Kulkarni
+2014|32198ae0|SRH,32198ae0,SRH,2014,Moises Henriques,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Moises Henriques
+2014|b17e2f24|SRH,b17e2f24,SRH,2014,KL Rahul,Batter,,,1,Under 2 Cr,2,Exact,True,KL Rahul
+2014|9219eff0|DC,9219eff0,DC,2014,James Neesham,All-Rounder,,,1,Under 2 Cr,2,Exact,True,James Neesham
+2014|f3171936|CSK,f3171936,CSK,2014,Ben Hilfenhaus,Bowler,,,1,Under 2 Cr,2,Exact,True,Ben Hilfenhaus
+2014|dfc4d8b5|RR,dfc4d8b5,RR,2014,Kane Richardson,Bowler,,,1,Under 2 Cr,2,Exact,True,Kane Richardson
+2014|4ba44e19|RCB,4ba44e19,RCB,2014,Muttiah Muralitharan,Bowler,,,1,Under 2 Cr,2,Exact,True,Muttiah Muralitharan
+2014|4ec07775|KKR,4ec07775,KKR,2014,Ryan Ten Doeschate,All-Rounder,,,1,Under 2 Cr,2,Surname,True,Ryan Ten Doeschate
+2014|abfeb126|PBKS,abfeb126,PBKS,2014,Murali Kartik,Bowler,,,1,Under 2 Cr,2,Exact,True,Murali Kartik
+2014|ded9240e|KKR,ded9240e,KKR,2014,Patrick Cummins,Bowler,,,1,Under 2 Cr,2,Initials,True,Pat Cummins
+2014|a45a5e8d|RR,a45a5e8d,RR,2014,Abhishek Nayar,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Abhishek Nayar
+2014|3a60e0b5|DC,3a60e0b5,DC,2014,Wayne Parnell,Bowler,,,1,Under 2 Cr,2,Exact,True,Wayne Parnell
+2014|9170ff49|SRH,9170ff49,SRH,2014,Parveez Rasool,All-Rounder,,,0.95,Under 2 Cr,2,Initials,True,Parveez Rasool
+2014|d68e7f48|RCB,d68e7f48,RCB,2014,Ravi Rampaul,Bowler,,,0.9,Under 2 Cr,2,Exact,True,Ravi Rampaul
+2014|249abedf|MI,249abedf,MI,2014,Jalaj Saxena,All-Rounder,,,0.9,Under 2 Cr,2,Exact,True,Jalaj Saxena
+2014|9d80c5e1|DC,9d80c5e1,DC,2014,Shahbaz Nadeem,Bowler,,,0.85,Under 2 Cr,2,Exact,True,Shahbaz Nadeem
+2014|ce820073|PBKS,ce820073,PBKS,2014,Sandeep Sharma,Bowler,,,0.85,Under 2 Cr,2,Exact,True,Sandeep Sharma
+2014|2e11c706|RR,2e11c706,RR,2014,Ben Cutting,Bowler,,,0.8,Under 2 Cr,2,Exact,True,Ben Cutting
+2014|c3a96caf|PBKS,c3a96caf,PBKS,2014,Mandeep Hardev Singh,All-Rounder,,,0.8,Under 2 Cr,2,Surname,True,Mandeep Singh
+2014|944533a5|RR,944533a5,RR,2014,Karun Nair,Batter,,,0.75,Under 2 Cr,2,Exact,True,Karun Nair
+2014|0f721006|SRH,0f721006,SRH,2014,Jason Holder,Bowler,,,0.75,Under 2 Cr,2,Exact,True,Jason Holder
+2014|2e171977|PBKS,2e171977,PBKS,2014,Akshar Rajesh Patel,All-Rounder,,,0.75,Under 2 Cr,2,Initials,True,Axar Rajesh Patel
+2014|709b0bac|DC,709b0bac,DC,2014,Saurabh Tiwary,Batter,,,0.7,Under 2 Cr,2,Exact,True,Saurabh Tiwary
+2014|271f83cd|KKR,271f83cd,KKR,2014,Suryakumar Yadav,Batter,,,0.7,Under 2 Cr,2,Initials,True,Suryakumar Yadav
+2014|0c94f480|RR,0c94f480,RR,2014,Unmukt Chand,Batter,,,0.65,Under 2 Cr,2,Exact,True,Unmukt Chand
+2014|85aae393|RR,85aae393,RR,2014,Iqbal Abdullah,All-Rounder,,,0.65,Under 2 Cr,2,Manual,True,Iqbal Abdullah
+2014|1a0c3177|PBKS,1a0c3177,PBKS,2014,Parvinder Awana,Bowler,,,0.65,Under 2 Cr,2,Exact,True,Parvinder Awana
+2014|5afd4539|KKR,5afd4539,KKR,2014,Manvinder Bisla,Wicket-Keeper,,,0.6,Under 2 Cr,2,Initials,True,Manvinder Bisla
+2014|bbd41817|KKR,bbd41817,KKR,2014,Andre Russell,All-Rounder,,,0.6,Under 2 Cr,2,Exact,True,Andre Russell
+2014|fe763256|SRH,fe763256,SRH,2014,Venugopal Rao,Batter,,,0.55,Under 2 Cr,2,Initials,True,Venugopal Rao
+2014|44afbf2d|RCB,44afbf2d,RCB,2014,Nic Maddinson,Batter,,,0.5,Under 2 Cr,2,Exact,True,Nic Maddinson
+2014|890946a0|SRH,890946a0,SRH,2014,Naman Ojha,Wicket-Keeper,,,0.5,Under 2 Cr,2,Exact,True,Naman Ojha
+2014|03806cf8|MI,03806cf8,MI,2014,Josh Hazlewood,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Josh Hazlewood
+2014|012829ff|CSK,012829ff,CSK,2014,John Hastings,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,John Hastings
+2014|dcf81436|DC,dcf81436,DC,2014,Siddarth Kaul,Bowler,,,0.45,Under 2 Cr,2,Initials,True,Siddharth Kaul
+2014|f986ca1a|RCB,f986ca1a,RCB,2014,Harshal Patel,Bowler,,,0.4,Under 2 Cr,2,Initials,True,Harshal Patel
+2014|8d2c70ad|KKR,8d2c70ad,KKR,2014,Kuldeep Singh Yadav,Bowler,,,0.4,Under 2 Cr,2,Exact,True,Kuldeep Yadav
+2014|de4b0555|DC,de4b0555,DC,2014,Rahul Shukla,Bowler,,,0.4,Under 2 Cr,2,Exact,True,Rahul Shukla
+2014|73ad96ed|RR,73ad96ed,RR,2014,Deepak Hooda,Bowler,,,0.4,Under 2 Cr,2,Manual,True,Deepak Hooda
+2014|d718440b|KKR,d718440b,KKR,2014,Veer Pratap Singh,Bowler,,,0.4,Under 2 Cr,2,Exact (register),True,Veer Pratap Singh
+2014|53597be1|SRH,53597be1,SRH,2014,Brendan Taylor,Wicket-Keeper,,,0.3,Under 2 Cr,2,Exact (register),True,Brendan Taylor
+2014|2af1b6d2|RCB,2af1b6d2,RCB,2014,Abu Nechim Ahmed,Bowler,,,0.3,Under 2 Cr,2,Exact,True,Abu Nechim Ahmed
+2014|76388dc8|CSK,76388dc8,CSK,2014,Samuel Badree,Bowler,,,0.3,Under 2 Cr,2,Initials,True,Samuel Badree
+2014|531f0278|MI,531f0278,MI,2014,Krismar Santokie,Bowler,,,0.3,Under 2 Cr,2,Initials,True,Krismar Santokie
+2014|d4eef961|MI,d4eef961,MI,2014,Marchant De Lange,Bowler,,,0.3,Under 2 Cr,2,Exact,True,Marchant De Lange
+2014|063b3673|RR,063b3673,RR,2014,Dishant Yagnik,Wicket-Keeper,,,0.3,Under 2 Cr,2,Initials,True,Dishant Yagnik
+2014|557153ca|RR,557153ca,RR,2014,Kevon Cooper,All-Rounder,,,0.3,Under 2 Cr,2,Initials,True,Kevon Cooper
+2014|A_prasanth_parameswaran|SRH,A_prasanth_parameswaran,SRH,2014,Prasanth Parameswaran,Bowler,,,0.3,Under 2 Cr,2,Unmatched,False,Prasanth Parameswaran
+2014|e84ac20c|CSK,e84ac20c,CSK,2014,Matt Henry,Bowler,,,0.3,Under 2 Cr,2,Manual,True,Matt Henry
+2014|6dbcf855|RCB,6dbcf855,RCB,2014,Vijay Zol,Batter,,,0.3,Under 2 Cr,2,Initials,True,Vijay Zol
+2014|c42aaf71|CSK,c42aaf71,CSK,2014,Mithun Manhas,All-Rounder,,,0.3,Under 2 Cr,2,Exact,True,Mithun Manhas
+2014|272d796e|MI,272d796e,MI,2014,Ben Dunk,Wicket-Keeper,,,0.2,Under 2 Cr,2,Exact,True,Ben Dunk
+2014|69be866a|PBKS,69be866a,PBKS,2014,Anureet Singh,Bowler,,,0.2,Under 2 Cr,2,Exact,True,Anureet Singh
+2014|5f26df4f|RR,5f26df4f,RR,2014,Vikramjeet Malik,Bowler,,,0.2,Under 2 Cr,2,Manual,True,Vikramjeet Malik
+2014|c8179c68|RCB,c8179c68,RCB,2014,Shadab Jakati,Bowler,,,0.2,Under 2 Cr,2,Exact,True,Shadab Jakati
+2014|90edaaa9|RCB,90edaaa9,RCB,2014,Sachin Rana,Bowler,,,0.2,Under 2 Cr,2,Initials,True,Sachin Rana
+2014|3a02626a|SRH,3a02626a,SRH,2014,Amit Paunikar,Wicket-Keeper,,,0.2,Under 2 Cr,2,Exact (register),True,Amit Paunikar
+2014|30a2649b|MI,30a2649b,MI,2014,C.M. Gautam,Wicket-Keeper,,,0.2,Under 2 Cr,2,Exact,True,C.M. Gautam
+2014|7050a1e7|KKR,7050a1e7,KKR,2014,Debabrata Das,Wicket-Keeper,,,0.2,Under 2 Cr,2,Exact,True,Debabrata Das
+2014|1abb78f8|PBKS,1abb78f8,PBKS,2014,Shardul Narendra Thakur,Bowler,,,0.2,Under 2 Cr,2,Initials,True,Shardul Thakur
+2014|95a2ea61|SRH,95a2ea61,SRH,2014,Srikkanth Anirudha,Batter,,,0.2,Under 2 Cr,2,Initials,True,Srikkanth Anirudha
+2014|1c2a64cd|SRH,1c2a64cd,SRH,2014,Ashish Reddy,Bowler,,,0.2,Under 2 Cr,2,Exact,True,Ashish Reddy
+2014|b2b23612|CSK,b2b23612,CSK,2014,Ronit More,Bowler,,,0.1,Base price buy,1,Exact,True,Ronit More
+2014|6b19d823|RR,6b19d823,RR,2014,Amit Mishra,Bowler,,,0.1,Base price buy,1,Exact,True,Amit Mishra
+2014|b63e358a|SRH,b63e358a,SRH,2014,Ricky Bhui,Batter,,,0.1,Base price buy,1,Exact,True,Ricky Bhui
+2014|57ee1fde|RCB,57ee1fde,RCB,2014,Yuzvendra Singh Chahal,Bowler,,,0.1,Base price buy,1,Initials,True,Yuzvendra Chahal
+2014|4e04666c|RCB,4e04666c,RCB,2014,Yogesh Takawale,Wicket-Keeper,,,0.1,Base price buy,1,Initials,True,Yogesh Takawale
+2014|A_tanmay_mishra|RCB,A_tanmay_mishra,RCB,2014,Tanmay Mishra,Batter,,,0.1,Base price buy,1,Unmatched,False,Tanmay Mishra
+2014|A_sushant_marathe|MI,A_sushant_marathe,MI,2014,Sushant Marathe,Wicket-Keeper,,,0.1,Base price buy,1,Unmatched,False,Sushant Marathe
+2014|39a2dfa8|RR,39a2dfa8,RR,2014,Rahul Tewatia,All-Rounder,,,0.1,Base price buy,1,Initials,True,Rahul Tewatia
+2014|7a8bd078|MI,7a8bd078,MI,2014,Shreyas Gopal,Bowler,,,0.1,Base price buy,1,Exact,True,Shreyas Gopal
+2014|c14721ab|KKR,c14721ab,KKR,2014,Sayan Sekhar Mandal,All-Rounder,,,0.1,Base price buy,1,Manual,True,Sayan Sekhar Mandal
+2014|b4296080|DC,b4296080,DC,2014,Milind Kumar,Batter,,,0.1,Base price buy,1,Exact (register),True,Milind Kumar
+2014|cdc6bdba|RCB,cdc6bdba,RCB,2014,Sandeep Warrier,Bowler,,,0.1,Base price buy,1,Exact,True,Sandeep Warrier
+2014|f62772e5|CSK,f62772e5,CSK,2014,Pawan Negi,Bowler,,,0.1,Base price buy,1,Exact,True,Pawan Negi
+2014|5708d0b6|MI,5708d0b6,MI,2014,Apoorv Vijay Wankhade,Batter,,,0.1,Base price buy,1,Manual,True,Apoorv Vijay Wankhade
+2014|24d94623|RR,24d94623,RR,2014,Ankit Nagendra Sharma,Bowler,,,0.1,Base price buy,1,Surname,True,Ankit Sharma
+2014|cb932841|RR,cb932841,RR,2014,Ankush Bains,Wicket-Keeper,,,0.1,Base price buy,1,Manual,True,Ankush Bains
+2014|6aed7e79|RR,6aed7e79,RR,2014,Pravin Tambe,Bowler,,,0.1,Base price buy,1,Manual,True,Pravin Tambe
+2014|0994d0ae|CSK,0994d0ae,CSK,2014,Vijay Shankar,All-Rounder,,,0.1,Base price buy,1,Exact,True,Vijay Shankar
+2014|cedc1d9a|MI,cedc1d9a,MI,2014,Pawan Suyal,Bowler,,,0.1,Base price buy,1,Exact,True,Pawan Suyal
+2014|5b627626|CSK,5b627626,CSK,2014,Baba Aparajith,Batter,,,0.1,Base price buy,1,Manual,True,Baba Aparajith
+2014|81049310|DC,81049310,DC,2014,Jayant Yadav,All-Rounder,,,0.1,Base price buy,1,Exact,True,Jayant Yadav
+2014|6f49cc6e|PBKS,6f49cc6e,PBKS,2014,Shivam Sharma,Bowler,,,0.1,Base price buy,1,Exact,True,Shivam Sharma
+2014|1647bd37|PBKS,1647bd37,PBKS,2014,Karanveer Singh,All-Rounder,,,0.1,Base price buy,1,Exact,True,Karanveer Singh
+2014|7b5b6311|SRH,7b5b6311,SRH,2014,Chama Milind,Bowler,,,0.1,Base price buy,1,Manual,True,Chama Milind
+2014|605b7efa|SRH,605b7efa,SRH,2014,Manprit Juneja,Batter,,,0.1,Base price buy,1,Manual,True,Manprit Juneja
+2014|A_hs_sharath|DC,A_hs_sharath,DC,2014,HS Sharath,Bowler,,,0.1,Base price buy,1,Unmatched,False,HS Sharath
+2015|1c914163|DC,1c914163,DC,2015,Yuvraj Singh,Batter,,,16,10 Cr and above,5,Exact,True,Yuvraj Singh
+2015|c03f1114|RCB,c03f1114,RCB,2015,Dinesh Karthik,Wicket-Keeper,,,10.5,10 Cr and above,5,Exact,True,Dinesh Karthik
+2015|896d78ad|DC,896d78ad,DC,2015,Angelo Mathews,All-Rounder,,,7.5,5 to 10 Cr,4,Exact,True,Angelo Mathews
+2015|91a4a398|DC,91a4a398,DC,2015,Zaheer Khan,Bowler,,,4,2 to 5 Cr,3,Exact,True,Zaheer Khan
+2015|a818c1be|SRH,a818c1be,SRH,2015,Trent Boult,Bowler,,,3.8,2 to 5 Cr,3,Exact,True,Trent Boult
+2015|6b19d823|DC,6b19d823,DC,2015,Amit Mishra,Bowler,,,3.5,2 to 5 Cr,3,Exact,True,Amit Mishra
+2015|b8d490fd|MI,b8d490fd,MI,2015,Aaron Finch,Batter,,,3.2,2 to 5 Cr,3,Exact,True,Aaron Finch
+2015|4b57e452|PBKS,4b57e452,PBKS,2015,Murali Vijay,Batter,,,3,2 to 5 Cr,3,Exact,True,Murali Vijay
+2015|c03c6200|RCB,c03c6200,RCB,2015,Darren Sammy,All-Rounder,,,2.8,2 to 5 Cr,3,Manual,True,Darren Sammy
+2015|aa8d28ae|RCB,aa8d28ae,RCB,2015,David Wiese,All-Rounder,,,2.8,2 to 5 Cr,3,Exact,True,David Wiese
+2015|85ec8e33|DC,85ec8e33,DC,2015,Shreyas Iyer,Batter,,,2.6,2 to 5 Cr,3,Exact,True,Shreyas Iyer
+2015|edb3d4f8|KKR,edb3d4f8,KKR,2015,K.C. Cariappa,Bowler,,,2.4,2 to 5 Cr,3,Exact,True,K.C Cariappa
+2015|e938e1bc|SRH,e938e1bc,SRH,2015,Praveen Kumar,Bowler,,,2.2,2 to 5 Cr,3,Exact,True,Praveen Kumar
+2015|39f01cdb|SRH,39f01cdb,SRH,2015,Kevin Pietersen,Batter,,,2,2 to 5 Cr,3,Exact,True,Kevin Pietersen
+2015|1558d83b|DC,1558d83b,DC,2015,Gurinder Sandhu,Bowler,,,1.7,Under 2 Cr,2,Exact,True,Gurinder Sandhu
+2015|48fd7349|CSK,48fd7349,CSK,2015,Michael Hussey,Batter,,,1.5,Under 2 Cr,2,Exact,True,Michael Hussey
+2015|d2a6c0e6|SRH,d2a6c0e6,SRH,2015,Eoin Morgan,Batter,,,1.5,Under 2 Cr,2,Exact,True,Eoin Morgan
+2015|5fa06777|CSK,5fa06777,CSK,2015,Irfan Pathan,All-Rounder,,,1.5,Under 2 Cr,2,Exact,True,Irfan Pathan
+2015|fb66ce1f|RR,fb66ce1f,RR,2015,Christopher Morris,All-Rounder,,,1.4,Under 2 Cr,2,Initials,True,Christopher Morris
+2015|1e66c162|DC,1e66c162,DC,2015,Jaydev Unadkat,Bowler,,,1.1,Under 2 Cr,2,Exact,True,Jaydev Unadkat
+2015|7ca5e05d|SRH,7ca5e05d,SRH,2015,Ravi Bopara,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Ravi Bopara
+2015|1a2676c5|RCB,1a2676c5,RCB,2015,Sean Abbott,Bowler,,,1,Under 2 Cr,2,Exact,True,Sean Abbott
+2015|2c76b512|DC,2c76b512,DC,2015,Domnic Joseph Muthuswamy,Bowler,,,0.75,Under 2 Cr,2,Initials,True,Domnic Joseph Muthuswamy
+2015|350bb1b1|RCB,350bb1b1,RCB,2015,Adam Milne,Bowler,,,0.7,Under 2 Cr,2,Exact,True,Adam Milne
+2015|d027ba9f|SRH,d027ba9f,SRH,2015,Kane Williamson,All-Rounder,,,0.6,Under 2 Cr,2,Exact,True,Kane Williamson
+2015|f708a0bc|KKR,f708a0bc,KKR,2015,Brad Hogg,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Brad Hogg
+2015|6c6591ab|MI,6c6591ab,MI,2015,Pragyan Ojha,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Pragyan Ojha
+2015|f088b960|RCB,f088b960,RCB,2015,Sarfaraz Naushad Khan,Batter,,,0.5,Under 2 Cr,2,Initials,True,Sarfaraz Khan
+2015|9219eff0|KKR,9219eff0,KKR,2015,James Neesham,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,James Neesham
+2015|b1451597|SRH,b1451597,SRH,2015,Laxmi Ratan Shukla,All-Rounder,,,0.3,Under 2 Cr,2,Manual,True,Laxmi Ratan Shukla
+2015|A_aiden_blizzard|MI,A_aiden_blizzard,MI,2015,Aiden Blizzard,Batter,,,0.3,Under 2 Cr,2,Unmatched,False,Aiden Blizzard
+2015|714cf6e4|CSK,714cf6e4,CSK,2015,Rahul Sharma,Bowler,,,0.3,Under 2 Cr,2,Exact (register),True,Rahul Sharma
+2015|3576e47e|RCB,3576e47e,RCB,2015,Subramaniam Badrinath,Batter,,,0.3,Under 2 Cr,2,Exact,True,Subramaniam Badrinath
+2015|c3d35165|DC,c3d35165,DC,2015,Albie Morkel,All-Rounder,,,0.3,Under 2 Cr,2,Exact,True,Albie Morkel
+2015|51a3c5ef|MI,51a3c5ef,MI,2015,Mitchell McClenaghan,Bowler,,,0.3,Under 2 Cr,2,Exact,True,Mitchell McClenaghan
+2015|12b610c2|DC,12b610c2,DC,2015,Travis Head,Batter,,,0.3,Under 2 Cr,2,Exact,True,Travis Head
+2015|aedc3b7c|PBKS,aedc3b7c,PBKS,2015,Nikhil Shankar Naik,Wicket-Keeper,,,0.3,Under 2 Cr,2,Initials,True,Nikhil Shankar Naik
+2015|a9da7784|CSK,a9da7784,CSK,2015,Kyle Abbott,Bowler,,,0.3,Under 2 Cr,2,Exact,True,Kyle Abbott
+2015|66cf56a5|MI,66cf56a5,MI,2015,Abhimanyu Mithun,Bowler,,,0.3,Under 2 Cr,2,Exact,True,Abhimanyu Mithun
+2015|dec8e038|RR,dec8e038,RR,2015,Juan Theron,Bowler,,,0.3,Under 2 Cr,2,Initials,True,Juan Theron
+2015|8e02f42b|KKR,8e02f42b,KKR,2015,Aditya Garhwal,All-Rounder,,,0.25,Under 2 Cr,2,Exact (register),True,Aditya Garhwal
+2015|d9273ee7|DC,d9273ee7,DC,2015,Marcus Stoinis,All-Rounder,,,0.25,Under 2 Cr,2,Exact,True,Marcus Stoinis
+2015|30a2649b|DC,30a2649b,DC,2015,C.M. Gautam,Wicket-Keeper,,,0.2,Under 2 Cr,2,Exact,True,C.M. Gautam
+2015|7c7d63a2|CSK,7c7d63a2,CSK,2015,Andrew Tye,Bowler,,,0.2,Under 2 Cr,2,Exact,True,Andrew Tye
+2015|acc1aeda|KKR,acc1aeda,KKR,2015,Sheldon Jackson,Batter,,,0.15,Under 2 Cr,2,Exact,True,Sheldon Jackson
+2015|A_vaibhav_rawal|KKR,A_vaibhav_rawal,KKR,2015,Vaibhav Rawal,All-Rounder,,,0.1,Base price buy,1,Unmatched,False,Vaibhav Rawal
+2015|dbe50b21|MI,dbe50b21,MI,2015,Hardik Pandya,All-Rounder,,,0.1,Base price buy,1,Exact,True,Hardik Pandya
+2015|4125d931|MI,4125d931,MI,2015,J. Suchitch,All-Rounder,,,0.1,Base price buy,1,Manual,True,J Suchith
+2015|287686fd|KKR,287686fd,KKR,2015,Sumit Narwal,All-Rounder,,,0.1,Base price buy,1,Manual,True,Sumit Narwal
+2015|0264c10e|RR,0264c10e,RR,2015,Dinesh Salunkhe,All-Rounder,,,0.1,Base price buy,1,Manual,True,Dinesh Salunkhe
+2015|9a0146b3|RR,9a0146b3,RR,2015,Pardeep Sahu,All-Rounder,,,0.1,Base price buy,1,Manual,True,Pardeep Sahu
+2015|9601c534|MI,9601c534,MI,2015,Siddhesh Dinesh Lad,All-Rounder,,,0.1,Base price buy,1,Manual,True,Siddhesh Dinesh Lad
+2015|44a89551|DC,44a89551,DC,2015,Kona Srikar Bharat,Wicket-Keeper,,,0.1,Base price buy,1,Manual,True,K.S. Bharat
+2015|249abedf|RCB,249abedf,RCB,2015,Jalaj Saxena,All-Rounder,,,0.1,Base price buy,1,Exact,True,Jalaj Saxena
+2015|fb2d1dda|MI,fb2d1dda,MI,2015,Nitish Rana,All-Rounder,,,0.1,Base price buy,1,Exact,True,Nitish Rana
+2015|94253925|SRH,94253925,SRH,2015,Hanuma Vihari,Batter,,,0.1,Base price buy,1,Exact,True,Hanuma Vihari
+2015|A_shishir_bhavane|RCB,A_shishir_bhavane,RCB,2015,Shishir Bhavane,Batter,,,0.1,Base price buy,1,Unmatched,False,Shishir Bhavane
+2015|A_yogesh_gowalkar|PBKS,A_yogesh_gowalkar,PBKS,2015,Yogesh Gowalkar,All-Rounder,,,0.1,Base price buy,1,Unmatched,False,Yogesh Gowalkar
+2015|b274dbbd|CSK,b274dbbd,CSK,2015,Eklavya Dwivedi,Wicket-Keeper,,,0.1,Base price buy,1,Exact,True,Eklavya Dwivedi
+2015|8da6dbf1|RR,8da6dbf1,RR,2015,Sagar Trivedi,All-Rounder,,,0.1,Base price buy,1,Exact (register),True,Sagar Trivedi
+2015|d8b2f218|RR,d8b2f218,RR,2015,Barinder Singh Saran,Bowler,,,0.1,Base price buy,1,Manual,True,Barinder Sran
+2015|cb932841|CSK,cb932841,CSK,2015,Ankush Bains,Wicket-Keeper,,,0.1,Base price buy,1,Manual,True,Ankush Bains
+2015|ddb00822|SRH,ddb00822,SRH,2015,Prasanth Padmanabhan,All-Rounder,,,0.1,Base price buy,1,Exact (register),True,Prasanth Padmanabhan
+2015|456af189|CSK,456af189,CSK,2015,Pratyush Singh,All-Rounder,,,0.1,Base price buy,1,Exact (register),True,Pratyush Singh
+2015|dcf81436|SRH,dcf81436,SRH,2015,Siddarth Kaul,Bowler,,,0.1,Base price buy,1,Initials,True,Siddharth Kaul
+2015|A_kk_jiyaz|DC,A_kk_jiyaz,DC,2015,K.K. Jiyaz,Bowler,,,0.1,Base price buy,1,Unmatched,False,K.K. Jiyaz
+2015|ec9fc54b|MI,ec9fc54b,MI,2015,Akshay Wakhare,Bowler,,,0.1,Base price buy,1,Exact (register),True,Akshay Wakhare
+2016|4329fbb5|RCB,4329fbb5,RCB,2016,Shane Watson,All-Rounder,,,9.5,5 to 10 Cr,4,Exact,True,Shane Watson
+2016|f62772e5|DC,f62772e5,DC,2016,Pawan Negi,All-Rounder,,,8.5,5 to 10 Cr,4,Exact,True,Pawan Negi
+2016|1c914163|SRH,1c914163,SRH,2016,Yuvraj Singh,All-Rounder,,,7,5 to 10 Cr,4,Exact,True,Yuvraj Singh
+2016|fb66ce1f|DC,fb66ce1f,DC,2016,Christopher Morris,All-Rounder,,,7,5 to 10 Cr,4,Initials,True,Christopher Morris
+2016|759ac88f|PBKS,759ac88f,PBKS,2016,Mohit Sharma,Bowler,,,6.5,5 to 10 Cr,4,Exact,True,Mohit Sharma
+2016|96fd40ae|SRH,96fd40ae,SRH,2016,Ashish Nehra,Bowler,,,5.5,5 to 10 Cr,4,Exact,True,Ashish Nehra
+2016|3d8feaf8|RPS,3d8feaf8,RPS,2016,Mitchell Marsh,All-Rounder,,,4.8,2 to 5 Cr,3,Exact,True,Mitchell Marsh
+2016|e2db2409|RPS,e2db2409,RPS,2016,M. Ashwin,Bowler,,,4.5,2 to 5 Cr,3,Exact,True,Murugan Ashwin
+2016|e342e5fb|DC,e342e5fb,DC,2016,Carlos Brathwaite,All-Rounder,,,4.2,2 to 5 Cr,3,Exact,True,Carlos Brathwaite
+2016|73ad96ed|SRH,73ad96ed,SRH,2016,Deepak Hooda,All-Rounder,,,4.2,2 to 5 Cr,3,Manual,True,Deepak Hooda
+2016|a4cc73aa|DC,a4cc73aa,DC,2016,Sanju Samson,Wicket-Keeper,,,4.2,2 to 5 Cr,3,Exact,True,Sanju Samson
+2016|944533a5|DC,944533a5,DC,2016,Karun Nair,Batter,,,4,2 to 5 Cr,3,Exact,True,Karun Nair
+2016|5bb1a1c4|RPS,5bb1a1c4,RPS,2016,Ishant Sharma,Bowler,,,3.8,2 to 5 Cr,3,Exact,True,Ishant Sharma
+2016|99b75528|MI,99b75528,MI,2016,Jos Buttler,Wicket-Keeper,,,3.8,2 to 5 Cr,3,Exact,True,Jos Buttler
+2016|e938e1bc|GL,e938e1bc,GL,2016,Praveen Kumar,Bowler,,,3.5,2 to 5 Cr,3,Exact,True,Praveen Kumar
+2016|39f01cdb|RPS,39f01cdb,RPS,2016,Kevin Pietersen,Batter,,,3.5,2 to 5 Cr,3,Exact,True,Kevin Pietersen
+2016|b822e99c|MI,b822e99c,MI,2016,Nathu Singh,Bowler,,,3.2,2 to 5 Cr,3,Exact,True,Nathu Singh
+2016|13c35c9e|MI,13c35c9e,MI,2016,Tim Southee,Bowler,,,2.5,2 to 5 Cr,3,Exact,True,Tim Southee
+2016|8fd1a8f5|GL,8fd1a8f5,GL,2016,Dale Steyn,Bowler,,,2.3,2 to 5 Cr,3,Exact,True,Dale Steyn
+2016|35205dfc|GL,35205dfc,GL,2016,Dwayne Smith,All-Rounder,,,2.3,2 to 5 Cr,3,Exact,True,Dwayne Smith
+2016|c03f1114|GL,c03f1114,GL,2016,Dinesh Karthik,Wicket-Keeper,,,2.3,2 to 5 Cr,3,Exact,True,Dinesh Karthik
+2016|a9da7784|PBKS,a9da7784,PBKS,2016,Kyle Abbott,Bowler,,,2.1,2 to 5 Cr,3,Exact,True,Kyle Abbott
+2016|bd17b45f|RCB,bd17b45f,RCB,2016,Stuart Binny,All-Rounder,,,2,2 to 5 Cr,3,Exact,True,Stuart Binny
+2016|dfc4d8b5|RCB,dfc4d8b5,RCB,2016,Kane Richardson,Bowler,,,2,2 to 5 Cr,3,Exact,True,Kane Richardson
+2016|5b8c830e|MI,5b8c830e,MI,2016,Krunal Pandya,All-Rounder,,,2,2 to 5 Cr,3,Initials,True,Krunal Pandya
+2016|d2a989fc|GL,d2a989fc,GL,2016,Dhawal Kulkarni,Bowler,,,2,2 to 5 Cr,3,Exact,True,Dhawal Kulkarni
+2016|919a3be2|DC,919a3be2,DC,2016,Rishabh Pant,Wicket-Keeper,,,1.9,Under 2 Cr,2,Exact,True,Rishabh Pant
+2016|1e66c162|KKR,1e66c162,KKR,2016,Jaydev Unadkat,Bowler,,,1.6,Under 2 Cr,2,Exact,True,Jaydev Unadkat
+2016|db31895a|KKR,db31895a,KKR,2016,Ankit Singh Rajpoot,Bowler,,,1.5,Under 2 Cr,2,Manual,True,Ankit Singh Rajpoot
+2016|A_kishore_pramod_kamath|MI,A_kishore_pramod_kamath,MI,2016,Kishore Pramod Kamath,All-Rounder,,,1.4,Under 2 Cr,2,Unmatched,False,Kishore Pramod Kamath
+2016|0a8fce53|SRH,0a8fce53,SRH,2016,Mustafizur Rahman,Bowler,,,1.4,Under 2 Cr,2,Exact,True,Mustafizur Rahman
+2016|012829ff|KKR,012829ff,KKR,2016,John Hastings,Bowler,,,1.3,Under 2 Cr,2,Exact,True,John Hastings
+2016|d8b2f218|SRH,d8b2f218,SRH,2016,Barinder Singh Sran,Bowler,,,1.2,Under 2 Cr,2,Exact,True,Barinder Sran
+2016|855a210c|SRH,855a210c,SRH,2016,Aditya Tare,Wicket-Keeper,,,1.2,Under 2 Cr,2,Exact,True,Aditya Tare
+2016|5fa06777|RPS,5fa06777,RPS,2016,Irfan Pathan,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Irfan Pathan
+2016|0f12f9df|RPS,0f12f9df,RPS,2016,Thisara Perera,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Thisara Perera
+2016|b274dbbd|GL,b274dbbd,GL,2016,Eklavya Dwivedi,Wicket-Keeper,,,1,Under 2 Cr,2,Exact,True,Eklavya Dwivedi
+2016|b8d490fd|GL,b8d490fd,GL,2016,Aaron Finch,Batter,,,1,Under 2 Cr,2,Exact,True,Aaron Finch
+2016|edb3d4f8|PBKS,edb3d4f8,PBKS,2016,K.C. Cariappa,Bowler,,,0.8,Under 2 Cr,2,Exact,True,K.C Cariappa
+2016|0f721006|KKR,0f721006,KKR,2016,Jason Holder,All-Rounder,,,0.7,Under 2 Cr,2,Exact,True,Jason Holder
+2016|33a364a6|RPS,33a364a6,RPS,2016,Rajat Bhatia,All-Rounder,,,0.6,Under 2 Cr,2,Exact,True,Rajat Bhatia
+2016|d9273ee7|PBKS,d9273ee7,PBKS,2016,Marcus Stoinis,All-Rounder,,,0.55,Under 2 Cr,2,Exact,True,Marcus Stoinis
+2016|76388dc8|RCB,76388dc8,RCB,2016,Samuel Badree,Bowler,,,0.5,Under 2 Cr,2,Initials,True,Samuel Badree
+2016|66b30f71|RPS,66b30f71,RPS,2016,Ashok Dinda,Bowler,,,0.5,Under 2 Cr,2,Initials,True,Ashok Dinda
+2016|2e11c706|SRH,2e11c706,SRH,2016,Ben Cutting,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Ben Cutting
+2016|d167edd3|RPS,d167edd3,RPS,2016,Scott Boland,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Scott Boland
+2016|12b610c2|RCB,12b610c2,RCB,2016,Travis Head,Batter,,,0.5,Under 2 Cr,2,Exact,True,Travis Head
+2016|7c7d63a2|GL,7c7d63a2,GL,2016,Andrew Tye,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Andrew Tye
+2016|0994d0ae|SRH,0994d0ae,SRH,2016,Vijay Shankar,All-Rounder,,,0.35,Under 2 Cr,2,Exact,True,Vijay Shankar
+2016|752f7486|GL,752f7486,GL,2016,Ishan Kishan,Wicket-Keeper,,,0.35,Under 2 Cr,2,Exact,True,Ishan Kishan
+2016|ed5a5510|RCB,ed5a5510,RCB,2016,Praveen Dubey,All-Rounder,,,0.35,Under 2 Cr,2,Manual,True,Pravin Dubey
+2016|14f96089|RPS,14f96089,RPS,2016,Adam Zampa,Bowler,,,0.3,Under 2 Cr,2,Exact,True,Adam Zampa
+2016|dce2019b|PBKS,dce2019b,PBKS,2016,Farhaan Behardien,All-Rounder,,,0.3,Under 2 Cr,2,Initials,True,Farhaan Behardien
+2016|66cf56a5|SRH,66cf56a5,SRH,2016,Abhimanyu Mithun,Bowler,,,0.3,Under 2 Cr,2,Exact,True,Abhimanyu Mithun
+2016|7c8f533d|DC,7c8f533d,DC,2016,Joel Paris,Bowler,,,0.3,Under 2 Cr,2,Exact (register),True,Joel Paris
+2016|c3d1402f|RPS,c3d1402f,RPS,2016,Rudra Pratap Singh,Bowler,,,0.3,Under 2 Cr,2,Initials,True,Rudra Pratap Singh
+2016|af2c687b|KKR,af2c687b,KKR,2016,Colin Munro,All-Rounder,,,0.3,Under 2 Cr,2,Exact,True,Colin Munro
+2016|c16d4035|DC,c16d4035,DC,2016,Sam Billings,Wicket-Keeper,,,0.3,Under 2 Cr,2,Exact,True,Sam Billings
+2016|ada15e88|RPS,ada15e88,RPS,2016,Peter Handscomb,Wicket-Keeper,,,0.3,Under 2 Cr,2,Exact,True,Peter Handscomb
+2016|9fc0ef64|GL,9fc0ef64,GL,2016,Pradeep Sangwan,All-Rounder,,,0.2,Under 2 Cr,2,Exact,True,Pradeep Sangwan
+2016|3c9b7d18|GL,3c9b7d18,GL,2016,Jaydev Shah,All-Rounder,,,0.2,Under 2 Cr,2,Exact (register),True,Jaydev Shah
+2016|e0407c01|RPS,e0407c01,RPS,2016,Ishwar Chandra Pandey,Bowler,,,0.2,Under 2 Cr,2,Exact,True,Ishwar Chandra Pandey
+2016|6aed7e79|GL,6aed7e79,GL,2016,Pravin Tambe,Bowler,,,0.2,Under 2 Cr,2,Manual,True,Pravin Tambe
+2016|5f26df4f|RCB,5f26df4f,RCB,2016,Vikramjeet Malik,Bowler,,,0.2,Under 2 Cr,2,Manual,True,Vikramjeet Malik
+2016|c8179c68|GL,c8179c68,GL,2016,Shadab Jakati,All-Rounder,,,0.2,Under 2 Cr,2,Exact,True,Shadab Jakati
+2016|626c5379|KKR,626c5379,KKR,2016,Rajagopal Sathish,All-Rounder,,,0.2,Under 2 Cr,2,Initials,True,Rajagopal Sathish
+2016|6f0f39fb|GL,6f0f39fb,GL,2016,Umang Sharma,Batter,,,0.1,Base price buy,1,Exact (register),True,Umang Sharma
+2016|dc9dd038|RCB,dc9dd038,RCB,2016,Sachin Baby,Batter,,,0.1,Base price buy,1,Exact,True,Sachin Baby
+2016|983f2f61|PBKS,983f2f61,PBKS,2016,Swapnil Singh,All-Rounder,,,0.1,Base price buy,1,Exact,True,Swapnil Singh
+2016|24d94623|RPS,24d94623,RPS,2016,Ankit Sharma,All-Rounder,,,0.1,Base price buy,1,Exact,True,Ankit Sharma
+2016|6b19d823|GL,6b19d823,GL,2016,Amit Mishra,Bowler,,,0.1,Base price buy,1,Exact,True,Amit Mishra
+2016|cedc1d9a|DC,cedc1d9a,DC,2016,Pawan Suyal,Bowler,,,0.1,Base price buy,1,Exact,True,Pawan Suyal
+2016|9a0146b3|PBKS,9a0146b3,PBKS,2016,Pardeep Sahu,All-Rounder,,,0.1,Base price buy,1,Manual,True,Pardeep Sahu
+2016|fb693839|GL,fb693839,GL,2016,Sarabjit Ladda,Bowler,,,0.1,Base price buy,1,Initials,True,Sarabjit Ladda
+2016|7b5b6311|DC,7b5b6311,DC,2016,Chama Milind,Bowler,,,0.1,Base price buy,1,Manual,True,Chama Milind
+2016|1da489ff|GL,1da489ff,GL,2016,Shivil Kaushik,Bowler,,,0.1,Base price buy,1,Initials,True,Shivil Kaushik
+2016|800d2d97|MI,800d2d97,MI,2016,Jitesh Sharma,Wicket-Keeper,,,0.1,Base price buy,1,Manual,True,Jitesh Sharma
+2016|da934ee8|DC,da934ee8,DC,2016,Mahipal Lomror,All-Rounder,,,0.1,Base price buy,1,Manual,True,Mahipal Lomror
+2016|4ed49d3d|DC,4ed49d3d,DC,2016,Akhil Arvind Herwadkar,All-Rounder,,,0.1,Base price buy,1,Manual,True,Akhil Arvind Herwadkar
+2016|5b627626|RPS,5b627626,RPS,2016,Baba Aparajith,All-Rounder,,,0.1,Base price buy,1,Manual,True,Baba Aparajith
+2016|a83208cd|PBKS,a83208cd,PBKS,2016,Armaan Jaffer,Batter,,,0.1,Base price buy,1,Exact (register),True,Armaan Jaffer
+2016|cb932841|RPS,cb932841,RPS,2016,Ankush Bains,Wicket-Keeper,,,0.1,Base price buy,1,Manual,True,Ankush Bains
+2016|cce2bcb2|RCB,cce2bcb2,RCB,2016,Vikas Tokas,Bowler,,,0.1,Base price buy,1,Exact (register),True,Vikas Tokas
+2016|A_jaskaran_singh|RPS,A_jaskaran_singh,RPS,2016,Jaskaran Singh,Bowler,,,0.1,Base price buy,1,Unmatched,False,Jaskaran Singh
+2016|85aae393|RCB,85aae393,RCB,2016,Iqbal Abdullah,All-Rounder,,,0.1,Base price buy,1,Manual,True,Iqbal Abdullah
+2016|2728e7e9|GL,2728e7e9,GL,2016,Paras Dogra,Batter,,,0.1,Base price buy,1,Manual,True,Paras Dogra
+2016|456af189|DC,456af189,DC,2016,Pratyush Singh,All-Rounder,,,0.1,Base price buy,1,Exact (register),True,Pratyush Singh
+2016|f10e94c4|GL,f10e94c4,GL,2016,Akshdeep Nath,All-Rounder,,,0.1,Base price buy,1,Initials,True,Akshdeep Nath
+2016|aaa1b522|SRH,aaa1b522,SRH,2016,Tirumalasetti Suman,Batter,,,0.1,Base price buy,1,Manual,True,Tirumalasetti Suman
+2016|e1e7f950|RCB,e1e7f950,RCB,2016,Akshay Karnewar,All-Rounder,,,0.1,Base price buy,1,Exact (register),True,Akshay Karnewar
+2016|A_syed_khaleel_ahmed|DC,A_syed_khaleel_ahmed,DC,2016,Syed Khaleel Ahmed,All-Rounder,,,0.1,Base price buy,1,Unmatched,False,Syed Khaleel Ahmed (A_syed_khaleel_ahmed)
+2016|bfcff6cd|KKR,bfcff6cd,KKR,2016,Manan Ajay Sharma,All-Rounder,,,0.1,Base price buy,1,Manual,True,Manan Ajay Sharma
+2016|5a004050|MI,5a004050,MI,2016,Deepak Punia,All-Rounder,,,0.1,Base price buy,1,Exact (register),True,Deepak Punia
+2016|23eeb873|RPS,23eeb873,RPS,2016,Deepak Chahar,All-Rounder,,,0.1,Base price buy,1,Initials,True,Deepak Chahar
+2017|e087956b|RPS,e087956b,RPS,2017,Benjamin Stokes,All-Rounder,,,14.5,10 Cr and above,5,Initials,True,Ben Stokes
+2017|245c97cb|RCB,245c97cb,RCB,2017,Tymal Mills,Bowler,,,12,10 Cr and above,5,Exact,True,Tymal Mills
+2017|e62dd25d|DC,e62dd25d,DC,2017,Kagiso Rabada,Bowler,,,5,5 to 10 Cr,4,Exact,True,Kagiso Rabada
+2017|a818c1be|KKR,a818c1be,KKR,2017,Trent Boult,Bowler,,,5,5 to 10 Cr,4,Exact,True,Trent Boult
+2017|ded9240e|DC,ded9240e,DC,2017,Patrick Cummins,Bowler,,,4.5,2 to 5 Cr,3,Initials,True,Pat Cummins
+2017|4c5d73db|KKR,4c5d73db,KKR,2017,Chris Woakes,All-Rounder,,,4.2,2 to 5 Cr,3,Exact,True,Chris Woakes
+2017|5f547c8b|SRH,5f547c8b,SRH,2017,Rashid Khan Arman,Bowler,,,4,2 to 5 Cr,3,Manual,True,Rashid Khan
+2017|56ab442f|KKR,56ab442f,KKR,2017,Nathan Coulter-Nile,Bowler,,,3.5,2 to 5 Cr,3,Exact,True,Nathan Coulter-Nile
+2017|119678fd|MI,119678fd,MI,2017,Karn Sharma,All-Rounder,,,3.2,2 to 5 Cr,3,Exact,True,Karn Sharma
+2017|ce794613|PBKS,ce794613,PBKS,2017,T Natarajan,Bowler,,,3,2 to 5 Cr,3,Exact,True,T. Natarajan
+2017|0a3d54b9|PBKS,0a3d54b9,PBKS,2017,Varun Aaron,Bowler,,,2.8,2 to 5 Cr,3,Exact,True,Varun Aaron
+2017|2f49c897|SRH,2f49c897,SRH,2017,Mohammed Siraj,Bowler,,,2.6,2 to 5 Cr,3,Exact,True,Mohammad Siraj
+2017|18e6906e|RCB,18e6906e,RCB,2017,Aniket Choudhary,Bowler,,,2,2 to 5 Cr,3,Initials,True,Aniket Choudhary (A Choudhary)
+2017|f5180fe6|MI,f5180fe6,MI,2017,Mitchell Johnson,Bowler,,,2,2 to 5 Cr,3,Exact,True,Mitchell Johnson
+2017|90de905a|MI,90de905a,MI,2017,Krishnappa Gowtham,All-Rounder,,,2,2 to 5 Cr,3,Manual,True,K. Gowtham
+2017|896d78ad|DC,896d78ad,DC,2017,Angelo Mathews,All-Rounder,,,2,2 to 5 Cr,3,Exact,True,Angelo Mathews
+2017|d2a6c0e6|PBKS,d2a6c0e6,PBKS,2017,Eoin Morgan,Batter,,,2,2 to 5 Cr,3,Exact,True,Eoin Morgan
+2017|8abdf100|DC,8abdf100,DC,2017,Corey Anderson,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Corey Anderson
+2017|e2db2409|DC,e2db2409,DC,2017,M. Ashwin,Bowler,,,1,Under 2 Cr,2,Exact,True,Murugan Ashwin
+2017|2a2e6343|RPS,2a2e6343,RPS,2017,Daniel Christian,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Dan Christian
+2017|d1c36f5c|GL,d1c36f5c,GL,2017,Jason Roy,Batter,,,1,Under 2 Cr,2,Exact,True,Jason Roy
+2017|f62772e5|RCB,f62772e5,RCB,2017,Pawan Negi,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Pawan Negi
+2017|871e9faf|GL,871e9faf,GL,2017,Basil Thampi,Bowler,,,0.85,Under 2 Cr,2,Exact,True,Basil Thampi
+2017|b274dbbd|SRH,b274dbbd,SRH,2017,Eklavya Dwivedi,Wicket-Keeper,,,0.75,Under 2 Cr,2,Exact,True,Eklavya Dwivedi
+2017|ae78bc32|GL,ae78bc32,GL,2017,Manpreet Gony,Bowler,,,0.6,Under 2 Cr,2,Initials,True,Manpreet Gony
+2017|26a85969|KKR,26a85969,KKR,2017,Rishi Dhawan,All-Rounder,,,0.55,Under 2 Cr,2,Manual,True,Rishi Dhawan
+2017|ffe699c0|SRH,ffe699c0,SRH,2017,Chris Jordan,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Chris Jordan
+2017|e84ac20c|PBKS,e84ac20c,PBKS,2017,Matt Henry,Bowler,,,0.5,Under 2 Cr,2,Manual,True,Matt Henry
+2017|2be41edb|PBKS,2be41edb,PBKS,2017,Martin Guptill,Batter,,,0.5,Under 2 Cr,2,Exact,True,Martin Guptill
+2017|2f9d0389|RPS,2f9d0389,RPS,2017,Lockie Ferguson,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Lockie Ferguson
+2017|b822e99c|GL,b822e99c,GL,2017,Nathu Singh,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Nathu Singh
+2017|14b14cd8|KKR,14b14cd8,KKR,2017,Darren Bravo,Batter,,,0.5,Under 2 Cr,2,Exact,True,Darren Bravo
+2017|26e5cabf|RPS,26e5cabf,RPS,2017,Manoj Tiwary,Batter,,,0.5,Under 2 Cr,2,Exact,True,Manoj Tiwary
+2017|b2a79f17|SRH,b2a79f17,SRH,2017,Ben Laughlin,Bowler,,,0.3,Under 2 Cr,2,Exact,True,Ben Laughlin
+2017|770494eb|MI,770494eb,MI,2017,Asela Gunarathna,Batter,,,0.3,Under 2 Cr,2,Manual,True,Asela Gunarathna
+2017|c03c6200|PBKS,c03c6200,PBKS,2017,Darren Sammy,All-Rounder,,,0.3,Under 2 Cr,2,Manual,True,Darren Sammy
+2017|3241e3fd|MI,3241e3fd,MI,2017,Nicolas Pooran,Wicket-Keeper,,,0.3,Under 2 Cr,2,Manual,True,Nicholas Pooran
+2017|650d5e49|KKR,650d5e49,KKR,2017,Rovman Powell,All-Rounder,,,0.3,Under 2 Cr,2,Manual,True,Rovman Powell
+2017|62af8546|SRH,62af8546,SRH,2017,Mohammad Nabi,All-Rounder,,,0.3,Under 2 Cr,2,Exact,True,Mohammad Nabi
+2017|f0f628c7|GL,f0f628c7,GL,2017,Munaf Patel,Bowler,,,0.3,Under 2 Cr,2,Exact,True,Munaf Patel
+2017|1e66c162|RPS,1e66c162,RPS,2017,Jaydev Unadkat,Bowler,,,0.3,Under 2 Cr,2,Exact,True,Jaydev Unadkat
+2017|6834d1f2|RCB,6834d1f2,RCB,2017,Billy Stanlake,Bowler,,,0.3,Under 2 Cr,2,Exact,True,Billy Stanlake
+2017|709b0bac|MI,709b0bac,MI,2017,Saurabh Tiwary,Batter,,,0.3,Under 2 Cr,2,Exact,True,Saurabh Tiwary
+2017|39a2dfa8|PBKS,39a2dfa8,PBKS,2017,Rahul Tewatia,All-Rounder,,,0.25,Under 2 Cr,2,Initials,True,Rahul Tewatia
+2017|855a210c|DC,855a210c,DC,2017,Aditya Tare,Wicket-Keeper,,,0.25,Under 2 Cr,2,Exact,True,Aditya Tare
+2017|e6e9b619|SRH,e6e9b619,SRH,2017,Tanmay Agarwal,Batter,,,0.1,Base price buy,1,Exact (register),True,Tanmay Agarwal
+2017|21d4e29b|DC,21d4e29b,DC,2017,Navdeep Saini,Bowler,,,0.1,Base price buy,1,Exact,True,Navdeep Saini
+2017|fa2f1dde|MI,fa2f1dde,MI,2017,Kulwant Khejroliya,Bowler,,,0.1,Base price buy,1,Exact,True,Kulwant Khejroliya
+2017|f10e94c4|GL,f10e94c4,GL,2017,Akshdeep Nath,All-Rounder,,,0.1,Base price buy,1,Initials,True,Akshdeep Nath
+2017|6aed7e79|SRH,6aed7e79,SRH,2017,Pravin Tambe,Bowler,,,0.1,Base price buy,1,Manual,True,Pravin Tambe
+2017|ed5a5510|RCB,ed5a5510,RCB,2017,Praveen Dubey,All-Rounder,,,0.1,Base price buy,1,Manual,True,Pravin Dubey
+2017|afe3355a|DC,afe3355a,DC,2017,Ankeet Bawane,Batter,,,0.1,Base price buy,1,Surname,True,Ankeet Bawane
+2017|33ffc3dd|KKR,33ffc3dd,KKR,2017,R. Sanjay Yadav,All-Rounder,,,0.1,Base price buy,1,Exact,True,Sanjay Yadav
+2017|A_milind_tandon|RPS,A_milind_tandon,RPS,2017,Milind Tandon,All-Rounder,,,0.1,Base price buy,1,Unmatched,False,Milind Tandon
+2017|26989d80|DC,26989d80,DC,2017,Shashank Singh,All-Rounder,,,0.1,Base price buy,1,Exact,True,Shashank Singh
+2017|0a509d6b|PBKS,0a509d6b,PBKS,2017,Rinku Singh,Batter,,,0.1,Base price buy,1,Exact,True,Rinku Singh
+2017|b51f72a5|GL,b51f72a5,GL,2017,Shubam Agrawal,All-Rounder,,,0.1,Base price buy,1,Surname,True,Shubam Agrawal
+2017|f9f21866|GL,f9f21866,GL,2017,Pratham Singh,All-Rounder,,,0.1,Base price buy,1,Exact (register),True,Pratham Singh
+2017|77255a9e|RPS,77255a9e,RPS,2017,Rahul Ajay Tripathi,All-Rounder,,,0.1,Base price buy,1,Initials,True,Rahul Tripathi
+2017|A_shelley_shaurya|GL,A_shelley_shaurya,GL,2017,Shelley Shaurya,Bowler,,,0.1,Base price buy,1,Unmatched,False,Shelley Shaurya
+2017|c28e9f12|GL,c28e9f12,GL,2017,Tejas Singh Baroka,Bowler,,,0.1,Base price buy,1,Surname,True,Tejas Baroka
+2017|dded65e7|KKR,dded65e7,KKR,2017,Ishank Jaggi,Batter,,,0.1,Base price buy,1,Manual,True,Ishank Jaggi
+2017|2ed569a0|RPS,2ed569a0,RPS,2017,Rahul Chahar,Bowler,,,0.1,Base price buy,1,Initials,True,Rahul Chahar
+2017|A_saurabh_kumar|RPS,A_saurabh_kumar,RPS,2017,Saurabh Kumar,Bowler,,,0.1,Base price buy,1,Unmatched,False,Saurabh Kumar
+2017|d4b8ea98|KKR,d4b8ea98,KKR,2017,Sayan Ghosh,Bowler,,,0.1,Base price buy,1,Exact (register),True,Sayan Ghosh
+2017|6176f240|GL,6176f240,GL,2017,Chirag Suri,Batter,,,0.1,Base price buy,1,Exact (register),True,Chirag Suri
+2018|e087956b|RR,e087956b,RR,2018,Benjamin Stokes,All-Rounder,,,12.5,10 Cr and above,5,Initials,True,Ben Stokes
+2018|1e66c162|RR,1e66c162,RR,2018,Jaydev Unadkat,Bowler,,,11.5,10 Cr and above,5,Exact,True,Jaydev Unadkat
+2018|93b4fc78|SRH,93b4fc78,SRH,2018,Manish Pandey,Batter,,,11,10 Cr and above,5,Exact,True,Manish Pandey
+2018|b17e2f24|PBKS,b17e2f24,PBKS,2018,KL Rahul,Batter,,,11,10 Cr and above,5,Exact,True,KL Rahul
+2018|45eda7c8|KKR,45eda7c8,KKR,2018,Chris Lynn,Batter,,,9.6,5 to 10 Cr,4,Exact,True,Chris Lynn
+2018|3fb19989|KKR,3fb19989,KKR,2018,Mitchell Starc,Bowler,,,9.4,5 to 10 Cr,4,Exact,True,Mitchell Starc
+2018|5f547c8b|SRH,5f547c8b,SRH,2018,Rashid Khan Arman,Bowler,,,9,5 to 10 Cr,4,Manual,True,Rashid Khan
+2018|b681e71e|DC,b681e71e,DC,2018,Glenn Maxwell,All-Rounder,,,9,5 to 10 Cr,4,Exact,True,Glenn Maxwell
+2018|5b8c830e|MI,5b8c830e,MI,2018,Krunal Pandya,All-Rounder,,,8.8,5 to 10 Cr,4,Initials,True,Krunal Pandya
+2018|a4cc73aa|RR,a4cc73aa,RR,2018,Sanju Samson,Wicket-Keeper,,,8,5 to 10 Cr,4,Exact,True,Sanju Samson
+2018|99d63244|CSK,99d63244,CSK,2018,Kedar Jadhav,All-Rounder,,,7.8,5 to 10 Cr,4,Initials,True,Kedar Jadhav
+2018|495d42a5|PBKS,495d42a5,PBKS,2018,Ravichandran Ashwin,All-Rounder,,,7.6,5 to 10 Cr,4,Initials,True,Ravichandran Ashwin
+2018|4c5d73db|RCB,4c5d73db,RCB,2018,Chris Woakes,All-Rounder,,,7.4,5 to 10 Cr,4,Exact,True,Chris Woakes
+2018|c03f1114|KKR,c03f1114,KKR,2018,Dinesh Karthik,Wicket-Keeper,,,7.4,5 to 10 Cr,4,Exact,True,Dinesh Karthik
+2018|7c7d63a2|PBKS,7c7d63a2,PBKS,2018,Andrew Tye,Bowler,,,7.2,5 to 10 Cr,4,Exact,True,Andrew Tye
+2018|5574750c|RR,5574750c,RR,2018,Jofra Archer,All-Rounder,,,7.2,5 to 10 Cr,4,Exact,True,Jofra Archer
+2018|1c17e270|KKR,1c17e270,KKR,2018,Robin Uthappa,Wicket-Keeper,,,6.4,5 to 10 Cr,4,Initials,True,Robin Uthappa
+2018|87e562a9|CSK,87e562a9,CSK,2018,Dwayne Bravo,All-Rounder,,,6.4,5 to 10 Cr,4,Exact,True,Dwayne Bravo
+2018|752f7486|MI,752f7486,MI,2018,Ishan Kishan,Wicket-Keeper,,,6.2,5 to 10 Cr,4,Exact,True,Ishan Kishan
+2018|b8d490fd|PBKS,b8d490fd,PBKS,2018,Aaron Finch,Batter,,,6.2,5 to 10 Cr,4,Exact,True,Aaron Finch
+2018|d9273ee7|PBKS,d9273ee7,PBKS,2018,Marcus Stoinis,All-Rounder,,,6.2,5 to 10 Cr,4,Exact,True,Marcus Stoinis
+2018|90de905a|RR,90de905a,RR,2018,Krishnappa Gowtham,Bowler,,,6.2,5 to 10 Cr,4,Manual,True,K. Gowtham
+2018|57ee1fde|RCB,57ee1fde,RCB,2018,Yuzvendra Singh Chahal,Bowler,,,6,5 to 10 Cr,4,Initials,True,Yuzvendra Chahal
+2018|8d2c70ad|KKR,8d2c70ad,KKR,2018,Kuldeep Singh Yadav,Bowler,,,5.8,5 to 10 Cr,4,Exact,True,Kuldeep Yadav
+2018|944533a5|PBKS,944533a5,PBKS,2018,Karun Nair,Batter,,,5.6,5 to 10 Cr,4,Exact,True,Karun Nair
+2018|a757b0d8|MI,a757b0d8,MI,2018,Kieron Pollard,All-Rounder,,,5.4,5 to 10 Cr,4,Initials,True,Kieron Pollard
+2018|ded9240e|MI,ded9240e,MI,2018,Pat Cummins,Bowler,,,5.4,5 to 10 Cr,4,Exact,True,Pat Cummins
+2018|0a476045|SRH,0a476045,SRH,2018,Shikhar Dhawan,Batter,,,5.2,5 to 10 Cr,4,Exact,True,Shikhar Dhawan
+2018|119678fd|CSK,119678fd,CSK,2018,Karn Sharma,Bowler,,,5,5 to 10 Cr,4,Exact,True,Karn Sharma
+2018|fe11caa6|SRH,fe11caa6,SRH,2018,Wriddhiman Saha,Wicket-Keeper,,,5,5 to 10 Cr,4,Exact,True,Wriddhiman Saha
+2018|99b75528|RR,99b75528,RR,2018,Jos Buttler,Wicket-Keeper,,,4.4,2 to 5 Cr,3,Exact,True,Jos Buttler
+2018|e62dd25d|DC,e62dd25d,DC,2018,Kagiso Rabada,Bowler,,,4.2,2 to 5 Cr,3,Exact,True,Kagiso Rabada
+2018|98ae73b1|KKR,98ae73b1,KKR,2018,Piyush Chawla,Bowler,,,4.2,2 to 5 Cr,3,Exact,True,Piyush Chawla
+2018|cc1e8c68|RCB,cc1e8c68,RCB,2018,Umesh Yadav,Bowler,,,4.2,2 to 5 Cr,3,Exact,True,Umesh Yadav
+2018|4329fbb5|CSK,4329fbb5,CSK,2018,Shane Watson,All-Rounder,,,4,2 to 5 Cr,3,Exact,True,Shane Watson
+2018|1a156c88|RR,1a156c88,RR,2018,Darcy Short,All-Rounder,,,4,2 to 5 Cr,3,Initials,True,Darcy Short
+2018|29e95537|RR,29e95537,RR,2018,Ajinkya Rahane,Batter,,,4,2 to 5 Cr,3,Exact,True,Ajinkya Rahane
+2018|6b19d823|DC,6b19d823,DC,2018,Amit Mishra,Bowler,,,4,2 to 5 Cr,3,Exact,True,Amit Mishra
+2018|7d92277a|PBKS,7d92277a,PBKS,2018,Mujeeb Zadran,Bowler,,,4,2 to 5 Cr,3,Exact,True,Mujeeb Ur Rahman
+2018|0ebfb1ad|MI,0ebfb1ad,MI,2018,Evin Lewis,Batter,,,3.8,2 to 5 Cr,3,Initials,True,Evin Lewis
+2018|dcf81436|SRH,dcf81436,SRH,2018,Siddarth Kaul,Bowler,,,3.8,2 to 5 Cr,3,Initials,True,Siddharth Kaul
+2018|b8a55852|RCB,b8a55852,RCB,2018,Brendon McCullum,Batter,,,3.6,2 to 5 Cr,3,Exact,True,Brendon McCullum
+2018|73ad96ed|SRH,73ad96ed,SRH,2018,Deepak Hooda,All-Rounder,,,3.6,2 to 5 Cr,3,Manual,True,Deepak Hooda
+2018|77255a9e|RR,77255a9e,RR,2018,Rahul Tripathi,Batter,,,3.4,2 to 5 Cr,3,Manual,True,Rahul Tripathi
+2018|fb2d1dda|KKR,fb2d1dda,KKR,2018,Nitish Rana,All-Rounder,,,3.4,2 to 5 Cr,3,Exact,True,Nitish Rana
+2018|271f83cd|MI,271f83cd,MI,2018,Suryakumar Yadav,Batter,,,3.2,2 to 5 Cr,3,Initials,True,Suryakumar Yadav
+2018|f19ccfad|RCB,f19ccfad,RCB,2018,M.S. Washington Sundar,All-Rounder,,,3.2,2 to 5 Cr,3,Exact,True,Washington Sundar
+2018|9d80c5e1|DC,9d80c5e1,DC,2018,Shahbaz Nadeem,Bowler,,,3.2,2 to 5 Cr,3,Exact,True,Shahbaz Nadeem
+2018|b4f5c2d9|KKR,b4f5c2d9,KKR,2018,Kamlesh Nagarkoti,All-Rounder,,,3.2,2 to 5 Cr,3,Exact,True,Kamlesh Nagarkoti
+2018|0994d0ae|DC,0994d0ae,DC,2018,Vijay Shankar,All-Rounder,,,3.2,2 to 5 Cr,3,Exact,True,Vijay Shankar
+2018|d027ba9f|SRH,d027ba9f,SRH,2018,Kane Williamson,Batter,,,3,2 to 5 Cr,3,Exact,True,Kane Williamson
+2018|db31895a|PBKS,db31895a,PBKS,2018,Ankit Singh Rajpoot,Bowler,,,3,2 to 5 Cr,3,Manual,True,Ankit Singh Rajpoot
+2018|a2f46292|SRH,a2f46292,SRH,2018,Syed Khaleel Ahmed,Bowler,,,3,2 to 5 Cr,3,Surname,True,Syed Khaleel Ahmed (KK Ahmed)
+2018|39a2dfa8|DC,39a2dfa8,DC,2018,Rahul Tewatia,All-Rounder,,,3,2 to 5 Cr,3,Initials,True,Rahul Tewatia
+2018|8cf9814c|DC,8cf9814c,DC,2018,Mohammad Shami,Bowler,,,3,2 to 5 Cr,3,Initials,True,Mohammad Shami
+2018|c38d3503|KKR,c38d3503,KKR,2018,Shivam Mavi,All-Rounder,,,3,2 to 5 Cr,3,Exact,True,Shivam Mavi
+2018|d67d5f00|PBKS,d67d5f00,PBKS,2018,David Miller,Batter,,,3,2 to 5 Cr,3,Exact,True,David Miller
+2018|ce820073|SRH,ce820073,SRH,2018,Sandeep Sharma,Bowler,,,3,2 to 5 Cr,3,Exact,True,Sandeep Sharma
+2018|21d4e29b|RCB,21d4e29b,RCB,2018,Navdeep Saini,Bowler,,,3,2 to 5 Cr,3,Exact,True,Navdeep Saini
+2018|372455c4|RCB,372455c4,RCB,2018,Quinton De Kock,Wicket-Keeper,,,2.8,2 to 5 Cr,3,Exact,True,Quinton De Kock
+2018|bb345e0b|DC,bb345e0b,DC,2018,Gautam Gambhir,Batter,,,2.8,2 to 5 Cr,3,Exact,True,Gautam Gambhir
+2018|1abb78f8|CSK,1abb78f8,CSK,2018,Shardul Narendra Thakur,Bowler,,,2.6,2 to 5 Cr,3,Initials,True,Shardul Thakur
+2018|2f49c897|RCB,2f49c897,RCB,2018,Mohammed Siraj,Bowler,,,2.6,2 to 5 Cr,3,Exact,True,Mohammad Siraj
+2018|759ac88f|PBKS,759ac88f,PBKS,2018,Mohit Sharma,Bowler,,,2.4,2 to 5 Cr,3,Exact,True,Mohit Sharma
+2018|0a8fce53|MI,0a8fce53,MI,2018,Mustafizur Rahman,Bowler,,,2.2,2 to 5 Cr,3,Exact,True,Mustafizur Rahman
+2018|2e11c706|MI,2e11c706,MI,2018,Ben Cutting,All-Rounder,,,2.2,2 to 5 Cr,3,Exact,True,Ben Cutting
+2018|70d205c9|CSK,70d205c9,CSK,2018,Ambati Rayudu,Wicket-Keeper,,,2.2,2 to 5 Cr,3,Initials,True,Ambati Rayudu
+2018|d8b2f218|PBKS,d8b2f218,PBKS,2018,Barinder Singh Sran,Bowler,,,2.2,2 to 5 Cr,3,Exact,True,Barinder Sran
+2018|94d7f855|RCB,94d7f855,RCB,2018,Colin De Grandhomme,All-Rounder,,,2.2,2 to 5 Cr,3,Exact,True,Colin De Grandhomme
+2018|56ab442f|RCB,56ab442f,RCB,2018,Nathan Coulter-Nile,Bowler,,,2.2,2 to 5 Cr,3,Exact,True,Nathan Coulter-Nile
+2018|a818c1be|DC,a818c1be,DC,2018,Trent Boult,Bowler,,,2.2,2 to 5 Cr,3,Exact,True,Trent Boult
+2018|e2db2409|RCB,e2db2409,RCB,2018,M. Ashwin,Bowler,,,2.2,2 to 5 Cr,3,Exact,True,Murugan Ashwin
+2018|7dc35884|SRH,7dc35884,SRH,2018,Shakib Al Hasan,All-Rounder,,,2,2 to 5 Cr,3,Exact,True,Shakib Al Hasan
+2018|4b57e452|CSK,4b57e452,CSK,2018,Murali Vijay,Batter,,,2,2 to 5 Cr,3,Exact,True,Murali Vijay
+2018|db584dad|PBKS,db584dad,PBKS,2018,Christopher Gayle,Batter,,,2,2 to 5 Cr,3,Initials,True,Christopher Gayle
+2018|e342e5fb|SRH,e342e5fb,SRH,2018,Carlos Brathwaite,All-Rounder,,,2,2 to 5 Cr,3,Exact,True,Carlos Brathwaite
+2018|1c914163|PBKS,1c914163,PBKS,2018,Yuvraj Singh,All-Rounder,,,2,2 to 5 Cr,3,Exact,True,Yuvraj Singh
+2018|f5180fe6|KKR,f5180fe6,KKR,2018,Mitchell Johnson,Bowler,,,2,2 to 5 Cr,3,Exact,True,Mitchell Johnson
+2018|8b5b6769|CSK,8b5b6769,CSK,2018,Harbhajan Singh,Bowler,,,2,2 to 5 Cr,3,Exact,True,Harbhajan Singh
+2018|af2c687b|DC,af2c687b,DC,2018,Colin Munro,All-Rounder,,,1.9,Under 2 Cr,2,Exact,True,Colin Munro
+2018|3c6ffae8|SRH,3c6ffae8,SRH,2018,Yusuf Pathan,All-Rounder,,,1.9,Under 2 Cr,2,Exact,True,Yusuf Pathan
+2018|2ed569a0|MI,2ed569a0,MI,2018,Rahul Chahar,Bowler,,,1.9,Under 2 Cr,2,Initials,True,Rahul Chahar
+2018|b4b99816|KKR,b4b99816,KKR,2018,Shubman Gill,Batter,,,1.8,Under 2 Cr,2,Exact,True,Shubman Gill
+2018|bb351c23|RCB,bb351c23,RCB,2018,Moeen Ali,All-Rounder,,,1.7,Under 2 Cr,2,Exact,True,Moeen Ali
+2018|b5da6c24|RCB,b5da6c24,RCB,2018,Parthiv Patel,Wicket-Keeper,,,1.7,Under 2 Cr,2,Exact,True,Parthiv Patel
+2018|3355b542|CSK,3355b542,CSK,2018,Faf Du Plessis,Batter,,,1.6,Under 2 Cr,2,Exact,True,Faf Du Plessis
+2018|8d92a2c3|CSK,8d92a2c3,CSK,2018,Mark Wood,Bowler,,,1.5,Under 2 Cr,2,Exact,True,Mark Wood
+2018|4933f499|MI,4933f499,MI,2018,Jason Behrendorff,Bowler,,,1.5,Under 2 Cr,2,Exact,True,Jason Behrendorff
+2018|9fc0ef64|MI,9fc0ef64,MI,2018,Pradeep Sangwan,Bowler,,,1.5,Under 2 Cr,2,Exact,True,Pradeep Sangwan
+2018|d1c36f5c|DC,d1c36f5c,DC,2018,Jason Roy,Batter,,,1.5,Under 2 Cr,2,Exact,True,Jason Roy
+2018|2a2e6343|DC,2a2e6343,DC,2018,Daniel Christian,All-Rounder,,,1.5,Under 2 Cr,2,Exact,True,Dan Christian
+2018|e1b9f3a9|PBKS,e1b9f3a9,PBKS,2018,Ben Dwarshuis,Bowler,,,1.4,Under 2 Cr,2,Exact,True,Ben Dwarshuis
+2018|c3a96caf|RCB,c3a96caf,RCB,2018,Mandeep Singh,All-Rounder,,,1.4,Under 2 Cr,2,Exact,True,Mandeep Singh
+2018|890946a0|DC,890946a0,DC,2018,Naman Ojha,Wicket-Keeper,,,1.4,Under 2 Cr,2,Exact,True,Naman Ojha
+2018|8b3e9c7c|DC,8b3e9c7c,DC,2018,Prithvi Shaw,Batter,,,1.2,Under 2 Cr,2,Exact,True,Prithvi Shaw
+2018|c03e2850|RCB,c03e2850,RCB,2018,Manan Vohra,Batter,,,1.1,Under 2 Cr,2,Exact,True,Manan Vohra
+2018|41eb4a4f|KKR,41eb4a4f,KKR,2018,Ranganath Vinay Kumar,Bowler,,,1,Under 2 Cr,2,Surname,True,Ranganath Vinay Kumar
+2018|13c35c9e|RCB,13c35c9e,RCB,2018,Tim Southee,Bowler,,,1,Under 2 Cr,2,Exact,True,Tim Southee
+2018|ffe699c0|SRH,ffe699c0,SRH,2018,Chris Jordan,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Chris Jordan
+2018|62af8546|SRH,62af8546,SRH,2018,Mohammad Nabi,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Mohammad Nabi
+2018|00ea847a|PBKS,00ea847a,PBKS,2018,Mayank Agarwal,Batter,,,1,Under 2 Cr,2,Exact,True,Mayank Agarwal
+2018|2e8994e7|MI,2e8994e7,MI,2018,Jean-Paul Duminy,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Jean-Paul Duminy
+2018|f10e94c4|PBKS,f10e94c4,PBKS,2018,Akshdeep Nath,All-Rounder,,,1,Under 2 Cr,2,Initials,True,Akshdeep Nath
+2018|26e5cabf|PBKS,26e5cabf,PBKS,2018,Manoj Tiwary,Batter,,,1,Under 2 Cr,2,Exact,True,Manoj Tiwary
+2018|acee4cc4|CSK,acee4cc4,CSK,2018,Imran Tahir,Bowler,,,1,Under 2 Cr,2,Exact,True,Imran Tahir
+2018|541f85c9|SRH,541f85c9,SRH,2018,Shreevats Goswami,Wicket-Keeper,,,1,Under 2 Cr,2,Exact,True,Shreevats Goswami
+2018|c16d4035|CSK,c16d4035,CSK,2018,Sam Billings,Wicket-Keeper,,,1,Under 2 Cr,2,Exact,True,Sam Billings
+2018|f62772e5|RCB,f62772e5,RCB,2018,Pawan Negi,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Pawan Negi
+2018|871e9faf|SRH,871e9faf,SRH,2018,Basil Thampi,Bowler,,,0.95,Under 2 Cr,2,Exact,True,Basil Thampi
+2018|fa2f1dde|RCB,fa2f1dde,RCB,2018,Kulwant Khejroliya,Bowler,,,0.85,Under 2 Cr,2,Exact,True,Kulwant Khejroliya
+2018|709b0bac|MI,709b0bac,MI,2018,Saurabh Tiwary,Batter,,,0.8,Under 2 Cr,2,Exact,True,Saurabh Tiwary
+2018|23eeb873|CSK,23eeb873,CSK,2018,Deepak Chahar,All-Rounder,,,0.8,Under 2 Cr,2,Initials,True,Deepak Chahar
+2018|0a509d6b|KKR,0a509d6b,KKR,2018,Rinku Singh,Batter,,,0.8,Under 2 Cr,2,Exact,True,Rinku Singh
+2018|6eb146d2|DC,6eb146d2,DC,2018,Gurkeerat Singh Mann,All-Rounder,,,0.75,Under 2 Cr,2,Manual,True,Gurkeerat Singh
+2018|d2a989fc|RR,d2a989fc,RR,2018,Dhawal Kulkarni,Bowler,,,0.75,Under 2 Cr,2,Exact,True,Dhawal Kulkarni
+2018|eef2536f|DC,eef2536f,DC,2018,Avesh Khan,Bowler,,,0.7,Under 2 Cr,2,Exact,True,Avesh Khan
+2018|A_zahir_khan_pakteen|RR,A_zahir_khan_pakteen,RR,2018,Zahir Khan Pakteen,Bowler,,,0.6,Under 2 Cr,2,Unmatched,False,Zahir Khan Pakteen
+2018|f29185a1|DC,f29185a1,DC,2018,Abhishek Sharma,All-Rounder,,,0.55,Under 2 Cr,2,Exact,True,Abhishek Sharma
+2018|f9d99806|MI,f9d99806,MI,2018,Tajinder Dhillon,All-Rounder,,,0.55,Under 2 Cr,2,Manual,True,Tajinder Dhillon
+2018|6834d1f2|SRH,6834d1f2,SRH,2018,Billy Stanlake,Batter,,,0.5,Under 2 Cr,2,Exact,True,Billy Stanlake
+2018|e4a0deae|CSK,e4a0deae,CSK,2018,Mitchell Santner,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Mitchell Santner
+2018|bd17b45f|RR,bd17b45f,RR,2018,Stuart Binny,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Stuart Binny
+2018|f834dcfc|CSK,f834dcfc,CSK,2018,Lungisani Ngidi,Bowler,,,0.5,Under 2 Cr,2,Manual,True,Lungi Ngidi
+2018|5b16a806|MI,5b16a806,MI,2018,Akila Dhananjaya,Bowler,,,0.5,Under 2 Cr,2,Manual,True,Akila Dananjaya
+2018|81049310|DC,81049310,DC,2018,Jayant Yadav,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Jayant Yadav
+2018|b2a79f17|RR,b2a79f17,RR,2018,Ben Laughlin,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Ben Laughlin
+2018|327b58d3|RR,327b58d3,RR,2018,Dushmantha Chameera,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Dushmantha Chameera
+2018|798cc28e|CSK,798cc28e,CSK,2018,Asif K M,Bowler,,,0.4,Under 2 Cr,2,Exact,True,K.M. Asif
+2018|ce794613|SRH,ce794613,SRH,2018,T Natarajan,Bowler,,,0.4,Under 2 Cr,2,Exact,True,T. Natarajan
+2018|A_aniket_choudhary|RCB,A_aniket_choudhary,RCB,2018,Aniket Choudhary,Bowler,,,0.3,Under 2 Cr,2,Unmatched,False,Aniket Choudhary (A_aniket_choudhary)
+2018|A_aryaman_vikram_birla|RR,A_aryaman_vikram_birla,RR,2018,Aryaman Vikram Birla,All-Rounder,,,0.3,Under 2 Cr,2,Unmatched,False,Aryaman Vikram Birla
+2018|99ed60f8|KKR,99ed60f8,KKR,2018,Javon Searless,All-Rounder,,,0.3,Under 2 Cr,2,Manual,True,Javon Searles
+2018|69be866a|RR,69be866a,RR,2018,Anureet Singh,Bowler,,,0.3,Under 2 Cr,2,Exact,True,Anureet Singh
+2018|afa78c3a|KKR,afa78c3a,KKR,2018,Cameron Delport,All-Rounder,,,0.3,Under 2 Cr,2,Exact (register),True,Cameron Delport
+2018|436b8481|RCB,436b8481,RCB,2018,Pavan Deshpande,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Pavan Deshpande
+2018|c33d8116|MI,c33d8116,MI,2018,Mohsin Khan,Bowler,,,0.2,Base price buy,1,Exact,True,Mohsin Khan
+2018|c18496e1|SRH,c18496e1,SRH,2018,Bipul Sharma,All-Rounder,,,0.2,Base price buy,1,Exact,True,Bipul Sharma
+2018|ade90de7|RR,ade90de7,RR,2018,Midhun S,All-Rounder,,,0.2,Base price buy,1,Exact,True,Midhun S
+2018|bd54eef5|CSK,bd54eef5,CSK,2018,N Jagadeesan,Wicket-Keeper,,,0.2,Base price buy,1,Exact,True,N. Jagadeesan
+2018|8ac93ca2|RR,8ac93ca2,RR,2018,Prashant Chopra,Wicket-Keeper,,,0.2,Base price buy,1,Initials,True,Prashant Chopra
+2018|9a0146b3|PBKS,9a0146b3,PBKS,2018,Pardeep Sahu,Bowler,,,0.2,Base price buy,1,Manual,True,Pardeep Sahu
+2018|96513a65|MI,96513a65,MI,2018,Nidheesh M D Dinesan,Bowler,,,0.2,Base price buy,1,Manual,True,Nidheesh M D Dinesan
+2018|e6e9b619|SRH,e6e9b619,SRH,2018,Tanmay Agarwal,Batter,,,0.2,Base price buy,1,Exact (register),True,Tanmay Agarwal
+2018|9601c534|MI,9601c534,MI,2018,Siddhesh Dinesh Lad,Batter,,,0.2,Base price buy,1,Manual,True,Siddhesh Dinesh Lad
+2018|855a210c|MI,855a210c,MI,2018,Aditya Tare,Wicket-Keeper,,,0.2,Base price buy,1,Exact,True,Aditya Tare
+2018|24d94623|RR,24d94623,RR,2018,Ankit Sharma,All-Rounder,,,0.2,Base price buy,1,Exact,True,Ankit Sharma
+2018|A_monu_singh|CSK,A_monu_singh,CSK,2018,Monu Singh,Bowler,,,0.2,Base price buy,1,Unmatched,False,Monu Singh
+2018|e4cdf230|MI,e4cdf230,MI,2018,Anukul Roy,All-Rounder,,,0.2,Base price buy,1,Exact,True,Anukul Roy
+2018|98f27d4b|CSK,98f27d4b,CSK,2018,Kanishk Seth,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Kanishk Seth
+2018|f986ca1a|DC,f986ca1a,DC,2018,Harshal Patel,All-Rounder,,,0.2,Base price buy,1,Initials,True,Harshal Patel
+2018|03c29939|MI,03c29939,MI,2018,Sharad Lumba,Batter,,,0.2,Base price buy,1,Exact (register),True,Sharad Lumba
+2018|b410bd3d|DC,b410bd3d,DC,2018,Sandeep Lamichhane,Bowler,,,0.2,Base price buy,1,Exact,True,Sandeep Lamichhane
+2018|0b960e01|RR,0b960e01,RR,2018,Jatin Saxena,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Jatin Saxena
+2018|40c1eeeb|RCB,40c1eeeb,RCB,2018,Anirudha Ashok Joshi,All-Rounder,,,0.2,Base price buy,1,Manual,True,Anirudha Ashok Joshi
+2018|dc9dd038|SRH,dc9dd038,SRH,2018,Sachin Baby,Batter,,,0.2,Base price buy,1,Exact,True,Sachin Baby
+2018|a457cfb5|PBKS,a457cfb5,PBKS,2018,Mayank Dagar,All-Rounder,,,0.2,Base price buy,1,Exact,True,Mayank Dagar
+2018|5708d0b6|KKR,5708d0b6,KKR,2018,Apoorv Vijay Wankhade,Batter,,,0.2,Base price buy,1,Manual,True,Apoorv Vijay Wankhade
+2018|7a8bd078|RR,7a8bd078,RR,2018,Shreyas Gopal,All-Rounder,,,0.2,Base price buy,1,Exact,True,Shreyas Gopal
+2018|e793a8ed|CSK,e793a8ed,CSK,2018,Chaitanya Bishnoi,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Chaitanya Bishnoi
+2018|faa7365d|CSK,faa7365d,CSK,2018,Dhruv Shorey,All-Rounder,,,0.2,Base price buy,1,Exact,True,Dhruv Shorey
+2018|a9fd84fb|MI,a9fd84fb,MI,2018,Mayank Markande,Bowler,,,0.2,Base price buy,1,Exact,True,Mayank Markande
+2018|b63e358a|SRH,b63e358a,SRH,2018,Ricky Bhui,Batter,,,0.2,Base price buy,1,Exact,True,Ricky Bhui
+2018|c910e89d|CSK,c910e89d,CSK,2018,Kshitiz Sharma,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Kshitiz Sharma
+2018|dded65e7|KKR,dded65e7,KKR,2018,Ishank Jaggi,Batter,,,0.2,Base price buy,1,Manual,True,Ishank Jaggi
+2018|da934ee8|RR,da934ee8,RR,2018,Mahipal Lomror,All-Rounder,,,0.2,Base price buy,1,Manual,True,Mahipal Lomror
+2018|91a260d3|PBKS,91a260d3,PBKS,2018,Manzoor Dar,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Manzoor Dar
+2018|d4b8ea98|DC,d4b8ea98,DC,2018,Sayan Ghosh,Bowler,,,0.2,Base price buy,1,Exact (register),True,Sayan Ghosh
+2018|f047e7ff|DC,f047e7ff,DC,2018,Manjot Kalra,Batter,,,0.2,Base price buy,1,Exact (register),True,Manjot Kalra
+2019|1e66c162|RR,1e66c162,RR,2019,Jaydev Unadkat,Bowler,,,8.4,5 to 10 Cr,4,Exact,True,Jaydev Unadkat
+2019|5b7ab5a9|PBKS,5b7ab5a9,PBKS,2019,Varun Chakaravarthy,All-Rounder,,,8.4,5 to 10 Cr,4,Manual,True,Varun Chakravarthy
+2019|e94915e6|PBKS,e94915e6,PBKS,2019,Sam Curran,All-Rounder,,,7.2,5 to 10 Cr,4,Exact,True,Sam Curran
+2019|c995d726|DC,c995d726,DC,2019,Colin Ingram,Batter,,,6.4,5 to 10 Cr,4,Exact,True,Colin Ingram
+2019|a4e37e47|RCB,a4e37e47,RCB,2019,Shivam Dube,All-Rounder,,,5,5 to 10 Cr,4,Exact,True,Shivam Dube
+2019|2e171977|DC,2e171977,DC,2019,Axar Rajesh Patel,All-Rounder,,,5,5 to 10 Cr,4,Initials,True,Axar Rajesh Patel
+2019|759ac88f|CSK,759ac88f,CSK,2019,Mohit Sharma,Bowler,,,5,5 to 10 Cr,4,Exact,True,Mohit Sharma
+2019|e342e5fb|KKR,e342e5fb,KKR,2019,Carlos Brathwaite,All-Rounder,,,5,5 to 10 Cr,4,Exact,True,Carlos Brathwaite
+2019|9418198b|PBKS,9418198b,PBKS,2019,Prabhsimran Singh,Wicket-Keeper,,,4.8,2 to 5 Cr,3,Exact,True,Prabhsimran Singh
+2019|8cf9814c|PBKS,8cf9814c,PBKS,2019,Mohammad Shami,Bowler,,,4.8,2 to 5 Cr,3,Initials,True,Mohammad Shami
+2019|48a1d7b7|RCB,48a1d7b7,RCB,2019,Shimron Hetmyer,Batter,,,4.2,2 to 5 Cr,3,Initials,True,Shimron Hetmyer
+2019|3241e3fd|PBKS,3241e3fd,PBKS,2019,Nicolas Pooran,Wicket-Keeper,,,4.2,2 to 5 Cr,3,Manual,True,Nicholas Pooran
+2019|f10e94c4|RCB,f10e94c4,RCB,2019,Akshdeep Nath,All-Rounder,,,3.6,2 to 5 Cr,3,Initials,True,Akshdeep Nath
+2019|d8b2f218|MI,d8b2f218,MI,2019,Barinder Singh Sran,Bowler,,,3.4,2 to 5 Cr,3,Exact,True,Barinder Sran
+2019|0a3d54b9|RR,0a3d54b9,RR,2019,Varun Aaron,Bowler,,,2.4,2 to 5 Cr,3,Exact,True,Varun Aaron
+2019|abb83e27|SRH,abb83e27,SRH,2019,Jonny Bairstow,Wicket-Keeper,,,2.2,2 to 5 Cr,3,Exact,True,Jonny Bairstow
+2019|a12e1d51|MI,a12e1d51,MI,2019,Lasith Malinga,Bowler,,,2,2 to 5 Cr,3,Exact,True,Lasith Malinga
+2019|d014d5ac|DC,d014d5ac,DC,2019,Sherfane Rutherford,All-Rounder,,,2,2 to 5 Cr,3,Exact,True,Sherfane Rutherford
+2019|94253925|DC,94253925,DC,2019,Hanuma Vihari,Batter,,,2,2 to 5 Cr,3,Exact,True,Hanuma Vihari
+2019|2f9d0389|KKR,2f9d0389,KKR,2019,Lockie Ferguson,Bowler,,,1.6,Under 2 Cr,2,Exact,True,Lockie Ferguson
+2019|441c72ae|RCB,441c72ae,RCB,2019,Prayas Ray Barman,All-Rounder,,,1.5,Under 2 Cr,2,Exact,True,Prayas Ray Barman
+2019|fe11caa6|SRH,fe11caa6,SRH,2019,Wriddhiman Saha,Wicket-Keeper,,,1.2,Under 2 Cr,2,Exact,True,Wriddhiman Saha
+2019|c6097d68|RR,c6097d68,RR,2019,Oshane Thomas,Bowler,,,1.1,Under 2 Cr,2,Manual,True,Oshane Thomas
+2019|5bb1a1c4|DC,5bb1a1c4,DC,2019,Ishant Sharma,Bowler,,,1.1,Under 2 Cr,2,Exact,True,Ishant Sharma
+2019|1c914163|MI,1c914163,MI,2019,Yuvraj Singh,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Yuvraj Singh
+2019|2be41edb|SRH,2be41edb,SRH,2019,Martin Guptill,Batter,,,1,Under 2 Cr,2,Exact,True,Martin Guptill
+2019|32198ae0|PBKS,32198ae0,PBKS,2019,Moises Henriques,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Moises Henriques
+2019|bdadf7da|KKR,bdadf7da,KKR,2019,Joe Denly,Batter,,,1,Under 2 Cr,2,Exact,True,Joe Denly
+2019|1399b39c|MI,1399b39c,MI,2019,Anmolpreet Singh,Batter,,,0.8,Under 2 Cr,2,Exact,True,Anmolpreet Singh
+2019|e412cb64|KKR,e412cb64,KKR,2019,Harry Gurney,Bowler,,,0.75,Under 2 Cr,2,Initials,True,Harry Gurney
+2019|a316d663|PBKS,a316d663,PBKS,2019,Hardus Viljoen,Bowler,,,0.75,Under 2 Cr,2,Exact,True,Hardus Viljoen
+2019|ebcfef83|RCB,ebcfef83,RCB,2019,Himmat Singh,Batter,,,0.65,Under 2 Cr,2,Exact,True,Himmat Singh
+2019|75224f22|DC,75224f22,DC,2019,Keemo Paul,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Keemo Paul
+2019|50c6bc2b|RR,50c6bc2b,RR,2019,Liam Livingstone,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Liam Livingstone
+2019|ff1e12a0|RR,ff1e12a0,RR,2019,Ashton Turner,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Ashton Turner
+2019|235c2bb6|RCB,235c2bb6,RCB,2019,Heinrich Klaasen,Wicket-Keeper,,,0.5,Under 2 Cr,2,Exact,True,Heinrich Klaasen
+2019|6eb146d2|RCB,6eb146d2,RCB,2019,Gurkeerat Singh Mann,All-Rounder,,,0.5,Under 2 Cr,2,Manual,True,Gurkeerat Singh
+2019|26989d80|RR,26989d80,RR,2019,Shashank Singh,All-Rounder,,,0.3,Under 2 Cr,2,Exact,True,Shashank Singh
+2019|cd8d2859|PBKS,cd8d2859,PBKS,2019,Darshan Nalkande,All-Rounder,,,0.3,Under 2 Cr,2,Manual,True,Darshan Nalkande
+2019|f088b960|PBKS,f088b960,PBKS,2019,Sarfaraz Naushad Khan,All-Rounder,,,0.25,Under 2 Cr,2,Initials,True,Sarfaraz Khan
+2019|e2db2409|PBKS,e2db2409,PBKS,2019,M. Ashwin,Bowler,,,0.2,Base price buy,1,Exact,True,Murugan Ashwin
+2019|b4296080|RCB,b4296080,RCB,2019,Milind Kumar,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Milind Kumar
+2019|c05edf8e|PBKS,c05edf8e,PBKS,2019,Harpreet Brar,All-Rounder,,,0.2,Base price buy,1,Exact,True,Harpreet Brar
+2019|A_agnivesh_ayachi|PBKS,A_agnivesh_ayachi,PBKS,2019,Agnivesh Ayachi,All-Rounder,,,0.2,Base price buy,1,Unmatched,False,Agnivesh Ayachi
+2019|A_shrikant_mundhe|KKR,A_shrikant_mundhe,KKR,2019,Shrikant Mundhe,All-Rounder,,,0.2,Base price buy,1,Unmatched,False,Shrikant Mundhe
+2019|3bc10d5b|MI,3bc10d5b,MI,2019,Pankaj Jaswal,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Pankaj Jaswal
+2019|04a418e8|RR,04a418e8,RR,2019,Riyan Parag,All-Rounder,,,0.2,Base price buy,1,Exact,True,Riyan Parag
+2019|6c7a68d0|RR,6c7a68d0,RR,2019,Shubham Ranjane,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Shubham Ranjane
+2019|249abedf|DC,249abedf,DC,2019,Jalaj Saxena,All-Rounder,,,0.2,Base price buy,1,Exact,True,Jalaj Saxena
+2019|2c25d4f5|RCB,2c25d4f5,RCB,2019,Devdutt Padikkal,Batter,,,0.2,Base price buy,1,Exact,True,Devdutt Padikkal
+2019|cb932841|DC,cb932841,DC,2019,Ankush Bains,Wicket-Keeper,,,0.2,Base price buy,1,Manual,True,Ankush Bains
+2019|244048f6|PBKS,244048f6,PBKS,2019,Arshdeep Singh,Bowler,,,0.2,Base price buy,1,Exact,True,Arshdeep Singh
+2019|c03e2850|RR,c03e2850,RR,2019,Manan Vohra,Batter,,,0.2,Base price buy,1,Exact,True,Manan Vohra
+2019|b8527c3d|MI,b8527c3d,MI,2019,Rasikh Dar,Bowler,,,0.2,Base price buy,1,Manual,True,Rasikh Dar
+2019|acdc62f5|KKR,acdc62f5,KKR,2019,Anrich Nortje,Bowler,,,0.2,Base price buy,1,Exact,True,Anrich Nortje
+2019|b822e99c|DC,b822e99c,DC,2019,Nathu Singh,Bowler,,,0.2,Base price buy,1,Exact,True,Nathu Singh
+2019|45a43fe2|CSK,45a43fe2,CSK,2019,Ruturaj Gaikwad,Batter,,,0.2,Base price buy,1,Initials,True,Ruturaj Gaikwad
+2019|aedc3b7c|KKR,aedc3b7c,KKR,2019,Nikhil Shankar Naik,Wicket-Keeper,,,0.2,Base price buy,1,Initials,True,Nikhil Shankar Naik
+2019|cfa4bd2b|KKR,cfa4bd2b,KKR,2019,Prithvi Raj Yarra,Bowler,,,0.2,Base price buy,1,Exact,True,Prithviraj Yarra
+2019|cb4f31e2|DC,cb4f31e2,DC,2019,Bandaru Ayyappa,Bowler,,,0.2,Base price buy,1,Exact (register),True,Bandaru Ayyappa
+2020|ded9240e|KKR,ded9240e,KKR,2020,Pat Cummins,All-Rounder,,,15.5,10 Cr and above,5,Exact,True,Pat Cummins
+2020|b681e71e|PBKS,b681e71e,PBKS,2020,Glenn Maxwell,All-Rounder,,,10.75,10 Cr and above,5,Exact,True,Glenn Maxwell
+2020|fb66ce1f|RCB,fb66ce1f,RCB,2020,Christopher Morris,All-Rounder,,,10,10 Cr and above,5,Initials,True,Christopher Morris
+2020|a1d053dd|PBKS,a1d053dd,PBKS,2020,Sheldon Cottrell,Bowler,,,8.5,5 to 10 Cr,4,Exact,True,Sheldon Cottrell
+2020|56ab442f|MI,56ab442f,MI,2020,Nathan Coulter-Nile,Bowler,,,8,5 to 10 Cr,4,Exact,True,Nathan Coulter-Nile
+2020|48a1d7b7|DC,48a1d7b7,DC,2020,Shimron Hetmyer,Batter,,,7.75,5 to 10 Cr,4,Initials,True,Shimron Hetmyer
+2020|98ae73b1|CSK,98ae73b1,CSK,2020,Piyush Chawla,Bowler,,,6.75,5 to 10 Cr,4,Exact,True,Piyush Chawla
+2020|e94915e6|CSK,e94915e6,CSK,2020,Sam Curran,All-Rounder,,,5.5,5 to 10 Cr,4,Exact,True,Sam Curran
+2020|d2a6c0e6|KKR,d2a6c0e6,KKR,2020,Eoin Morgan,Batter,,,5.25,5 to 10 Cr,4,Exact,True,Eoin Morgan
+2020|d9273ee7|DC,d9273ee7,DC,2020,Marcus Stoinis,All-Rounder,,,4.8,2 to 5 Cr,3,Exact,True,Marcus Stoinis
+2020|b8d490fd|RCB,b8d490fd,RCB,2020,Aaron Finch,Batter,,,4.4,2 to 5 Cr,3,Exact,True,Aaron Finch
+2020|5b7ab5a9|KKR,5b7ab5a9,KKR,2020,Varun Chakaravarthy,All-Rounder,,,4,2 to 5 Cr,3,Manual,True,Varun Chakravarthy
+2020|dfc4d8b5|RCB,dfc4d8b5,RCB,2020,Kane Richardson,Bowler,,,4,2 to 5 Cr,3,Exact,True,Kane Richardson
+2020|ffe699c0|PBKS,ffe699c0,PBKS,2020,Chris Jordan,All-Rounder,,,3,2 to 5 Cr,3,Exact,True,Chris Jordan
+2020|1e66c162|RR,1e66c162,RR,2020,Jaydev Unadkat,Bowler,,,3,2 to 5 Cr,3,Exact,True,Jaydev Unadkat
+2020|1c17e270|RR,1c17e270,RR,2020,Robin Uthappa,Batter,,,3,2 to 5 Cr,3,Initials,True,Robin Uthappa
+2020|6c19c6e5|RR,6c19c6e5,RR,2020,Yashasvi Jaiswal,All-Rounder,,,2.4,2 to 5 Cr,3,Initials,True,Yashasvi Jaiswal
+2020|69d03465|DC,69d03465,DC,2020,Alex Carey,Wicket-Keeper,,,2.4,2 to 5 Cr,3,Exact,True,Alex Carey
+2020|8fd1a8f5|RCB,8fd1a8f5,RCB,2020,Dale Steyn,Bowler,,,2,2 to 5 Cr,3,Exact,True,Dale Steyn
+2020|df064e1a|PBKS,df064e1a,PBKS,2020,Ravi Bishnoi,Bowler,,,2,2 to 5 Cr,3,Exact,True,Ravi Bishnoi
+2020|45eda7c8|MI,45eda7c8,MI,2020,Chris Lynn,Batter,,,2,2 to 5 Cr,3,Exact,True,Chris Lynn
+2020|03806cf8|CSK,03806cf8,CSK,2020,Josh Hazlewood,Bowler,,,2,2 to 5 Cr,3,Exact,True,Josh Hazlewood
+2020|3d8feaf8|SRH,3d8feaf8,SRH,2020,Mitchell Marsh,All-Rounder,,,2,2 to 5 Cr,3,Exact,True,Mitchell Marsh
+2020|bb965e9a|SRH,bb965e9a,SRH,2020,Priyam Garg,Batter,,,1.9,Under 2 Cr,2,Exact,True,Priyam Garg
+2020|26d76ad9|SRH,26d76ad9,SRH,2020,Virat Singh,Batter,,,1.9,Under 2 Cr,2,Exact,True,Virat Singh
+2020|d1c36f5c|DC,d1c36f5c,DC,2020,Jason Roy,Batter,,,1.5,Under 2 Cr,2,Exact,True,Jason Roy
+2020|4c5d73db|DC,4c5d73db,DC,2020,Chris Woakes,All-Rounder,,,1.5,Under 2 Cr,2,Exact,True,Chris Woakes
+2020|5d2eea49|RR,5d2eea49,RR,2020,Kartik Tyagi,Bowler,,,1.3,Under 2 Cr,2,Exact,True,Kartik Tyagi
+2020|7c7d63a2|RR,7c7d63a2,RR,2020,Andrew Tye,Bowler,,,1,Under 2 Cr,2,Exact,True,Andrew Tye
+2020|25f7b7d6|KKR,25f7b7d6,KKR,2020,Tom Banton,Batter,,,1,Under 2 Cr,2,Exact,True,Tom Banton
+2020|e86754b2|RR,e86754b2,RR,2020,Tom Curran,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Tom Curran
+2020|c8f5f961|RR,c8f5f961,RR,2020,Anuj Rawat,Wicket-Keeper,,,0.8,Under 2 Cr,2,Exact,True,Anuj Rawat
+2020|d67d5f00|RR,d67d5f00,RR,2020,David Miller,Batter,,,0.75,Under 2 Cr,2,Exact,True,David Miller
+2020|77255a9e|KKR,77255a9e,KKR,2020,Rahul Tripathi,Batter,,,0.6,Under 2 Cr,2,Manual,True,Rahul Tripathi
+2020|9418198b|PBKS,9418198b,PBKS,2020,Prabhsimran Singh,Wicket-Keeper,,,0.55,Under 2 Cr,2,Exact,True,Prabhsimran Singh
+2020|9219eff0|PBKS,9219eff0,PBKS,2020,James Neesham,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,James Neesham
+2020|ac5ae4af|RCB,ac5ae4af,RCB,2020,Isuru Udana,All-Rounder,,,0.5,Under 2 Cr,2,Initials,True,Isuru Udana
+2020|759ac88f|DC,759ac88f,DC,2020,Mohit Sharma,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Mohit Sharma
+2020|b52ffbbd|SRH,b52ffbbd,SRH,2020,Fabian Allen,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Finn Allen
+2020|c6097d68|RR,c6097d68,RR,2020,Oshane Thomas,Bowler,,,0.5,Under 2 Cr,2,Manual,True,Oshane Thomas
+2020|709b0bac|MI,709b0bac,MI,2020,Saurabh Tiwary,Batter,,,0.5,Under 2 Cr,2,Exact,True,Saurabh Tiwary
+2020|73ad96ed|PBKS,73ad96ed,PBKS,2020,Deepak Hooda,All-Rounder,,,0.5,Under 2 Cr,2,Manual,True,Deepak Hooda
+2020|ad427b5c|DC,ad427b5c,DC,2020,Lalit Yadav,All-Rounder,,,0.2,Base price buy,1,Exact,True,Lalit Yadav
+2020|436b8481|RCB,436b8481,RCB,2020,Pavan Deshpande,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Pavan Deshpande
+2020|19b9f399|KKR,19b9f399,KKR,2020,Chris Green,All-Rounder,,,0.2,Base price buy,1,Exact,True,Chris Green
+2020|c7a995d3|CSK,c7a995d3,CSK,2020,R. Sai Kishore,Bowler,,,0.2,Base price buy,1,Exact,True,R. Sai Kishore
+2020|cf0ccafa|KKR,cf0ccafa,KKR,2020,M Siddharth,Bowler,,,0.2,Base price buy,1,Exact,True,M. Siddharth
+2020|8e514b4c|SRH,8e514b4c,SRH,2020,Abdul Samad,All-Rounder,,,0.2,Base price buy,1,Exact,True,Abdul Samad
+2020|c33d8116|MI,c33d8116,MI,2020,Mohsin Khan,Bowler,,,0.2,Base price buy,1,Exact,True,Mohsin Khan
+2020|b483905d|RR,b483905d,RR,2020,Akash Singh,Bowler,,,0.2,Base price buy,1,Exact,True,Akash Singh
+2020|A_prince_balwant_rai_singh|MI,A_prince_balwant_rai_singh,MI,2020,Prince Balwant Rai Singh,All-Rounder,,,0.2,Base price buy,1,Unmatched,False,Prince Balwant Rai Singh
+2020|f9d99806|PBKS,f9d99806,PBKS,2020,Tajinder Dhillon,All-Rounder,,,0.2,Base price buy,1,Manual,True,Tajinder Dhillon
+2020|40c1eeeb|RR,40c1eeeb,RR,2020,Anirudha Ashok Joshi,All-Rounder,,,0.2,Base price buy,1,Manual,True,Anirudha Ashok Joshi
+2020|fdf7491e|PBKS,fdf7491e,PBKS,2020,Ishan Porel,Bowler,,,0.2,Base price buy,1,Exact,True,Ishan Porel
+2020|f9e6e7ef|RCB,f9e6e7ef,RCB,2020,Shahbaz Ahamad,Wicket-Keeper,,,0.2,Base price buy,1,Manual,True,Shahbaz Ahmed
+2020|46a9bea1|DC,46a9bea1,DC,2020,Tushar Deshpande,Bowler,,,0.2,Base price buy,1,Initials,True,Tushar Deshpande
+2020|6aed7e79|KKR,6aed7e79,KKR,2020,Pravin Tambe,Bowler,,,0.2,Base price buy,1,Manual,True,Pravin Tambe
+2020|33ffc3dd|SRH,33ffc3dd,SRH,2020,Sanjay Yadav,All-Rounder,,,0.2,Base price buy,1,Manual,True,Sanjay Yadav
+2020|39086549|RCB,39086549,RCB,2020,Joshua Philippe,Wicket-Keeper,,,0.2,Base price buy,1,Initials,True,Joshua Philippe
+2020|A_sandeep_bavanaka|SRH,A_sandeep_bavanaka,SRH,2020,Sandeep Bavanaka,All-Rounder,,,0.2,Base price buy,1,Unmatched,False,Sandeep Bavanaka
+2020|aedc3b7c|KKR,aedc3b7c,KKR,2020,Nikhil Shankar Naik,Wicket-Keeper,,,0.2,Base price buy,1,Initials,True,Nikhil Shankar Naik
+2020|ddc7a53d|MI,ddc7a53d,MI,2020,Digvijay Deshmukh,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Digvijay Deshmukh
+2021|fb66ce1f|RR,fb66ce1f,RR,2021,Christopher Morris,All-Rounder,,,16.25,10 Cr and above,5,Initials,True,Christopher Morris
+2021|68c56d09|RCB,68c56d09,RCB,2021,Kyle Jamieson,All-Rounder,,,15,10 Cr and above,5,Exact,True,Kyle Jamieson
+2021|b681e71e|RCB,b681e71e,RCB,2021,Glenn Maxwell,All-Rounder,,,14.25,10 Cr and above,5,Exact,True,Glenn Maxwell
+2021|1ee08e9a|PBKS,1ee08e9a,PBKS,2021,Jhye Richardson,Bowler,,,14,10 Cr and above,5,Exact,True,Jhye Richardson
+2021|90de905a|CSK,90de905a,CSK,2021,Krishnappa Gowtham,All-Rounder,,,9.25,5 to 10 Cr,4,Manual,True,K. Gowtham
+2021|64775749|PBKS,64775749,PBKS,2021,Riley Meredith,Bowler,,,8,5 to 10 Cr,4,Exact,True,Riley Meredith
+2021|bb351c23|CSK,bb351c23,CSK,2021,Moeen Ali,All-Rounder,,,7,5 to 10 Cr,4,Exact,True,Moeen Ali
+2021|e86754b2|DC,e86754b2,DC,2021,Tom Curran,All-Rounder,,,5.25,5 to 10 Cr,4,Exact,True,Tom Curran
+2021|7dcb9bc9|PBKS,7dcb9bc9,PBKS,2021,Shahrukh Khan,All-Rounder,,,5.25,5 to 10 Cr,4,Exact,True,Shahrukh Khan
+2021|56ab442f|MI,56ab442f,MI,2021,Nathan Coulter-Nile,Bowler,,,5,5 to 10 Cr,4,Exact,True,Nathan Coulter-Nile
+2021|2a2e6343|RCB,2a2e6343,RCB,2021,Dan Christian,All-Rounder,,,4.8,2 to 5 Cr,3,Initials,True,Dan Christian
+2021|a4e37e47|RR,a4e37e47,RR,2021,Shivam Dube,All-Rounder,,,4.4,2 to 5 Cr,3,Exact,True,Shivam Dube
+2021|32198ae0|PBKS,32198ae0,PBKS,2021,Moises Henriques,All-Rounder,,,4.2,2 to 5 Cr,3,Exact,True,Moises Henriques
+2021|7dc35884|KKR,7dc35884,KKR,2021,Shakib Al Hasan,All-Rounder,,,3.2,2 to 5 Cr,3,Exact,True,Shakib Al Hasan
+2021|350bb1b1|MI,350bb1b1,MI,2021,Adam Milne,Bowler,,,3.2,2 to 5 Cr,3,Exact,True,Adam Milne
+2021|98ae73b1|MI,98ae73b1,MI,2021,Piyush Chawla,Bowler,,,2.4,2 to 5 Cr,3,Exact,True,Piyush Chawla
+2021|30a45b23|DC,30a45b23,DC,2021,Steven Smith,Batter,,,2.2,2 to 5 Cr,3,Exact,True,Steven Smith
+2021|99d63244|SRH,99d63244,SRH,2021,Kedar Jadhav,All-Rounder,,,2,2 to 5 Cr,3,Initials,True,Kedar Jadhav
+2021|c16d4035|DC,c16d4035,DC,2021,Sam Billings,Wicket-Keeper,,,2,2 to 5 Cr,3,Exact,True,Sam Billings
+2021|8b5b6769|KKR,8b5b6769,KKR,2021,Harbhajan Singh,Bowler,,,2,2 to 5 Cr,3,Exact,True,Harbhajan Singh
+2021|7d92277a|SRH,7d92277a,SRH,2021,Mujeeb Zadran,Bowler,,,1.5,Under 2 Cr,2,Exact,True,Mujeeb Ur Rahman
+2021|ad9c32a2|PBKS,ad9c32a2,PBKS,2021,Dawid Malan,All-Rounder,,,1.5,Under 2 Cr,2,Exact,True,Dawid Malan
+2021|2cdce1be|RR,2cdce1be,RR,2021,Chetan Sakariya,Bowler,,,1.2,Under 2 Cr,2,Exact,True,Chetan Sakariya
+2021|cc1e8c68|DC,cc1e8c68,DC,2021,Umesh Yadav,Bowler,,,1,Under 2 Cr,2,Exact,True,Umesh Yadav
+2021|0a8fce53|RR,0a8fce53,RR,2021,Mustafizur Rahman,Bowler,,,1,Under 2 Cr,2,Exact,True,Mustafizur Rahman
+2021|50c6bc2b|RR,50c6bc2b,RR,2021,Liam Livingstone,All-Rounder,,,0.75,Under 2 Cr,2,Exact,True,Liam Livingstone
+2021|b52ffbbd|PBKS,b52ffbbd,PBKS,2021,Fabian Allen,All-Rounder,,,0.75,Under 2 Cr,2,Exact,True,Finn Allen
+2021|2e11c706|KKR,2e11c706,KKR,2021,Ben Cutting,All-Rounder,,,0.75,Under 2 Cr,2,Exact,True,Ben Cutting
+2021|d4f9dbd4|CSK,d4f9dbd4,CSK,2021,Cheteshwar Pujara,Batter,,,0.5,Under 2 Cr,2,Exact,True,Cheteshwar Pujara
+2021|9219eff0|MI,9219eff0,MI,2021,James Neesham,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,James Neesham
+2021|944533a5|KKR,944533a5,KKR,2021,Karun Nair,Batter,,,0.5,Under 2 Cr,2,Exact,True,Karun Nair
+2021|f62772e5|KKR,f62772e5,KKR,2021,Pawan Negi,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Pawan Negi
+2021|249abedf|PBKS,249abedf,PBKS,2021,Jalaj Saxena,All-Rounder,,,0.3,Under 2 Cr,2,Exact,True,Jalaj Saxena
+2021|4125d931|SRH,4125d931,SRH,2021,J Suchith,Bowler,,,0.3,Under 2 Cr,2,Exact,True,J Suchith
+2021|9385de2e|RCB,9385de2e,RCB,2021,Suyash Prabhudesai,All-Rounder,,,0.2,Base price buy,1,Manual,True,Suyash Prabhudessai
+2021|c3f37533|CSK,c3f37533,CSK,2021,C Hari Nishaanth,Batter,,,0.2,Base price buy,1,Manual,True,C.Hari Nishaanth
+2021|d3611425|DC,d3611425,DC,2021,Lukman Hussain Meriwala,Bowler,,,0.2,Base price buy,1,Surname,True,Lukman Hussain Meriwala
+2021|030f3089|RR,030f3089,RR,2021,Kuldip Yadav,Bowler,,,0.2,Base price buy,1,Initials,True,Kuldip Yadav
+2021|44a89551|RCB,44a89551,RCB,2021,Kona Srikar Bharat,Wicket-Keeper,,,0.2,Base price buy,1,Manual,True,K.S. Bharat
+2021|acc1aeda|KKR,acc1aeda,KKR,2021,Sheldon Jackson,Wicket-Keeper,,,0.2,Base price buy,1,Exact,True,Sheldon Jackson
+2021|cf0ccafa|DC,cf0ccafa,DC,2021,M Siddharth,Bowler,,,0.2,Base price buy,1,Exact,True,M. Siddharth
+2021|4ae89f36|RCB,4ae89f36,RCB,2021,Mohammed Azharudeen,Wicket-Keeper,,,0.2,Base price buy,1,Manual,True,Mohammed Azharuddeen
+2021|791c088d|CSK,791c088d,CSK,2021,M. Harisankar Reddy,Bowler,,,0.2,Base price buy,1,Manual,True,M. Harisankar Reddy
+2021|c740ea83|RCB,c740ea83,RCB,2021,Rajat Patidar,Batter,,,0.2,Base price buy,1,Exact,True,Rajat Patidar
+2021|5438ffba|CSK,5438ffba,CSK,2021,K.Bhagath Varma,All-Rounder,,,0.2,Base price buy,1,Manual,True,Bhagath Varma
+2021|dc9dd038|RCB,dc9dd038,RCB,2021,Sachin Baby,Batter,,,0.2,Base price buy,1,Exact,True,Sachin Baby
+2021|0494fa6e|DC,0494fa6e,DC,2021,Vishnu Vinod,Wicket-Keeper,,,0.2,Base price buy,1,Exact,True,Vishnu Vinod
+2021|edb3d4f8|RR,edb3d4f8,RR,2021,K.C Cariappa,Bowler,,,0.2,Base price buy,1,Exact,True,K.C Cariappa
+2021|7c3b3b78|KKR,7c3b3b78,KKR,2021,Vaibhav Arora,Bowler,,,0.2,Base price buy,1,Surname,True,Vaibhav Arora
+2021|44aac2f0|MI,44aac2f0,MI,2021,Arjun Tendulkar,All-Rounder,,,0.2,Base price buy,1,Exact,True,Arjun Tendulkar
+2021|60500956|DC,60500956,DC,2021,Ripal Patel,All-Rounder,,,0.2,Base price buy,1,Exact,True,Ripal Patel
+2021|b483905d|RR,b483905d,RR,2021,Akash Singh,Bowler,,,0.2,Base price buy,1,Exact,True,Akash Singh
+2021|b2a55ac1|PBKS,b2a55ac1,PBKS,2021,Utkarsh Singh,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Utkarsh Singh
+2021|A_saurabh_kumar|PBKS,A_saurabh_kumar,PBKS,2021,Saurabh Kumar,All-Rounder,,,0.2,Base price buy,1,Unmatched,False,Saurabh Kumar
+2021|a24be938|KKR,a24be938,KKR,2021,Venkatesh Iyer,All-Rounder,,,0.2,Base price buy,1,Exact,True,Venkatesh Iyer
+2021|4885bbe6|MI,4885bbe6,MI,2021,Yudhvir Charak,All-Rounder,,,0.2,Base price buy,1,Manual,True,Yudhvir Charak
+2021|81c36ee9|MI,81c36ee9,MI,2021,Marco Jansen,All-Rounder,,,0.2,Base price buy,1,Exact,True,Marco Jansen
+2022|752f7486|MI,752f7486,MI,2022,Ishan Kishan,Wicket-Keeper,,,15.25,10 Cr and above,5,Exact,True,Ishan Kishan
+2022|23eeb873|CSK,23eeb873,CSK,2022,Deepak Chahar,Bowler,,,14,10 Cr and above,5,Initials,True,Deepak Chahar
+2022|85ec8e33|KKR,85ec8e33,KKR,2022,Shreyas Iyer,Batter,,,12.25,10 Cr and above,5,Exact,True,Shreyas Iyer
+2022|50c6bc2b|PBKS,50c6bc2b,PBKS,2022,Liam Livingstone,All-Rounder,,,11.5,10 Cr and above,5,Exact,True,Liam Livingstone
+2022|1abb78f8|DC,1abb78f8,DC,2022,Shardul Thakur,Bowler,,,10.75,10 Cr and above,5,Exact,True,Shardul Thakur
+2022|f986ca1a|RCB,f986ca1a,RCB,2022,Harshal Patel,All-Rounder,,,10.75,10 Cr and above,5,Initials,True,Harshal Patel
+2022|3241e3fd|SRH,3241e3fd,SRH,2022,Nicholas Pooran,Wicket-Keeper,,,10.75,10 Cr and above,5,Exact,True,Nicholas Pooran
+2022|a97c8ec2|RCB,a97c8ec2,RCB,2022,Wanindu Hasaranga,All-Rounder,,,10.75,10 Cr and above,5,Exact,True,Wanindu Hasaranga
+2022|85e0cf10|RR,85e0cf10,RR,2022,Prasidh Krishna,Bowler,,,10,10 Cr and above,5,Initials,True,Prasidh Krishna
+2022|2f9d0389|GT,2f9d0389,GT,2022,Lockie Ferguson,Bowler,,,10,10 Cr and above,5,Exact,True,Lockie Ferguson
+2022|eef2536f|LSG,eef2536f,LSG,2022,Avesh Khan,Bowler,,,10,10 Cr and above,5,Exact,True,Avesh Khan
+2022|e62dd25d|PBKS,e62dd25d,PBKS,2022,Kagiso Rabada,Bowler,,,9.25,5 to 10 Cr,4,Exact,True,Kagiso Rabada
+2022|7dcb9bc9|PBKS,7dcb9bc9,PBKS,2022,Shahrukh Khan,All-Rounder,,,9,5 to 10 Cr,4,Exact,True,Shahrukh Khan
+2022|39a2dfa8|GT,39a2dfa8,GT,2022,Rahul Tewatia,All-Rounder,,,9,5 to 10 Cr,4,Initials,True,Rahul Tewatia
+2022|0f721006|LSG,0f721006,LSG,2022,Jason Holder,All-Rounder,,,8.75,5 to 10 Cr,4,Exact,True,Jason Holder
+2022|f19ccfad|SRH,f19ccfad,SRH,2022,Washington Sundar,All-Rounder,,,8.75,5 to 10 Cr,4,Exact,True,Washington Sundar
+2022|77255a9e|SRH,77255a9e,SRH,2022,Rahul Tripathi,Batter,,,8.5,5 to 10 Cr,4,Manual,True,Rahul Tripathi
+2022|48a1d7b7|RR,48a1d7b7,RR,2022,Shimron Hetmyer,Batter,,,8.5,5 to 10 Cr,4,Initials,True,Shimron Hetmyer
+2022|0a476045|PBKS,0a476045,PBKS,2022,Shikhar Dhawan,Batter,,,8.25,5 to 10 Cr,4,Exact,True,Shikhar Dhawan
+2022|5b8c830e|LSG,5b8c830e,LSG,2022,Krunal Pandya,All-Rounder,,,8.25,5 to 10 Cr,4,Initials,True,Krunal Pandya
+2022|f1f99156|MI,f1f99156,MI,2022,Tim David,All-Rounder,,,8.25,5 to 10 Cr,4,Exact,True,Tim David
+2022|5574750c|MI,5574750c,MI,2022,Jofra Archer,All-Rounder,,,8,5 to 10 Cr,4,Exact,True,Jofra Archer
+2022|fb2d1dda|KKR,fb2d1dda,KKR,2022,Nitish Rana,All-Rounder,,,8,5 to 10 Cr,4,Exact,True,Nitish Rana
+2022|a818c1be|RR,a818c1be,RR,2022,Trent Boult,Bowler,,,8,5 to 10 Cr,4,Exact,True,Trent Boult
+2022|c5aef772|SRH,c5aef772,SRH,2022,Romario Shepherd,All-Rounder,,,7.75,5 to 10 Cr,4,Initials,True,Romario Shepherd
+2022|03806cf8|RCB,03806cf8,RCB,2022,Josh Hazlewood,Bowler,,,7.75,5 to 10 Cr,4,Exact,True,Josh Hazlewood
+2022|2c25d4f5|RR,2c25d4f5,RR,2022,Devdutt Padikkal,Batter,,,7.75,5 to 10 Cr,4,Exact,True,Devdutt Padikkal
+2022|8d92a2c3|LSG,8d92a2c3,LSG,2022,Mark Wood,Bowler,,,7.5,5 to 10 Cr,4,Exact,True,Mark Wood
+2022|c38d3503|KKR,c38d3503,KKR,2022,Shivam Mavi,All-Rounder,,,7.25,5 to 10 Cr,4,Exact,True,Shivam Mavi
+2022|ded9240e|KKR,ded9240e,KKR,2022,Pat Cummins,All-Rounder,,,7.25,5 to 10 Cr,4,Exact,True,Pat Cummins
+2022|3355b542|RCB,3355b542,RCB,2022,Faf Du Plessis,Batter,,,7,5 to 10 Cr,4,Exact,True,Faf Du Plessis
+2022|372455c4|LSG,372455c4,LSG,2022,Quinton De Kock,Wicket-Keeper,,,6.75,5 to 10 Cr,4,Exact,True,Quinton De Kock
+2022|abb83e27|PBKS,abb83e27,PBKS,2022,Jonny Bairstow,Wicket-Keeper,,,6.75,5 to 10 Cr,4,Exact,True,Jonny Bairstow
+2022|70d205c9|CSK,70d205c9,CSK,2022,Ambati Rayudu,Wicket-Keeper,,,6.75,5 to 10 Cr,4,Initials,True,Ambati Rayudu
+2022|3d8feaf8|DC,3d8feaf8,DC,2022,Mitchell Marsh,All-Rounder,,,6.5,5 to 10 Cr,4,Exact,True,Mitchell Marsh
+2022|57ee1fde|RR,57ee1fde,RR,2022,Yuzvendra Chahal,Bowler,,,6.5,5 to 10 Cr,4,Exact,True,Yuzvendra Chahal
+2022|f29185a1|SRH,f29185a1,SRH,2022,Abhishek Sharma,All-Rounder,,,6.5,5 to 10 Cr,4,Exact,True,Abhishek Sharma
+2022|8cf9814c|GT,8cf9814c,GT,2022,Mohammad Shami,Bowler,,,6.25,5 to 10 Cr,4,Initials,True,Mohammad Shami
+2022|dcce6f09|DC,dcce6f09,DC,2022,David Warner,Batter,,,6.25,5 to 10 Cr,4,Exact,True,David Warner
+2022|23cca426|PBKS,23cca426,PBKS,2022,Odean Smith,All-Rounder,,,6,5 to 10 Cr,4,Manual,True,Odean Smith
+2022|73ad96ed|LSG,73ad96ed,LSG,2022,Deepak Hooda,All-Rounder,,,5.75,5 to 10 Cr,4,Manual,True,Deepak Hooda
+2022|c03f1114|RCB,c03f1114,RCB,2022,Dinesh Karthik,Wicket-Keeper,,,5.5,5 to 10 Cr,4,Exact,True,Dinesh Karthik
+2022|2ed569a0|PBKS,2ed569a0,PBKS,2022,Rahul Chahar,Bowler,,,5.25,5 to 10 Cr,4,Initials,True,Rahul Chahar
+2022|a2f46292|DC,a2f46292,DC,2022,Syed Khaleel Ahmed,Bowler,,,5.25,5 to 10 Cr,4,Surname,True,Syed Khaleel Ahmed (KK Ahmed)
+2022|495d42a5|RR,495d42a5,RR,2022,R. Ashwin,All-Rounder,,,5,5 to 10 Cr,4,Exact,True,Ravichandran Ashwin
+2022|93b4fc78|LSG,93b4fc78,LSG,2022,Manish Pandey,Batter,,,4.6,2 to 5 Cr,3,Exact,True,Manish Pandey
+2022|87e562a9|CSK,87e562a9,CSK,2022,Dwayne Bravo,All-Rounder,,,4.4,2 to 5 Cr,3,Exact,True,Dwayne Bravo
+2022|81c36ee9|SRH,81c36ee9,SRH,2022,Marco Jansen,All-Rounder,,,4.2,2 to 5 Cr,3,Exact,True,Marco Jansen
+2022|2cdce1be|DC,2cdce1be,DC,2022,Chetan Sakariya,Bowler,,,4.2,2 to 5 Cr,3,Exact,True,Chetan Sakariya
+2022|2e81a32d|SRH,2e81a32d,SRH,2022,Bhuvneshwar Kumar,Bowler,,,4.2,2 to 5 Cr,3,Exact,True,Bhuvneshwar Kumar
+2022|a4e37e47|CSK,a4e37e47,CSK,2022,Shivam Dube,All-Rounder,,,4,2 to 5 Cr,3,Exact,True,Shivam Dube
+2022|5d2eea49|SRH,5d2eea49,SRH,2022,Kartik Tyagi,Bowler,,,4,2 to 5 Cr,3,Exact,True,Kartik Tyagi
+2022|ce794613|SRH,ce794613,SRH,2022,T. Natarajan,Bowler,,,4,2 to 5 Cr,3,Exact,True,T. Natarajan
+2022|c05edf8e|PBKS,c05edf8e,PBKS,2022,Harpreet Brar,All-Rounder,,,3.8,2 to 5 Cr,3,Exact,True,Harpreet Brar
+2022|04a418e8|RR,04a418e8,RR,2022,Riyan Parag,All-Rounder,,,3.8,2 to 5 Cr,3,Exact,True,Riyan Parag
+2022|ffe699c0|CSK,ffe699c0,CSK,2022,Chris Jordan,All-Rounder,,,3.6,2 to 5 Cr,3,Exact,True,Chris Jordan
+2022|c8f5f961|RCB,c8f5f961,RCB,2022,Anuj Rawat,Wicket-Keeper,,,3.4,2 to 5 Cr,3,Exact,True,Anuj Rawat
+2022|7210d461|GT,7210d461,GT,2022,Yash Dayal,Bowler,,,3.2,2 to 5 Cr,3,Exact,True,Yash Dayal
+2022|844e79d1|MI,844e79d1,MI,2022,Dewald Brevis,Batter,,,3,2 to 5 Cr,3,Exact,True,Dewald Brevis
+2022|d67d5f00|GT,d67d5f00,GT,2022,David Miller,Batter,,,3,2 to 5 Cr,3,Exact,True,David Miller
+2022|c7a995d3|GT,c7a995d3,GT,2022,R. Sai Kishore,Bowler,,,3,2 to 5 Cr,3,Exact,True,R. Sai Kishore
+2022|650d5e49|DC,650d5e49,DC,2022,Rovman Powell,Batter,,,2.8,2 to 5 Cr,3,Manual,True,Rovman Powell
+2022|21d4e29b|RR,21d4e29b,RR,2022,Navdeep Saini,Bowler,,,2.6,2 to 5 Cr,3,Exact,True,Navdeep Saini
+2022|caf69bf7|MI,caf69bf7,MI,2022,Daniel Sams,All-Rounder,,,2.6,2 to 5 Cr,3,Exact,True,Daniel Sams
+2022|A_abhinav_sadarangani|GT,A_abhinav_sadarangani,GT,2022,Abhinav Sadarangani,Batter,,,2.6,2 to 5 Cr,3,Unmatched,False,Abhinav Sadarangani
+2022|6a26221c|SRH,6a26221c,SRH,2022,Aiden Markram,Batter,,,2.6,2 to 5 Cr,3,Exact,True,Aiden Markram
+2022|f9e6e7ef|RCB,f9e6e7ef,RCB,2022,Shahbaz Ahamad,All-Rounder,,,2.4,2 to 5 Cr,3,Manual,True,Shahbaz Ahmed
+2022|1a2676c5|SRH,1a2676c5,SRH,2022,Sean Abbott,Bowler,,,2.4,2 to 5 Cr,3,Exact,True,Sean Abbott
+2022|afa7e784|GT,afa7e784,GT,2022,Matthew Wade,Wicket-Keeper,,,2.4,2 to 5 Cr,3,Exact,True,Matthew Wade
+2022|b0946605|GT,b0946605,GT,2022,Alzarri Joseph,Bowler,,,2.4,2 to 5 Cr,3,Exact,True,Alzarri Joseph
+2022|8d2c70ad|DC,8d2c70ad,DC,2022,Kuldeep Yadav,Bowler,,,2,2 to 5 Cr,3,Exact,True,Kuldeep Yadav
+2022|cc1e8c68|KKR,cc1e8c68,KKR,2022,Umesh Yadav,Bowler,,,2,2 to 5 Cr,3,Exact,True,Umesh Yadav
+2022|44a89551|DC,44a89551,DC,2022,K.S. Bharat,Wicket-Keeper,,,2,2 to 5 Cr,3,Exact,True,K.S. Bharat
+2022|56ab442f|RR,56ab442f,RR,2022,Nathan Coulter-Nile,Bowler,,,2,2 to 5 Cr,3,Exact,True,Nathan Coulter-Nile
+2022|c16d4035|KKR,c16d4035,KKR,2022,Sam Billings,Wicket-Keeper,,,2,2 to 5 Cr,3,Exact,True,Sam Billings
+2022|0a8fce53|DC,0a8fce53,DC,2022,Mustafizur Rahman,Bowler,,,2,2 to 5 Cr,3,Exact,True,Mustafizur Rahman
+2022|d1c36f5c|GT,d1c36f5c,GT,2022,Jason Roy,Batter,,,2,2 to 5 Cr,3,Exact,True,Jason Roy
+2022|ba6b2f91|PBKS,ba6b2f91,PBKS,2022,Raj Angad Bawa,All-Rounder,,,2,2 to 5 Cr,3,Initials,True,Raj Angad Bawa
+2022|7c3b3b78|PBKS,7c3b3b78,PBKS,2022,Vaibhav Arora,Bowler,,,2,2 to 5 Cr,3,Surname,True,Vaibhav Arora
+2022|327b58d3|LSG,327b58d3,LSG,2022,Dushmanta Chameera,Bowler,,,2,2 to 5 Cr,3,Initials,True,Dushmantha Chameera
+2022|7f048519|RCB,7f048519,RCB,2022,David Willey,All-Rounder,,,2,2 to 5 Cr,3,Manual,True,David Willey
+2022|1c17e270|CSK,1c17e270,CSK,2022,Robin Uthappa,Batter,,,2,2 to 5 Cr,3,Initials,True,Robin Uthappa
+2022|0ebfb1ad|LSG,0ebfb1ad,LSG,2022,Evin Lewis,Batter,,,2,2 to 5 Cr,3,Initials,True,Evin Lewis
+2022|fe11caa6|GT,fe11caa6,GT,2022,Wriddhiman Saha,Wicket-Keeper,,,1.9,Under 2 Cr,2,Exact,True,Wriddhiman Saha
+2022|350bb1b1|CSK,350bb1b1,CSK,2022,Adam Milne,Bowler,,,1.9,Under 2 Cr,2,Exact,True,Adam Milne
+2022|e4a0deae|CSK,e4a0deae,CSK,2022,Mitchell Santner,All-Rounder,,,1.9,Under 2 Cr,2,Exact,True,Mitchell Santner
+2022|b0482a1d|MI,b0482a1d,MI,2022,N. Tilak Varma,All-Rounder,,,1.7,Under 2 Cr,2,Surname,True,N. Tilak Varma
+2022|81049310|GT,81049310,GT,2022,Jayant Yadav,All-Rounder,,,1.7,Under 2 Cr,2,Exact,True,Jayant Yadav
+2022|e2db2409|MI,e2db2409,MI,2022,Murugan Ashwin,Bowler,,,1.6,Under 2 Cr,2,Manual,True,Murugan Ashwin
+2022|9219eff0|RR,9219eff0,RR,2022,James Neesham,All-Rounder,,,1.5,Under 2 Cr,2,Exact,True,James Neesham
+2022|245c97cb|MI,245c97cb,MI,2022,Tymal Mills,Bowler,,,1.5,Under 2 Cr,2,Exact,True,Tymal Mills
+2022|9a46c4e5|SRH,9a46c4e5,SRH,2022,Glenn Phillips,Wicket-Keeper,,,1.5,Under 2 Cr,2,Exact,True,Glenn Phillips
+2022|92aeac25|KKR,92aeac25,KKR,2022,Alex Hales,Batter,,,1.5,Under 2 Cr,2,Exact,True,Alex Hales
+2022|13c35c9e|KKR,13c35c9e,KKR,2022,Tim Southee,Bowler,,,1.5,Under 2 Cr,2,Exact,True,Tim Southee
+2022|c3c92b42|CSK,c3c92b42,CSK,2022,Rajvardhan Hangargekar,All-Rounder,,,1.5,Under 2 Cr,2,Exact,True,Rajvardhan Hangargekar
+2022|0994d0ae|GT,0994d0ae,GT,2022,Vijay Shankar,All-Rounder,,,1.4,Under 2 Cr,2,Exact,True,Vijay Shankar
+2022|944533a5|RR,944533a5,RR,2022,Karun Nair,Batter,,,1.4,Under 2 Cr,2,Exact,True,Karun Nair
+2022|1e66c162|MI,1e66c162,MI,2022,Jaydev Unadkat,Bowler,,,1.3,Under 2 Cr,2,Exact,True,Jaydev Unadkat
+2022|c695b423|CSK,c695b423,CSK,2022,Prashant Solanki,Bowler,,,1.2,Under 2 Cr,2,Manual,True,Prashant Solanki
+2022|b4f5c2d9|DC,b4f5c2d9,DC,2022,Kamlesh Nagarkoti,All-Rounder,,,1.1,Under 2 Cr,2,Exact,True,Kamlesh Nagarkoti
+2022|c3a96caf|DC,c3a96caf,DC,2022,Mandeep Singh,Batter,,,1.1,Under 2 Cr,2,Exact,True,Mandeep Singh
+2022|34b332d3|GT,34b332d3,GT,2022,Dominic Drakes,All-Rounder,,,1.1,Under 2 Cr,2,Manual,True,Dominic Drakes
+2022|d014d5ac|RCB,d014d5ac,RCB,2022,Sherfane Rutherford,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Sherfane Rutherford
+2022|9948e262|RR,9948e262,RR,2022,Rassie Van Der Dussen,Batter,,,1,Under 2 Cr,2,Exact,True,Rassie Van Der Dussen
+2022|64775749|MI,64775749,MI,2022,Riley Meredith,Bowler,,,1,Under 2 Cr,2,Exact,True,Riley Meredith
+2022|df5a6881|CSK,df5a6881,CSK,2022,Devon Conway,Batter,,,1,Under 2 Cr,2,Exact,True,Devon Conway
+2022|29e95537|KKR,29e95537,KKR,2022,Ajinkya Rahane,Batter,,,1,Under 2 Cr,2,Exact,True,Ajinkya Rahane
+2022|62af8546|KKR,62af8546,KKR,2022,Mohammad Nabi,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Mohammad Nabi
+2022|da934ee8|RCB,da934ee8,RCB,2022,Mahipal Lomror,All-Rounder,,,0.95,Under 2 Cr,2,Manual,True,Mahipal Lomror
+2022|90de905a|LSG,90de905a,LSG,2022,K. Gowtham,All-Rounder,,,0.9,Under 2 Cr,2,Exact,True,K. Gowtham
+2022|b52ffbbd|RCB,b52ffbbd,RCB,2022,Finn Allen,Batter,,,0.8,Under 2 Cr,2,Manual,True,Finn Allen
+2022|dcf81436|RCB,dcf81436,RCB,2022,Siddharth Kaul,Bowler,,,0.75,Under 2 Cr,2,Exact,True,Siddharth Kaul
+2022|9eb1455b|PBKS,9eb1455b,PBKS,2022,Nathan Ellis,Bowler,,,0.75,Under 2 Cr,2,Exact,True,Nathan Ellis
+2022|529eb9e0|RR,529eb9e0,RR,2022,Obed Mccoy,Bowler,,,0.75,Under 2 Cr,2,Initials,True,Obed Mccoy
+2022|b52ffbbd|MI,b52ffbbd,MI,2022,Fabian Allen,All-Rounder,,,0.75,Under 2 Cr,2,Exact,True,Finn Allen
+2022|7a8bd078|SRH,7a8bd078,SRH,2022,Shreyas Gopal,Bowler,,,0.75,Under 2 Cr,2,Exact,True,Shreyas Gopal
+2022|eade4650|RR,eade4650,RR,2022,Daryl Mitchell,All-Rounder,,,0.75,Under 2 Cr,2,Exact,True,Daryl Mitchell
+2022|4933f499|RCB,4933f499,RCB,2022,Jason Behrendorff,Bowler,,,0.75,Under 2 Cr,2,Exact,True,Jason Behrendorff
+2022|f24c6701|CSK,f24c6701,CSK,2022,Maheesh Theekshana,Bowler,,,0.7,Under 2 Cr,2,Manual,True,Maheesh Theekshana
+2022|ad427b5c|DC,ad427b5c,DC,2022,Lalit Yadav,All-Rounder,,,0.65,Under 2 Cr,2,Exact,True,Lalit Yadav
+2022|a9fd84fb|MI,a9fd84fb,MI,2022,Mayank Markande,Bowler,,,0.65,Under 2 Cr,2,Exact,True,Mayank Markande
+2022|9418198b|PBKS,9418198b,PBKS,2022,Prabhsimran Singh,Wicket-Keeper,,,0.6,Under 2 Cr,2,Exact,True,Prabhsimran Singh
+2022|acc1aeda|KKR,acc1aeda,KKR,2022,Sheldon Jackson,Wicket-Keeper,,,0.6,Under 2 Cr,2,Exact,True,Sheldon Jackson
+2022|26a85969|PBKS,26a85969,PBKS,2022,Rishi Dhawan,All-Rounder,,,0.55,Under 2 Cr,2,Manual,True,Rishi Dhawan
+2022|50c09020|KKR,50c09020,KKR,2022,Ashok Sharma,Bowler,,,0.55,Under 2 Cr,2,Exact,True,Ashok Sharma
+2022|0a509d6b|KKR,0a509d6b,KKR,2022,Rinku Singh,Batter,,,0.55,Under 2 Cr,2,Exact,True,Rinku Singh
+2022|db31895a|LSG,db31895a,LSG,2022,Ankit Singh Rajpoot,Bowler,,,0.5,Under 2 Cr,2,Manual,True,Ankit Singh Rajpoot
+2022|dd7e9b3b|DC,dd7e9b3b,DC,2022,Yash Dhull,All-Rounder,,,0.5,Under 2 Cr,2,Manual,True,Yash Dhull
+2022|fb3e0d39|KKR,fb3e0d39,KKR,2022,Chamika Karunaratne,All-Rounder,,,0.5,Under 2 Cr,2,Exact (register),True,Chamika Karunaratne
+2022|4663bd23|DC,4663bd23,DC,2022,Tim Seifert,Wicket-Keeper,,,0.5,Under 2 Cr,2,Initials,True,Tim Seifert
+2022|f834dcfc|DC,f834dcfc,DC,2022,Lungisani Ngidi,Bowler,,,0.5,Under 2 Cr,2,Manual,True,Lungi Ngidi
+2022|33ffc3dd|MI,33ffc3dd,MI,2022,Sanjay Yadav,All-Rounder,,,0.5,Under 2 Cr,2,Manual,True,Sanjay Yadav
+2022|6c882e9a|PBKS,6c882e9a,PBKS,2022,Bhanuka Rajapaksa,Batter,,,0.5,Under 2 Cr,2,Initials,True,Bhanuka Rajapaksa
+2022|73c18486|LSG,73c18486,LSG,2022,Kyle Mayers,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Kyle Mayers
+2022|ce820073|PBKS,ce820073,PBKS,2022,Sandeep Sharma,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Sandeep Sharma
+2022|9d80c5e1|LSG,9d80c5e1,LSG,2022,Shahbaz Nadeem,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Shahbaz Nadeem
+2022|ed5a5510|DC,ed5a5510,DC,2022,Pravin Dubey,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Pravin Dubey
+2022|6eb146d2|GT,6eb146d2,GT,2022,Gurkeerat Singh,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Gurkeerat Singh
+2022|0a3d54b9|GT,0a3d54b9,GT,2022,Varun Aaron,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Varun Aaron
+2022|119678fd|RCB,119678fd,RCB,2022,Karn Sharma,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Karn Sharma
+2022|11614d87|CSK,11614d87,CSK,2022,Dwaine Pretorius,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Dwaine Pretorius
+2022|e9c7f0d0|SRH,e9c7f0d0,SRH,2022,Fazalhaq Farooqi,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Fazalhaq Farooqi
+2022|0494fa6e|SRH,0494fa6e,SRH,2022,Vishnu Vinod,Wicket-Keeper,,,0.5,Under 2 Cr,2,Exact,True,Vishnu Vinod
+2022|0bec3a6c|PBKS,0bec3a6c,PBKS,2022,Benny Howell,All-Rounder,,,0.4,Under 2 Cr,2,Exact (register),True,Benny Howell
+2022|aa5d8c9e|KKR,aa5d8c9e,KKR,2022,Abhijeet Tomar,Batter,,,0.4,Under 2 Cr,2,Exact,True,Abhijeet Tomar
+2022|44aac2f0|MI,44aac2f0,MI,2022,Arjun Tendulkar,All-Rounder,,,0.3,Under 2 Cr,2,Exact,True,Arjun Tendulkar
+2022|9385de2e|RCB,9385de2e,RCB,2022,Suyash Prabhudessai,All-Rounder,,,0.3,Under 2 Cr,2,Surname,True,Suyash Prabhudessai
+2022|edb3d4f8|RR,edb3d4f8,RR,2022,K.C Cariappa,Bowler,,,0.3,Under 2 Cr,2,Exact,True,K.C Cariappa
+2022|871e9faf|MI,871e9faf,MI,2022,Basil Thampi,Bowler,,,0.3,Under 2 Cr,2,Exact,True,Basil Thampi
+2022|efc04be7|GT,efc04be7,GT,2022,Noor Ahmad,Bowler,,,0.3,Under 2 Cr,2,Exact,True,Noor Ahmad
+2022|fdf7491e|PBKS,fdf7491e,PBKS,2022,Ishan Porel,Bowler,,,0.25,Under 2 Cr,2,Exact,True,Ishan Porel
+2022|7b5b6311|RCB,7b5b6311,RCB,2022,Chama Milind,Bowler,,,0.25,Under 2 Cr,2,Manual,True,Chama Milind
+2022|800d2d97|PBKS,800d2d97,PBKS,2022,Jitesh Sharma,Wicket-Keeper,,,0.2,Base price buy,1,Manual,True,Jitesh Sharma
+2022|4125d931|SRH,4125d931,SRH,2022,Jagadeesha Suchith,Bowler,,,0.2,Base price buy,1,Initials,True,J Suchith
+2022|ff1e68fa|KKR,ff1e68fa,KKR,2022,Baba Indrajith,Wicket-Keeper,,,0.2,Base price buy,1,Initials,True,Baba Indrajith
+2022|f9f21866|KKR,f9f21866,KKR,2022,Pratham Singh,Batter,,,0.2,Base price buy,1,Exact (register),True,Pratham Singh
+2022|cd8d2859|GT,cd8d2859,GT,2022,Darshan Nalkande,All-Rounder,,,0.2,Base price buy,1,Manual,True,Darshan Nalkande
+2022|12314277|MI,12314277,MI,2022,Mohd. Arshad Khan,All-Rounder,,,0.2,Base price buy,1,Manual,True,Mohd. Arshad Khan
+2022|c28e9f12|RR,c28e9f12,RR,2022,Tejas Baroka,Bowler,,,0.2,Base price buy,1,Exact,True,Tejas Baroka
+2022|663b5e34|PBKS,663b5e34,PBKS,2022,Prerak Mankad,All-Rounder,,,0.2,Base price buy,1,Exact,True,Prerak Mankad
+2022|A_ramesh_kumar|KKR,A_ramesh_kumar,KKR,2022,Ramesh Kumar,Batter,,,0.2,Base price buy,1,Unmatched,False,Ramesh Kumar
+2022|70a9b353|MI,70a9b353,MI,2022,Rahul Buddhi,Batter,,,0.2,Base price buy,1,Exact (register),True,Rahul Buddhi
+2022|A_r_samarth|SRH,A_r_samarth,SRH,2022,R Samarth,Batter,,,0.2,Base price buy,1,Unmatched,False,R Samarth
+2022|bb965e9a|SRH,bb965e9a,SRH,2022,Priyam Garg,Batter,,,0.2,Base price buy,1,Exact,True,Priyam Garg
+2022|9e76cdb3|PBKS,9e76cdb3,PBKS,2022,Ansh Patel,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Ansh Patel
+2022|60500956|DC,60500956,DC,2022,Ripal Patel,All-Rounder,,,0.2,Base price buy,1,Exact,True,Ripal Patel
+2022|30df8c66|CSK,30df8c66,CSK,2022,Simarjeet Singh,Bowler,,,0.2,Base price buy,1,Exact,True,Simarjeet Singh
+2022|39ed0d2f|LSG,39ed0d2f,LSG,2022,Karan Sharma,All-Rounder,,,0.2,Base price buy,1,Surname,True,Karan Sharma
+2022|5438ffba|CSK,5438ffba,CSK,2022,K.Bhagath Varma,All-Rounder,,,0.2,Base price buy,1,Manual,True,Bhagath Varma
+2022|26989d80|SRH,26989d80,SRH,2022,Shashank Singh,All-Rounder,,,0.2,Base price buy,1,Exact,True,Shashank Singh
+2022|1399b39c|MI,1399b39c,MI,2022,Anmolpreet Singh,Batter,,,0.2,Base price buy,1,Exact,True,Anmolpreet Singh
+2022|b8527c3d|KKR,b8527c3d,KKR,2022,Rasikh Dar,Bowler,,,0.2,Base price buy,1,Manual,True,Rasikh Dar
+2022|0edcb652|CSK,0edcb652,CSK,2022,Subhranshu Senapati,Batter,,,0.2,Base price buy,1,Manual,True,Subhranshu Senapati
+2022|be24ead0|MI,be24ead0,MI,2022,Ramandeep Singh,All-Rounder,,,0.2,Base price buy,1,Exact,True,Ramandeep Singh
+2022|0a67aec0|RCB,0a67aec0,RCB,2022,Akash Deep,Bowler,,,0.2,Base price buy,1,Exact,True,Akash Deep
+2022|2e78f685|RR,2e78f685,RR,2022,Kuldeep Sen,Bowler,,,0.2,Base price buy,1,Exact,True,Kuldeep Sen
+2022|c03e2850|LSG,c03e2850,LSG,2022,Manan Vohra,Batter,,,0.2,Base price buy,1,Exact,True,Manan Vohra
+2022|c3f37533|CSK,c3f37533,CSK,2022,C.Hari Nishaanth,Batter,,,0.2,Base price buy,1,Manual,True,C.Hari Nishaanth
+2022|9fc0ef64|GT,9fc0ef64,GT,2022,Pradeep Sangwan,All-Rounder,,,0.2,Base price buy,1,Exact,True,Pradeep Sangwan
+2022|1ac746c8|PBKS,1ac746c8,PBKS,2022,Atharva Taide,All-Rounder,,,0.2,Base price buy,1,Exact,True,Atharva Taide
+2022|A_shubham_garhwal|RR,A_shubham_garhwal,RR,2022,Shubham Garhwal,All-Rounder,,,0.2,Base price buy,1,Unmatched,False,Shubham Garhwal
+2022|030f3089|RR,030f3089,RR,2022,Kuldip Yadav,Bowler,,,0.2,Base price buy,1,Initials,True,Kuldip Yadav
+2022|798cc28e|CSK,798cc28e,CSK,2022,K.M. Asif,Bowler,,,0.2,Base price buy,1,Manual,True,K.M. Asif
+2022|A_aneeshwar_gautam|RCB,A_aneeshwar_gautam,RCB,2022,Aneeshwar Gautam,All-Rounder,,,0.2,Base price buy,1,Unmatched,False,Aneeshwar Gautam
+2022|378daa89|KKR,378daa89,KKR,2022,Aman Khan,All-Rounder,,,0.2,Base price buy,1,Exact,True,Aman Khan
+2022|66317b81|SRH,66317b81,SRH,2022,Saurabh Dubey,Bowler,,,0.2,Base price buy,1,Exact (register),True,Saurabh Dubey
+2022|b1ad996b|LSG,b1ad996b,LSG,2022,Mayank Yadav,Bowler,,,0.2,Base price buy,1,Surname,True,Mayank Yadav
+2022|765a4731|CSK,765a4731,CSK,2022,Mukesh Choudhary,Bowler,,,0.2,Base price buy,1,Exact,True,Mukesh Choudhary
+2022|e4cdf230|KKR,e4cdf230,KKR,2022,Anukul Roy,All-Rounder,,,0.2,Base price buy,1,Exact,True,Anukul Roy
+2022|bd54eef5|CSK,bd54eef5,CSK,2022,N. Jagadeesan,Wicket-Keeper,,,0.2,Base price buy,1,Exact,True,N. Jagadeesan
+2022|0c9652b0|MI,0c9652b0,MI,2022,Hrithik Shokeen,All-Rounder,,,0.2,Base price buy,1,Surname,True,Hrithik Shokeen
+2022|f088b960|DC,f088b960,DC,2022,Sarfaraz Khan,All-Rounder,,,0.2,Base price buy,1,Initials,True,Sarfaraz Khan
+2022|a00e1842|PBKS,a00e1842,PBKS,2022,Writtick Chatterjee,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Writtick Chatterjee
+2022|5f2732f7|MI,5f2732f7,MI,2022,Aryan Juyal,Wicket-Keeper,,,0.2,Base price buy,1,Exact (register),True,Aryan Juyal
+2022|A_vicky_ostwal|DC,A_vicky_ostwal,DC,2022,Vicky Ostwal,All-Rounder,,,0.2,Base price buy,1,Unmatched,False,Vicky Ostwal
+2022|872b03f7|LSG,872b03f7,LSG,2022,Ayush Badoni,All-Rounder,,,0.2,Base price buy,1,Exact,True,Ayush Badoni
+2022|b11d8647|DC,b11d8647,DC,2022,Ashwin Hebbar,Batter,,,0.2,Base price buy,1,Exact (register),True,Ashwin Hebbar
+2022|d5130a30|GT,d5130a30,GT,2022,B. Sai Sudharsan,All-Rounder,,,0.2,Base price buy,1,Exact,True,B. Sai Sudharsan
+2022|bcf325d2|RR,bcf325d2,RR,2022,Dhruv Jurel,Wicket-Keeper,,,0.2,Base price buy,1,Exact,True,Dhruv Jurel
+2022|a3350945|RR,a3350945,RR,2022,Anunay Singh,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Anunay Singh
+2022|c33d8116|LSG,c33d8116,LSG,2022,Mohsin Khan,Bowler,,,0.2,Base price buy,1,Exact,True,Mohsin Khan
+2022|a689af4b|RCB,a689af4b,RCB,2022,Luvnith Sisodia,Wicket-Keeper,,,0.2,Base price buy,1,Exact (register),True,Luvnith Sisodia
+2022|46a9bea1|CSK,46a9bea1,CSK,2022,Tushar Deshpande,Bowler,,,0.2,Base price buy,1,Initials,True,Tushar Deshpande
+2022|A_baltej_dhanda|PBKS,A_baltej_dhanda,PBKS,2022,Baltej Dhanda,Bowler,,,0.2,Base price buy,1,Unmatched,False,Baltej Dhanda
+2023|e94915e6|PBKS,e94915e6,PBKS,2023,Sam Curran,All-Rounder,,,18.5,10 Cr and above,5,Exact,True,Sam Curran
+2023|eaa76d3c|MI,eaa76d3c,MI,2023,Cameron Green,All-Rounder,,,17.5,10 Cr and above,5,Exact,True,Cameron Green
+2023|e087956b|CSK,e087956b,CSK,2023,Ben Stokes,All-Rounder,,,16.25,10 Cr and above,5,Exact,True,Ben Stokes
+2023|3241e3fd|LSG,3241e3fd,LSG,2023,Nicholas Pooran,Wicket-Keeper,,,16,10 Cr and above,5,Exact,True,Nicholas Pooran
+2023|4ae1755b|SRH,4ae1755b,SRH,2023,Harry Brook,Batter,,,13.25,10 Cr and above,5,Manual,True,Harry Brook
+2023|00ea847a|SRH,00ea847a,SRH,2023,Mayank Agarwal,Batter,,,8.25,5 to 10 Cr,4,Exact,True,Mayank Agarwal
+2023|c38d3503|GT,c38d3503,GT,2023,Shivam Mavi,Bowler,,,6,5 to 10 Cr,4,Exact,True,Shivam Mavi
+2023|0f721006|RR,0f721006,RR,2023,Jason Holder,All-Rounder,,,5.75,5 to 10 Cr,4,Exact,True,Jason Holder
+2023|2cffab74|DC,2cffab74,DC,2023,Mukesh Kumar,Bowler,,,5.5,5 to 10 Cr,4,Exact,True,Mukesh Kumar
+2023|235c2bb6|SRH,235c2bb6,SRH,2023,Heinrich Klaasen,Wicket-Keeper,,,5.25,5 to 10 Cr,4,Exact,True,Heinrich Klaasen
+2023|cad00a4d|DC,cad00a4d,DC,2023,Rilee Rossouw,Batter,,,4.6,2 to 5 Cr,3,Exact,True,Rilee Rossouw
+2023|9061a703|GT,9061a703,GT,2023,Joshua Little,Bowler,,,4.4,2 to 5 Cr,3,Initials,True,Joshua Little
+2023|9caf69a1|RCB,9caf69a1,RCB,2023,Will Jacks,Batter,,,3.2,2 to 5 Cr,3,Exact,True,Will Jacks
+2023|1b7b0fa7|SRH,1b7b0fa7,SRH,2023,Vivrant Sharma,All-Rounder,,,2.6,2 to 5 Cr,3,Exact,True,Vivrant Sharma
+2023|93b4fc78|DC,93b4fc78,DC,2023,Manish Pandey,Batter,,,2.4,2 to 5 Cr,3,Exact,True,Manish Pandey
+2023|d027ba9f|GT,d027ba9f,GT,2023,Kane Williamson,Batter,,,2,2 to 5 Cr,3,Exact,True,Kane Williamson
+2023|3d284ca3|DC,3d284ca3,DC,2023,Phil Salt,Wicket-Keeper,,,2,2 to 5 Cr,3,Initials,True,Phil Salt
+2023|249d60c9|SRH,249d60c9,SRH,2023,Adil Rashid,Bowler,,,2,2 to 5 Cr,3,Exact,True,Adil Rashid
+2023|8db7f47f|RCB,8db7f47f,RCB,2023,Reece Topley,Bowler,,,1.9,Under 2 Cr,2,Initials,True,Reece Topley
+2023|a457cfb5|SRH,a457cfb5,SRH,2023,Mayank Dagar,All-Rounder,,,1.8,Under 2 Cr,2,Exact,True,Mayank Dagar
+2023|1ee08e9a|MI,1ee08e9a,MI,2023,Jhye Richardson,Bowler,,,1.5,Under 2 Cr,2,Exact,True,Jhye Richardson
+2023|7dc35884|KKR,7dc35884,KKR,2023,Shakib Al Hasan,All-Rounder,,,1.5,Under 2 Cr,2,Exact,True,Shakib Al Hasan
+2023|14f96089|RR,14f96089,RR,2023,Adam Zampa,Bowler,,,1.5,Under 2 Cr,2,Exact,True,Adam Zampa
+2023|44a89551|GT,44a89551,GT,2023,K.S. Bharat,Wicket-Keeper,,,1.2,Under 2 Cr,2,Exact,True,K.S. Bharat
+2023|4d7f517e|SRH,4d7f517e,SRH,2023,Akeal Hosein,Bowler,,,1,Under 2 Cr,2,Exact,True,Akeal Hosein
+2023|aa8d28ae|KKR,aa8d28ae,KKR,2023,David Wiese,All-Rounder,,,1,Under 2 Cr,2,Exact,True,David Wiese
+2023|a343262c|RR,a343262c,RR,2023,Joe Root,Batter,,,1,Under 2 Cr,2,Exact,True,Joe Root
+2023|68c56d09|CSK,68c56d09,CSK,2023,Kyle Jamieson,Bowler,,,1,Under 2 Cr,2,Exact,True,Kyle Jamieson
+2023|bd54eef5|KKR,bd54eef5,KKR,2023,N. Jagadeesan,Wicket-Keeper,,,0.9,Under 2 Cr,2,Exact,True,N. Jagadeesan
+2023|caf69bf7|LSG,caf69bf7,LSG,2023,Daniel Sams,All-Rounder,,,0.75,Under 2 Cr,2,Exact,True,Daniel Sams
+2023|cd474693|RCB,cd474693,RCB,2023,Rajan Kumar,Bowler,,,0.7,Under 2 Cr,2,Exact (register),True,Rajan Kumar
+2023|82c10dac|RCB,82c10dac,RCB,2023,Avinash Singh,Bowler,,,0.6,Under 2 Cr,2,Surname,True,Abhinandan Singh
+2023|3cea23da|CSK,3cea23da,CSK,2023,Nishant Sindhu,All-Rounder,,,0.6,Under 2 Cr,2,Manual,True,Nishant Sindhu
+2023|7c3b3b78|KKR,7c3b3b78,KKR,2023,Vaibhav Arora,Bowler,,,0.6,Under 2 Cr,2,Surname,True,Vaibhav Arora
+2023|6b19d823|LSG,6b19d823,LSG,2023,Amit Mishra,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Amit Mishra
+2023|a9fd84fb|SRH,a9fd84fb,SRH,2023,Mayank Markande,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Mayank Markande
+2023|c3a96caf|KKR,c3a96caf,KKR,2023,Mandeep Singh,Batter,,,0.5,Under 2 Cr,2,Exact,True,Mandeep Singh
+2023|c0c411cb|LSG,c0c411cb,LSG,2023,Naveen Ul Haq,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Naveen Ul Haq
+2023|26d041c4|PBKS,26d041c4,PBKS,2023,Sikandar Raza,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Sikandar Raza
+2023|5bb1a1c4|DC,5bb1a1c4,DC,2023,Ishant Sharma,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Ishant Sharma
+2023|23cca426|GT,23cca426,GT,2023,Odean Smith,All-Rounder,,,0.5,Under 2 Cr,2,Manual,True,Odean Smith
+2023|f0af99a7|RR,f0af99a7,RR,2023,Donovan Ferreira,Wicket-Keeper,,,0.5,Under 2 Cr,2,Exact,True,Donovan Ferreira
+2023|0404d43c|KKR,0404d43c,KKR,2023,Litton Das,Wicket-Keeper,,,0.5,Under 2 Cr,2,Initials,True,Litton Das
+2023|29e95537|CSK,29e95537,CSK,2023,Ajinkya Rahane,Batter,,,0.5,Under 2 Cr,2,Exact,True,Ajinkya Rahane
+2023|98ae73b1|MI,98ae73b1,MI,2023,Piyush Chawla,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Piyush Chawla
+2023|759ac88f|GT,759ac88f,GT,2023,Mohit Sharma,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Mohit Sharma
+2023|1e66c162|LSG,1e66c162,LSG,2023,Jaydev Unadkat,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Jaydev Unadkat
+2023|c5aef772|LSG,c5aef772,LSG,2023,Romario Shepherd,All-Rounder,,,0.5,Under 2 Cr,2,Initials,True,Romario Shepherd
+2023|4b31f3a3|LSG,4b31f3a3,LSG,2023,Yash Thakur,Bowler,,,0.45,Under 2 Cr,2,Exact,True,Yash Thakur
+2023|28c78fb3|PBKS,28c78fb3,PBKS,2023,Harpreet Bhatia,Batter,,,0.4,Under 2 Cr,2,Surname,True,Harpreet Bhatia
+2023|798cc28e|RR,798cc28e,RR,2023,K.M. Asif,Bowler,,,0.3,Under 2 Cr,2,Manual,True,K.M. Asif
+2023|80ffea17|SRH,80ffea17,SRH,2023,Upendra Singh Yadav,Wicket-Keeper,,,0.25,Under 2 Cr,2,Manual,True,Upendra Singh Yadav
+2023|d4d929b0|PBKS,d4d929b0,PBKS,2023,Vidwath Kaverappa,Bowler,,,0.2,Base price buy,1,Initials,True,Vidwath Kaverappa
+2023|fa2f1dde|KKR,fa2f1dde,KKR,2023,Kulwant Khejroliya,Bowler,,,0.2,Base price buy,1,Exact,True,Kulwant Khejroliya
+2023|6ab96cc2|RCB,6ab96cc2,RCB,2023,Sonu Yadav,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Sonu Yadav
+2023|5438ffba|CSK,5438ffba,CSK,2023,Bhagath Varma,All-Rounder,,,0.2,Base price buy,1,Manual,True,Bhagath Varma
+2023|e3851766|RR,e3851766,RR,2023,Kunal Rathore,Wicket-Keeper,,,0.2,Base price buy,1,Surname,True,Kunal Rathore
+2023|983f2f61|LSG,983f2f61,LSG,2023,Swapnil Singh,All-Rounder,,,0.2,Base price buy,1,Exact,True,Swapnil Singh
+2023|52294a79|RCB,52294a79,RCB,2023,Himanshu Sharma,Bowler,,,0.2,Base price buy,1,Initials,True,Himanshu Sharma
+2023|b0f2baf4|SRH,b0f2baf4,SRH,2023,Sanvir Singh,All-Rounder,,,0.2,Base price buy,1,Exact,True,Sanvir Singh
+2023|9a5f2863|PBKS,9a5f2863,PBKS,2023,Mohit Rathee,All-Rounder,,,0.2,Base price buy,1,Exact,True,Mohit Rathee
+2023|35ccfdd4|RR,35ccfdd4,RR,2023,Akash Vashisht,All-Rounder,,,0.2,Base price buy,1,Manual,True,Akash Vashisht
+2023|266849c1|MI,266849c1,MI,2023,Raghav Goyal,Bowler,,,0.2,Base price buy,1,Initials,True,Raghav Goyal
+2023|8dc152d1|MI,8dc152d1,MI,2023,Duan Jansen,All-Rounder,,,0.2,Base price buy,1,Exact,True,Duan Jansen
+2023|aad0c365|SRH,aad0c365,SRH,2023,Nitish Kumar Reddy,Wicket-Keeper,,,0.2,Base price buy,1,Surname,True,Nitish Kumar Reddy
+2023|e1d9ae9c|PBKS,e1d9ae9c,PBKS,2023,Shivam Singh,All-Rounder,,,0.2,Base price buy,1,Exact,True,Shivam Singh
+2023|1399b39c|SRH,1399b39c,SRH,2023,Anmolpreet Singh,Batter,,,0.2,Base price buy,1,Exact,True,Anmolpreet Singh
+2023|31ee319e|CSK,31ee319e,CSK,2023,Ajay Mandal,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Ajay Mandal
+2023|cbf58a86|CSK,cbf58a86,CSK,2023,Shaik Rasheed,Batter,,,0.2,Base price buy,1,Surname,True,Shaik Rasheed
+2023|e96801ea|RCB,e96801ea,RCB,2023,Manoj Bhandage,All-Rounder,,,0.2,Base price buy,1,Exact,True,Manoj Bhandage
+2023|cf59b3f0|GT,cf59b3f0,GT,2023,Urvil Patel,Wicket-Keeper,,,0.2,Base price buy,1,Exact,True,Urvil Patel
+2023|663b5e34|LSG,663b5e34,LSG,2023,Prerak Mankad,All-Rounder,,,0.2,Base price buy,1,Exact,True,Prerak Mankad
+2023|e2db2409|RR,e2db2409,RR,2023,Murugan Ashwin,Bowler,,,0.2,Base price buy,1,Manual,True,Murugan Ashwin
+2023|0494fa6e|MI,0494fa6e,MI,2023,Vishnu Vinod,Wicket-Keeper,,,0.2,Base price buy,1,Exact,True,Vishnu Vinod
+2023|d1a60072|MI,d1a60072,MI,2023,Nehal Wadhera,All-Rounder,,,0.2,Base price buy,1,Initials,True,Nehal Wadhera
+2023|4885bbe6|LSG,4885bbe6,LSG,2023,Yudhvir Charak,All-Rounder,,,0.2,Base price buy,1,Manual,True,Yudhvir Charak
+2023|A_abdul_pa|RR,A_abdul_pa,RR,2023,Abdul P A,All-Rounder,,,0.2,Base price buy,1,Unmatched,False,Abdul P A
+2023|34819e70|SRH,34819e70,SRH,2023,Samarth Vyas,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Samarth Vyas
+2023|9440ef41|KKR,9440ef41,KKR,2023,Suyash Sharma,Bowler,,,0.2,Base price buy,1,Exact,True,Suyash Sharma
+2023|9d704f6f|MI,9d704f6f,MI,2023,Shams Mulani,All-Rounder,,,0.2,Base price buy,1,Exact,True,Shams Mulani
+2024|3fb19989|KKR,3fb19989,KKR,2024,Mitchell Starc,Bowler,,,24.75,10 Cr and above,5,Exact,True,Mitchell Starc
+2024|ded9240e|SRH,ded9240e,SRH,2024,Pat Cummins,All-Rounder,,,20.5,10 Cr and above,5,Exact,True,Pat Cummins
+2024|eade4650|CSK,eade4650,CSK,2024,Daryl Mitchell,All-Rounder,,,14,10 Cr and above,5,Exact,True,Daryl Mitchell
+2024|f986ca1a|PBKS,f986ca1a,PBKS,2024,Harshal Patel,All-Rounder,,,11.75,10 Cr and above,5,Initials,True,Harshal Patel
+2024|b0946605|RCB,b0946605,RCB,2024,Alzarri Joseph,Bowler,,,11.5,10 Cr and above,5,Exact,True,Alzarri Joseph
+2024|83c3e8e3|GT,83c3e8e3,GT,2024,Spencer Johnson,Bowler,,,10,10 Cr and above,5,Manual,True,Spencer Johnson
+2024|f89d3b11|CSK,f89d3b11,CSK,2024,Sameer Rizvi,Batter,,,8.4,5 to 10 Cr,4,Exact,True,Sameer Rizvi
+2024|cad00a4d|PBKS,cad00a4d,PBKS,2024,Rilee Rossouw,Batter,,,8,5 to 10 Cr,4,Exact,True,Rilee Rossouw
+2024|650d5e49|RR,650d5e49,RR,2024,Rovman Powell,Batter,,,7.4,5 to 10 Cr,4,Manual,True,Rovman Powell
+2024|7dcb9bc9|GT,7dcb9bc9,GT,2024,Shahrukh Khan,All-Rounder,,,7.4,5 to 10 Cr,4,Exact,True,Shahrukh Khan
+2024|57ca01b3|DC,57ca01b3,DC,2024,Kumar Kushagra,Wicket-Keeper,,,7.2,5 to 10 Cr,4,Exact,True,Kumar Kushagra
+2024|12b610c2|SRH,12b610c2,SRH,2024,Travis Head,Batter,,,6.8,5 to 10 Cr,4,Exact,True,Travis Head
+2024|c38d3503|LSG,c38d3503,LSG,2024,Shivam Mavi,Bowler,,,6.4,5 to 10 Cr,4,Exact,True,Shivam Mavi
+2024|cc1e8c68|GT,cc1e8c68,GT,2024,Umesh Yadav,Bowler,,,5.8,5 to 10 Cr,4,Exact,True,Umesh Yadav
+2024|6b2ff18f|RR,6b2ff18f,RR,2024,Shubham Dubey,Batter,,,5.8,5 to 10 Cr,4,Exact,True,Shubham Dubey
+2024|7210d461|RCB,7210d461,RCB,2024,Yash Dayal,Bowler,,,5,5 to 10 Cr,4,Exact,True,Yash Dayal
+2024|3204c99f|MI,3204c99f,MI,2024,Gerald Coetzee,All-Rounder,,,5,5 to 10 Cr,4,Exact,True,Gerald Coetzee
+2024|1ee08e9a|DC,1ee08e9a,DC,2024,Jhye Richardson,Bowler,,,5,5 to 10 Cr,4,Exact,True,Jhye Richardson
+2024|ee1b6c27|MI,ee1b6c27,MI,2024,Nuwan Thushara,Bowler,,,4.8,2 to 5 Cr,3,Initials,True,Nuwan Thushara
+2024|de7d833e|MI,de7d833e,MI,2024,Dilshan Madushanka,Bowler,,,4.6,2 to 5 Cr,3,Manual,True,Dilshan Madushanka
+2024|4c5d73db|PBKS,4c5d73db,PBKS,2024,Chris Woakes,All-Rounder,,,4.2,2 to 5 Cr,3,Exact,True,Chris Woakes
+2024|4ae1755b|DC,4ae1755b,DC,2024,Harry Brook,Batter,,,4,2 to 5 Cr,3,Manual,True,Harry Brook
+2024|1abb78f8|CSK,1abb78f8,CSK,2024,Shardul Thakur,All-Rounder,,,4,2 to 5 Cr,3,Exact,True,Shardul Thakur
+2024|bafd0398|GT,bafd0398,GT,2024,Robin Minz,Wicket-Keeper,,,3.6,2 to 5 Cr,3,Manual,True,Robin Minz
+2024|cf0ccafa|LSG,cf0ccafa,LSG,2024,M. Siddharth,Bowler,,,2.4,2 to 5 Cr,3,Exact,True,M. Siddharth
+2024|A_sushant_mishra|GT,A_sushant_mishra,GT,2024,Sushant Mishra,Bowler,,,2.2,2 to 5 Cr,3,Unmatched,False,Sushant Mishra (A_sushant_mishra)
+2024|7d92277a|KKR,7d92277a,KKR,2024,Mujeeb Rahman,Bowler,,,2,2 to 5 Cr,3,Manual,True,Mujeeb Ur Rahman
+2024|0a8fce53|CSK,0a8fce53,CSK,2024,Mustafizur Rahman,Bowler,,,2,2 to 5 Cr,3,Exact,True,Mustafizur Rahman
+2024|7f048519|LSG,7f048519,LSG,2024,David Willey,All-Rounder,,,2,2 to 5 Cr,3,Manual,True,David Willey
+2024|2f9d0389|RCB,2f9d0389,RCB,2024,Lockie Ferguson,Bowler,,,2,2 to 5 Cr,3,Exact,True,Lockie Ferguson
+2024|ba5e1069|CSK,ba5e1069,CSK,2024,Rachin Ravindra,All-Rounder,,,1.8,Under 2 Cr,2,Exact,True,Rachin Ravindra
+2024|1e66c162|SRH,1e66c162,SRH,2024,Jaydev Unadkat,Bowler,,,1.6,Under 2 Cr,2,Exact,True,Jaydev Unadkat
+2024|62af8546|MI,62af8546,MI,2024,Mohammad Nabi,All-Rounder,,,1.5,Under 2 Cr,2,Exact,True,Mohammad Nabi
+2024|e86754b2|RCB,e86754b2,RCB,2024,Tom Curran,All-Rounder,,,1.5,Under 2 Cr,2,Exact,True,Tom Curran
+2024|d014d5ac|KKR,d014d5ac,KKR,2024,Sherfane Rutherford,Batter,,,1.5,Under 2 Cr,2,Exact,True,Sherfane Rutherford
+2024|a97c8ec2|SRH,a97c8ec2,SRH,2024,Wanindu Hasaranga,All-Rounder,,,1.5,Under 2 Cr,2,Exact,True,Wanindu Hasaranga
+2024|8998a68f|DC,8998a68f,DC,2024,Sumit Kumar,All-Rounder,,,1,Under 2 Cr,2,Exact,True,Sumit Kumar
+2024|A_gus_atkinson|KKR,A_gus_atkinson,KKR,2024,Gus Atkinson,Bowler,,,1,Under 2 Cr,2,Unmatched,False,Gus Atkinson
+2024|ff1e12a0|LSG,ff1e12a0,LSG,2024,Ashton Turner,Batter,,,1,Under 2 Cr,2,Exact,True,Ashton Turner
+2024|1fc6ef83|DC,1fc6ef83,DC,2024,Shai Hope,Wicket-Keeper,,,0.75,Under 2 Cr,2,Exact,True,Shai Hope
+2024|5d2eea49|GT,5d2eea49,GT,2024,Kartik Tyagi,Bowler,,,0.6,Under 2 Cr,2,Exact,True,Kartik Tyagi
+2024|2cdce1be|KKR,2cdce1be,KKR,2024,Chetan Sakariya,Bowler,,,0.5,Under 2 Cr,2,Exact,True,Chetan Sakariya
+2024|44a89551|KKR,44a89551,KKR,2024,K.S. Bharat,Wicket-Keeper,,,0.5,Under 2 Cr,2,Exact,True,K.S. Bharat
+2024|8f6dd463|GT,8f6dd463,GT,2024,Azmatullah Omarzai,All-Rounder,,,0.5,Under 2 Cr,2,Exact,True,Azmatullah Omarzai
+2024|85b3fab2|DC,85b3fab2,DC,2024,Tristan Stubbs,Wicket-Keeper,,,0.5,Under 2 Cr,2,Exact,True,Tristan Stubbs
+2024|465aa633|RR,465aa633,RR,2024,Nandre Burger,Bowler,,,0.5,Under 2 Cr,2,Initials,True,Nandre Burger
+2024|93b4fc78|KKR,93b4fc78,KKR,2024,Manish Pandey,Batter,,,0.5,Under 2 Cr,2,Exact,True,Manish Pandey
+2024|f836b33d|RR,f836b33d,RR,2024,Tom Kohler-Cadmore,Wicket-Keeper,,,0.4,Under 2 Cr,2,Surname,True,Tom Kohler-Cadmore
+2024|A_abid_mushtaq|RR,A_abid_mushtaq,RR,2024,Abid Mushtaq,All-Rounder,,,0.2,Base price buy,1,Unmatched,False,Abid Mushtaq
+2024|26989d80|PBKS,26989d80,PBKS,2024,Shashank Singh,Batter,,,0.2,Base price buy,1,Exact,True,Shashank Singh
+2024|7a8bd078|MI,7a8bd078,MI,2024,Shreyas Gopal,Bowler,,,0.2,Base price buy,1,Exact,True,Shreyas Gopal
+2024|b63e358a|DC,b63e358a,DC,2024,Ricky Bhui,Wicket-Keeper,,,0.2,Base price buy,1,Exact,True,Ricky Bhui
+2024|b8527c3d|DC,b8527c3d,DC,2024,Rasikh Dar,Bowler,,,0.2,Base price buy,1,Manual,True,Rasikh Dar
+2024|280fff14|KKR,280fff14,KKR,2024,Sakib Hussain,Bowler,,,0.2,Base price buy,1,Exact,True,Sakib Hussain
+2024|b483905d|SRH,b483905d,SRH,2024,Akash Singh,Bowler,,,0.2,Base price buy,1,Exact,True,Akash Singh
+2024|983f2f61|RCB,983f2f61,RCB,2024,Swapnil Singh,All-Rounder,,,0.2,Base price buy,1,Exact,True,Swapnil Singh
+2024|eb19d010|SRH,eb19d010,SRH,2024,Jhathavedh Subramanyan,Bowler,,,0.2,Base price buy,1,Manual,True,Jhathavedh Subramanyan
+2024|9e7225b0|RCB,9e7225b0,RCB,2024,Saurav Chuahan,Batter,,,0.2,Base price buy,1,Manual,True,Saurav Chauhan
+2024|84d9c311|PBKS,84d9c311,PBKS,2024,Ashutosh Sharma,All-Rounder,,,0.2,Base price buy,1,Exact,True,Ashutosh Sharma
+2024|A_swastik_chhikara|DC,A_swastik_chhikara,DC,2024,Swastik Chhikara,Batter,,,0.2,Base price buy,1,Unmatched,False,Swastik Chhikara
+2024|d7017798|KKR,d7017798,KKR,2024,Angkrish Raghuvanshi,Batter,,,0.2,Base price buy,1,Initials,True,Angkrish Raghuvanshi
+2024|A_avanish_rao_aravelly|CSK,A_avanish_rao_aravelly,CSK,2024,Avanish Rao Aravelly,Wicket-Keeper,,,0.2,Base price buy,1,Unmatched,False,Avanish Rao Aravelly
+2024|2d140b79|LSG,2d140b79,LSG,2024,Arshin Kulkarni,All-Rounder,,,0.2,Base price buy,1,Surname,True,Arshin Kulkarni
+2024|f1809c03|PBKS,f1809c03,PBKS,2024,Tanay Thyagarajann,All-Rounder,,,0.2,Base price buy,1,Manual,True,Tanay Thyagarajan
+2024|0ebaa16a|MI,0ebaa16a,MI,2024,Shivalik Sharma,All-Rounder,,,0.2,Base price buy,1,Exact (register),True,Shivalik Sharma
+2024|fcc21ace|MI,fcc21ace,MI,2024,Anshul Kamboj,All-Rounder,,,0.2,Base price buy,1,Initials,True,Anshul Kamboj
+2024|A_prince_choudhary|PBKS,A_prince_choudhary,PBKS,2024,Prince Choudhary,Bowler,,,0.2,Base price buy,1,Unmatched,False,Prince Choudhary
+2024|fffa744b|MI,fffa744b,MI,2024,Naman Dhir,All-Rounder,,,0.2,Base price buy,1,Exact,True,Naman Dhir
+2024|12314277|LSG,12314277,LSG,2024,Mohd. Arshad Khan,All-Rounder,,,0.2,Base price buy,1,Manual,True,Mohd. Arshad Khan
+2024|025c4400|GT,025c4400,GT,2024,Manav Suthar,Bowler,,,0.2,Base price buy,1,Surname,True,Manav Suthar
+2024|A_vishwanath_pratap_singh|PBKS,A_vishwanath_pratap_singh,PBKS,2024,Vishwanath Pratap Singh,All-Rounder,,,0.2,Base price buy,1,Unmatched,False,Vishwanath Pratap Singh
+2024|be24ead0|KKR,be24ead0,KKR,2024,Ramandeep Singh,All-Rounder,,,0.2,Base price buy,1,Exact,True,Ramandeep Singh
+2025|919a3be2|LSG,919a3be2,LSG,2025,Rishabh Pant,Batter,Capped,2,27,10 Cr and above,5,Exact,True,Rishabh Pant
+2025|85ec8e33|PBKS,85ec8e33,PBKS,2025,Shreyas Iyer,Batter,Capped,2,26.75,10 Cr and above,5,Exact,True,Shreyas Iyer
+2025|a24be938|KKR,a24be938,KKR,2025,Venkatesh Iyer,All-Rounder,Capped,2,23.75,10 Cr and above,5,Exact,True,Venkatesh Iyer
+2025|57ee1fde|PBKS,57ee1fde,PBKS,2025,Yuzvendra Chahal,Bowler,Capped,2,18,10 Cr and above,5,Exact,True,Yuzvendra Chahal
+2025|244048f6|PBKS,244048f6,PBKS,2025,Arshdeep Singh,Bowler,Capped,2,18,10 Cr and above,5,Exact,True,Arshdeep Singh
+2025|99b75528|GT,99b75528,GT,2025,Jos Buttler,Wicket-Keeper,Capped,2,15.75,10 Cr and above,5,Exact,True,Jos Buttler
+2025|b17e2f24|DC,b17e2f24,DC,2025,KL Rahul,Wicket-Keeper,Capped,2,14,10 Cr and above,5,Exact,True,KL Rahul
+2025|a818c1be|MI,a818c1be,MI,2025,Trent Boult,Bowler,Capped,2,12.5,10 Cr and above,5,Exact,True,Trent Boult
+2025|03806cf8|RCB,03806cf8,RCB,2025,Josh Hazlewood,Bowler,Capped,2,12.5,10 Cr and above,5,Exact,True,Josh Hazlewood
+2025|5574750c|RR,5574750c,RR,2025,Jofra Archer,,Capped,2,12.5,10 Cr and above,5,Exact,True,Jofra Archer
+2025|2f49c897|GT,2f49c897,GT,2025,Mohammad Siraj,Bowler,Capped,2,12.25,10 Cr and above,5,Initials,True,Mohammad Siraj
+2025|3fb19989|DC,3fb19989,DC,2025,Mitchell Starc,Bowler,Capped,2,11.75,10 Cr and above,5,Exact,True,Mitchell Starc
+2025|3d284ca3|RCB,3d284ca3,RCB,2025,Phil Salt,Wicket-Keeper,Capped,2,11.5,10 Cr and above,5,Initials,True,Phil Salt
+2025|752f7486|SRH,752f7486,SRH,2025,Ishan Kishan,Wicket-Keeper,Capped,2,11.25,10 Cr and above,5,Exact,True,Ishan Kishan
+2025|800d2d97|RCB,800d2d97,RCB,2025,Jitesh Sharma,Wicket-Keeper,Capped,1,11,10 Cr and above,5,Manual,True,Jitesh Sharma
+2025|d9273ee7|PBKS,d9273ee7,PBKS,2025,Marcus Stoinis,All-Rounder,Capped,2,11,10 Cr and above,5,Exact,True,Marcus Stoinis
+2025|e62dd25d|GT,e62dd25d,GT,2025,Kagiso Rabada,Bowler,Capped,2,10.75,10 Cr and above,5,Exact,True,Kagiso Rabada
+2025|ce794613|DC,ce794613,DC,2025,T. Natarajan,Bowler,Capped,2,10.75,10 Cr and above,5,Exact,True,T. Natarajan
+2025|2e81a32d|RCB,2e81a32d,RCB,2025,Bhuvneshwar Kumar,Bowler,Capped,2,10.75,10 Cr and above,5,Exact,True,Bhuvneshwar Kumar
+2025|8cf9814c|SRH,8cf9814c,SRH,2025,Mohammad Shami,Bowler,Capped,2,10,10 Cr and above,5,Initials,True,Mohammad Shami
+2025|efc04be7|CSK,efc04be7,CSK,2025,Noor Ahmad,Bowler,Capped,2,10,10 Cr and above,5,Exact,True,Noor Ahmad
+2025|eef2536f|LSG,eef2536f,LSG,2025,Avesh Khan,Bowler,Capped,2,9.75,5 to 10 Cr,4,Exact,True,Avesh Khan
+2025|495d42a5|CSK,495d42a5,CSK,2025,Ravichandaran Ashwin,All-Rounder,Capped,2,9.75,5 to 10 Cr,4,Manual,True,Ravichandran Ashwin
+2025|85e0cf10|GT,85e0cf10,GT,2025,Prasidh Krishna,Bowler,Capped,2,9.5,5 to 10 Cr,4,Initials,True,Prasidh Krishna
+2025|23eeb873|MI,23eeb873,MI,2025,Deepak Chahar,Bowler,Capped,2,9.25,5 to 10 Cr,4,Initials,True,Deepak Chahar
+2025|9b6e1b3f|DC,9b6e1b3f,DC,2025,Jake Fraser-Mcgurk,Batter,Capped,2,9,5 to 10 Cr,4,Exact,True,Jake Fraser-Mcgurk
+2025|50c6bc2b|RCB,50c6bc2b,RCB,2025,Liam Livingstone,All-Rounder,Capped,2,8.75,5 to 10 Cr,4,Exact,True,Liam Livingstone
+2025|2cffab74|DC,2cffab74,DC,2025,Mukesh Kumar,Bowler,Capped,2,8,5 to 10 Cr,4,Exact,True,Mukesh Kumar
+2025|0a67aec0|LSG,0a67aec0,LSG,2025,Akash Deep,Bowler,Capped,1,8,5 to 10 Cr,4,Exact,True,Akash Deep
+2025|f986ca1a|SRH,f986ca1a,SRH,2025,Harshal Patel,All-Rounder,Capped,2,8,5 to 10 Cr,4,Initials,True,Harshal Patel
+2025|d67d5f00|LSG,d67d5f00,LSG,2025,David Miller,Batter,Capped,1.5,7.5,5 to 10 Cr,4,Exact,True,David Miller
+2025|81c36ee9|PBKS,81c36ee9,PBKS,2025,Marco Jansen,All-Rounder,Capped,1.25,7,5 to 10 Cr,4,Exact,True,Marco Jansen
+2025|46a9bea1|RR,46a9bea1,RR,2025,Tushar Deshpande,Bowler,Capped,1,6.5,5 to 10 Cr,4,Initials,True,Tushar Deshpande
+2025|acdc62f5|KKR,acdc62f5,KKR,2025,Anrich Nortje,Bowler,Capped,2,6.5,5 to 10 Cr,4,Exact,True,Anrich Nortje
+2025|4ae1755b|DC,4ae1755b,DC,2025,Harry Brook,Batter,Capped,2,6.25,5 to 10 Cr,4,Manual,True,Harry Brook
+2025|df5a6881|CSK,df5a6881,CSK,2025,Devon Conway,Batter,Capped,2,6.25,5 to 10 Cr,4,Exact,True,Devon Conway
+2025|b8527c3d|RCB,b8527c3d,RCB,2025,Rasikh Dar,Bowler,Uncapped,0.3,6,5 to 10 Cr,4,Manual,True,Rasikh Dar
+2025|5b8c830e|RCB,5b8c830e,RCB,2025,Krunal Pandya,All-Rounder,Capped,2,5.75,5 to 10 Cr,4,Initials,True,Krunal Pandya
+2025|fffa744b|MI,fffa744b,MI,2025,Naman Dhir,All-Rounder,Uncapped,0.3,5.25,5 to 10 Cr,4,Exact,True,Naman Dhir
+2025|9caf69a1|MI,9caf69a1,MI,2025,Will Jacks,All-Rounder,Capped,2,5.25,5 to 10 Cr,4,Exact,True,Will Jacks
+2025|a97c8ec2|RR,a97c8ec2,RR,2025,Wanindu Hasaranga,Bowler,Capped,2,5.25,5 to 10 Cr,4,Exact,True,Wanindu Hasaranga
+2025|9ca68676|MI,9ca68676,MI,2025,Allah Ghazanfar,Bowler,Capped,0.75,4.8,2 to 5 Cr,3,Surname,True,Allah Ghazanfar
+2025|a2f46292|CSK,a2f46292,CSK,2025,Syed Khaleel Ahmed,Bowler,Capped,2,4.8,2 to 5 Cr,3,Surname,True,Syed Khaleel Ahmed (KK Ahmed)
+2025|f24c6701|RR,f24c6701,RR,2025,Maheesh Theekshana,Bowler,Capped,2,4.4,2 to 5 Cr,3,Manual,True,Maheesh Theekshana
+2025|b681e71e|PBKS,b681e71e,PBKS,2025,Glenn Maxwell,All-Rounder,Capped,2,4.2,2 to 5 Cr,3,Exact,True,Glenn Maxwell
+2025|8e514b4c|LSG,8e514b4c,LSG,2025,Abdul Samad,All-Rounder,Uncapped,0.3,4.2,2 to 5 Cr,3,Exact,True,Abdul Samad
+2025|d1a60072|PBKS,d1a60072,PBKS,2025,Nehal Wadhera,Batter,Uncapped,0.3,4.2,2 to 5 Cr,3,Initials,True,Nehal Wadhera
+2025|fb2d1dda|RR,fb2d1dda,RR,2025,Nitish Rana,All-Rounder,Capped,1.5,4.2,2 to 5 Cr,3,Exact,True,Nitish Rana
+2025|ba5e1069|CSK,ba5e1069,CSK,2025,Rachin Ravindra,All-Rounder,Capped,1.5,4,2 to 5 Cr,3,Exact,True,Rachin Ravindra
+2025|b5797845|PBKS,b5797845,PBKS,2025,Priyansh Arya,All-Rounder,Uncapped,0.3,3.8,2 to 5 Cr,3,Exact,True,Priyansh Arya
+2025|84d9c311|DC,84d9c311,DC,2025,Ashutosh Sharma,All-Rounder,Uncapped,0.3,3.8,2 to 5 Cr,3,Exact,True,Ashutosh Sharma
+2025|372455c4|KKR,372455c4,KKR,2025,Quinton De Kock,Wicket-Keeper,Capped,2,3.6,2 to 5 Cr,3,Exact,True,Quinton De Kock
+2025|3d8feaf8|LSG,3d8feaf8,LSG,2025,Mitchell Marsh,All-Rounder,Capped,2,3.4,2 to 5 Cr,3,Exact,True,Mitchell Marsh
+2025|fcc21ace|CSK,fcc21ace,CSK,2025,Anshul Kamboj,All-Rounder,Uncapped,0.3,3.4,2 to 5 Cr,3,Initials,True,Anshul Kamboj
+2025|77255a9e|CSK,77255a9e,CSK,2025,Rahul Tripathi,Batter,Capped,0.75,3.4,2 to 5 Cr,3,Manual,True,Rahul Tripathi
+2025|f19ccfad|GT,f19ccfad,GT,2025,Washington Sundar,All-Rounder,Capped,2,3.2,2 to 5 Cr,3,Exact,True,Washington Sundar
+2025|2ed569a0|SRH,2ed569a0,SRH,2025,Rahul Chahar,Bowler,Capped,1,3.2,2 to 5 Cr,3,Initials,True,Rahul Chahar
+2025|0890552f|SRH,0890552f,SRH,2025,Abhinav Manohar,Batter,Uncapped,0.3,3.2,2 to 5 Cr,3,Exact,True,Abhinav Manohar
+2025|f1f99156|RCB,f1f99156,RCB,2025,Tim David,All-Rounder,Capped,2,3,2 to 5 Cr,3,Exact,True,Tim David
+2025|d7017798|KKR,d7017798,KKR,2025,Angkrish Raghuvanshi,Batter,Uncapped,0.3,3,2 to 5 Cr,3,Initials,True,Angkrish Raghuvanshi
+2025|83c3e8e3|KKR,83c3e8e3,KKR,2025,Spencer Johnson,Bowler,Capped,2,2.8,2 to 5 Cr,3,Manual,True,Spencer Johnson
+2025|3c55c703|RCB,3c55c703,RCB,2025,Jacob Bethell,All-Rounder,Capped,1.25,2.6,2 to 5 Cr,3,Surname,True,Jacob Bethell
+2025|989889ff|PBKS,989889ff,PBKS,2025,Josh Inglis,Wicket-Keeper,Capped,2,2.6,2 to 5 Cr,3,Exact,True,Josh Inglis
+2025|d014d5ac|GT,d014d5ac,GT,2025,Sherfane Rutherford,Batter,Capped,1.5,2.6,2 to 5 Cr,3,Exact,True,Sherfane Rutherford
+2025|9440ef41|RCB,9440ef41,RCB,2025,Suyash Sharma,Bowler,Uncapped,0.3,2.6,2 to 5 Cr,3,Exact,True,Suyash Sharma
+2025|3204c99f|GT,3204c99f,GT,2025,Gerald Coetzee,Bowler,Capped,1.25,2.4,2 to 5 Cr,3,Exact,True,Gerald Coetzee
+2025|14f96089|SRH,14f96089,SRH,2025,Adam Zampa,Bowler,Capped,2,2.4,2 to 5 Cr,3,Exact,True,Adam Zampa
+2025|e94915e6|CSK,e94915e6,CSK,2025,Sam Curran,All-Rounder,Capped,2,2.4,2 to 5 Cr,3,Exact,True,Sam Curran
+2025|8f6dd463|PBKS,8f6dd463,PBKS,2025,Azmatullah Omarzai,All-Rounder,Capped,1.5,2.4,2 to 5 Cr,3,Exact,True,Azmatullah Omarzai
+2025|f9e6e7ef|LSG,f9e6e7ef,LSG,2025,Shahbaz Ahamad,All-Rounder,Capped,1,2.4,2 to 5 Cr,3,Manual,True,Shahbaz Ahmed
+2025|cc61ee8f|CSK,cc61ee8f,CSK,2025,Gurjapneet Singh,Bowler,Uncapped,0.3,2.2,2 to 5 Cr,3,Exact,True,Gurjapneet Singh
+2025|759ac88f|DC,759ac88f,DC,2025,Mohit Sharma,Bowler,Uncapped,0.5,2.2,2 to 5 Cr,3,Exact,True,Mohit Sharma
+2025|9a46c4e5|GT,9a46c4e5,GT,2025,Glenn Phillips,Batter,Capped,2,2,Base price buy,1,Exact,True,Glenn Phillips
+2025|3355b542|DC,3355b542,DC,2025,Faf Du Plessis,Batter,Capped,2,2,Base price buy,1,Exact,True,Faf Du Plessis
+2025|e4a0deae|MI,e4a0deae,MI,2025,Mitchell Santner,All-Rounder,Capped,2,2,Base price buy,1,Exact,True,Mitchell Santner
+2025|0bacade8|KKR,0bacade8,KKR,2025,Rahmanullah Gurbaz,Wicket-Keeper,Capped,2,2,Base price buy,1,Exact,True,Rahmanullah Gurbaz
+2025|bb351c23|KKR,bb351c23,KKR,2025,Moeen Ali,All-Rounder,Capped,2,2,Base price buy,1,Exact,True,Moeen Ali
+2025|2f9d0389|PBKS,2f9d0389,PBKS,2025,Lockie Ferguson,Bowler,Capped,2,2,Base price buy,1,Exact,True,Lockie Ferguson
+2025|e9c7f0d0|RR,e9c7f0d0,RR,2025,Fazalhaq Farooqi,Bowler,Capped,2,2,Base price buy,1,Exact,True,Fazalhaq Farooqi
+2025|9eb1455b|CSK,9eb1455b,CSK,2025,Nathan Ellis,Bowler,Capped,1.25,2,2 to 5 Cr,3,Exact,True,Nathan Ellis
+2025|2c25d4f5|RCB,2c25d4f5,RCB,2025,Devdutt Padikkal,Batter,Capped,2,2,Base price buy,1,Exact,True,Devdutt Padikkal
+2025|6a26221c|LSG,6a26221c,LSG,2025,Aiden Markram,Batter,Capped,2,2,Base price buy,1,Exact,True,Aiden Markram
+2025|c7a995d3|GT,c7a995d3,GT,2025,R. Sai Kishore,All-Rounder,Capped,0.75,2,2 to 5 Cr,3,Exact,True,R. Sai Kishore
+2025|7c3b3b78|KKR,7c3b3b78,KKR,2025,Vaibhav Arora,Bowler,Uncapped,0.3,1.8,Under 2 Cr,2,Surname,True,Vaibhav Arora
+2025|54e52590|PBKS,54e52590,PBKS,2025,Vyshak Vijaykumar,Bowler,Uncapped,0.3,1.8,Under 2 Cr,2,Manual,True,Vyshak Vijaykumar
+2025|73ad96ed|CSK,73ad96ed,CSK,2025,Deepak Hooda,All-Rounder,Capped,0.75,1.7,Under 2 Cr,2,Manual,True,Deepak Hooda
+2025|da934ee8|GT,da934ee8,GT,2025,Mahipal Lomror,All-Rounder,Uncapped,0.5,1.7,Under 2 Cr,2,Manual,True,Mahipal Lomror
+2025|ee1b6c27|RCB,ee1b6c27,RCB,2025,Nuwan Thushara,Bowler,Capped,0.75,1.6,Under 2 Cr,2,Initials,True,Nuwan Thushara
+2025|4b31f3a3|PBKS,4b31f3a3,PBKS,2025,Yash Thakur,Bowler,Uncapped,0.3,1.6,Under 2 Cr,2,Exact,True,Yash Thakur
+2025|30df8c66|SRH,30df8c66,SRH,2025,Simarjeet Singh,Bowler,Uncapped,0.3,1.5,Under 2 Cr,2,Exact,True,Simarjeet Singh
+2025|650d5e49|KKR,650d5e49,KKR,2025,Rovman Powell,Batter,Capped,1.5,1.5,Base price buy,1,Manual,True,Rovman Powell
+2025|c5aef772|RCB,c5aef772,RCB,2025,Romario Shepherd,All-Rounder,Capped,1.5,1.5,Base price buy,1,Initials,True,Romario Shepherd
+2025|59559bc2|CSK,59559bc2,CSK,2025,Jamie Overton,All-Rounder,Capped,1.5,1.5,Base price buy,1,Initials,True,Jamie Overton
+2025|107c26fb|RR,107c26fb,RR,2025,Kwena Maphaka,Bowler,Capped,0.75,1.5,Under 2 Cr,2,Exact,True,Kwena Maphaka
+2025|29e95537|KKR,29e95537,KKR,2025,Ajinkya Rahane,Batter,Capped,1.5,1.5,Base price buy,1,Exact,True,Ajinkya Rahane
+2025|c05edf8e|PBKS,c05edf8e,PBKS,2025,Harpreet Brar,All-Rounder,Uncapped,0.3,1.5,Under 2 Cr,2,Exact,True,Harpreet Brar
+2025|12314277|GT,12314277,GT,2025,Mohd. Arshad Khan,All-Rounder,Uncapped,0.3,1.3,Under 2 Cr,2,Manual,True,Mohd. Arshad Khan
+2025|99258814|GT,99258814,GT,2025,Gurnoor Singh Brar,Bowler,Uncapped,0.3,1.3,Under 2 Cr,2,Manual,True,Gurnoor Singh Brar
+2025|d405c0d5|PBKS,d405c0d5,PBKS,2025,Aaron Hardie,All-Rounder,Capped,1.25,1.25,Base price buy,1,Exact (register),True,Aaron Hardie
+2025|4bd09374|RR,4bd09374,RR,2025,Akash Madhwal,Bowler,Uncapped,0.3,1.2,Under 2 Cr,2,Exact,True,Akash Madhwal
+2025|5750bcb4|SRH,5750bcb4,SRH,2025,Eshan Malinga,Bowler,Uncapped,0.3,1.2,Under 2 Cr,2,Initials,True,Eshan Malinga
+2025|0994d0ae|CSK,0994d0ae,CSK,2025,Vijay Shankar,All-Rounder,Uncapped,0.3,1.2,Under 2 Cr,2,Exact,True,Vijay Shankar
+2025|470f446b|RR,470f446b,RR,2025,Vaibhav Suryavanshi,Batter,Uncapped,0.3,1.1,Under 2 Cr,2,Initials,True,Vaibhav Suryavanshi
+2025|1e66c162|SRH,1e66c162,SRH,2025,Jaydev Unadkat,Bowler,Capped,1,1,Base price buy,1,Exact,True,Jaydev Unadkat
+2025|e66732f8|MI,e66732f8,MI,2025,Ryan Rickelton,Wicket-Keeper,Capped,1,1,Base price buy,1,Exact,True,Ryan Rickelton
+2025|cad40f5e|SRH,cad40f5e,SRH,2025,Brydon Carse,All-Rounder,Capped,1,1,Base price buy,1,Manual,True,Brydon Carse
+2025|f834dcfc|RCB,f834dcfc,RCB,2025,Lungisani Ngidi,Bowler,Capped,1,1,Base price buy,1,Manual,True,Lungi Ngidi
+2025|0494fa6e|PBKS,0494fa6e,PBKS,2025,Vishnu Vinod,Wicket-Keeper,Uncapped,0.3,0.95,Under 2 Cr,2,Exact,True,Vishnu Vinod
+2025|f89d3b11|DC,f89d3b11,DC,2025,Sameer Rizvi,All-Rounder,Uncapped,0.3,0.95,Under 2 Cr,2,Exact,True,Sameer Rizvi
+2025|6b2ff18f|RR,6b2ff18f,RR,2025,Shubham Dubey,Batter,Uncapped,0.3,0.8,Under 2 Cr,2,Exact,True,Shubham Dubey
+2025|2e78f685|PBKS,2e78f685,PBKS,2025,Kuldeep Sen,Bowler,Capped,0.75,0.8,Under 2 Cr,2,Exact,True,Kuldeep Sen
+2025|3b53243a|PBKS,3b53243a,PBKS,2025,Xavier Bartlett,Bowler,Capped,0.75,0.8,Under 2 Cr,2,Exact,True,Xavier Bartlett
+2025|f0af99a7|DC,f0af99a7,DC,2025,Donovan Ferreira,Wicket-Keeper,Capped,0.75,0.75,Base price buy,1,Exact,True,Donovan Ferreira
+2025|cf0ccafa|LSG,cf0ccafa,LSG,2025,M. Siddharth,Bowler,Uncapped,0.3,0.75,Under 2 Cr,2,Exact,True,M. Siddharth
+2025|5bb1a1c4|GT,5bb1a1c4,GT,2025,Ishant Sharma,Bowler,Capped,0.75,0.75,Base price buy,1,Exact,True,Ishant Sharma
+2025|62175638|GT,62175638,GT,2025,Karim Janat,All-Rounder,Capped,0.75,0.75,Base price buy,1,Exact,True,Karim Janat
+2025|81049310|GT,81049310,GT,2025,Jayant Yadav,All-Rounder,Capped,0.75,0.75,Base price buy,1,Exact,True,Jayant Yadav
+2025|08548b13|SRH,08548b13,SRH,2025,Kamindu Mendis,All-Rounder,Capped,0.75,0.75,Base price buy,1,Manual,True,Kamindu Mendis
+2025|A_shamar_joseph|LSG,A_shamar_joseph,LSG,2025,Shamar Joseph,Bowler,Capped,0.75,0.75,Base price buy,1,Unmatched,False,Shamar Joseph
+2025|a1d95bd8|MI,a1d95bd8,MI,2025,Lizaad Williams,Bowler,Capped,0.75,0.75,Base price buy,1,Manual,True,Lizaad Williams
+2025|93b4fc78|KKR,93b4fc78,KKR,2025,Manish Pandey,Batter,Capped,0.75,0.75,Base price buy,1,Exact,True,Manish Pandey
+2025|35f173a0|LSG,35f173a0,LSG,2025,Matthew Breetzke,Batter,Capped,0.75,0.75,Base price buy,1,Exact,True,Matthew Breetzke
+2025|81c08fa3|KKR,81c08fa3,KKR,2025,Umran Malik,Bowler,Capped,0.75,0.75,Base price buy,1,Exact,True,Umran Malik
+2025|327b58d3|DC,327b58d3,DC,2025,Dushmantha Chameera,Bowler,Capped,0.75,0.75,Base price buy,1,Exact,True,Dushmantha Chameera
+2025|8db7f47f|MI,8db7f47f,MI,2025,Reece Topley,Bowler,Capped,0.75,0.75,Base price buy,1,Initials,True,Reece Topley
+2025|bafd0398|MI,bafd0398,MI,2025,Robin Minz,Wicket-Keeper,Uncapped,0.3,0.65,Under 2 Cr,2,Manual,True,Robin Minz
+2025|57ca01b3|GT,57ca01b3,GT,2025,Kumar Kushagra,Wicket-Keeper,Uncapped,0.3,0.65,Under 2 Cr,2,Exact,True,Kumar Kushagra
+2025|A_vansh_bedi|CSK,A_vansh_bedi,CSK,2025,Vansh Bedi,Wicket-Keeper,Uncapped,0.3,0.55,Under 2 Cr,2,Unmatched,False,Vansh Bedi
+2025|983f2f61|RCB,983f2f61,RCB,2025,Swapnil Singh,All-Rounder,Uncapped,0.3,0.5,Under 2 Cr,2,Exact,True,Swapnil Singh
+2025|944533a5|DC,944533a5,DC,2025,Karun Nair,Batter,Uncapped,0.3,0.5,Under 2 Cr,2,Exact,True,Karun Nair
+2025|5ffc0565|DC,5ffc0565,DC,2025,Vipraj Nigam,All-Rounder,Uncapped,0.3,0.5,Under 2 Cr,2,Initials,True,Vipraj Nigam
+2025|119678fd|MI,119678fd,MI,2025,Karn Sharma,Bowler,Uncapped,0.5,0.5,Base price buy,1,Exact,True,Karn Sharma
+2025|fb5f69e4|DC,fb5f69e4,DC,2025,Madhav Tiwari,All-Rounder,Uncapped,0.3,0.4,Under 2 Cr,2,Initials,True,Madhav Tiwari
+2025|e4cdf230|KKR,e4cdf230,KKR,2025,Anukul Roy,All-Rounder,Uncapped,0.3,0.4,Under 2 Cr,2,Exact,True,Anukul Roy
+2025|36619795|SRH,36619795,SRH,2025,Zeeshan Ansari,Bowler,Uncapped,0.3,0.4,Under 2 Cr,2,Exact,True,Zeeshan Ansari
+2025|4885bbe6|RR,4885bbe6,RR,2025,Yudhvir Charak,All-Rounder,Uncapped,0.3,0.35,Under 2 Cr,2,Manual,True,Yudhvir Charak
+2025|ed5a5510|PBKS,ed5a5510,PBKS,2025,Pravin Dubey,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Pravin Dubey
+2025|d621b427|PBKS,d621b427,PBKS,2025,Musheer Khan,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Musheer Khan
+2025|A_pyla_avinash|PBKS,A_pyla_avinash,PBKS,2025,Pyla Avinash,Batter,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Pyla Avinash
+2025|A_harnoor_pannu|PBKS,A_harnoor_pannu,PBKS,2025,Harnoor Pannu,Batter,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Harnoor Pannu
+2025|a9fd84fb|KKR,a9fd84fb,KKR,2025,Mayank Markande,Bowler,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Mayank Markande
+2025|A_swastik_chhikara|RCB,A_swastik_chhikara,RCB,2025,Swastik Chhikara,Batter,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Swastik Chhikara
+2025|A_shrijith_krishnan|MI,A_shrijith_krishnan,MI,2025,Shrijith Krishnan,Wicket-Keeper,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Shrijith Krishnan
+2025|ba6b2f91|MI,ba6b2f91,MI,2025,Raj Angad Bawa,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Initials,True,Raj Angad Bawa
+2025|A_venkata_satyanarayana_penmetsa|MI,A_venkata_satyanarayana_penmetsa,MI,2025,Venkata Satyanarayana Penmetsa,Bowler,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Venkata Satyanarayana Penmetsa
+2025|c3c92b42|LSG,c3c92b42,LSG,2025,Rajvardhan Hangargekar,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Rajvardhan Hangargekar
+2025|2d140b79|LSG,2d140b79,LSG,2025,Arshin Kulkarni,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Surname,True,Arshin Kulkarni
+2025|A_andre_siddarth|CSK,A_andre_siddarth,CSK,2025,Andre Siddarth,Batter,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Andre Siddarth
+2025|dee07622|CSK,dee07622,CSK,2025,Ramakrishna Ghosh,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Surname,True,Ramakrishna Ghosh
+2025|cbf58a86|CSK,cbf58a86,CSK,2025,Shaik Rasheed,Batter,Uncapped,0.3,0.3,Base price buy,1,Surname,True,Shaik Rasheed
+2025|025c4400|GT,025c4400,GT,2025,Manav Suthar,Bowler,Uncapped,0.3,0.3,Base price buy,1,Surname,True,Manav Suthar
+2025|A_manvanth_kumar_l|DC,A_manvanth_kumar_l,DC,2025,Manvanth Kumar L,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Manvanth Kumar L
+2025|f6d8a7ab|RR,f6d8a7ab,RR,2025,Kumar Kartikeya Singh,Bowler,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Kumar Kartikeya Singh
+2025|970ddd24|PBKS,970ddd24,PBKS,2025,Suryansh Shedge,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Suryansh Shedge
+2025|e96801ea|RCB,e96801ea,RCB,2025,Manoj Bhandage,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Manoj Bhandage
+2025|51ec3919|DC,51ec3919,DC,2025,Tripurana Vijay,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Initials,True,Tripurana Vijay
+2025|31ee319e|DC,31ee319e,DC,2025,Ajay Mandal,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Exact (register),True,Ajay Mandal
+2025|A_bevan_john_jacobs|MI,A_bevan_john_jacobs,MI,2025,Bevan John Jacobs,Batter,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Bevan John Jacobs
+2025|5f2732f7|LSG,5f2732f7,LSG,2025,Aryan Juyal,Wicket-Keeper,Uncapped,0.3,0.3,Base price buy,1,Exact (register),True,Aryan Juyal
+2025|a689af4b|KKR,a689af4b,KKR,2025,Luvnith Sisodia,Wicket-Keeper,Uncapped,0.3,0.3,Base price buy,1,Exact (register),True,Luvnith Sisodia
+2025|b4f5c2d9|CSK,b4f5c2d9,CSK,2025,Kamlesh Nagarkoti,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Kamlesh Nagarkoti
+2025|1730e08e|LSG,1730e08e,LSG,2025,Yuvraj Chaudhary,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Exact (register),True,Yuvraj Chaudhary
+2025|fa2f1dde|GT,fa2f1dde,GT,2025,Kulwant Khejroliya,Bowler,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Kulwant Khejroliya
+2025|e3851766|RR,e3851766,RR,2025,Kunal Rathore,Wicket-Keeper,Uncapped,0.3,0.3,Base price buy,1,Surname,True,Kunal Rathore
+2025|ebcfef83|LSG,ebcfef83,LSG,2025,Himmat Singh,Batter,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Himmat Singh
+2025|50c09020|RR,50c09020,RR,2025,Ashok Sharma,Bowler,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Ashok Sharma
+2025|d45c29b1|MI,d45c29b1,MI,2025,Ashwani Kumar,Bowler,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Ashwani Kumar
+2025|1ac746c8|SRH,1ac746c8,SRH,2025,Atharva Taide,Batter,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Atharva Taide
+2025|7a8bd078|CSK,7a8bd078,CSK,2025,Shreyas Gopal,Bowler,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Shreyas Gopal
+2025|44aac2f0|MI,44aac2f0,MI,2025,Arjun Tendulkar,Bowler,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Arjun Tendulkar
+2025|c8f5f961|GT,c8f5f961,GT,2025,Anuj Rawat,Wicket-Keeper,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Anuj Rawat
+2025|cd8d2859|DC,cd8d2859,DC,2025,Darshan Nalkande,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Manual,True,Darshan Nalkande
+2025|3cea23da|GT,3cea23da,GT,2025,Nishant Sindhu,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Manual,True,Nishant Sindhu
+2025|13fc5c6d|LSG,13fc5c6d,LSG,2025,Digvesh Singh,Bowler,Uncapped,0.3,0.3,Base price buy,1,Manual,True,Digvesh Singh
+2025|1e030637|MI,1e030637,MI,2025,Vignesh Puthur,All-Rounder,Uncapped,0.3,0.3,Base price buy,1,Manual,True,Vignesh Puthur
+2025|82c10dac|RCB,82c10dac,RCB,2025,Abhinandan Singh,Bowler,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Abhinandan Singh
+2025|b483905d|LSG,b483905d,LSG,2025,Akash Singh,Bowler,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Akash Singh
+2025|a3b0600d|SRH,a3b0600d,SRH,2025,Aniket Verma,Batter,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Aniket Verma
+2025|765a4731|CSK,765a4731,CSK,2025,Mukesh Choudhary,Bowler,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Mukesh Choudhary
+2025|9a5f2863|RCB,9a5f2863,RCB,2025,Mohit Rathee,Bowler,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Mohit Rathee
+2025|dc9dd038|SRH,dc9dd038,SRH,2025,Sachin Baby,Batter,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Sachin Baby
+2025|80b2fb19|LSG,80b2fb19,LSG,2025,Prince Yadav,Bowler,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Prince Yadav
+2026|eaa76d3c|KKR,eaa76d3c,KKR,2026,Cameron Green,,Capped,2,25.2,10 Cr and above,5,Exact,True,Cameron Green
+2026|64839cb3|KKR,64839cb3,KKR,2026,Matheesha Pathirana,,Capped,2,18,10 Cr and above,5,Initials,True,Matheesha Pathirana
+2026|e148e6bd|CSK,e148e6bd,CSK,2026,Prashant Veer,,Uncapped,0.3,14.2,10 Cr and above,5,Surname,True,Prashant Veer
+2026|7b679de5|CSK,7b679de5,CSK,2026,Kartik Sharma,,Uncapped,0.3,14.2,10 Cr and above,5,Exact,True,Kartik Sharma
+2026|50c6bc2b|SRH,50c6bc2b,SRH,2026,Liam Livingstone,,Capped,2,13,10 Cr and above,5,Exact,True,Liam Livingstone
+2026|0a8fce53|KKR,0a8fce53,KKR,2026,Mustafizur Rahman,,Capped,2,9.2,5 to 10 Cr,4,Exact,True,Mustafizur Rahman
+2026|989889ff|LSG,989889ff,LSG,2026,Josh Inglis,,Capped,2,8.6,5 to 10 Cr,4,Exact,True,Josh Inglis
+2026|7c3c0337|DC,7c3c0337,DC,2026,Auqib Dar,,Uncapped,0.3,8.4,5 to 10 Cr,4,Surname,True,Auqib Dar
+2026|df064e1a|RR,df064e1a,RR,2026,Ravi Bishnoi,,Capped,2,7.2,5 to 10 Cr,4,Exact,True,Ravi Bishnoi
+2026|0f721006|GT,0f721006,GT,2026,Jason Holder,,Capped,2,7,5 to 10 Cr,4,Exact,True,Jason Holder
+2026|a24be938|RCB,a24be938,RCB,2026,Venkatesh Iyer,,Capped,2,7,5 to 10 Cr,4,Exact,True,Venkatesh Iyer
+2026|2ed569a0|CSK,2ed569a0,CSK,2026,Rahul Chahar,,Capped,1,5.2,5 to 10 Cr,4,Initials,True,Rahul Chahar
+2026|A_mangesh_yadav|RCB,A_mangesh_yadav,RCB,2026,Mangesh Yadav,,Uncapped,0.3,5.2,5 to 10 Cr,4,Unmatched,False,Mangesh Yadav
+2026|e1b9f3a9|PBKS,e1b9f3a9,PBKS,2026,Ben Dwarshuis,,Capped,1,4.4,2 to 5 Cr,3,Exact,True,Ben Dwarshuis
+2026|8ee36b18|DC,8ee36b18,DC,2026,Pathum Nissanka,,Capped,0.75,4,2 to 5 Cr,3,Exact,True,Pathum Nissanka
+2026|fe366f34|PBKS,fe366f34,PBKS,2026,Cooper Connolly,,Capped,2,3,2 to 5 Cr,3,Initials,True,Cooper Connolly
+2026|f12fe2a1|KKR,f12fe2a1,KKR,2026,Tejasvi Singh,,Uncapped,0.3,3,2 to 5 Cr,3,Manual,True,Tejasvi Singh
+2026|A_jack_edwards|SRH,A_jack_edwards,SRH,2026,Jack Edwards,,Uncapped,0.5,3,2 to 5 Cr,3,Unmatched,False,Jack Edwards
+2026|1c84109e|LSG,1c84109e,LSG,2026,Mukul Choudhary,,Uncapped,0.3,2.6,2 to 5 Cr,3,Surname,True,Mukul Choudhary
+2026|350bb1b1|RR,350bb1b1,RR,2026,Adam Milne,,Capped,2,2.4,2 to 5 Cr,3,Exact,True,Adam Milne
+2026|d8d67045|LSG,d8d67045,LSG,2026,Akshat Raghuwanshi,,Uncapped,0.3,2.2,2 to 5 Cr,3,Exact,True,Akshat Raghuwanshi
+2026|dadbdb68|RCB,dadbdb68,RCB,2026,Jacob Duffy,,Capped,2,2,Base price buy,1,Initials,True,Jacob Duffy
+2026|ba5e1069|KKR,ba5e1069,KKR,2026,Rachin Ravindra,,Capped,2,2,Base price buy,1,Exact,True,Rachin Ravindra
+2026|5f26f677|DC,5f26f677,DC,2026,Ben Duckett,,Capped,2,2,Base price buy,1,Exact (register),True,Ben Duckett
+2026|25f7b7d6|GT,25f7b7d6,GT,2026,Tom Banton,,Capped,2,2,Base price buy,1,Exact,True,Tom Banton
+2026|acdc62f5|LSG,acdc62f5,LSG,2026,Anrich Nortje,,Capped,2,2,Base price buy,1,Exact,True,Anrich Nortje
+2026|d67d5f00|DC,d67d5f00,DC,2026,David Miller,,Capped,2,2,Base price buy,1,Exact,True,David Miller
+2026|a97c8ec2|LSG,a97c8ec2,LSG,2026,Wanindu Hasaranga,,Capped,2,2,Base price buy,1,Exact,True,Wanindu Hasaranga
+2026|e84ac20c|CSK,e84ac20c,CSK,2026,Matt Henry,,Capped,2,2,Base price buy,1,Manual,True,Matt Henry
+2026|b52ffbbd|KKR,b52ffbbd,KKR,2026,Finn Allen,,Capped,2,2,Base price buy,1,Manual,True,Finn Allen
+2026|4d7f517e|CSK,4d7f517e,CSK,2026,Akeal Hosein,,Capped,2,2,Base price buy,1,Exact,True,Akeal Hosein
+2026|68c56d09|DC,68c56d09,DC,2026,Kyle Jamieson,,Capped,2,2,Base price buy,1,Exact,True,Kyle Jamieson
+2026|f834dcfc|DC,f834dcfc,DC,2026,Lungisani Ngidi,,Capped,2,2,Base price buy,1,Manual,True,Lungi Ngidi
+2026|a90e53ec|CSK,a90e53ec,CSK,2026,Matthew Short,,Capped,1.5,1.5,Base price buy,1,Initials,True,Matthew Short
+2026|4663bd23|KKR,4663bd23,KKR,2026,Tim Seifert,,Capped,1.5,1.5,Base price buy,1,Initials,True,Tim Seifert
+2026|d7423da1|SRH,d7423da1,SRH,2026,Salil Arora,,Uncapped,0.3,1.5,Under 2 Cr,2,Exact,True,Salil Arora
+2026|A_naman_tiwari|LSG,A_naman_tiwari,LSG,2026,Naman Tiwari,,Uncapped,0.3,1,Under 2 Cr,2,Unmatched,False,Naman Tiwari
+2026|0a67aec0|KKR,0a67aec0,KKR,2026,Akash Deep,,Capped,1,1,Base price buy,1,Exact,True,Akash Deep
+2026|372455c4|MI,372455c4,MI,2026,Quinton De Kock,,Capped,1,1,Base price buy,1,Exact,True,Quinton De Kock
+2026|548516a6|RR,548516a6,RR,2026,Ravi Singh,,Uncapped,0.3,0.95,Under 2 Cr,2,Exact,True,Ravi Singh
+2026|50c09020|GT,50c09020,GT,2026,Ashok Sharma,,Uncapped,0.3,0.9,Under 2 Cr,2,Exact,True,Ashok Sharma
+2026|92500ad5|RR,92500ad5,RR,2026,Sushant Mishra,,Uncapped,0.3,0.9,Under 2 Cr,2,Surname,True,Sushant Mishra (SS Mishra)
+2026|30f92334|CSK,30f92334,CSK,2026,Zak Foulkes,,Capped,0.75,0.75,Base price buy,1,Manual,True,Zak Foulkes
+2026|65b6943c|GT,65b6943c,GT,2026,Luke Wood,,Capped,0.75,0.75,Base price buy,1,Manual,True,Luke Wood
+2026|A_jordan_cox|RCB,A_jordan_cox,RCB,2026,Jordan Cox,,Capped,0.75,0.75,Base price buy,1,Unmatched,False,Jordan Cox
+2026|c38d3503|SRH,c38d3503,SRH,2026,Shivam Mavi,,Capped,0.75,0.75,Base price buy,1,Exact,True,Shivam Mavi
+2026|2e78f685|RR,2e78f685,RR,2026,Kuldeep Sen,,Capped,0.75,0.75,Base price buy,1,Exact,True,Kuldeep Sen
+2026|77255a9e|KKR,77255a9e,KKR,2026,Rahul Tripathi,,Capped,0.75,0.75,Base price buy,1,Manual,True,Rahul Tripathi
+2026|8b3e9c7c|DC,8b3e9c7c,DC,2026,Prithvi Shaw,,Capped,0.75,0.75,Base price buy,1,Exact,True,Prithvi Shaw
+2026|f088b960|CSK,f088b960,CSK,2026,Sarfaraz Khan,,Capped,0.75,0.75,Base price buy,1,Initials,True,Sarfaraz Khan
+2026|378daa89|CSK,378daa89,CSK,2026,Aman Khan,,Uncapped,0.3,0.4,Under 2 Cr,2,Exact,True,Aman Khan
+2026|7b44eb3e|SRH,7b44eb3e,SRH,2026,Shivang Kumar,,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Shivang Kumar
+2026|02dfebbe|RR,02dfebbe,RR,2026,Yash Raj Punja,,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Yash Raj Punja
+2026|926c7443|DC,926c7443,DC,2026,Sahil Parakh,,Uncapped,0.3,0.3,Base price buy,1,Surname,True,Sahil Parakh
+2026|cfa4bd2b|GT,cfa4bd2b,GT,2026,Prithviraj Yarra,,Uncapped,0.3,0.3,Base price buy,1,Manual,True,Prithviraj Yarra
+2026|d6cd318e|MI,d6cd318e,MI,2026,Atharva Ankolekar,,Uncapped,0.3,0.3,Base price buy,1,Exact (register),True,Atharva Ankolekar
+2026|A_mohammad_izhar|MI,A_mohammad_izhar,MI,2026,Mohammad Izhar,,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Mohammad Izhar
+2026|A_amit_kumar|SRH,A_amit_kumar,SRH,2026,Amit Kumar,,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Amit Kumar
+2026|5d2eea49|KKR,5d2eea49,KKR,2026,Kartik Tyagi,,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Kartik Tyagi
+2026|A_krains_fuletra|SRH,A_krains_fuletra,SRH,2026,Krains Fuletra,,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Krains Fuletra
+2026|A_onkar_tarmale|SRH,A_onkar_tarmale,SRH,2026,Onkar Tarmale,,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Onkar Tarmale
+2026|ece7b6b3|SRH,ece7b6b3,SRH,2026,Praful Hinge,,Uncapped,0.3,0.3,Base price buy,1,Surname,True,Praful Hinge
+2026|280fff14|SRH,280fff14,SRH,2026,Sakib Hussain,,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Sakib Hussain
+2026|c695b423|KKR,c695b423,KKR,2026,Prashant Solanki,,Uncapped,0.3,0.3,Base price buy,1,Manual,True,Prashant Solanki
+2026|A_vihaan_malhotra|RCB,A_vihaan_malhotra,RCB,2026,Vihaan Malhotra,,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Vihaan Malhotra
+2026|ed5a5510|PBKS,ed5a5510,PBKS,2026,Pravin Dubey,,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Pravin Dubey
+2026|A_vishal_nishad|PBKS,A_vishal_nishad,PBKS,2026,Vishal Nishad,,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Vishal Nishad
+2026|133bbd61|RR,133bbd61,RR,2026,Brijesh Sharma,,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Brijesh Sharma
+2026|d7cdefa9|KKR,d7cdefa9,KKR,2026,Sarthak Ranjan,,Uncapped,0.3,0.3,Base price buy,1,Exact (register),True,Sarthak Ranjan
+2026|A_aman_rao_perala|RR,A_aman_rao_perala,RR,2026,Aman Rao Perala,,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Aman Rao Perala
+2026|1e030637|RR,1e030637,RR,2026,Vignesh Puthur,,Uncapped,0.3,0.3,Base price buy,1,Manual,True,Vignesh Puthur
+2026|A_vicky_ostwal|RCB,A_vicky_ostwal,RCB,2026,Vicky Ostwal,,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Vicky Ostwal
+2026|A_satvik_deswal|RCB,A_satvik_deswal,RCB,2026,Satvik Deswal,,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Satvik Deswal
+2026|9e6032fa|MI,9e6032fa,MI,2026,Danish Malewar,,Uncapped,0.3,0.3,Base price buy,1,Surname,True,Danish Malewar
+2026|A_daksh_kamra|KKR,A_daksh_kamra,KKR,2026,Daksh Kamra,,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Daksh Kamra
+2026|2b801189|MI,2b801189,MI,2026,Mayank Rawat,,Uncapped,0.3,0.3,Base price buy,1,Exact,True,Mayank Rawat
+2026|A_kanishk_chouhan|RCB,A_kanishk_chouhan,RCB,2026,Kanishk Chouhan,,Uncapped,0.3,0.3,Base price buy,1,Unmatched,False,Kanishk Chouhan

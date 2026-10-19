@@ -1,0 +1,133 @@
+table FactAuction
+	lineageTag: 34d0405c-8e4d-5828-9ba5-e5341e2b0999
+
+	column AuctionKey
+		dataType: string
+		isHidden
+		lineageTag: bda17e09-de34-535b-985e-e236c5a15314
+		summarizeBy: none
+		sourceColumn: AuctionKey
+
+		annotation SummarizationSetBy = User
+
+	column PlayerID
+		dataType: string
+		isHidden
+		lineageTag: 0c5234c8-bfa1-5efc-8f69-82d1f20d73f8
+		summarizeBy: none
+		sourceColumn: PlayerID
+
+		annotation SummarizationSetBy = User
+
+	column TeamKey
+		dataType: string
+		isHidden
+		lineageTag: 81a3270a-bed9-59cf-a767-e2bca7580a87
+		summarizeBy: none
+		sourceColumn: TeamKey
+
+		annotation SummarizationSetBy = User
+
+	column Season
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a73e6651-2073-562b-abfb-9a2075fa2737
+		summarizeBy: none
+		sourceColumn: Season
+
+		annotation SummarizationSetBy = User
+
+	column AuctionName
+		dataType: string
+		lineageTag: a276ba2e-652e-51ac-89e6-07124273d9d6
+		summarizeBy: none
+		sourceColumn: AuctionName
+
+		annotation SummarizationSetBy = User
+
+	column AuctionRole
+		dataType: string
+		lineageTag: b3c49f21-4704-5ddc-90fd-434b81225cae
+		summarizeBy: none
+		sourceColumn: AuctionRole
+
+		annotation SummarizationSetBy = User
+
+	column Capped
+		dataType: string
+		lineageTag: 21ba38d5-82ac-56e5-bd36-fc31ee782a5e
+		summarizeBy: none
+		sourceColumn: Capped
+
+		annotation SummarizationSetBy = User
+
+	column BasePriceCr
+		dataType: double
+		formatString: #,0.00
+		lineageTag: b15ed413-59a8-5ccb-b590-eab7e394986a
+		summarizeBy: sum
+		sourceColumn: BasePriceCr
+
+		annotation SummarizationSetBy = User
+
+	column PriceCr
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 9935fc48-a0ea-51bb-8177-3ee533fab7d9
+		summarizeBy: sum
+		sourceColumn: PriceCr
+
+		annotation SummarizationSetBy = User
+
+	column PriceBracket
+		dataType: string
+		lineageTag: 3cfe3a31-3720-52e5-b8c8-b76e095e0062
+		summarizeBy: none
+		sourceColumn: PriceBracket
+		sortByColumn: PriceBracketOrder
+
+		annotation SummarizationSetBy = User
+
+	column PriceBracketOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4da7ecfb-0628-56a5-94b3-503dfdf65665
+		summarizeBy: none
+		sourceColumn: PriceBracketOrder
+
+		annotation SummarizationSetBy = User
+
+	column MatchPass
+		dataType: string
+		lineageTag: 68f7fca8-b7dc-5d41-b280-4bae4b4b18f0
+		summarizeBy: none
+		sourceColumn: MatchPass
+
+		annotation SummarizationSetBy = User
+
+	column IsMatched
+		dataType: boolean
+		lineageTag: a727df98-d42d-5d6c-a8a3-c6b960005152
+		summarizeBy: none
+		sourceColumn: IsMatched
+
+		annotation SummarizationSetBy = User
+
+	partition FactAuction = m
+		mode: import
+		queryGroup: Model
+		source =
+				let
+				    Source = stg_AuctionMatched,
+				    Renamed = Table.RenameColumns(Source, {{"PlayerKey", "PlayerKeyOut"}, {"AuctionSeason", "Season"}, {"Player", "AuctionName"}, {"Role", "AuctionRole"}}),
+				    WithRowKey = Table.AddColumn(Renamed, "AuctionKey", each Text.From([Season]) & "|" & [PlayerKeyOut] & "|" & [TeamKey], type text),
+				    Kept = Table.SelectColumns(WithRowKey, {"AuctionKey", "PlayerKeyOut", "TeamKey", "Season", "AuctionName", "AuctionRole", "Capped", "BasePriceCr", "PriceCr", "PriceBracket", "PriceBracketOrder", "MatchPass", "IsMatched"}),
+				    Final = Table.RenameColumns(Kept, {{"PlayerKeyOut", "PlayerID"}}),
+				    Typed = Table.TransformColumnTypes(Final, {{"Season", Int64.Type}, {"BasePriceCr", type number}, {"PriceCr", type number}, {"PriceBracketOrder", Int64.Type}, {"IsMatched", type logical}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

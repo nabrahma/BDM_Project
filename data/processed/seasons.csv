@@ -1,0 +1,15 @@
+Season,SeasonLabel,IsMegaAuction,AuctionType,Matches,PlayersBought,AuctionSpendCr,AvgPriceCr,MedianPriceCr,TopBuyPlayer,TopBuyPriceCr,TopRunScorer,TopRunScorerRuns,TopWicketTaker,TopWicketTakerWickets,LeagueSpendCr,LeaguePricedImpact,LakhPerPoint,LeagueValueIndex
+2013,IPL 2013,False,Mini auction,76,37,64.179,1.7346,1.62,Glenn Maxwell (MI),5.4,Michael Hussey,733,Dwayne Bravo,32,64.179,6965,0.9215,1
+2014,IPL 2014,True,Mega auction,60,154,262.6,1.7052,1,Yuvraj Singh (RCB),14,Robin Uthappa,660,Mohit Sharma,23,262.6,32352,0.8117,1
+2015,IPL 2015,False,Mini auction,59,67,87.6,1.3075,0.3,Yuvraj Singh (DC),16,David Warner,562,Dwayne Bravo,26,235.5,29476,0.799,1
+2016,IPL 2016,False,Mini auction,60,94,136,1.4468,0.5,Shane Watson (RCB),9.5,V Kohli,973,Bhuvneshwar Kumar,23,241.3,30250,0.7977,1
+2017,IPL 2017,False,Mini auction,59,66,91.15,1.3811,0.4,Ben Stokes (RPS),14.5,David Warner,641,Bhuvneshwar Kumar,26,239.7,32995,0.7265,1
+2018,IPL 2018,True,Mega auction,60,168,431.5,2.5685,1.7,Ben Stokes (RR),12.5,Kane Williamson,735,Andrew Tye,24,431.5,37158,1.1613,1
+2019,IPL 2019,False,Mini auction,60,60,106.8,1.78,0.75,Jaydev Unadkat (RR),8.4,David Warner,692,Imran Tahir,26,405.25,33186,1.2211,1
+2020,IPL 2020,False,Mini auction,60,62,140.3,2.2629,0.9,Pat Cummins (KKR),15.5,KL Rahul,670,Kagiso Rabada,30,379.9,32595,1.1655,1
+2021,IPL 2021,False,Mini auction,60,57,145.3,2.5491,0.5,Christopher Morris (RR),16.25,Ruturaj Gaikwad,635,Harshal Patel,32,398.35,33859,1.1765,1
+2022,IPL 2022,True,Mega auction,74,204,551.7,2.7044,1.05,Ishan Kishan (MI),15.25,Jos Buttler,863,Yuzvendra Chahal,27,551.7,43559,1.2666,1
+2023,IPL 2023,False,Mini auction,74,80,167,2.0875,0.5,Sam Curran (PBKS),18.5,Shubman Gill,890,Mohammad Shami,28,563.35,40305,1.3977,1
+2024,IPL 2024,False,Mini auction,71,72,230.45,3.2007,1.25,Mitchell Starc (KKR),24.75,V Kohli,741,Harshal Patel,24,574.3,38496,1.4918,1
+2025,IPL 2025,True,Mega auction,74,182,639.15,3.5118,1.5,Rishabh Pant (LSG),27,B. Sai Sudharsan,759,Prasidh Krishna,25,639.15,36923,1.731,1
+2026,IPL 2026,False,Mini auction,74,77,215.45,2.7981,1,Cameron Green (KKR),25.2,Vaibhav Suryavanshi,776,Kagiso Rabada,29,661.45,39944,1.6559,1

@@ -1,0 +1,8 @@
+* text=auto
+# Power BI Desktop writes TMDL with CRLF; keep it that way so saves don't show whole-file diffs
+*.tmdl text eol=crlf
+*.sh text eol=lf
+*.ps1 text eol=crlf
+*.pdf binary
+*.png binary
+*.abf binary

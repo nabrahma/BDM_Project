@@ -1,0 +1,57 @@
+table DimTeam
+	lineageTag: f319b4cb-80f0-536a-bea2-43032c791145
+
+	column TeamKey
+		dataType: string
+		isHidden
+		lineageTag: c511031d-b55d-5080-90dd-e62a123d823a
+		summarizeBy: none
+		sourceColumn: TeamKey
+
+		annotation SummarizationSetBy = User
+
+	column TeamName
+		dataType: string
+		lineageTag: 0d2dd487-6079-5928-b26b-c9330c1e1502
+		summarizeBy: none
+		sourceColumn: TeamName
+
+		annotation SummarizationSetBy = User
+
+	column ShortCode
+		dataType: string
+		lineageTag: eaefc6df-cf40-55aa-ad8f-cf93cc32eab5
+		summarizeBy: none
+		sourceColumn: ShortCode
+
+		annotation SummarizationSetBy = User
+
+	column TeamColour
+		dataType: string
+		lineageTag: c055c4de-feb1-5ade-aa29-97e44c4ad6ed
+		summarizeBy: none
+		sourceColumn: TeamColour
+
+		annotation SummarizationSetBy = User
+
+	column IsActive
+		dataType: boolean
+		lineageTag: ebfbe64f-cd95-555d-8121-85e8562bea84
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = User
+
+	partition DimTeam = m
+		mode: import
+		queryGroup: Model
+		source =
+				let
+				    Source = Table.Distinct(Table.SelectColumns(stg_TeamMap, {"TeamKey", "TeamName", "TeamColour", "IsActive"}), {"TeamKey"}),
+				    WithCode = Table.AddColumn(Source, "ShortCode", each [TeamKey], type text),
+				    Final = Table.SelectColumns(WithCode, {"TeamKey", "TeamName", "ShortCode", "TeamColour", "IsActive"})
+				in
+				    Final
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,634 @@
+[
+ {
+  "Season":2026,
+  "Player":"Karn Sharma",
+  "BasePriceCr":0.5,
+  "CareerMatches":89,
+  "CareerImpact":3209,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Deepak Hooda",
+  "BasePriceCr":0.75,
+  "CareerMatches":125,
+  "CareerImpact":2570,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Jonny Bairstow",
+  "BasePriceCr":1.0,
+  "CareerMatches":52,
+  "CareerImpact":2293,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Vijay Shankar",
+  "BasePriceCr":0.3,
+  "CareerMatches":78,
+  "CareerImpact":2034,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Manan Vohra",
+  "BasePriceCr":0.3,
+  "CareerMatches":56,
+  "CareerImpact":1383,
+  "LastIplSeason":2023
+ },
+ {
+  "Season":2026,
+  "Player":"Devon Conway",
+  "BasePriceCr":2.0,
+  "CareerMatches":29,
+  "CareerImpact":1350,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Murugan Ashwin",
+  "BasePriceCr":0.3,
+  "CareerMatches":44,
+  "CareerImpact":1276,
+  "LastIplSeason":2023
+ },
+ {
+  "Season":2026,
+  "Player":"Maheesh Theekshana",
+  "BasePriceCr":2.0,
+  "CareerMatches":38,
+  "CareerImpact":1236,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Alzarri Joseph",
+  "BasePriceCr":2.0,
+  "CareerMatches":22,
+  "CareerImpact":771,
+  "LastIplSeason":2024
+ },
+ {
+  "Season":2026,
+  "Player":"Mahipal Lomror",
+  "BasePriceCr":0.5,
+  "CareerMatches":40,
+  "CareerImpact":763,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Chetan Sakariya",
+  "BasePriceCr":0.75,
+  "CareerMatches":20,
+  "CareerImpact":725,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Akash Madhwal",
+  "BasePriceCr":0.3,
+  "CareerMatches":17,
+  "CareerImpact":709,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Mujeeb Ur Rahman",
+  "BasePriceCr":2.0,
+  "CareerMatches":20,
+  "CareerImpact":686,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Riley Meredith",
+  "BasePriceCr":1.5,
+  "CareerMatches":18,
+  "CareerImpact":647,
+  "LastIplSeason":2023
+ },
+ {
+  "Season":2026,
+  "Player":"Rahmanullah Gurbaz",
+  "BasePriceCr":1.5,
+  "CareerMatches":18,
+  "CareerImpact":583,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Jake Fraser-McGurk",
+  "BasePriceCr":2.0,
+  "CareerMatches":15,
+  "CareerImpact":554,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Gerald Coetzee",
+  "BasePriceCr":2.0,
+  "CareerMatches":14,
+  "CareerImpact":546,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Daryl Mitchell",
+  "BasePriceCr":2.0,
+  "CareerMatches":15,
+  "CareerImpact":517,
+  "LastIplSeason":2024
+ },
+ {
+  "Season":2026,
+  "Player":"Abhinav Manohar",
+  "BasePriceCr":0.3,
+  "CareerMatches":27,
+  "CareerImpact":491,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Simarjeet Singh",
+  "BasePriceCr":0.3,
+  "CareerMatches":14,
+  "CareerImpact":422,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Kartikeya Singh",
+  "BasePriceCr":0.3,
+  "CareerMatches":16,
+  "CareerImpact":411,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Atharva Taide",
+  "BasePriceCr":0.3,
+  "CareerMatches":10,
+  "CareerImpact":346,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"KC Cariappa",
+  "BasePriceCr":0.3,
+  "CareerMatches":11,
+  "CareerImpact":314,
+  "LastIplSeason":2019
+ },
+ {
+  "Season":2026,
+  "Player":"Spencer Johnson",
+  "BasePriceCr":1.5,
+  "CareerMatches":12,
+  "CareerImpact":305,
+  "LastIplSeason":2026
+ },
+ {
+  "Season":2026,
+  "Player":"K.S. Bharat",
+  "BasePriceCr":0.75,
+  "CareerMatches":10,
+  "CareerImpact":279,
+  "LastIplSeason":2023
+ },
+ {
+  "Season":2026,
+  "Player":"Kamlesh Nagarkoti",
+  "BasePriceCr":0.3,
+  "CareerMatches":12,
+  "CareerImpact":272,
+  "LastIplSeason":2022
+ },
+ {
+  "Season":2026,
+  "Player":"Michael Bracewell",
+  "BasePriceCr":2.0,
+  "CareerMatches":5,
+  "CareerImpact":250,
+  "LastIplSeason":2023
+ },
+ {
+  "Season":2026,
+  "Player":"Fazalhaq Farooqi",
+  "BasePriceCr":1.0,
+  "CareerMatches":12,
+  "CareerImpact":246,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"KM Asif",
+  "BasePriceCr":0.4,
+  "CareerMatches":7,
+  "CareerImpact":229,
+  "LastIplSeason":2023
+ },
+ {
+  "Season":2026,
+  "Player":"Anmolpreet Singh",
+  "BasePriceCr":0.3,
+  "CareerMatches":9,
+  "CareerImpact":180,
+  "LastIplSeason":2024
+ },
+ {
+  "Season":2026,
+  "Player":"Dasun Shanaka",
+  "BasePriceCr":0.75,
+  "CareerMatches":10,
+  "CareerImpact":169,
+  "LastIplSeason":2026
+ },
+ {
+  "Season":2026,
+  "Player":"Jhye Richardson",
+  "BasePriceCr":1.5,
+  "CareerMatches":4,
+  "CareerImpact":134,
+  "LastIplSeason":2024
+ },
+ {
+  "Season":2026,
+  "Player":"Mayank Dagar",
+  "BasePriceCr":0.3,
+  "CareerMatches":8,
+  "CareerImpact":118,
+  "LastIplSeason":2024
+ },
+ {
+  "Season":2026,
+  "Player":"Rajvardhan Hangargekar",
+  "BasePriceCr":0.4,
+  "CareerMatches":2,
+  "CareerImpact":89,
+  "LastIplSeason":2023
+ },
+ {
+  "Season":2026,
+  "Player":"Richard Gleeson",
+  "BasePriceCr":0.75,
+  "CareerMatches":3,
+  "CareerImpact":77,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Sean Abbott",
+  "BasePriceCr":2.0,
+  "CareerMatches":3,
+  "CareerImpact":73,
+  "LastIplSeason":2022
+ },
+ {
+  "Season":2026,
+  "Player":"Sanvir Singh",
+  "BasePriceCr":0.3,
+  "CareerMatches":6,
+  "CareerImpact":53,
+  "LastIplSeason":2024
+ },
+ {
+  "Season":2026,
+  "Player":"Yash Dhull",
+  "BasePriceCr":0.3,
+  "CareerMatches":4,
+  "CareerImpact":39,
+  "LastIplSeason":2023
+ },
+ {
+  "Season":2026,
+  "Player":"Tanush Kotian",
+  "BasePriceCr":0.3,
+  "CareerMatches":1,
+  "CareerImpact":33,
+  "LastIplSeason":2024
+ },
+ {
+  "Season":2026,
+  "Player":"Sediqullah Atal",
+  "BasePriceCr":0.75,
+  "CareerMatches":1,
+  "CareerImpact":26,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Wiaan Mulder",
+  "BasePriceCr":1.0,
+  "CareerMatches":1,
+  "CareerImpact":19,
+  "LastIplSeason":2025
+ },
+ {
+  "Season":2026,
+  "Player":"Tanay Thyagarajann",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":14,
+  "LastIplSeason":2024
+ },
+ {
+  "Season":2026,
+  "Player":"Tejas Baroka",
+  "BasePriceCr":0.3,
+  "CareerMatches":1,
+  "CareerImpact":6,
+  "LastIplSeason":2017
+ },
+ {
+  "Season":2026,
+  "Player":"Mohit Rathee",
+  "BasePriceCr":0.3,
+  "CareerMatches":1,
+  "CareerImpact":4,
+  "LastIplSeason":2023
+ },
+ {
+  "Season":2026,
+  "Player":"Ruchit Ahir",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Vansh Bedi",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Tushar Raheja",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Raj Limbani",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Wahidullah Zadran",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Shivam Shukla",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Waqar Salamkheil",
+  "BasePriceCr":1.0,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Salman Nizar",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Taskin Ahmed",
+  "BasePriceCr":0.75,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"M.Dheeraj Kumar",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Connor Esterhuizen",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Irfan Umair",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Chintal Gandhi",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Nathan Smith",
+  "BasePriceCr":0.75,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Daniel Lategan",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Karan Lal",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Utkarsh Singh",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Ayush Vartak",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Jikku Bright",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Izaz Sawariya",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Mani Sankar Mura Singh",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Money Grewal",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Macneil Noronha",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Siddharth Yadav",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Ritik Tada",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Swastik Chikara",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"William Sutherland",
+  "BasePriceCr":1.0,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"RS Ambrish",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Daniel Lawrence",
+  "BasePriceCr":2.0,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Chama Milind",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Gus Atkinson",
+  "BasePriceCr":2.0,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Jamie Smith",
+  "BasePriceCr":2.0,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Aarya Desai",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Abhinav Tejrana",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ },
+ {
+  "Season":2026,
+  "Player":"Eden Apple Tom",
+  "BasePriceCr":0.3,
+  "CareerMatches":0,
+  "CareerImpact":0,
+  "LastIplSeason":null
+ }
+]

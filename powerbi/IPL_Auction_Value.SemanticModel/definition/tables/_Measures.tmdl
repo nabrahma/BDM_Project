@@ -1,0 +1,625 @@
+table _Measures
+	lineageTag: 8aff85e6-cf86-52b8-9963-8a4dfffb591e
+
+	measure 'Spend Cr' = SUM ( FactPlayerSeason[PriceCr] )
+		formatString: ₹#,0.0 Cr
+		displayFolder: Money
+		lineageTag: 69e421b8-6981-5885-8a19-30f6bd9db917
+
+	measure 'Total Auction Spend Cr' = SUM ( FactAuction[PriceCr] )
+		formatString: ₹#,0.0 Cr
+		displayFolder: Money
+		lineageTag: 70b2a040-bd08-5efd-9a04-5604447df674
+
+	measure 'Players Bought' = COUNTROWS ( FactAuction )
+		formatString: #,0
+		displayFolder: Money
+		lineageTag: e240d070-502e-57d7-9a89-83d11485dc70
+
+	measure 'Avg Auction Price Cr' = AVERAGE ( FactAuction[PriceCr] )
+		formatString: ₹#,0.00 Cr
+		displayFolder: Money
+		lineageTag: c69dab8d-e6b3-5aa9-9007-23d760734626
+
+	measure 'Median Auction Price Cr' = MEDIAN ( FactAuction[PriceCr] )
+		formatString: ₹#,0.00 Cr
+		displayFolder: Money
+		lineageTag: bdb07151-53b4-5539-b04c-1f32b439b889
+
+	measure 'Top Buy Price Cr' = MAX ( FactAuction[PriceCr] )
+		formatString: ₹#,0.0 Cr
+		displayFolder: Money
+		lineageTag: d0c59ead-e12b-596c-a6e8-6bbfb4a34bd4
+
+	measure 'Top Buy Player' =
+			-- One name even when two buys share the top price (ties broken by the auction row key).
+			VAR mx = MAX ( FactAuction[PriceCr] )
+			VAR top1 = TOPN ( 1, FILTER ( FactAuction, FactAuction[PriceCr] = mx ), FactAuction[AuctionKey], ASC )
+			RETURN
+			    CONCATENATEX ( top1, RELATED ( DimPlayer[PlayerName] ) & " (" & FactAuction[TeamKey] & ")", ", " )
+		displayFolder: Money
+		lineageTag: 791dbd2a-6b0f-5699-b2d6-cb57c66a4831
+
+	measure 'Auction Premium %' =
+			VAR withBase = FILTER ( FactAuction, NOT ISBLANK ( FactAuction[BasePriceCr] ) )
+			VAR paid = SUMX ( withBase, FactAuction[PriceCr] )
+			VAR base = SUMX ( withBase, FactAuction[BasePriceCr] )
+			RETURN
+			    DIVIDE ( paid - base, base )
+		formatString: 0%
+		displayFolder: Money
+		lineageTag: 78f8569f-d065-59df-9612-8316fccc844d
+
+	measure 'Avg Price vs 2013' =
+			-- Average price in the latest season in context, as a multiple of the 2013 average.
+			VAR latest = MAX ( DimSeason[Season] )
+			RETURN
+			    DIVIDE (
+			        CALCULATE ( [Avg Auction Price Cr], REMOVEFILTERS ( DimSeason ), DimSeason[Season] = latest ),
+			        CALCULATE ( [Avg Auction Price Cr], REMOVEFILTERS ( DimSeason ), DimSeason[Season] = 2013 )
+			    )
+		formatString: 0.0x
+		displayFolder: Money
+		lineageTag: 327138c8-8422-5524-bf18-79d885d176c8
+
+	measure 'Mega 2025 vs 2013' =
+			DIVIDE (
+			    CALCULATE ( [Avg Auction Price Cr], REMOVEFILTERS ( DimSeason ), DimSeason[Season] = 2025 ),
+			    CALCULATE ( [Avg Auction Price Cr], REMOVEFILTERS ( DimSeason ), DimSeason[Season] = 2013 )
+			)
+		formatString: 0.0x
+		displayFolder: Money
+		lineageTag: 76a5bc1e-5416-515c-bdd5-4bffc47fd90a
+
+	measure 'Mega Auction Avg Price Cr' = IF ( SELECTEDVALUE ( DimSeason[IsMegaAuction] ) = TRUE (), [Avg Auction Price Cr] )
+		formatString: ₹#,0.00 Cr
+		displayFolder: Money
+		lineageTag: bd339a3b-cb2c-5584-8869-854dabec4b58
+
+	measure 'Spend Matched %' =
+			DIVIDE (
+			    CALCULATE ( SUM ( FactAuction[PriceCr] ), FactAuction[IsMatched] = TRUE () ),
+			    SUM ( FactAuction[PriceCr] )
+			)
+		formatString: 0.0%
+		displayFolder: Money
+		lineageTag: 97885308-4b7a-599b-949e-21cddadd6207
+
+	measure 'Base Price Buys' = CALCULATE ( COUNTROWS ( FactAuction ), FactAuction[PriceBracket] = "Base price buy" )
+		formatString: #,0
+		displayFolder: Money
+		lineageTag: 368b4737-679c-509f-9c6f-ddf99b30a6b8
+
+	measure 'Impact Points' = SUM ( FactPlayerSeason[ImpactPoints] )
+		formatString: #,0
+		displayFolder: Performance
+		lineageTag: c0d0487d-7076-57ea-b32f-c5bb46aeed7d
+
+	measure 'Priced Impact' = CALCULATE ( [Impact Points], FactPlayerSeason[PriceSource] = "Auction" )
+		formatString: #,0
+		displayFolder: Performance
+		lineageTag: a40de50f-7c5c-5a2c-a33a-be55e4b35c44
+
+	measure 'Player Matches' = SUM ( FactPlayerSeason[Matches] )
+		formatString: #,0
+		displayFolder: Performance
+		lineageTag: 0432ff3d-abca-5ded-a407-0fd23f191d80
+
+	measure 'Priced Matches' = CALCULATE ( [Player Matches], FactPlayerSeason[PriceSource] = "Auction" )
+		formatString: #,0
+		displayFolder: Performance
+		lineageTag: 5781e115-da75-51a9-a35b-0a7e748b4b27
+
+	measure Runs = SUM ( FactPlayerSeason[Runs] )
+		formatString: #,0
+		displayFolder: Performance
+		lineageTag: 3a92bf19-36bd-5cd8-86e7-55253117f36a
+
+	measure Wickets = SUM ( FactPlayerSeason[Wickets] )
+		formatString: #,0
+		displayFolder: Performance
+		lineageTag: 2caebcfb-39e4-5b8e-a57b-c02ea3fb11d2
+
+	measure Catches = SUM ( FactPlayerSeason[Catches] )
+		formatString: #,0
+		displayFolder: Performance
+		lineageTag: 7b75b7ea-5c00-541c-a3e2-aaecc18fcd06
+
+	measure 'Strike Rate' = DIVIDE ( [Runs], SUM ( FactPlayerSeason[BallsFaced] ) ) * 100
+		formatString: 0.0
+		displayFolder: Performance
+		lineageTag: 24897d53-3b49-53b9-82cf-55fd97db3ed7
+
+	measure Economy = DIVIDE ( SUM ( FactPlayerSeason[RunsConceded] ), SUM ( FactPlayerSeason[LegalBalls] ) / 6 )
+		formatString: 0.00
+		displayFolder: Performance
+		lineageTag: debf57e3-f9ff-57d8-b6ec-c41d598cfd08
+
+	measure 'Impact per Match' = DIVIDE ( [Impact Points], [Player Matches] )
+		formatString: 0.0
+		displayFolder: Performance
+		lineageTag: 7879252b-02b4-55d8-9128-e061bbba8875
+
+	measure 'Top Run Scorer Runs' = MAXX ( VALUES ( DimPlayer[PlayerID] ), [Runs] )
+		formatString: #,0
+		displayFolder: Performance
+		lineageTag: b3397da2-ec6b-5dde-949c-6ad851ae3ad7
+
+	measure 'Top Run Scorer' =
+			VAR best = [Top Run Scorer Runs]
+			RETURN
+			    CONCATENATEX ( FILTER ( VALUES ( DimPlayer[PlayerName] ), [Runs] = best ), DimPlayer[PlayerName], ", " )
+		displayFolder: Performance
+		lineageTag: 276685af-983b-5008-8eef-61d05e4163df
+
+	measure 'Top Wicket Taker Wickets' = MAXX ( VALUES ( DimPlayer[PlayerID] ), [Wickets] )
+		formatString: #,0
+		displayFolder: Performance
+		lineageTag: 6b4fa3c0-e65a-5b74-8c89-61840f227c35
+
+	measure 'Top Wicket Taker' =
+			VAR best = [Top Wicket Taker Wickets]
+			RETURN
+			    CONCATENATEX ( FILTER ( VALUES ( DimPlayer[PlayerName] ), [Wickets] = best ), DimPlayer[PlayerName], ", " )
+		displayFolder: Performance
+		lineageTag: e53b5143-d179-5a11-9dad-451044a911fe
+
+	measure 'Lakh per Point' = DIVIDE ( [Spend Cr] * 100, [Priced Impact] )
+		formatString: #,0.00
+		displayFolder: Value
+		lineageTag: 9a7e798a-4edd-5964-83b4-99f8cda3ecc6
+
+	measure 'League Spend' = CALCULATE ( [Spend Cr], ALL ( FactPlayerSeason ), VALUES ( DimSeason[Season] ) )
+		formatString: ₹#,0.0 Cr
+		displayFolder: Value
+		lineageTag: 3a3e7420-9a66-5976-82c4-d24c0aa1ee5a
+
+	measure 'League Priced Impact' = CALCULATE ( [Priced Impact], ALL ( FactPlayerSeason ), VALUES ( DimSeason[Season] ) )
+		formatString: #,0
+		displayFolder: Value
+		lineageTag: 28af0d09-121d-55e2-9db9-f12c26c93bdc
+
+	measure 'Value Index' =
+			-- Share of the league's priced impact divided by share of the league's spend,
+			-- computed season by season so each season is judged against its own market.
+			-- 1.00 = fair value, above 1 = more output than the money suggests.
+			VAR bySeason =
+			    ADDCOLUMNS (
+			        VALUES ( DimSeason[Season] ),
+			        "@impShare", DIVIDE ( [Priced Impact], [League Priced Impact] ),
+			        "@spendShare", DIVIDE ( [Spend Cr], [League Spend] )
+			    )
+			RETURN
+			    DIVIDE ( SUMX ( bySeason, [@impShare] ), SUMX ( bySeason, [@spendShare] ) )
+		formatString: 0.00
+		displayFolder: Value
+		lineageTag: 4b134e6d-ee5d-518b-8a22-f06cb68ff53d
+
+	measure 'Fair Value Cr' =
+			-- What the output would have cost at that season's league price per Impact Point.
+			SUMX (
+			    VALUES ( DimSeason[Season] ),
+			    DIVIDE ( [Priced Impact] * [League Spend], [League Priced Impact] )
+			)
+		formatString: ₹#,0.0 Cr
+		displayFolder: Value
+		lineageTag: 651f60c3-fc5f-5918-a887-4ec3f210f8ee
+
+	measure 'Overpay Cr' = IF ( NOT ISBLANK ( [Spend Cr] ), [Spend Cr] - [Fair Value Cr] )
+		formatString: ₹#,0.0 Cr
+		displayFolder: Value
+		lineageTag: 2e0f801d-23dc-56f4-ae69-7afed6e10b51
+
+	measure 'Surplus Cr' = IF ( NOT ISBLANK ( [Spend Cr] ), [Fair Value Cr] - [Spend Cr] )
+		formatString: ₹#,0.0 Cr
+		displayFolder: Value
+		lineageTag: 6b9c8945-59ec-5d15-906e-0df5d89d324e
+
+	measure 'Value Index (min 5 matches)' = IF ( [Priced Matches] >= 5, [Value Index] )
+		formatString: 0.00
+		displayFolder: Value
+		lineageTag: 4095ab85-81d4-5f01-ba16-6f7a1f28a887
+
+	measure 'Value Quadrant Label' =
+			IF ( HASONEVALUE ( FactPlayerSeason[Value Quadrant] ), VALUES ( FactPlayerSeason[Value Quadrant] ),
+			    CONCATENATEX ( VALUES ( FactPlayerSeason[Value Quadrant] ), FactPlayerSeason[Value Quadrant], ", " ) )
+		displayFolder: Value
+		lineageTag: d254951c-6b4f-52a1-8e9e-07c55fbaf3d5
+
+	measure 'Bargain XI Flag' =
+			-- 1 when the player is in the Bargain XI: top Value Index per role (4 batters, 1 keeper, 2 all-rounders, 4 bowlers), min 5 priced matches.
+			VAR thisPlayer = SELECTEDVALUE ( DimPlayer[PlayerID] )
+			VAR thisRole = SELECTEDVALUE ( DimPlayer[Role] )
+			VAR slots = SWITCH ( thisRole, "Batter", 4, "Wicket-Keeper", 1, "All-Rounder", 2, "Bowler", 4, 0 )
+			VAR eligible =
+			    CALCULATETABLE (
+			        FILTER (
+			            ADDCOLUMNS ( VALUES ( DimPlayer[PlayerID] ), "@vi", [Value Index], "@m", [Priced Matches] ),
+			            [@m] >= 5 && NOT ISBLANK ( [@vi] )
+			        ),
+			        ALLSELECTED ( DimPlayer ),
+			        DimPlayer[Role] = thisRole
+			    )
+			VAR picked = TOPN ( slots, eligible, [@vi], DESC )
+			RETURN
+			    IF ( NOT ISBLANK ( thisPlayer ) && thisPlayer IN SELECTCOLUMNS ( picked, "id", DimPlayer[PlayerID] ), 1 )
+		formatString: 0
+		displayFolder: Value
+		lineageTag: 24ccbd9d-df2f-5f4a-844c-23932d04f915
+
+	measure 'Overpaid XI Flag' =
+			-- 1 when the player is in the Overpaid XI: largest Overpay Cr per role, min 5 priced matches.
+			VAR thisPlayer = SELECTEDVALUE ( DimPlayer[PlayerID] )
+			VAR thisRole = SELECTEDVALUE ( DimPlayer[Role] )
+			VAR slots = SWITCH ( thisRole, "Batter", 4, "Wicket-Keeper", 1, "All-Rounder", 2, "Bowler", 4, 0 )
+			VAR eligible =
+			    CALCULATETABLE (
+			        FILTER (
+			            ADDCOLUMNS ( VALUES ( DimPlayer[PlayerID] ), "@over", [Overpay Cr], "@m", [Priced Matches] ),
+			            [@m] >= 5 && [@over] > 0
+			        ),
+			        ALLSELECTED ( DimPlayer ),
+			        DimPlayer[Role] = thisRole
+			    )
+			VAR picked = TOPN ( slots, eligible, [@over], DESC )
+			RETURN
+			    IF ( NOT ISBLANK ( thisPlayer ) && thisPlayer IN SELECTCOLUMNS ( picked, "id", DimPlayer[PlayerID] ), 1 )
+		formatString: 0
+		displayFolder: Value
+		lineageTag: 453d9191-06f8-5171-9a1c-d5269fdf31ae
+
+	measure 'Teams Played For' = CONCATENATEX ( VALUES ( FactPlayerSeason[TeamKey] ), FactPlayerSeason[TeamKey], ", ", FactPlayerSeason[TeamKey], ASC )
+		displayFolder: Value
+		lineageTag: 65aa2db3-196b-5aa8-a172-c0ff5ead68fd
+
+	measure 'Career Value Index' = CALCULATE ( [Value Index], REMOVEFILTERS ( DimSeason ) )
+		formatString: 0.00
+		displayFolder: Value
+		lineageTag: e15c5d61-4fa1-5232-98de-c4683024ea93
+
+	measure 'Selected Season Label' =
+			VAR mn = MIN ( DimSeason[Season] )
+			VAR mx = MAX ( DimSeason[Season] )
+			RETURN
+			    IF ( mn = mx, "IPL " & mn, "IPL " & mn & "–" & mx )
+		displayFolder: Value
+		lineageTag: fe951e6f-82e8-5dd6-bea4-6f9bb28867b0
+
+	measure 'Unsold Card Text' =
+			VAR top5 = TOPN ( 5, FILTER ( UnsoldPlayers, UnsoldPlayers[CareerImpact] > 0 ), UnsoldPlayers[CareerImpact], DESC )
+			RETURN
+			    CONCATENATEX ( top5, UnsoldPlayers[Player] & " (" & FORMAT ( UnsoldPlayers[CareerImpact], "#,0" ) & " pts)", UNICHAR ( 10 ), UnsoldPlayers[CareerImpact], DESC )
+		displayFolder: Value
+		lineageTag: 39b3401c-1bc4-5c30-8d18-2e184c1749db
+
+	measure 'Player Seasons' = COUNTROWS ( FactPlayerSeason )
+		formatString: #,0
+		displayFolder: Value
+		lineageTag: 4375624c-f8b3-5663-91cd-b2e712eb3f51
+
+	measure 'Median Priced Price Cr' = CALCULATE ( MEDIAN ( FactPlayerSeason[PriceCr] ), ALL ( FactPlayerSeason ), VALUES ( DimSeason[Season] ), FactPlayerSeason[PriceSource] = "Auction" )
+		formatString: ₹#,0.00 Cr
+		displayFolder: Value
+		lineageTag: 1b3787ab-276a-5361-8317-81ad5a310137
+
+	measure 'Median Priced Impact' = CALCULATE ( MEDIAN ( FactPlayerSeason[ImpactPoints] ), ALL ( FactPlayerSeason ), VALUES ( DimSeason[Season] ), FactPlayerSeason[PriceSource] = "Auction" )
+		formatString: #,0
+		displayFolder: Value
+		lineageTag: 0ce290f3-fc86-5846-b7d9-ec46f7a7abf0
+
+	measure 'Above Median Impact %' =
+			-- Share of priced player-seasons whose Impact Points beat that season's median.
+			VAR priced = FILTER ( FactPlayerSeason, FactPlayerSeason[PriceSource] = "Auction" )
+			RETURN
+			    DIVIDE ( COUNTROWS ( FILTER ( priced, FactPlayerSeason[ImpactPoints] >= FactPlayerSeason[MedianImpact] ) ), COUNTROWS ( priced ) )
+		formatString: 0%
+		displayFolder: Value
+		lineageTag: 23af9b39-654b-540c-b1bb-effaaaa71282
+
+	measure 'Overpay Cr (min 5 matches)' = IF ( [Priced Matches] >= 5, [Overpay Cr] )
+		formatString: ₹#,0.0 Cr
+		displayFolder: Value
+		lineageTag: a5b221fd-8b5b-544f-b5ec-5a95c3cd4b56
+
+	measure 'Steal Rank' =
+			VAR vi = [Value Index (min 5 matches)]
+			RETURN
+			    IF (
+			        ISBLANK ( vi ), 999,
+			        RANKX ( FILTER ( ALLSELECTED ( DimPlayer[PlayerName] ), NOT ISBLANK ( [Value Index (min 5 matches)] ) ), [Value Index (min 5 matches)], vi, DESC, SKIP )
+			    )
+		formatString: 0
+		displayFolder: Value
+		lineageTag: 6064a07e-aef1-5fef-9792-63d061334869
+
+	measure 'Overpaid Rank' =
+			VAR o = [Overpay Cr (min 5 matches)]
+			RETURN
+			    IF (
+			        ISBLANK ( o ) || o <= 0, 999,
+			        RANKX ( FILTER ( ALLSELECTED ( DimPlayer[PlayerName] ), [Overpay Cr (min 5 matches)] > 0 ), [Overpay Cr (min 5 matches)], o, DESC, SKIP )
+			    )
+		formatString: 0
+		displayFolder: Value
+		lineageTag: 6e417626-bf0a-5ff0-b3de-a1ecfe90eb14
+
+	measure 'Base Price Value Index' = CALCULATE ( [Value Index], FactPlayerSeason[PriceBracket] = "Base price buy" )
+		formatString: 0.00
+		displayFolder: Value
+		lineageTag: d868944d-48ab-5852-80a1-2a431c51fe55
+
+	measure 'Marquee Value Index' = CALCULATE ( [Value Index], FactPlayerSeason[PriceBracket] = "10 Cr and above" )
+		formatString: 0.00
+		displayFolder: Value
+		lineageTag: b02e79ff-1471-5795-be95-becd4b2fae3d
+
+	measure 'Marquee Above Median %' = CALCULATE ( [Above Median Impact %], FactPlayerSeason[PriceBracket] = "10 Cr and above" )
+		formatString: 0%
+		displayFolder: Value
+		lineageTag: 96b6fecc-7696-582d-88ae-06f5203d1d0f
+
+	measure 'Base Price Above Median %' = CALCULATE ( [Above Median Impact %], FactPlayerSeason[PriceBracket] = "Base price buy" )
+		formatString: 0%
+		displayFolder: Value
+		lineageTag: 5774d826-b700-524d-b2d5-2207b9557de9
+
+	measure 'Overseas Price Premium %' =
+			DIVIDE (
+			    CALCULATE ( [Avg Auction Price Cr], DimPlayer[Nationality] = "Overseas" ),
+			    CALCULATE ( [Avg Auction Price Cr], DimPlayer[Nationality] = "Indian" )
+			) - 1
+		formatString: 0%
+		displayFolder: Money
+		lineageTag: 589ebb83-5468-5f8d-a1a4-321ee57f6930
+
+	measure 'Overseas Value Index' = CALCULATE ( [Value Index], DimPlayer[Nationality] = "Overseas" )
+		formatString: 0.00
+		displayFolder: Value
+		lineageTag: 06b9f981-f8b3-569b-9f27-45f9a1478417
+
+	measure 'Indian Value Index' = CALCULATE ( [Value Index], DimPlayer[Nationality] = "Indian" )
+		formatString: 0.00
+		displayFolder: Value
+		lineageTag: a5d155d6-4cbb-5adb-8f32-bb83224432de
+
+	measure 'Selected Player' = SELECTEDVALUE ( DimPlayer[PlayerName], "Select a player" )
+		displayFolder: Value
+		lineageTag: 8a14b0d2-c64f-596e-9ab7-2af2ab7f68bf
+
+	measure 'Selected Role' = SELECTEDVALUE ( DimPlayer[Role] )
+		displayFolder: Value
+		lineageTag: 86b44152-12a3-5645-8a0c-5032729d93fc
+
+	measure 'Selected Nationality' = SELECTEDVALUE ( DimPlayer[Nationality] )
+		displayFolder: Value
+		lineageTag: 280749ca-7e48-59f5-9d9b-fb30db86e147
+
+	measure 'Career Spend Cr' = CALCULATE ( [Spend Cr], REMOVEFILTERS ( DimSeason ) )
+		formatString: ₹#,0.0 Cr
+		displayFolder: Money
+		lineageTag: 790e4843-c87e-521c-a0ff-63d7b282b88c
+
+	measure 'Unsold Career Impact' = SUM ( UnsoldPlayers[CareerImpact] )
+		formatString: #,0
+		displayFolder: Value
+		lineageTag: 91e8d06f-2f27-5e72-98e5-5f95cfacb191
+
+	measure 'Unsold Rank' = RANKX ( ALL ( UnsoldPlayers[Player] ), [Unsold Career Impact], , DESC, SKIP )
+		formatString: 0
+		displayFolder: Value
+		lineageTag: 55c79020-3b65-581f-acb9-ea510ce8f1fd
+
+	measure 'Season Bar Colour' = IF ( SELECTEDVALUE ( DimSeason[IsMegaAuction] ) = TRUE (), "#262626", "#F2C94C" )
+		displayFolder: Formatting
+		lineageTag: d37ba365-d112-5e28-aea8-986d49df04da
+
+	measure 'Spend Bar Colour' = "#F2C94C"
+		displayFolder: Formatting
+		lineageTag: 2d645be5-bffe-5534-9c1d-5735e7b21f7e
+
+	measure 'Team Colour' = SELECTEDVALUE ( DimTeam[TeamColour], "#94A3B8" )
+		displayFolder: Formatting
+		lineageTag: df00644b-0e7b-5565-a803-01061bd0b193
+
+	measure 'Team Season Colour' = SELECTEDVALUE ( DimTeamSeason[TeamColour], "#94A3B8" )
+		displayFolder: Formatting
+		lineageTag: 7f7b1286-3aa3-50e5-bfc6-a4df922a6049
+
+	measure 'Lakh per Point Colour' =
+			-- Green when cheaper than the league rate for the same seasons, red when dearer.
+			VAR lpp = [Lakh per Point]
+			VAR league = DIVIDE ( [League Spend] * 100, [League Priced Impact] )
+			VAR ratio = DIVIDE ( lpp, league )
+			RETURN
+			    SWITCH ( TRUE (), ISBLANK ( lpp ), "#FFFFFF", ratio <= 0.8, "#D7F0DE", ratio >= 1.25, "#FADADB", "#FFFFFF" )
+		displayFolder: Formatting
+		lineageTag: eed774d8-714b-516d-ab42-39099e3968bc
+
+	measure 'Steal Colour' = IF ( [Value Index (min 5 matches)] >= 2, "#BFE6CB", "#D7F0DE" )
+		displayFolder: Formatting
+		lineageTag: 405a7745-03a5-52da-ad81-ffcd78b3f072
+
+	measure 'Overpaid Colour' = IF ( [Overpay Cr] >= 5, "#F6C3C5", "#FADADB" )
+		displayFolder: Formatting
+		lineageTag: 97e4da0b-89d0-5cbb-a244-4e74983c49a5
+
+	measure 'Quadrant Colour' = SWITCH ( SELECTEDVALUE ( FactPlayerSeason[Value Quadrant] ), "Steal", "#D7F0DE", "Star", "#FCF0C8", "Overpaid", "#FADADB", "Passenger", "#EEEEEE", "#FFFFFF" )
+		displayFolder: Formatting
+		lineageTag: ea2d9435-0d40-5424-855f-aa62033c80e4
+
+	measure 'Steal Count' = CALCULATE ( COUNTROWS ( FactPlayerSeason ), FactPlayerSeason[Value Quadrant] = "Steal" )
+		formatString: #,0
+		displayFolder: Value
+		lineageTag: f77c7fef-4266-5b3e-b42f-a3f931a00fb7
+
+	measure 'Overpaid Count' = CALCULATE ( COUNTROWS ( FactPlayerSeason ), FactPlayerSeason[Value Quadrant] = "Overpaid" )
+		formatString: #,0
+		displayFolder: Value
+		lineageTag: 17163f9f-609f-59e4-8ef5-da4117fcaad3
+
+	measure 'Priced Player Seasons' = CALCULATE ( COUNTROWS ( FactPlayerSeason ), FactPlayerSeason[PriceSource] = "Auction" )
+		formatString: #,0
+		displayFolder: Value
+		lineageTag: 2abca8d3-e162-5ed1-9673-10faf3dcf418
+
+	measure 'Top Steal Label' =
+			VAR t =
+			    TOPN ( 1,
+			        FILTER ( ADDCOLUMNS ( VALUES ( DimPlayer[PlayerName] ), "@v", [Value Index (min 5 matches)] ), NOT ISBLANK ( [@v] ) ),
+			        [@v], DESC )
+			RETURN
+			    CONCATENATEX ( t, DimPlayer[PlayerName] & " · " & FORMAT ( [@v], "0.0" ) & "×", ", " )
+		displayFolder: Value
+		lineageTag: 23798ffd-7aae-5d14-ab37-5f5e94943eac
+
+	measure 'Most Overpaid Label' =
+			VAR t =
+			    TOPN ( 1,
+			        FILTER ( ADDCOLUMNS ( VALUES ( DimPlayer[PlayerName] ), "@o", [Overpay Cr (min 5 matches)] ), [@o] > 0 ),
+			        [@o], DESC )
+			RETURN
+			    CONCATENATEX ( t, DimPlayer[PlayerName] & " · ₹" & FORMAT ( [@o], "0.0" ) & " Cr", ", " )
+		displayFolder: Value
+		lineageTag: ce93ad92-12e6-5c2f-9398-13097a4580b3
+
+	measure 'Best Team Label' =
+			VAR t =
+			    TOPN ( 1,
+			        FILTER ( ADDCOLUMNS ( VALUES ( DimTeam[ShortCode] ), "@v", [Value Index] ), NOT ISBLANK ( [@v] ) ),
+			        [@v], DESC )
+			RETURN
+			    CONCATENATEX ( t, DimTeam[ShortCode] & " · " & FORMAT ( [@v], "0.00" ), ", " )
+		displayFolder: Value
+		lineageTag: 57d0f279-778c-5db6-95b2-d1d7750f96d0
+
+	measure 'Worst Team Label' =
+			VAR t =
+			    TOPN ( 1,
+			        FILTER ( ADDCOLUMNS ( VALUES ( DimTeam[ShortCode] ), "@v", [Value Index] ), NOT ISBLANK ( [@v] ) ),
+			        [@v], ASC )
+			RETURN
+			    CONCATENATEX ( t, DimTeam[ShortCode] & " · " & FORMAT ( [@v], "0.00" ), ", " )
+		displayFolder: Value
+		lineageTag: c25622ff-ac14-5cbb-ba53-a968fbd818fc
+
+	measure 'Best Role Label' =
+			VAR t =
+			    TOPN ( 1,
+			        FILTER (
+			            ADDCOLUMNS ( FILTER ( VALUES ( DimPlayer[Role] ), DimPlayer[Role] <> "Unknown" ), "@v", [Value Index] ),
+			            NOT ISBLANK ( [@v] ) ),
+			        [@v], DESC )
+			RETURN
+			    CONCATENATEX ( t, DimPlayer[Role] & " · " & FORMAT ( [@v], "0.00" ), ", " )
+		displayFolder: Value
+		lineageTag: b8ca9a5a-3e4d-52a3-a01d-8bc0da33ab1a
+
+	measure 'Players In Data' = COUNTROWS ( DimPlayer )
+		formatString: #,0
+		displayFolder: QA
+		lineageTag: a5edfe64-3bf1-5558-84e1-b38b3c5ce346
+
+	measure 'Seasons Covered' = DISTINCTCOUNT ( FactTeamMatch[Season] )
+		formatString: #,0
+		displayFolder: QA
+		lineageTag: 54256091-eae8-5a21-9579-a5fecdc09e5c
+
+	measure 'QA 2026 Buys' = CALCULATE ( [Players Bought], DimSeason[Season] = 2026 )
+		formatString: #,0
+		displayFolder: QA
+		lineageTag: c1329c0a-9348-5fd9-9ae9-cd2276198857
+
+	measure 'QA 2026 Spend Cr' = CALCULATE ( [Total Auction Spend Cr], DimSeason[Season] = 2026 )
+		formatString: ₹#,0.00 Cr
+		displayFolder: QA
+		lineageTag: d581e4fe-e23f-507b-a2e1-36f368de4d4b
+
+	measure 'Team Wins' = SUM ( FactTeamMatch[Won] )
+		formatString: #,0
+		displayFolder: Team
+		lineageTag: 97aaadf4-8909-5c7f-9be9-fb5bc7d56286
+
+	measure 'Team Results' = COUNTROWS ( FactTeamMatch ) - SUM ( FactTeamMatch[NoResult] )
+		formatString: #,0
+		displayFolder: Team
+		lineageTag: 247a7629-1437-56ec-9c3b-2cb77a47790e
+
+	measure 'Win %' = DIVIDE ( [Team Wins], [Team Results] )
+		formatString: 0%
+		displayFolder: Team
+		lineageTag: 85107d79-81ce-51e3-b09a-15eceadaa3ca
+
+	measure 'Team Spend Cr' = [Spend Cr]
+		formatString: ₹#,0.0 Cr
+		displayFolder: Team
+		lineageTag: 6e8a5fd5-066b-5176-b3e2-94f5fb1bd040
+
+	measure 'QA Matches' = DISTINCTCOUNT ( FactTeamMatch[MatchID] )
+		formatString: #,0
+		displayFolder: QA
+		lineageTag: 191fa43d-97e0-5599-bba3-2bb76e41135e
+
+	measure 'QA League Value Index' = CALCULATE ( [Value Index], REMOVEFILTERS ( DimTeam ), REMOVEFILTERS ( DimPlayer ) )
+		formatString: 0.00
+		displayFolder: QA
+		lineageTag: 58d28979-93e9-5d04-9847-34a8220026df
+
+	measure 'QA Bad Prices' = 0 + COUNTROWS ( FILTER ( FactAuction, ISBLANK ( FactAuction[PriceCr] ) || FactAuction[PriceCr] <= 0 ) )
+		formatString: #,0
+		displayFolder: QA
+		lineageTag: 55856cfe-07a7-5cf4-abdb-5bd96a18cb4d
+
+	measure 'QA Team Keys' = CONCATENATEX ( FILTER ( VALUES ( DimTeam[TeamKey] ), CALCULATE ( COUNTROWS ( FactPlayerSeason ) ) + CALCULATE ( COUNTROWS ( FactAuction ) ) > 0 ), DimTeam[TeamKey], ", ", DimTeam[TeamKey], ASC )
+		displayFolder: QA
+		lineageTag: e86473f1-ed5c-59d0-8fd9-6f344387ba0b
+
+	measure 'QA Unmapped Team Rows' = 0 + COUNTROWS ( FILTER ( FactAuction, ISBLANK ( FactAuction[TeamKey] ) ) ) + COUNTROWS ( FILTER ( FactTeamMatch, ISBLANK ( FactTeamMatch[TeamKey] ) ) )
+		formatString: #,0
+		displayFolder: QA
+		lineageTag: 33aad17b-9d32-5e08-a2f4-5edc4a94f095
+
+	measure 'QA Avg Win %' = AVERAGEX ( VALUES ( DimTeam[TeamKey] ), [Win %] )
+		formatString: 0.0%
+		displayFolder: QA
+		lineageTag: bb2a0d32-f8fc-5271-90c5-a244544faec0
+
+	measure 'QA Contract Rows Beyond Mega' =
+			-- Contract rows that run past the season before the next mega auction (should be 0).
+			0 + COUNTROWS (
+			    FILTER (
+			        FactPlayerSeason,
+			        FactPlayerSeason[PriceSource] = "Auction"
+			            && FactPlayerSeason[Season] > SWITCH ( TRUE (),
+			                FactPlayerSeason[AuctionSeason] < 2014, 2013,
+			                FactPlayerSeason[AuctionSeason] < 2018, 2017,
+			                FactPlayerSeason[AuctionSeason] < 2022, 2021,
+			                FactPlayerSeason[AuctionSeason] < 2025, 2024,
+			                2026 )
+			    )
+			)
+		formatString: #,0
+		displayFolder: QA
+		lineageTag: c45cd1c5-0dca-55eb-b631-b3e6fa958117
+
+	column Measures
+		dataType: string
+		isHidden
+		lineageTag: b8199f3b-3b5f-52ee-9534-20bd265fae44
+		summarizeBy: none
+		sourceColumn: Measures
+
+		annotation SummarizationSetBy = User
+
+	partition _Measures = m
+		mode: import
+		queryGroup: Model
+		source =
+				let
+				    Source = #table(type table [Measures = text], {})
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

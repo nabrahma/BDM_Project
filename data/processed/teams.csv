@@ -1,0 +1,14 @@
+TeamKey,TeamName,ShortCode,TeamColour,IsActive
+CSK,Chennai Super Kings,CSK,#FDB913,True
+DC,Delhi Capitals,DC,#60A5FA,True
+GL,Gujarat Lions,GL,#FDBA74,False
+GT,Gujarat Titans,GT,#CBD5E1,True
+KKR,Kolkata Knight Riders,KKR,#7C3AED,True
+LSG,Lucknow Super Giants,LSG,#22D3EE,True
+MI,Mumbai Indians,MI,#2563EB,True
+PBKS,Punjab Kings,PBKS,#F87171,True
+PWI,Pune Warriors India,PWI,#64748B,False
+RCB,Royal Challengers Bengaluru,RCB,#DC2626,True
+RPS,Rising Pune Supergiant,RPS,#A78BFA,False
+RR,Rajasthan Royals,RR,#EC4899,True
+SRH,Sunrisers Hyderabad,SRH,#F97316,True

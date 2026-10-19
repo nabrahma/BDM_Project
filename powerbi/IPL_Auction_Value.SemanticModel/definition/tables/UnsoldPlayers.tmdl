@@ -1,0 +1,83 @@
+table UnsoldPlayers
+	lineageTag: 80124844-c1b2-511e-8e24-29fbc096ba2f
+
+	column Season
+		dataType: int64
+		formatString: 0
+		lineageTag: 41277b94-28da-5e24-92b2-0d50b9519361
+		summarizeBy: none
+		sourceColumn: Season
+
+		annotation SummarizationSetBy = User
+
+	column Player
+		dataType: string
+		lineageTag: a8ee995d-e968-5405-ac1b-2e208f130d19
+		summarizeBy: none
+		sourceColumn: Player
+
+		annotation SummarizationSetBy = User
+
+	column BasePriceCr
+		dataType: double
+		formatString: #,0.00
+		lineageTag: f71e725f-ea35-53c3-b235-33297f5cbbbb
+		summarizeBy: sum
+		sourceColumn: BasePriceCr
+
+		annotation SummarizationSetBy = User
+
+	column CareerMatches
+		dataType: int64
+		formatString: 0
+		lineageTag: 54d21a75-1371-5946-98de-84e6afdca848
+		summarizeBy: sum
+		sourceColumn: CareerMatches
+
+		annotation SummarizationSetBy = User
+
+	column CareerImpact
+		dataType: int64
+		formatString: 0
+		lineageTag: 8608d34e-0b9a-5bc4-aaa6-2c3f6920c3f1
+		summarizeBy: sum
+		sourceColumn: CareerImpact
+
+		annotation SummarizationSetBy = User
+
+	column LastIplSeason
+		dataType: int64
+		formatString: 0
+		lineageTag: 6abc9827-3e50-5fcf-bcbf-5b9597cecb40
+		summarizeBy: none
+		sourceColumn: LastIplSeason
+
+		annotation SummarizationSetBy = User
+
+	partition UnsoldPlayers = m
+		mode: import
+		queryGroup: Model
+		source =
+				// Disconnected helper table for the "notable unsold" card: career IPL output of players nobody bought.
+				let
+				    UniqueOf = (variants as table) as table =>
+				        let G = Table.Group(variants, {"VKey"}, {{"N", each List.Count(List.Distinct([PlayerID])), Int64.Type}, {"PlayerID", each List.First([PlayerID]), type text}})
+				        in Table.SelectColumns(Table.SelectRows(G, each [N] = 1), {"VKey", "PlayerID"}),
+				    Lookup = Table.Distinct(Table.Combine({
+				        Table.RenameColumns(stg_NameFixes, {{"NameKey", "VKey"}}),
+				        UniqueOf(stg_IplVariants)}), {"VKey"}),
+				    // Exact (unique) or manual matches only: initials guesses mis-match common surnames.
+				    Matched = Table.ExpandTableColumn(Table.NestedJoin(stg_Unsold, {"NameKey"}, Lookup, {"VKey"}, "L", JoinKind.LeftOuter), "L", {"PlayerID"}),
+				    InitialsMatched = Table.RenameColumns(Matched, {{"PlayerID", "PlayerID2"}}),
+				    Career = Table.Group(stg_PlayerSeasonStats, {"PlayerID"}, {
+				        {"CareerMatches", each List.Sum([Matches]), Int64.Type},
+				        {"CareerImpact", each List.Sum([ImpactPoints]), Int64.Type},
+				        {"LastIplSeason", each List.Max([Season]), Int64.Type}}),
+				    WithCareer = Table.ExpandTableColumn(Table.NestedJoin(InitialsMatched, {"PlayerID2"}, Career, {"PlayerID"}, "C", JoinKind.LeftOuter), "C", {"CareerMatches", "CareerImpact", "LastIplSeason"}),
+				    Zeroed = Table.ReplaceValue(WithCareer, null, 0, Replacer.ReplaceValue, {"CareerMatches", "CareerImpact"}),
+				    Final = Table.SelectColumns(Zeroed, {"Season", "Player", "BasePriceCr", "CareerMatches", "CareerImpact", "LastIplSeason"})
+				in
+				    Final
+
+	annotation PBI_ResultType = Table
+

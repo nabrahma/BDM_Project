@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "IPL_Auction_Value"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8a3f6c1e-2b7d-4f51-9c0a-1d2e3f4a5b6c"
+  }
+}

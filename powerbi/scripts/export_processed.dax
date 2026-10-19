@@ -1,0 +1,125 @@
+-- Tables exported to data/processed/ for the web app (scripts/export_processed.ps1).
+-- Each block starts with "-- name: <file>"; measures are evaluated per row through context transition,
+-- so the numbers are exactly what the Power BI report shows.
+
+-- name: players
+EVALUATE
+ADDCOLUMNS (
+    DimPlayer,
+    "SeasonsPlayed", CALCULATE ( DISTINCTCOUNT ( FactPlayerSeason[Season] ), FactPlayerSeason[Matches] > 0 ),
+    "CareerMatches", [Player Matches],
+    "CareerRuns", [Runs],
+    "CareerWickets", [Wickets],
+    "CareerCatches", [Catches],
+    "CareerImpactPoints", [Impact Points],
+    "AuctionBuys", CALCULATE ( COUNTROWS ( FactAuction ) ),
+    "TotalAuctionSpendCr", [Total Auction Spend Cr],
+    "CareerSpendCr", [Spend Cr],
+    "CareerFairValueCr", [Fair Value Cr],
+    "CareerOverpayCr", [Overpay Cr],
+    "CareerValueIndex", [Value Index]
+)
+ORDER BY DimPlayer[PlayerName]
+
+-- name: teams
+EVALUATE DimTeam
+ORDER BY DimTeam[TeamKey]
+
+-- name: seasons
+EVALUATE
+ADDCOLUMNS (
+    DimSeason,
+    "Matches", [QA Matches],
+    "PlayersBought", [Players Bought],
+    "AuctionSpendCr", [Total Auction Spend Cr],
+    "AvgPriceCr", [Avg Auction Price Cr],
+    "MedianPriceCr", [Median Auction Price Cr],
+    "TopBuyPlayer", [Top Buy Player],
+    "TopBuyPriceCr", [Top Buy Price Cr],
+    "TopRunScorer", [Top Run Scorer],
+    "TopRunScorerRuns", [Top Run Scorer Runs],
+    "TopWicketTaker", [Top Wicket Taker],
+    "TopWicketTakerWickets", [Top Wicket Taker Wickets],
+    "LeagueSpendCr", [League Spend],
+    "LeaguePricedImpact", [League Priced Impact],
+    "LakhPerPoint", [Lakh per Point],
+    "LeagueValueIndex", [Value Index]
+)
+ORDER BY DimSeason[Season]
+
+-- name: team_seasons
+EVALUATE
+ADDCOLUMNS (
+    DimTeamSeason,
+    "Played", CALCULATE ( COUNTROWS ( FactTeamMatch ) ),
+    "Results", [Team Results],
+    "Wins", [Team Wins],
+    "WinPct", [Win %],
+    "SpendCr", [Spend Cr],
+    "PricedPlayers", CALCULATE ( COUNTROWS ( FactPlayerSeason ), FactPlayerSeason[PriceSource] = "Auction" ),
+    "ImpactPoints", [Impact Points],
+    "PricedImpact", [Priced Impact],
+    "FairValueCr", [Fair Value Cr],
+    "OverpayCr", [Overpay Cr],
+    "ValueIndex", [Value Index]
+)
+ORDER BY DimTeamSeason[Season], DimTeamSeason[TeamKey]
+
+-- name: player_seasons
+EVALUATE
+ADDCOLUMNS (
+    SELECTCOLUMNS (
+        FactPlayerSeason,
+        "PlayerSeasonKey", FactPlayerSeason[PlayerSeasonKey],
+        "PlayerID", FactPlayerSeason[PlayerID],
+        "PlayerName", RELATED ( DimPlayer[PlayerName] ),
+        "Season", FactPlayerSeason[Season],
+        "TeamKey", FactPlayerSeason[TeamKey],
+        "TeamSeasonKey", FactPlayerSeason[TeamSeasonKey],
+        "Role", RELATED ( DimPlayer[Role] ),
+        "Nationality", RELATED ( DimPlayer[Nationality] ),
+        "Matches", FactPlayerSeason[Matches],
+        "Runs", FactPlayerSeason[Runs],
+        "BallsFaced", FactPlayerSeason[BallsFaced],
+        "Fours", FactPlayerSeason[Fours],
+        "Sixes", FactPlayerSeason[Sixes],
+        "Outs", FactPlayerSeason[Outs],
+        "Wickets", FactPlayerSeason[Wickets],
+        "LegalBalls", FactPlayerSeason[LegalBalls],
+        "RunsConceded", FactPlayerSeason[RunsConceded],
+        "DotBalls", FactPlayerSeason[DotBalls],
+        "Catches", FactPlayerSeason[Catches],
+        "Stumpings", FactPlayerSeason[Stumpings],
+        "RunOuts", FactPlayerSeason[RunOuts],
+        "ImpactPoints", FactPlayerSeason[ImpactPoints],
+        "PriceSource", FactPlayerSeason[PriceSource],
+        "AuctionSeason", FactPlayerSeason[AuctionSeason],
+        "PriceCr", FactPlayerSeason[PriceCr],
+        "BasePriceCr", FactPlayerSeason[BasePriceCr],
+        "PriceBracket", FactPlayerSeason[PriceBracket],
+        "PriceBracketOrder", FactPlayerSeason[PriceBracketOrder],
+        "SeasonMedianPriceCr", FactPlayerSeason[MedianPriceCr],
+        "SeasonMedianImpact", FactPlayerSeason[MedianImpact],
+        "ValueQuadrant", FactPlayerSeason[Value Quadrant]
+    ),
+    "FairValueCr", VAR k = [PlayerSeasonKey] RETURN CALCULATE ( [Fair Value Cr], FactPlayerSeason[PlayerSeasonKey] = k ),
+    "OverpayCr", VAR k = [PlayerSeasonKey] RETURN CALCULATE ( [Overpay Cr], FactPlayerSeason[PlayerSeasonKey] = k ),
+    "ValueIndex", VAR k = [PlayerSeasonKey] RETURN CALCULATE ( [Value Index], FactPlayerSeason[PlayerSeasonKey] = k )
+)
+ORDER BY [Season], [PlayerName]
+
+-- name: auction_buys
+EVALUATE
+ADDCOLUMNS (
+    FactAuction,
+    "PlayerName", RELATED ( DimPlayer[PlayerName] )
+)
+ORDER BY FactAuction[Season], FactAuction[PriceCr] DESC
+
+-- name: team_matches
+EVALUATE FactTeamMatch
+ORDER BY FactTeamMatch[MatchDate], FactTeamMatch[MatchID], FactTeamMatch[TeamKey]
+
+-- name: unsold_players
+EVALUATE UnsoldPlayers
+ORDER BY UnsoldPlayers[Season], UnsoldPlayers[CareerImpact] DESC

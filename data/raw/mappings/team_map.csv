@@ -1,0 +1,20 @@
+RawName,TeamKey,TeamName,TeamColour,IsActive
+Chennai Super Kings,CSK,Chennai Super Kings,#FDB913,TRUE
+CSK,CSK,Chennai Super Kings,#FDB913,TRUE
+Delhi Daredevils,DC,Delhi Capitals,#60A5FA,TRUE
+Delhi Capitals,DC,Delhi Capitals,#60A5FA,TRUE
+Kings XI Punjab,PBKS,Punjab Kings,#F87171,TRUE
+Punjab Kings,PBKS,Punjab Kings,#F87171,TRUE
+Royal Challengers Bangalore,RCB,Royal Challengers Bengaluru,#DC2626,TRUE
+Royal Challengers Bengaluru,RCB,Royal Challengers Bengaluru,#DC2626,TRUE
+Kolkata Knight Riders,KKR,Kolkata Knight Riders,#7C3AED,TRUE
+Mumbai Indians,MI,Mumbai Indians,#2563EB,TRUE
+Rajasthan Royals,RR,Rajasthan Royals,#EC4899,TRUE
+Sunrisers Hyderabad,SRH,Sunrisers Hyderabad,#F97316,TRUE
+Gujarat Titans,GT,Gujarat Titans,#CBD5E1,TRUE
+Lucknow Super Giants,LSG,Lucknow Super Giants,#22D3EE,TRUE
+Pune Warriors,PWI,Pune Warriors India,#64748B,FALSE
+Pune Warriors India,PWI,Pune Warriors India,#64748B,FALSE
+Rising Pune Supergiant,RPS,Rising Pune Supergiant,#A78BFA,FALSE
+Rising Pune Supergiants,RPS,Rising Pune Supergiant,#A78BFA,FALSE
+Gujarat Lions,GL,Gujarat Lions,#FDBA74,FALSE

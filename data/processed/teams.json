@@ -1,0 +1,93 @@
+[
+ {
+  "TeamKey":"CSK",
+  "TeamName":"Chennai Super Kings",
+  "ShortCode":"CSK",
+  "TeamColour":"#FDB913",
+  "IsActive":true
+ },
+ {
+  "TeamKey":"DC",
+  "TeamName":"Delhi Capitals",
+  "ShortCode":"DC",
+  "TeamColour":"#60A5FA",
+  "IsActive":true
+ },
+ {
+  "TeamKey":"GL",
+  "TeamName":"Gujarat Lions",
+  "ShortCode":"GL",
+  "TeamColour":"#FDBA74",
+  "IsActive":false
+ },
+ {
+  "TeamKey":"GT",
+  "TeamName":"Gujarat Titans",
+  "ShortCode":"GT",
+  "TeamColour":"#CBD5E1",
+  "IsActive":true
+ },
+ {
+  "TeamKey":"KKR",
+  "TeamName":"Kolkata Knight Riders",
+  "ShortCode":"KKR",
+  "TeamColour":"#7C3AED",
+  "IsActive":true
+ },
+ {
+  "TeamKey":"LSG",
+  "TeamName":"Lucknow Super Giants",
+  "ShortCode":"LSG",
+  "TeamColour":"#22D3EE",
+  "IsActive":true
+ },
+ {
+  "TeamKey":"MI",
+  "TeamName":"Mumbai Indians",
+  "ShortCode":"MI",
+  "TeamColour":"#2563EB",
+  "IsActive":true
+ },
+ {
+  "TeamKey":"PBKS",
+  "TeamName":"Punjab Kings",
+  "ShortCode":"PBKS",
+  "TeamColour":"#F87171",
+  "IsActive":true
+ },
+ {
+  "TeamKey":"PWI",
+  "TeamName":"Pune Warriors India",
+  "ShortCode":"PWI",
+  "TeamColour":"#64748B",
+  "IsActive":false
+ },
+ {
+  "TeamKey":"RCB",
+  "TeamName":"Royal Challengers Bengaluru",
+  "ShortCode":"RCB",
+  "TeamColour":"#DC2626",
+  "IsActive":true
+ },
+ {
+  "TeamKey":"RPS",
+  "TeamName":"Rising Pune Supergiant",
+  "ShortCode":"RPS",
+  "TeamColour":"#A78BFA",
+  "IsActive":false
+ },
+ {
+  "TeamKey":"RR",
+  "TeamName":"Rajasthan Royals",
+  "ShortCode":"RR",
+  "TeamColour":"#EC4899",
+  "IsActive":true
+ },
+ {
+  "TeamKey":"SRH",
+  "TeamName":"Sunrisers Hyderabad",
+  "ShortCode":"SRH",
+  "TeamColour":"#F97316",
+  "IsActive":true
+ }
+]

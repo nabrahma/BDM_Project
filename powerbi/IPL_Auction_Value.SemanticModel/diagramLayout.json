@@ -1,0 +1,139 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 974.93974317022025,
+            "y": 295.6580391606916
+          },
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "8aff85e6-cf86-52b8-9963-8a4dfffb591e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 740.93974317022025,
+            "y": -50
+          },
+          "nodeIndex": "DimPlayer",
+          "nodeLineageTag": "c1f6f03a-7a59-5f54-a214-35c340558746",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 404.60822202510707,
+            "y": 665.3160783213832
+          },
+          "nodeIndex": "DimSeason",
+          "nodeLineageTag": "37895049-a9e2-5903-b75c-6d87cfce7bd8",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 421.61174856534637,
+            "y": 412.37253869088892
+          },
+          "nodeIndex": "DimTeam",
+          "nodeLineageTag": "f319b4cb-80f0-536a-bea2-43032c791145",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 102.9277457035497
+          },
+          "nodeIndex": "DimTeamSeason",
+          "nodeLineageTag": "526f7343-9b9a-5da1-aad3-0b28337a21a4",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 711.28250023348437,
+            "y": 307.24580282609259
+          },
+          "nodeIndex": "FactAuction",
+          "nodeLineageTag": "34d0405c-8e4d-5828-9ba5-e5341e2b0999",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 407.768323384267,
+            "y": 47.748282008086221
+          },
+          "nodeIndex": "FactPlayerSeason",
+          "nodeLineageTag": "74e9b98f-cfe5-5117-a4ac-9d43aec84491",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 117.86648675569484,
+            "y": 359.13630504860913
+          },
+          "nodeIndex": "FactTeamMatch",
+          "nodeLineageTag": "52a98f41-d010-50a9-abbf-ec05d57f187f",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1258.9397431702203,
+            "y": 333.6580391606916
+          },
+          "nodeIndex": "UnsoldPlayers",
+          "nodeLineageTag": "80124844-c1b2-511e-8e24-29fbc096ba2f",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

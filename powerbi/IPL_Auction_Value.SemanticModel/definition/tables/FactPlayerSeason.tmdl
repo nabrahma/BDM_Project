@@ -1,0 +1,328 @@
+table FactPlayerSeason
+	lineageTag: 74e9b98f-cfe5-5117-a4ac-9d43aec84491
+
+	column PlayerSeasonKey
+		dataType: string
+		isHidden
+		lineageTag: 34552a30-cb6c-5f1c-a181-bbce38e3acc5
+		summarizeBy: none
+		sourceColumn: PlayerSeasonKey
+
+		annotation SummarizationSetBy = User
+
+	column TeamSeasonKey
+		dataType: string
+		isHidden
+		lineageTag: 4db82d15-c3d3-5e84-b633-68c82e9e9400
+		summarizeBy: none
+		sourceColumn: TeamSeasonKey
+
+		annotation SummarizationSetBy = User
+
+	column PlayerID
+		dataType: string
+		isHidden
+		lineageTag: bb8437b8-e301-5abe-9f00-a8485a638d23
+		summarizeBy: none
+		sourceColumn: PlayerID
+
+		annotation SummarizationSetBy = User
+
+	column TeamKey
+		dataType: string
+		isHidden
+		lineageTag: 0be8dec3-12bc-51db-b549-f354e370c542
+		summarizeBy: none
+		sourceColumn: TeamKey
+
+		annotation SummarizationSetBy = User
+
+	column Season
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 734869bf-7699-5f58-8039-a70a5b4d8ea6
+		summarizeBy: none
+		sourceColumn: Season
+
+		annotation SummarizationSetBy = User
+
+	column Matches
+		dataType: int64
+		formatString: 0
+		lineageTag: 9630dc0e-8899-55d9-938b-c01dda1abb2e
+		summarizeBy: sum
+		sourceColumn: Matches
+
+		annotation SummarizationSetBy = User
+
+	column Runs
+		dataType: int64
+		formatString: 0
+		lineageTag: 9dbd671a-4065-5ed5-bfc6-c484c0e9d9bf
+		summarizeBy: sum
+		sourceColumn: Runs
+
+		annotation SummarizationSetBy = User
+
+	column BallsFaced
+		dataType: int64
+		formatString: 0
+		lineageTag: b9ac6ee4-b28a-5b3d-8087-1bf974fd1e73
+		summarizeBy: sum
+		sourceColumn: BallsFaced
+
+		annotation SummarizationSetBy = User
+
+	column Fours
+		dataType: int64
+		formatString: 0
+		lineageTag: 787dc305-d74e-527c-9d63-a93c352a764e
+		summarizeBy: sum
+		sourceColumn: Fours
+
+		annotation SummarizationSetBy = User
+
+	column Sixes
+		dataType: int64
+		formatString: 0
+		lineageTag: 4fee0a61-b05d-529d-a749-9df76cab489f
+		summarizeBy: sum
+		sourceColumn: Sixes
+
+		annotation SummarizationSetBy = User
+
+	column Outs
+		dataType: int64
+		formatString: 0
+		lineageTag: 15753185-7843-55fd-9d64-0f482375bb98
+		summarizeBy: sum
+		sourceColumn: Outs
+
+		annotation SummarizationSetBy = User
+
+	column Wickets
+		dataType: int64
+		formatString: 0
+		lineageTag: a3eaa333-56d0-57c4-a7be-3147e8fde887
+		summarizeBy: sum
+		sourceColumn: Wickets
+
+		annotation SummarizationSetBy = User
+
+	column LegalBalls
+		dataType: int64
+		formatString: 0
+		lineageTag: 5dda5485-827c-5366-bbd8-5cf52982808b
+		summarizeBy: sum
+		sourceColumn: LegalBalls
+
+		annotation SummarizationSetBy = User
+
+	column RunsConceded
+		dataType: int64
+		formatString: 0
+		lineageTag: 1c4ffa6f-0ba9-50c5-a9fe-48731770e8f5
+		summarizeBy: sum
+		sourceColumn: RunsConceded
+
+		annotation SummarizationSetBy = User
+
+	column DotBalls
+		dataType: int64
+		formatString: 0
+		lineageTag: 1572eb65-eada-5f5e-bb36-ae33e8c59602
+		summarizeBy: sum
+		sourceColumn: DotBalls
+
+		annotation SummarizationSetBy = User
+
+	column Catches
+		dataType: int64
+		formatString: 0
+		lineageTag: 36ebc0dd-ed97-5260-aafd-059552a261fc
+		summarizeBy: sum
+		sourceColumn: Catches
+
+		annotation SummarizationSetBy = User
+
+	column Stumpings
+		dataType: int64
+		formatString: 0
+		lineageTag: 473a19a0-b5ee-56f5-8820-ebc7a77da208
+		summarizeBy: sum
+		sourceColumn: Stumpings
+
+		annotation SummarizationSetBy = User
+
+	column RunOuts
+		dataType: int64
+		formatString: 0
+		lineageTag: 70b9de36-9a24-5a5f-bd40-1e09cf48464c
+		summarizeBy: sum
+		sourceColumn: RunOuts
+
+		annotation SummarizationSetBy = User
+
+	column ImpactPoints
+		dataType: int64
+		formatString: 0
+		lineageTag: 62ee26f3-9045-5edf-bac7-9f6bc74f64f5
+		summarizeBy: sum
+		sourceColumn: ImpactPoints
+
+		annotation SummarizationSetBy = User
+
+	column PriceCr
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 633dcde2-541f-560e-ab45-0515da3b87f3
+		summarizeBy: sum
+		sourceColumn: PriceCr
+
+		annotation SummarizationSetBy = User
+
+	column BasePriceCr
+		dataType: double
+		formatString: #,0.00
+		lineageTag: b7633651-b6b3-5428-9f9c-b29cab4d1e9c
+		summarizeBy: sum
+		sourceColumn: BasePriceCr
+
+		annotation SummarizationSetBy = User
+
+	column PriceBracket
+		dataType: string
+		lineageTag: fc25a866-da77-54de-b0d8-0f09c9a8a1c2
+		summarizeBy: none
+		sourceColumn: PriceBracket
+		sortByColumn: PriceBracketOrder
+
+		annotation SummarizationSetBy = User
+
+	column PriceBracketOrder
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2235973f-1fde-560d-a25e-4d3b4783e7c0
+		summarizeBy: none
+		sourceColumn: PriceBracketOrder
+
+		annotation SummarizationSetBy = User
+
+	column PriceSource
+		dataType: string
+		lineageTag: 5c8fde0a-ad62-5282-8b2a-f413f6972396
+		summarizeBy: none
+		sourceColumn: PriceSource
+
+		annotation SummarizationSetBy = User
+
+	column AuctionSeason
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b8146ed-541e-585f-b18f-bcea44bdecb5
+		summarizeBy: none
+		sourceColumn: AuctionSeason
+
+		annotation SummarizationSetBy = User
+
+	column MedianPriceCr
+		dataType: double
+		isHidden
+		lineageTag: e4e07c3c-6c56-584e-a6c5-7b8c0b6331f6
+		summarizeBy: none
+		sourceColumn: MedianPriceCr
+
+		annotation SummarizationSetBy = User
+
+	column MedianImpact
+		dataType: double
+		isHidden
+		lineageTag: cf06b935-f7ab-5744-93c7-1fd122198065
+		summarizeBy: none
+		sourceColumn: MedianImpact
+
+		annotation SummarizationSetBy = User
+
+	column 'Value Quadrant' =
+			-- Compares each priced player-season with the median price and median Impact Points of priced players in the same season.
+			VAR medPrice = FactPlayerSeason[MedianPriceCr]
+			VAR medImpact = FactPlayerSeason[MedianImpact]
+			VAR p = FactPlayerSeason[PriceCr]
+			VAR i = FactPlayerSeason[ImpactPoints]
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        FactPlayerSeason[PriceSource] <> "Auction", "Unpriced",
+			        FactPlayerSeason[Matches] < 5, "Too few matches",
+			        p >= medPrice && i >= medImpact, "Star",
+			        p < medPrice && i >= medImpact, "Steal",
+			        p >= medPrice && i < medImpact, "Overpaid",
+			        "Passenger"
+			    )
+		dataType: string
+		lineageTag: 2238c69d-5c11-5f82-a105-2da84b4f4306
+		summarizeBy: none
+		sortByColumn: 'Quadrant Order'
+
+		annotation SummarizationSetBy = User
+
+	column 'Quadrant Order' =
+			-- Same rule as Value Quadrant, returned as a sort order (kept independent so the two columns do not depend on each other).
+			VAR p = FactPlayerSeason[PriceCr]
+			VAR i = FactPlayerSeason[ImpactPoints]
+			RETURN
+			    SWITCH (
+			        TRUE (),
+			        FactPlayerSeason[PriceSource] <> "Auction", 6,
+			        FactPlayerSeason[Matches] < 5, 5,
+			        p < FactPlayerSeason[MedianPriceCr] && i >= FactPlayerSeason[MedianImpact], 1,
+			        p >= FactPlayerSeason[MedianPriceCr] && i >= FactPlayerSeason[MedianImpact], 2,
+			        p < FactPlayerSeason[MedianPriceCr] && i < FactPlayerSeason[MedianImpact], 3,
+			        4
+			    )
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: bbbd1026-bf39-573b-81fd-7419d415e70c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = User
+
+	partition FactPlayerSeason = m
+		mode: import
+		queryGroup: Model
+		source =
+				let
+				    Joined = Table.NestedJoin(stg_PlayerSeasonStats, {"Season", "PlayerID", "TeamKey"}, stg_Contracts, {"Season", "PlayerKey", "TeamKey"}, "C", JoinKind.FullOuter),
+				    Expanded = Table.ExpandTableColumn(Joined, "C",
+				        {"Season", "PlayerKey", "TeamKey", "AuctionSeason", "PriceCr", "BasePriceCr", "PriceBracket", "PriceBracketOrder"},
+				        {"C.Season", "C.PlayerKey", "C.TeamKey", "AuctionSeason", "PriceCr", "BasePriceCr", "PriceBracket", "PriceBracketOrder"}),
+				    Keys = Table.AddColumn(Table.AddColumn(Table.AddColumn(Expanded,
+				        "Season2", each if [Season] <> null then [Season] else [C.Season], Int64.Type),
+				        "PlayerID2", each if [PlayerID] <> null then [PlayerID] else [C.PlayerKey], type text),
+				        "TeamKey2", each if [TeamKey] <> null then [TeamKey] else [C.TeamKey], type text),
+				    Dropped = Table.RemoveColumns(Keys, {"Season", "PlayerID", "TeamKey", "C.Season", "C.PlayerKey", "C.TeamKey"}),
+				    Renamed = Table.RenameColumns(Dropped, {{"Season2", "Season"}, {"PlayerID2", "PlayerID"}, {"TeamKey2", "TeamKey"}}),
+				    Metrics = {"Matches", "Runs", "BallsFaced", "Fours", "Sixes", "Outs", "LegalBalls", "RunsConceded", "DotBalls", "Wickets", "Catches", "Stumpings", "RunOuts", "ImpactPoints"},
+				    Zeroed = Table.ReplaceValue(Renamed, null, 0, Replacer.ReplaceValue, Metrics),
+				    WithSource = Table.AddColumn(Zeroed, "PriceSource", each if [PriceCr] <> null then "Auction" else "Unpriced", type text),
+				    BracketFilled = Table.ReplaceValue(WithSource, null, "Unpriced", Replacer.ReplaceValue, {"PriceBracket"}),
+				    OrderFilled = Table.ReplaceValue(BracketFilled, null, 9, Replacer.ReplaceValue, {"PriceBracketOrder"}),
+				    // Season medians of priced player-seasons, used by the Value Quadrant column.
+				    Priced = Table.SelectRows(OrderFilled, each [PriceSource] = "Auction"),
+				    Medians = Table.Group(Priced, {"Season"}, {{"MedianPriceCr", each List.Median([PriceCr]), type number}, {"MedianImpact", each List.Median([ImpactPoints]), type number}}),
+				    WithMedians = Table.ExpandTableColumn(Table.NestedJoin(OrderFilled, {"Season"}, Medians, {"Season"}, "Med", JoinKind.LeftOuter), "Med", {"MedianPriceCr", "MedianImpact"}),
+				    WithRowKey0 = Table.AddColumn(WithMedians, "PlayerSeasonKey", each Text.From([Season]) & "|" & [PlayerID] & "|" & [TeamKey], type text),
+				    WithRowKey = Table.AddColumn(WithRowKey0, "TeamSeasonKey", each [TeamKey] & "|" & Text.From([Season]), type text),
+				    Typed = Table.TransformColumnTypes(WithRowKey, List.Transform(Metrics, each {_, Int64.Type}) & {
+				        {"Season", Int64.Type}, {"AuctionSeason", Int64.Type}, {"PriceCr", type number}, {"BasePriceCr", type number}, {"PriceBracketOrder", Int64.Type}}),
+				    Ordered = Table.SelectColumns(Typed, {"PlayerSeasonKey", "TeamSeasonKey", "PlayerID", "TeamKey", "Season", "Matches", "Runs", "BallsFaced", "Fours", "Sixes", "Outs",
+				        "Wickets", "LegalBalls", "RunsConceded", "DotBalls", "Catches", "Stumpings", "RunOuts", "ImpactPoints",
+				        "PriceCr", "BasePriceCr", "PriceBracket", "PriceBracketOrder", "PriceSource", "AuctionSeason", "MedianPriceCr", "MedianImpact"})
+				in
+				    Ordered
+
+	annotation PBI_ResultType = Table
+

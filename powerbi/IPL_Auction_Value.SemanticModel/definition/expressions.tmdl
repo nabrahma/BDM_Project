@@ -1,0 +1,717 @@
+expression DataFolder = "D:\For coding\BDM Project\data\raw\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 122bff7d-c07f-5cac-8ef1-390c0adb03ba
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Text
+
+expression UsdInrRate2013 = 54 meta [IsParameterQuery=true, Type="Number", IsParameterQueryRequired=true]
+	lineageTag: eabcedb8-f427-5993-a8f5-29ff09b56efe
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Number
+
+expression FirstSeason = 2013 meta [IsParameterQuery=true, Type="Number", IsParameterQueryRequired=true]
+	lineageTag: 91a4a347-4df6-5af7-8d1e-2eb549b1c8c0
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Number
+
+expression LastSeason = 2026 meta [IsParameterQuery=true, Type="Number", IsParameterQueryRequired=true]
+	lineageTag: 38b29d7a-6823-5535-83df-43a136dd1985
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Number
+
+expression fnNormName =
+		// Lower-case, letters only, collapse spaces, and join runs of initials ("K.S. Bharat" -> "ks bharat").
+		(name as nullable text) as nullable text =>
+		let
+		    Lower = if name = null then "" else Text.Lower(Text.Trim(name)),
+		    Letters = Text.Combine(List.Transform(Text.ToList(Lower), each if _ >= "a" and _ <= "z" then _ else " ")),
+		    Tokens = List.Select(Text.Split(Letters, " "), each _ <> ""),
+		    Merged = List.Accumulate(Tokens, [Out = {}, PrevInitial = false], (s, t) =>
+		        if Text.Length(t) = 1 and s[PrevInitial] then
+		            [Out = List.RemoveLastN(s[Out], 1) & {List.Last(s[Out]) & t}, PrevInitial = true]
+		        else
+		            [Out = s[Out] & {t}, PrevInitial = Text.Length(t) = 1]),
+		    Result = if List.IsEmpty(Merged[Out]) then null else Text.Combine(Merged[Out], " ")
+		in
+		    Result
+	lineageTag: 81852459-03f7-5297-b709-d9f5bbbd1ad4
+	queryGroup: Functions
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+
+expression fnInitialsKey =
+		// "virat kohli" -> "v kohli", "mahendra singh dhoni" -> "ms dhoni"
+		(nameKey as nullable text) as nullable text =>
+		let
+		    Tokens = if nameKey = null then {} else Text.Split(nameKey, " "),
+		    Result =
+		        if List.Count(Tokens) < 2 then nameKey
+		        else Text.Combine(List.Transform(List.RemoveLastN(Tokens, 1), each Text.Start(_, 1))) & " " & List.Last(Tokens)
+		in
+		    Result
+	lineageTag: 8adeb14c-ffdb-5bcc-8c0c-7fd5b3a45977
+	queryGroup: Functions
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+
+expression fnCleanText =
+		(value as any) as nullable text =>
+		let
+		    s = if value = null then null else Text.Combine(List.Select(Text.Split(Text.Replace(Text.From(value), "#(00A0)", " "), " "), each _ <> ""), " ")
+		in
+		    if s = null or s = "" then null else s
+	lineageTag: ef9d7044-6db6-5b0b-922a-36d25a2677ac
+	queryGroup: Functions
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+
+expression fnPriceToCr =
+		// Converts any price text to crores. Strips Rs, ₹, Cr, Lakh and commas first.
+		// defaultUnit is used when the text itself carries no unit: "rs", "usd", "lakh" or "cr".
+		(value as any, defaultUnit as text) as nullable number =>
+		let
+		    s = if value = null then "" else Text.Lower(Text.Trim(Text.From(value))),
+		    Unit =
+		        if Text.Contains(s, "cr") then "cr"
+		        else if Text.Contains(s, "lakh") or Text.Contains(s, "lac") then "lakh"
+		        else if Text.Contains(s, "$") or Text.Contains(s, "usd") then "usd"
+		        else defaultUnit,
+		    Digits = Text.Select(s, {"0".."9", "."}),
+		    n = if Digits = "" then null else Number.FromText(Digits, "en-US"),
+		    Cr =
+		        if n = null then null
+		        else if Unit = "cr" then n
+		        else if Unit = "lakh" then n / 100
+		        else if Unit = "usd" then n * UsdInrRate2013 / 10000000
+		        else n / 10000000
+		in
+		    Cr
+	lineageTag: 43ce800b-4a2d-5fc2-845a-6e9241623368
+	queryGroup: Functions
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+
+expression fnStdRole =
+		(role as nullable text) as nullable text =>
+		let
+		    s = if role = null then null else Text.Upper(Text.Remove(role, {" ", "-", "_"}))
+		in
+		    if s = null then null
+		    else if s = "BATSMAN" or s = "BATTER" then "Batter"
+		    else if s = "WICKETKEEPER" or s = "WK" or s = "KEEPER" then "Wicket-Keeper"
+		    else if s = "ALLROUNDER" then "All-Rounder"
+		    else if s = "BOWLER" then "Bowler"
+		    else null
+	lineageTag: c80e2851-53ef-5571-9f63-11164244de76
+	queryGroup: Functions
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+
+expression fnStdNationality =
+		(value as nullable text) as nullable text =>
+		let
+		    s = if value = null then null else Text.Upper(Text.Trim(value))
+		in
+		    if s = null or s = "" then null
+		    else if s = "INDIAN" or s = "INDIA" then "Indian"
+		    else "Overseas"
+	lineageTag: 7945c508-73dc-57cc-897b-fe61ebd98c64
+	queryGroup: Functions
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+
+expression fnTeamKey =
+		// Maps any raw franchise name to its TeamKey via team_map.csv (null if unmapped).
+		(rawName as nullable text) as nullable text =>
+		    if rawName = null then null else Record.FieldOrDefault(stg_TeamLookup, Text.Trim(rawName), null)
+	lineageTag: cb24937e-df0a-5894-81dc-61b1594072aa
+	queryGroup: Functions
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+
+expression fnReadCsv =
+		(relativePath as text) as table =>
+		let
+		    Source = Csv.Document(File.Contents(DataFolder & relativePath), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+		    CleanNames = Table.TransformColumnNames(Promoted, each Text.Trim(Text.Replace(_, Character.FromNumber(65279), "")))
+		in
+		    CleanNames
+	lineageTag: 9ec284c9-a938-5300-a930-1263bb12fef3
+	queryGroup: Functions
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+
+expression fnStandardiseAuctionFile =
+		// One rename function for every yearly auction file. It reads the headers each
+		// year uses and maps them to Player, Team, Role, Nationality, BasePriceCr,
+		// PriceCr, Capped, Status.
+		(t as table) as table =>
+		let
+		    Clean = Table.TransformColumnNames(t, Text.Trim),
+		    Cols = Table.ColumnNames(Clean),
+		    PriceCol =
+		        if List.Contains(Cols, "Winning Bid in Rs") then "Winning Bid in Rs"
+		        else if List.Contains(Cols, "Price in $") then "Price in $"
+		        else "Price in rs",
+		    PriceUnit = if PriceCol = "Price in $" then "usd" else "rs",
+		    HasBase = List.Contains(Cols, "BasePrices in Rs"),
+		    Std = List.Transform(Table.ToRecords(Clean), (r) => [
+		        Player = fnCleanText(Record.Field(r, "Name")),
+		        Team = fnCleanText(Record.Field(r, "TeamName")),
+		        Role = fnCleanText(Record.FieldOrDefault(r, "Role", null)),
+		        Nationality = fnCleanText(Record.FieldOrDefault(r, "Nationality", null)),
+		        BasePriceCr = if HasBase then fnPriceToCr(Record.Field(r, "BasePrices in Rs"), "rs") else null,
+		        PriceCr = fnPriceToCr(Record.Field(r, PriceCol), PriceUnit),
+		        Capped = fnCleanText(Record.FieldOrDefault(r, "Capped/UnCapped", null)),
+		        Status = "Sold"
+		    ]),
+		    Out = Table.FromRecords(Std, type table [Player = text, Team = text, Role = text, Nationality = text, BasePriceCr = number, PriceCr = number, Capped = text, Status = text])
+		in
+		    Out
+	lineageTag: 7cb0018c-cf67-50df-8806-1d934e169ade
+	queryGroup: Functions
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+
+expression fnParseMatch =
+		// Parses one Cricsheet match JSON into a record of match info plus three
+		// nested tables: Appearances (playing XI), Deliveries (one row per ball) and
+		// Dismissals (fielding credits). Super overs are excluded.
+		(doc as record, matchId as number) as record =>
+		let
+		    Info = doc[info],
+		    Teams = Info[teams],
+		    Registry = Info[registry][people],
+		    IdOf = (n as text) as text => Record.FieldOrDefault(Registry, n, "UNREG:" & n),
+		    MatchDate = Date.FromText(Info[dates]{0}, [Format = "yyyy-MM-dd", Culture = "en-US"]),
+		    Outcome = Record.FieldOrDefault(Info, "outcome", []),
+		    Winner = if Record.HasFields(Outcome, "winner") then Outcome[winner] else Record.FieldOrDefault(Outcome, "eliminator", null),
+		    NonBowlerKinds = {"run out", "retired hurt", "retired out", "obstructing the field", "retired not out"},
+		    TeamPlayers = Record.ToTable(Info[players]),
+		    Appearances = Table.FromRows(
+		        List.Combine(List.Transform(Table.ToRecords(TeamPlayers), (tp) =>
+		            List.Transform(tp[Value], (p) => {matchId, tp[Name], p, IdOf(p)}))),
+		        type table [MatchID = Int64.Type, TeamName = text, PlayerName = text, PlayerID = text]),
+		    Innings = List.Select(Record.FieldOrDefault(doc, "innings", {}), each not Record.FieldOrDefault(_, "super_over", false)),
+		    BowlingTeamOf = (bat as text) as text => if Teams{0} = bat then Teams{1} else Teams{0},
+		    DeliveryRows = List.Combine(List.Transform(Innings, (inn) =>
+		        let
+		            Bat = inn[team],
+		            Bowl = BowlingTeamOf(Bat)
+		        in
+		            List.Combine(List.Transform(Record.FieldOrDefault(inn, "overs", {}), (ov) =>
+		                List.Transform(ov[deliveries], (d) =>
+		                    let
+		                        Ex = Record.FieldOrDefault(d, "extras", []),
+		                        R = d[runs],
+		                        Wk = Record.FieldOrDefault(d, "wickets", {}),
+		                        NonBoundary = Record.FieldOrDefault(R, "non_boundary", false),
+		                        BatterRuns = R[batter]
+		                    in
+		                        {matchId, Bat, Bowl, IdOf(d[batter]), IdOf(d[bowler]), BatterRuns,
+		                         Record.FieldOrDefault(Ex, "wides", 0), Record.FieldOrDefault(Ex, "noballs", 0),
+		                         Record.FieldOrDefault(Ex, "byes", 0), Record.FieldOrDefault(Ex, "legbyes", 0), R[total],
+		                         if BatterRuns = 4 and not NonBoundary then 1 else 0,
+		                         if BatterRuns = 6 and not NonBoundary then 1 else 0,
+		                         List.Count(List.Select(Wk, (w) => not List.Contains(NonBowlerKinds, w[kind]))),
+		                         if List.AnyTrue(List.Transform(Wk, (w) => w[player_out] = d[batter])) then 1 else 0})))
+		        )),
+		    Deliveries = Table.FromRows(DeliveryRows,
+		        type table [MatchID = Int64.Type, BattingTeam = text, BowlingTeam = text, BatterID = text, BowlerID = text,
+		            BatterRuns = Int64.Type, Wides = Int64.Type, NoBalls = Int64.Type, Byes = Int64.Type, LegByes = Int64.Type,
+		            TotalRuns = Int64.Type, IsFour = Int64.Type, IsSix = Int64.Type, BowlerWickets = Int64.Type, BatterOut = Int64.Type]),
+		    DismissalRows = List.Combine(List.Transform(Innings, (inn) =>
+		        let
+		            Bowl = BowlingTeamOf(inn[team])
+		        in
+		            List.Combine(List.Transform(Record.FieldOrDefault(inn, "overs", {}), (ov) =>
+		                List.Combine(List.Transform(ov[deliveries], (d) =>
+		                    List.Combine(List.Transform(Record.FieldOrDefault(d, "wickets", {}), (w) =>
+		                        let
+		                            Kind = w[kind],
+		                            Fielders = List.Select(
+		                                List.Transform(Record.FieldOrDefault(w, "fielders", {}), each Record.FieldOrDefault(_, "name", null)),
+		                                each _ <> null)
+		                        in
+		                            if Kind = "caught" and not List.IsEmpty(Fielders) then {{matchId, Bowl, IdOf(Fielders{0}), "Catch"}}
+		                            else if Kind = "caught and bowled" then {{matchId, Bowl, IdOf(d[bowler]), "Catch"}}
+		                            else if Kind = "stumped" and not List.IsEmpty(Fielders) then {{matchId, Bowl, IdOf(Fielders{0}), "Stumping"}}
+		                            else if Kind = "run out" then List.Transform(Fielders, (f) => {matchId, Bowl, IdOf(f), "RunOut"})
+		                            else {}))))))
+		        )),
+		    Dismissals = Table.FromRows(DismissalRows, type table [MatchID = Int64.Type, FieldingTeam = text, FielderID = text, Kind = text])
+		in
+		    [
+		        MatchID = matchId,
+		        Season = Date.Year(MatchDate),
+		        MatchDate = MatchDate,
+		        Venue = Record.FieldOrDefault(Info, "venue", null),
+		        Team1 = Teams{0},
+		        Team2 = Teams{1},
+		        Winner = Winner,
+		        NoResult = if Winner = null then 1 else 0,
+		        Appearances = Appearances,
+		        Deliveries = Deliveries,
+		        Dismissals = Dismissals
+		    ]
+	lineageTag: 8024257f-fd67-57bd-b33f-f9a09b52d4cb
+	queryGroup: Functions
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+
+expression stg_TeamMap =
+		let
+		    Source = fnReadCsv("mappings\team_map.csv"),
+		    Typed = Table.TransformColumns(Source, {
+		        {"RawName", Text.Trim, type text}, {"TeamKey", Text.Trim, type text}, {"TeamName", Text.Trim, type text},
+		        {"TeamColour", Text.Trim, type text}, {"IsActive", each Text.Upper(Text.Trim(_)) = "TRUE", type logical}})
+		in
+		    Typed
+	lineageTag: 226797c5-b305-5d6b-a2f8-2c73875c9efc
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_TeamLookup =
+		let
+		    Lookup = Record.FromList(stg_TeamMap[TeamKey], stg_TeamMap[RawName])
+		in
+		    Lookup
+	lineageTag: 3dc10868-6cdf-5d4e-9293-5add806c4ee3
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Record
+
+expression stg_AuctionOrigin =
+		// Backup auction dataset (2013-2022): fills Role and Indian/Overseas for years whose files lack them.
+		let
+		    Source = fnReadCsv("supplementary\auction_origin_2013_2022.csv"),
+		    Rows = Table.SelectRows(Source, each fnCleanText([Player]) <> null and fnCleanText([Year]) <> null),
+		    Shaped = Table.FromRecords(List.Transform(Table.ToRecords(Rows), (r) => [
+		        NameKey = fnNormName(r[Player]),
+		        Season = Number.RoundDown(Number.FromText(r[Year], "en-US")),
+		        Role = fnStdRole(r[Role]),
+		        Nationality = fnStdNationality(r[Player Origin])
+		    ]), type table [NameKey = text, Season = Int64.Type, Role = text, Nationality = text]),
+		    Distinct = Table.Distinct(Shaped, {"NameKey", "Season"})
+		in
+		    Distinct
+	lineageTag: 2412b19c-8e68-554a-a13f-2b572d076c35
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_AuctionList2025 =
+		// Official TATA IPL 2025 auction list: fills Role and nationality for 2025 buys.
+		let
+		    Source = Csv.Document(File.Contents(DataFolder & "supplementary\auction_list_2025.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		    PlayerRows = Table.SelectRows(Source, each (try Number.FromText([Column1], "en-US") otherwise null) <> null),
+		    Shaped = Table.FromRecords(List.Transform(Table.ToRecords(PlayerRows), (r) => [
+		        NameKey = fnNormName(Text.Trim(r[Column4]) & " " & Text.Trim(r[Column5])),
+		        Role = fnStdRole(r[Column10]),
+		        Nationality = fnStdNationality(r[Column6])
+		    ]), type table [NameKey = text, Role = text, Nationality = text]),
+		    Distinct = Table.Distinct(Shaped, {"NameKey"})
+		in
+		    Distinct
+	lineageTag: a17c890f-e642-5f94-8c02-8904a7edf15f
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_Auction =
+		let
+		    Files = Folder.Files(DataFolder & "auction"),
+		    AuctionFiles = Table.SelectRows(Files, each Text.StartsWith(Text.Lower([Name]), "ipl_auction_") and Text.EndsWith(Text.Lower([Name]), ".csv")),
+		    // ipl_auction_2019.csv -> 2019. Each file is named for the season it was held for.
+		    WithSeason = Table.AddColumn(AuctionFiles, "AuctionSeason", each Number.From(Text.Select([Name], {"0".."9"})), Int64.Type),
+		    WithData = Table.AddColumn(WithSeason, "Data", each fnStandardiseAuctionFile(
+		        Table.PromoteHeaders(Csv.Document([Content], [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]), [PromoteAllScalars = true]))),
+		    Kept = Table.SelectColumns(WithData, {"AuctionSeason", "Data"}),
+		    Expanded = Table.ExpandTableColumn(Kept, "Data",
+		        {"Player", "Team", "Role", "Nationality", "BasePriceCr", "PriceCr", "Capped", "Status"}),
+		    Typed = Table.TransformColumnTypes(Expanded, {
+		        {"Player", type text}, {"Team", type text}, {"Role", type text}, {"Nationality", type text},
+		        {"BasePriceCr", type number}, {"PriceCr", type number}, {"Capped", type text}, {"Status", type text}}),
+		    SoldOnly = Table.SelectRows(Typed, each [Status] = "Sold" and [Player] <> null and [PriceCr] <> null and [PriceCr] > 0),
+		    WithTeamKey = Table.AddColumn(SoldOnly, "TeamKey", each fnTeamKey([Team]), type text),
+		    WithNameKey = Table.AddColumn(WithTeamKey, "NameKey", each fnNormName([Player]), type text),
+		    JoinOrigin = Table.NestedJoin(WithNameKey, {"NameKey", "AuctionSeason"}, stg_AuctionOrigin, {"NameKey", "Season"}, "O", JoinKind.LeftOuter),
+		    ExpOrigin = Table.ExpandTableColumn(JoinOrigin, "O", {"Role", "Nationality"}, {"O.Role", "O.Nationality"}),
+		    Join2025 = Table.NestedJoin(ExpOrigin, {"NameKey"}, stg_AuctionList2025, {"NameKey"}, "L", JoinKind.LeftOuter),
+		    Exp2025 = Table.ExpandTableColumn(Join2025, "L", {"Role", "Nationality"}, {"L.Role", "L.Nationality"}),
+		    WithRole = Table.AddColumn(Exp2025, "RoleStd", each List.First(List.RemoveNulls({fnStdRole([Role]), [O.Role], if [AuctionSeason] = 2025 then [L.Role] else null}), null), type text),
+		    WithNat = Table.AddColumn(WithRole, "NationalityStd", each List.First(List.RemoveNulls({fnStdNationality([Nationality]), [O.Nationality], if [AuctionSeason] = 2025 then [L.Nationality] else null}), null), type text),
+		    Final = Table.SelectColumns(WithNat, {"AuctionSeason", "Player", "Team", "TeamKey", "NameKey", "RoleStd", "NationalityStd", "BasePriceCr", "PriceCr", "Capped"}),
+		    Renamed = Table.RenameColumns(Final, {{"RoleStd", "Role"}, {"NationalityStd", "Nationality"}})
+		in
+		    Renamed
+	lineageTag: 4e97dae1-a563-593d-9883-1a4a137cfdfc
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_Unsold =
+		// Unsold players at the latest auction (Wisden list), for the "notable unsold" card.
+		let
+		    Source = fnReadCsv("supplementary\unsold_2026.csv"),
+		    Shaped = Table.FromRecords(List.Transform(Table.ToRecords(Source), (r) => [
+		        Season = 2026,
+		        Player = fnCleanText(r[Player]),
+		        NameKey = fnNormName(r[Player]),
+		        BasePriceCr = fnPriceToCr(r[BasePriceText], "rs"),
+		        Status = "Unsold"
+		    ]), type table [Season = Int64.Type, Player = text, NameKey = text, BasePriceCr = number, Status = text])
+		in
+		    Shaped
+	lineageTag: 0820b8c6-5d62-56b8-a25e-d600f19e6ef3
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_Matches =
+		let
+		    Files = Folder.Files(DataFolder & "cricsheet_ipl_json"),
+		    JsonFiles = Table.SelectRows(Files, each Text.Lower([Extension]) = ".json"),
+		    Parsed = Table.AddColumn(JsonFiles, "Match", each fnParseMatch(Json.Document([Content]), Number.From(Text.BeforeDelimiter([Name], ".")))),
+		    Kept = Table.SelectColumns(Parsed, {"Match"}),
+		    Expanded = Table.ExpandRecordColumn(Kept, "Match",
+		        {"MatchID", "Season", "MatchDate", "Venue", "Team1", "Team2", "Winner", "NoResult", "Appearances", "Deliveries", "Dismissals"}),
+		    // Season = calendar year of the match ("2020/21" in Cricsheet is the 2020 season).
+		    InWindow = Table.SelectRows(Expanded, each [Season] >= FirstSeason and [Season] <= LastSeason),
+		    Buffered = Table.Buffer(InWindow)
+		in
+		    Buffered
+	lineageTag: 29ad16e8-b7b1-5416-b8ae-03b5cbd83d63
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_Appearances =
+		let
+		    Source = Table.SelectColumns(stg_Matches, {"Season", "Appearances"}),
+		    Expanded = Table.ExpandTableColumn(Source, "Appearances", {"MatchID", "TeamName", "PlayerName", "PlayerID"}),
+		    Typed = Table.TransformColumnTypes(Expanded, {{"Season", Int64.Type}, {"MatchID", Int64.Type}, {"TeamName", type text}, {"PlayerName", type text}, {"PlayerID", type text}}),
+		    WithTeamKey = Table.AddColumn(Typed, "TeamKey", each fnTeamKey([TeamName]), type text)
+		in
+		    WithTeamKey
+	lineageTag: 2fb1643b-9111-595a-83ae-047ce68e59ee
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_Deliveries =
+		let
+		    Source = Table.SelectColumns(stg_Matches, {"Season", "Deliveries"}),
+		    Expanded = Table.ExpandTableColumn(Source, "Deliveries",
+		        {"MatchID", "BattingTeam", "BowlingTeam", "BatterID", "BowlerID", "BatterRuns", "Wides", "NoBalls", "Byes", "LegByes", "TotalRuns", "IsFour", "IsSix", "BowlerWickets", "BatterOut"}),
+		    Typed = Table.TransformColumnTypes(Expanded, {
+		        {"Season", Int64.Type}, {"MatchID", Int64.Type}, {"BattingTeam", type text}, {"BowlingTeam", type text},
+		        {"BatterID", type text}, {"BowlerID", type text}, {"BatterRuns", Int64.Type}, {"Wides", Int64.Type},
+		        {"NoBalls", Int64.Type}, {"Byes", Int64.Type}, {"LegByes", Int64.Type}, {"TotalRuns", Int64.Type},
+		        {"IsFour", Int64.Type}, {"IsSix", Int64.Type}, {"BowlerWickets", Int64.Type}, {"BatterOut", Int64.Type}}),
+		    WithKeys = Table.AddColumn(Table.AddColumn(Typed, "BattingTeamKey", each fnTeamKey([BattingTeam]), type text),
+		        "BowlingTeamKey", each fnTeamKey([BowlingTeam]), type text),
+		    // Legal ball = not a wide or no-ball. Balls faced excludes wides only.
+		    WithFlags = Table.AddColumn(Table.AddColumn(Table.AddColumn(Table.AddColumn(WithKeys,
+		        "Faced", each if [Wides] = 0 then 1 else 0, Int64.Type),
+		        "Legal", each if [Wides] = 0 and [NoBalls] = 0 then 1 else 0, Int64.Type),
+		        "Conceded", each [BatterRuns] + [Wides] + [NoBalls], Int64.Type),
+		        "Dot", each if [Wides] = 0 and [NoBalls] = 0 and [BatterRuns] + [Wides] + [NoBalls] = 0 then 1 else 0, Int64.Type)
+		in
+		    WithFlags
+	lineageTag: 87e4da72-db93-584d-bf46-297c824b63d0
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_Batting =
+		let
+		    Grouped = Table.Group(stg_Deliveries, {"Season", "BatterID", "BattingTeamKey"}, {
+		        {"Runs", each List.Sum([BatterRuns]), Int64.Type},
+		        {"BallsFaced", each List.Sum([Faced]), Int64.Type},
+		        {"Fours", each List.Sum([IsFour]), Int64.Type},
+		        {"Sixes", each List.Sum([IsSix]), Int64.Type},
+		        {"Outs", each List.Sum([BatterOut]), Int64.Type}}),
+		    Renamed = Table.RenameColumns(Grouped, {{"BatterID", "PlayerID"}, {"BattingTeamKey", "TeamKey"}})
+		in
+		    Renamed
+	lineageTag: 032773fb-a065-599a-906a-a1de83308d73
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_Bowling =
+		let
+		    // Runs conceded excludes byes and leg-byes; wickets exclude run outs, retirements and obstructing the field.
+		    Grouped = Table.Group(stg_Deliveries, {"Season", "BowlerID", "BowlingTeamKey"}, {
+		        {"LegalBalls", each List.Sum([Legal]), Int64.Type},
+		        {"RunsConceded", each List.Sum([Conceded]), Int64.Type},
+		        {"DotBalls", each List.Sum([Dot]), Int64.Type},
+		        {"Wickets", each List.Sum([BowlerWickets]), Int64.Type}}),
+		    Renamed = Table.RenameColumns(Grouped, {{"BowlerID", "PlayerID"}, {"BowlingTeamKey", "TeamKey"}})
+		in
+		    Renamed
+	lineageTag: 0a4b4eed-dc6b-5f99-b73e-c003d773af9b
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_Fielding =
+		let
+		    Source = Table.SelectColumns(stg_Matches, {"Season", "Dismissals"}),
+		    Expanded = Table.ExpandTableColumn(Source, "Dismissals", {"MatchID", "FieldingTeam", "FielderID", "Kind"}),
+		    Registered = Table.SelectRows(Expanded, each [FielderID] <> null and not Text.StartsWith([FielderID], "UNREG:")),
+		    WithKey = Table.AddColumn(Registered, "TeamKey", each fnTeamKey([FieldingTeam]), type text),
+		    Grouped = Table.Group(WithKey, {"Season", "FielderID", "TeamKey"}, {
+		        {"Catches", each List.Count(List.Select([Kind], each _ = "Catch")), Int64.Type},
+		        {"Stumpings", each List.Count(List.Select([Kind], each _ = "Stumping")), Int64.Type},
+		        {"RunOuts", each List.Count(List.Select([Kind], each _ = "RunOut")), Int64.Type}}),
+		    Renamed = Table.RenameColumns(Grouped, {{"FielderID", "PlayerID"}}),
+		    Typed = Table.TransformColumnTypes(Renamed, {{"Season", Int64.Type}})
+		in
+		    Typed
+	lineageTag: 020c60b7-549e-5431-b06a-ff428a9c3f0a
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_PlayerSeasonStats =
+		let
+		    // Matches = distinct matches in the playing XI for that team.
+		    Played = Table.Group(stg_Appearances, {"Season", "PlayerID", "TeamKey"}, {{"Matches", each List.Count(List.Distinct([MatchID])), Int64.Type}}),
+		    Keys = Table.Distinct(Table.Combine({
+		        Table.SelectColumns(Played, {"Season", "PlayerID", "TeamKey"}),
+		        Table.SelectColumns(stg_Batting, {"Season", "PlayerID", "TeamKey"}),
+		        Table.SelectColumns(stg_Bowling, {"Season", "PlayerID", "TeamKey"}),
+		        Table.SelectColumns(stg_Fielding, {"Season", "PlayerID", "TeamKey"})})),
+		    J1 = Table.ExpandTableColumn(Table.NestedJoin(Keys, {"Season", "PlayerID", "TeamKey"}, Played, {"Season", "PlayerID", "TeamKey"}, "P", JoinKind.LeftOuter), "P", {"Matches"}),
+		    J2 = Table.ExpandTableColumn(Table.NestedJoin(J1, {"Season", "PlayerID", "TeamKey"}, stg_Batting, {"Season", "PlayerID", "TeamKey"}, "B", JoinKind.LeftOuter), "B", {"Runs", "BallsFaced", "Fours", "Sixes", "Outs"}),
+		    J3 = Table.ExpandTableColumn(Table.NestedJoin(J2, {"Season", "PlayerID", "TeamKey"}, stg_Bowling, {"Season", "PlayerID", "TeamKey"}, "W", JoinKind.LeftOuter), "W", {"LegalBalls", "RunsConceded", "DotBalls", "Wickets"}),
+		    J4 = Table.ExpandTableColumn(Table.NestedJoin(J3, {"Season", "PlayerID", "TeamKey"}, stg_Fielding, {"Season", "PlayerID", "TeamKey"}, "F", JoinKind.LeftOuter), "F", {"Catches", "Stumpings", "RunOuts"}),
+		    Metrics = {"Matches", "Runs", "BallsFaced", "Fours", "Sixes", "Outs", "LegalBalls", "RunsConceded", "DotBalls", "Wickets", "Catches", "Stumpings", "RunOuts"},
+		    Zeroed = Table.ReplaceValue(J4, null, 0, Replacer.ReplaceValue, Metrics),
+		    Typed = Table.TransformColumnTypes(Zeroed, List.Transform(Metrics, each {_, Int64.Type}) & {{"Season", Int64.Type}}),
+		    // Impact Points: run 1, four bonus 1, six bonus 2, wicket 25, dot ball 1, catch 8, stumping 12, run-out involvement 6
+		    WithImpact = Table.AddColumn(Typed, "ImpactPoints", each
+		        [Runs] + [Fours] + 2 * [Sixes] + 25 * [Wickets] + [DotBalls] + 8 * [Catches] + 12 * [Stumpings] + 6 * [RunOuts], Int64.Type)
+		in
+		    WithImpact
+	lineageTag: c02b7ded-652a-546b-adec-aa81bd4c47ce
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_RegisterVariants =
+		// Every Cricsheet name variant (people.csv name + unique_name, plus names.csv), normalised.
+		let
+		    People = fnReadCsv("register\people.csv"),
+		    Names = fnReadCsv("register\names.csv"),
+		    FromPeople = Table.Combine({
+		        Table.RenameColumns(Table.SelectColumns(People, {"identifier", "name"}), {{"identifier", "PlayerID"}, {"name", "Variant"}}),
+		        Table.RenameColumns(Table.SelectColumns(People, {"identifier", "unique_name"}), {{"identifier", "PlayerID"}, {"unique_name", "Variant"}})}),
+		    FromNames = Table.RenameColumns(Table.SelectColumns(Names, {"identifier", "name"}), {{"identifier", "PlayerID"}, {"name", "Variant"}}),
+		    All = Table.Combine({FromPeople, FromNames}),
+		    WithKey = Table.AddColumn(All, "VKey", each fnNormName([Variant]), type text),
+		    Distinct = Table.Distinct(Table.SelectRows(Table.SelectColumns(WithKey, {"PlayerID", "VKey"}), each [VKey] <> null)),
+		    Buffered = Table.Buffer(Distinct)
+		in
+		    Buffered
+	lineageTag: 862b702e-0bf7-5c88-9757-a9fd11a85609
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_IplVariants =
+		// Name variants restricted to people who played IPL matches in the window, plus the exact match-file names.
+		let
+		    IplIds = Table.Distinct(Table.SelectColumns(stg_Appearances, {"PlayerID"})),
+		    FromRegister = Table.Join(stg_RegisterVariants, "PlayerID", Table.RenameColumns(IplIds, {{"PlayerID", "IplID"}}), "IplID", JoinKind.Inner),
+		    FromMatches = Table.Distinct(Table.AddColumn(Table.SelectColumns(stg_Appearances, {"PlayerID", "PlayerName"}), "VKey", each fnNormName([PlayerName]), type text)),
+		    All = Table.Distinct(Table.Combine({Table.SelectColumns(FromRegister, {"PlayerID", "VKey"}), Table.SelectColumns(FromMatches, {"PlayerID", "VKey"})})),
+		    Buffered = Table.Buffer(All)
+		in
+		    Buffered
+	lineageTag: 585dfc79-f9cf-54c6-8f49-cf07896c03b0
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_NameFixesRaw =
+		// name_fixes.csv as-is (AuctionName, PlayerID, Note, DisplayName). Only this query touches the file.
+		let
+		    Source = fnReadCsv("mappings\name_fixes.csv"),
+		    WithDisplay = if Table.HasColumns(Source, "DisplayName") then Source else Table.AddColumn(Source, "DisplayName", each null, type text)
+		in
+		    WithDisplay
+	lineageTag: 949c785f-9d61-599c-9812-d7f096a201b9
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_NameFixes =
+		let
+		    Source = stg_NameFixesRaw,
+		    WithKey = Table.AddColumn(Source, "NameKey", each fnNormName([AuctionName]), type text),
+		    Kept = Table.Distinct(Table.SelectColumns(Table.SelectRows(WithKey, each fnCleanText([PlayerID]) <> null), {"NameKey", "PlayerID"}), {"NameKey"})
+		in
+		    Kept
+	lineageTag: b59215f9-2c6e-5743-9f84-040ce8c2716a
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_NameMatch =
+		// Auction name -> Cricsheet PlayerID, one row per (AuctionSeason, TeamKey, NameKey).
+		// Passes, in priority order:
+		//   0 Manual        name_fixes.csv
+		//   1 Exact         full name equals a register variant, unique among IPL players
+		//   2 ExactRegister full name equals a register variant, unique in the whole register
+		//   3 Initials      "Virat Kohli" -> "V Kohli", among players who played for that team in the contract window
+		//   4 Surname       same surname and first initial, unique in that team-window roster
+		//   5 Fuzzy         Power Query fuzzy merge (similarity >= 0.8) against that roster
+		let
+		    Keys = Table.Distinct(Table.SelectColumns(stg_Auction, {"AuctionSeason", "TeamKey", "NameKey"})),
+		    UniqueOf = (variants as table) as table =>
+		        let
+		            G = Table.Group(variants, {"VKey"}, {{"N", each List.Count(List.Distinct([PlayerID])), Int64.Type}, {"PlayerID", each List.First([PlayerID]), type text}})
+		        in
+		            Table.SelectColumns(Table.SelectRows(G, each [N] = 1), {"VKey", "PlayerID"}),
+		    UniqueIpl = UniqueOf(stg_IplVariants),
+		    UniqueRegister = UniqueOf(stg_RegisterVariants),
+		    P0 = Table.AddColumn(Table.Join(Keys, "NameKey", Table.RenameColumns(stg_NameFixes, {{"NameKey", "FixKey"}}), "FixKey", JoinKind.Inner), "Pass", each 0, Int64.Type),
+		    P1 = Table.AddColumn(Table.Join(Keys, "NameKey", Table.RenameColumns(UniqueIpl, {{"VKey", "FixKey"}}), "FixKey", JoinKind.Inner), "Pass", each 1, Int64.Type),
+		    P2 = Table.AddColumn(Table.Join(Keys, "NameKey", Table.RenameColumns(UniqueRegister, {{"VKey", "FixKey"}}), "FixKey", JoinKind.Inner), "Pass", each 2, Int64.Type),
+		    Exact = Table.SelectColumns(Table.Combine({P0, P1, P2}), {"AuctionSeason", "TeamKey", "NameKey", "PlayerID", "Pass"}),
+		    Leftover = Table.SelectRows(Table.NestedJoin(Keys, {"AuctionSeason", "TeamKey", "NameKey"}, Exact, {"AuctionSeason", "TeamKey", "NameKey"}, "E", JoinKind.LeftAnti), each true),
+		    LeftKeys = Table.RemoveColumns(Leftover, {"E"}),
+		    // Roster scope: anyone who played for that TeamKey in the auction season or the next three.
+		    Roster = Table.Distinct(Table.SelectColumns(stg_Appearances, {"PlayerID", "TeamKey", "Season"})),
+		    Window = Table.ExpandListColumn(Table.AddColumn(LeftKeys, "Season", each List.Numbers([AuctionSeason], 4)), "Season"),
+		    WindowTyped = Table.TransformColumnTypes(Window, {{"Season", Int64.Type}}),
+		    InRoster = Table.Join(WindowTyped, {"TeamKey", "Season"}, Table.RenameColumns(Roster, {{"TeamKey", "RTeamKey"}, {"Season", "RSeason"}}), {"RTeamKey", "RSeason"}, JoinKind.Inner),
+		    CandidateIds = Table.Distinct(Table.SelectColumns(InRoster, {"AuctionSeason", "TeamKey", "NameKey", "PlayerID"})),
+		    Candidates = Table.Join(CandidateIds, "PlayerID", Table.RenameColumns(stg_IplVariants, {{"PlayerID", "VPlayerID"}}), "VPlayerID", JoinKind.Inner),
+		    WithTests = Table.AddColumn(Table.AddColumn(Candidates,
+		        "IsInitials", each [VKey] = fnNormName(fnInitialsKey([NameKey])), type logical),
+		        "IsSurname", each List.Last(Text.Split([VKey], " ")) = List.Last(Text.Split([NameKey], " ")) and Text.Start([VKey], 1) = Text.Start([NameKey], 1), type logical),
+		    UniqueHit = (flag as text, pass as number) as table =>
+		        let
+		            Hits = Table.SelectRows(WithTests, each Record.Field(_, flag)),
+		            G = Table.Group(Hits, {"AuctionSeason", "TeamKey", "NameKey"}, {{"N", each List.Count(List.Distinct([PlayerID])), Int64.Type}, {"PlayerID", each List.First([PlayerID]), type text}}),
+		            One = Table.SelectRows(G, each [N] = 1)
+		        in
+		            Table.AddColumn(Table.RemoveColumns(One, {"N"}), "Pass", each pass, Int64.Type),
+		    P3 = UniqueHit("IsInitials", 3),
+		    P4 = UniqueHit("IsSurname", 4),
+		    // Fuzzy pass: one scoped fuzzy merge per leftover name.
+		    FuzzyGroups = Table.Group(Candidates, {"AuctionSeason", "TeamKey", "NameKey"}, {{"Cands", each Table.Distinct(Table.SelectColumns(_, {"PlayerID", "VKey"})), type table}}),
+		    FuzzyMatched = Table.AddColumn(FuzzyGroups, "PlayerID", each
+		        let
+		            Probe = #table(type table [NameKey = text], {{[NameKey]}}),
+		            J = Table.FuzzyNestedJoin(Probe, {"NameKey"}, [Cands], {"VKey"}, "M", JoinKind.LeftOuter, [Threshold = 0.8, IgnoreCase = true, IgnoreSpace = true]),
+		            Matches = J{0}[M],
+		            // An unmatched fuzzy join returns an empty table without columns.
+		            Ids = if Table.HasColumns(Matches, "PlayerID") then List.Distinct(Matches[PlayerID]) else {}
+		        in
+		            if List.Count(Ids) = 1 then Ids{0} else null, type text),
+		    P5 = Table.AddColumn(Table.SelectRows(Table.RemoveColumns(FuzzyMatched, {"Cands"}), each [PlayerID] <> null), "Pass", each 5, Int64.Type),
+		    All = Table.Combine({Exact, P3, P4, P5}),
+		    Best = Table.Group(All, {"AuctionSeason", "TeamKey", "NameKey"}, {{"Pass", each List.Min([Pass]), Int64.Type},
+		        {"PlayerID", (g) => Table.SelectRows(g, each [Pass] = List.Min(g[Pass])){0}[PlayerID], type text}}),
+		    WithLabel = Table.AddColumn(Best, "MatchPass", each {"Manual", "Exact", "Exact (register)", "Initials", "Surname", "Fuzzy"}{[Pass]}, type text)
+		in
+		    WithLabel
+	lineageTag: b7a3fe52-44ab-5e15-83d2-8302a04c95ba
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_AuctionMatched =
+		let
+		    Joined = Table.NestedJoin(stg_Auction, {"AuctionSeason", "TeamKey", "NameKey"}, stg_NameMatch, {"AuctionSeason", "TeamKey", "NameKey"}, "M", JoinKind.LeftOuter),
+		    Expanded = Table.ExpandTableColumn(Joined, "M", {"PlayerID", "MatchPass"}),
+		    // Unmatched buys keep their spend under a synthetic key so totals stay complete.
+		    WithKey = Table.AddColumn(Expanded, "PlayerKey", each if [PlayerID] <> null then [PlayerID] else "A_" & Text.Replace([NameKey], " ", "_"), type text),
+		    WithFlag = Table.AddColumn(WithKey, "IsMatched", each [PlayerID] <> null, type logical),
+		    WithPass = Table.ReplaceValue(WithFlag, null, "Unmatched", Replacer.ReplaceValue, {"MatchPass"}),
+		    // Base price is only published for 2025-26. Earlier, a buy at the minimum base price of that era counts as a base-price buy.
+		    MinBase = (s as number) as number => if s >= 2025 then 0.30 else if s >= 2018 then 0.20 else 0.10,
+		    WithBracket = Table.AddColumn(WithPass, "PriceBracket", each
+		        if ([BasePriceCr] <> null and Number.Abs([PriceCr] - [BasePriceCr]) < 0.001) or ([BasePriceCr] = null and [PriceCr] <= MinBase([AuctionSeason]) * 1.1) then "Base price buy"
+		        else if [PriceCr] < 2 then "Under 2 Cr"
+		        else if [PriceCr] < 5 then "2 to 5 Cr"
+		        else if [PriceCr] < 10 then "5 to 10 Cr"
+		        else "10 Cr and above", type text),
+		    WithOrder = Table.AddColumn(WithBracket, "PriceBracketOrder", each List.PositionOf({"Base price buy", "Under 2 Cr", "2 to 5 Cr", "5 to 10 Cr", "10 Cr and above"}, [PriceBracket]) + 1, Int64.Type),
+		    // If a player appears twice for the same team in one auction file, keep the higher price.
+		    Sorted = Table.Buffer(Table.Sort(WithOrder, {{"PriceCr", Order.Descending}})),
+		    Deduped = Table.Distinct(Sorted, {"PlayerKey", "TeamKey", "AuctionSeason"})
+		in
+		    Deduped
+	lineageTag: d511a9d9-2c4e-5089-b844-2e607dc38fc2
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+
+expression stg_Contracts =
+		// One row per auction buy per season it covers.
+		// ContractEnd = earliest of (player's next auction season - 1, next mega auction - 1, LastSeason).
+		// Seasons after the buy are kept only while the player still appears for that team (released players drop out).
+		let
+		    MegaAuctions = {2014, 2018, 2022, 2025},
+		    Buys = Table.SelectColumns(stg_AuctionMatched, {"PlayerKey", "PlayerID", "TeamKey", "AuctionSeason", "PriceCr", "BasePriceCr", "PriceBracket", "PriceBracketOrder"}),
+		    SeasonsByPlayer = Table.Group(Buys, {"PlayerKey"}, {{"AllAuctions", each List.Distinct([AuctionSeason]), type list}}),
+		    WithAll = Table.ExpandTableColumn(Table.NestedJoin(Buys, {"PlayerKey"}, SeasonsByPlayer, {"PlayerKey"}, "S", JoinKind.LeftOuter), "S", {"AllAuctions"}),
+		    PlayedSeasons = Table.Group(Table.Distinct(Table.SelectColumns(stg_Appearances, {"PlayerID", "TeamKey", "Season"})), {"PlayerID", "TeamKey"}, {{"PlayedSeasons", each [Season], type list}}),
+		    WithPlayed = Table.ExpandTableColumn(Table.NestedJoin(WithAll, {"PlayerID", "TeamKey"}, PlayedSeasons, {"PlayerID", "TeamKey"}, "P", JoinKind.LeftOuter), "P", {"PlayedSeasons"}),
+		    WithEnd = Table.AddColumn(WithPlayed, "ContractEnd", each
+		        let
+		            s = [AuctionSeason],
+		            NextAuction = List.Min(List.Select([AllAuctions], (a) => a > s)),
+		            NextMega = List.Min(List.Select(MegaAuctions, (m) => m > s))
+		        in
+		            List.Min(List.RemoveNulls({LastSeason, if NextAuction = null then null else NextAuction - 1, if NextMega = null then null else NextMega - 1})), Int64.Type),
+		    WithSeasons = Table.AddColumn(WithEnd, "Season", each
+		        let
+		            s = [AuctionSeason],
+		            Played = if [PlayedSeasons] = null then {} else List.Select([PlayedSeasons], (p) => p >= s and p <= [ContractEnd]),
+		            LastPlayed = List.Max(Played, s)
+		        in
+		            List.Select(List.Numbers(s, [ContractEnd] - s + 1), (x) => x = s or x <= LastPlayed)),
+		    Expanded = Table.ExpandListColumn(WithSeasons, "Season"),
+		    Typed = Table.TransformColumnTypes(Expanded, {{"Season", Int64.Type}}),
+		    Sorted = Table.Buffer(Table.Sort(Typed, {{"AuctionSeason", Order.Descending}})),
+		    Deduped = Table.Distinct(Sorted, {"PlayerKey", "TeamKey", "Season"}),
+		    Final = Table.RemoveColumns(Deduped, {"AllAuctions", "PlayedSeasons"})
+		in
+		    Final
+	lineageTag: 5cb2450e-13cd-51a8-853f-0b27bd45f1ea
+	queryGroup: Staging
+
+	annotation PBI_ResultType = Table
+

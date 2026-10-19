@@ -1,0 +1,157 @@
+table DimPlayer
+	lineageTag: c1f6f03a-7a59-5f54-a214-35c340558746
+
+	column PlayerID
+		dataType: string
+		isHidden
+		lineageTag: c814c432-d356-5e6b-b447-46bf3b17e3bd
+		summarizeBy: none
+		sourceColumn: PlayerID
+
+		annotation SummarizationSetBy = User
+
+	column PlayerName
+		dataType: string
+		lineageTag: 7b7354af-b75a-5af4-bdfc-bf002d7ff479
+		summarizeBy: none
+		sourceColumn: PlayerName
+
+		annotation SummarizationSetBy = User
+
+	column CricsheetName
+		dataType: string
+		lineageTag: 2dea57c2-93bd-5116-9c2b-1be913a2dea1
+		summarizeBy: none
+		sourceColumn: CricsheetName
+
+		annotation SummarizationSetBy = User
+
+	column Role
+		dataType: string
+		lineageTag: 6f60ae7c-9341-5efb-9481-1213751e79a0
+		summarizeBy: none
+		sourceColumn: Role
+
+		annotation SummarizationSetBy = User
+
+	column RoleSource
+		dataType: string
+		lineageTag: 002b9e0c-3095-5997-a4f2-45905eb1bf5f
+		summarizeBy: none
+		sourceColumn: RoleSource
+
+		annotation SummarizationSetBy = User
+
+	column Nationality
+		dataType: string
+		lineageTag: 8484a2b8-0d4f-5d02-81ae-98a3e027fff2
+		summarizeBy: none
+		sourceColumn: Nationality
+
+		annotation SummarizationSetBy = User
+
+	column LatestTeamKey
+		dataType: string
+		lineageTag: 652110c1-c90b-56c1-abcf-e5fb9b2cb119
+		summarizeBy: none
+		sourceColumn: LatestTeamKey
+
+		annotation SummarizationSetBy = User
+
+	column FirstSeason
+		dataType: int64
+		formatString: 0
+		lineageTag: 69768798-3199-589a-9cdc-5ef300c21224
+		summarizeBy: none
+		sourceColumn: FirstSeason
+
+		annotation SummarizationSetBy = User
+
+	column LastSeason
+		dataType: int64
+		formatString: 0
+		lineageTag: 6963f1ce-b065-5c82-b0f8-7a79bd1d64cf
+		summarizeBy: none
+		sourceColumn: LastSeason
+
+		annotation SummarizationSetBy = User
+
+	column HasCricsheetID
+		dataType: boolean
+		lineageTag: a1729df0-cb70-5b10-9a34-98eb0517906c
+		summarizeBy: none
+		sourceColumn: HasCricsheetID
+
+		annotation SummarizationSetBy = User
+
+	column EverAuctioned
+		dataType: boolean
+		lineageTag: dae576ce-73cb-53a1-9833-73e8a889db63
+		summarizeBy: none
+		sourceColumn: EverAuctioned
+
+		annotation SummarizationSetBy = User
+
+	partition DimPlayer = m
+		mode: import
+		queryGroup: Model
+		source =
+				let
+				    FromStats = Table.SelectColumns(stg_PlayerSeasonStats, {"PlayerID"}),
+				    FromAuction = Table.RenameColumns(Table.SelectColumns(stg_AuctionMatched, {"PlayerKey"}), {{"PlayerKey", "PlayerID"}}),
+				    Ids = Table.Distinct(Table.Combine({FromStats, FromAuction})),
+				    // Cricsheet display name (most frequent name in match files).
+				    CsNames = Table.Group(stg_Appearances, {"PlayerID"}, {{"CricsheetName", each List.Mode([PlayerName]), type text}}),
+				    // Latest auction row per player: name, role, nationality, team.
+				    AuctionSorted = Table.Buffer(Table.Sort(stg_AuctionMatched, {{"AuctionSeason", Order.Descending}})),
+				    LatestAuction = Table.Group(AuctionSorted, {"PlayerKey"}, {
+				        {"AuctionName", each List.First([Player]), type text},
+				        {"AuctionRole", each List.First(List.RemoveNulls([Role]), null), type text},
+				        {"Nationality", each List.First(List.RemoveNulls([Nationality]), null), type text},
+				        {"AuctionTeamKey", each List.First([TeamKey]), type text},
+				        {"AuctionsBought", each List.Count([AuctionSeason]), Int64.Type}}),
+				    Career = Table.Group(stg_PlayerSeasonStats, {"PlayerID"}, {
+				        {"CareerMatches", each List.Sum([Matches]), Int64.Type},
+				        {"CareerBallsFaced", each List.Sum([BallsFaced]), Int64.Type},
+				        {"CareerLegalBalls", each List.Sum([LegalBalls]), Int64.Type},
+				        {"CareerStumpings", each List.Sum([Stumpings]), Int64.Type},
+				        {"FirstSeason", each List.Min([Season]), Int64.Type},
+				        {"LastSeason", each List.Max([Season]), Int64.Type}}),
+				    LatestTeam = Table.Group(Table.Buffer(Table.Sort(stg_PlayerSeasonStats, {{"Season", Order.Descending}, {"Matches", Order.Descending}})), {"PlayerID"}, {{"StatsTeamKey", each List.First([TeamKey]), type text}}),
+				    J1 = Table.ExpandTableColumn(Table.NestedJoin(Ids, {"PlayerID"}, CsNames, {"PlayerID"}, "N", JoinKind.LeftOuter), "N", {"CricsheetName"}),
+				    J2 = Table.ExpandTableColumn(Table.NestedJoin(J1, {"PlayerID"}, LatestAuction, {"PlayerKey"}, "A", JoinKind.LeftOuter), "A", {"AuctionName", "AuctionRole", "Nationality", "AuctionTeamKey", "AuctionsBought"}),
+				    J3 = Table.ExpandTableColumn(Table.NestedJoin(J2, {"PlayerID"}, Career, {"PlayerID"}, "C", JoinKind.LeftOuter), "C", {"CareerMatches", "CareerBallsFaced", "CareerLegalBalls", "CareerStumpings", "FirstSeason", "LastSeason"}),
+				    J4 = Table.ExpandTableColumn(Table.NestedJoin(J3, {"PlayerID"}, LatestTeam, {"PlayerID"}, "T", JoinKind.LeftOuter), "T", {"StatsTeamKey"}),
+				    // Role: latest auction role; otherwise derived from career output.
+				    WithRole = Table.AddColumn(J4, "Role", each
+				        if [AuctionRole] <> null then [AuctionRole]
+				        else if [CareerMatches] = null or [CareerMatches] = 0 then "Unknown"
+				        else if [CareerStumpings] > 0 then "Wicket-Keeper"
+				        else
+				            let
+				                Share = [CareerLegalBalls] / List.Max({1, [CareerLegalBalls] + [CareerBallsFaced]})
+				            in
+				                if Share >= 0.65 then "Bowler" else if Share <= 0.15 then "Batter" else "All-Rounder", type text),
+				    WithRoleSource = Table.AddColumn(WithRole, "RoleSource", each if [AuctionRole] <> null then "Auction file" else "Derived from stats", type text),
+				    WithNat = Table.ReplaceValue(WithRoleSource, null, "Unknown", Replacer.ReplaceValue, {"Nationality"}),
+				    BaseName = Table.AddColumn(WithNat, "BaseName", each if [AuctionName] <> null then [AuctionName] else if [CricsheetName] <> null then [CricsheetName] else [PlayerID], type text),
+				    // Display names must be unique for drill-through; disambiguate duplicates with the Cricsheet name or ID.
+				    NameCounts = Table.Group(BaseName, {"BaseName"}, {{"NameCount", each Table.RowCount(_), Int64.Type}}),
+				    WithCount = Table.ExpandTableColumn(Table.NestedJoin(BaseName, {"BaseName"}, NameCounts, {"BaseName"}, "K", JoinKind.LeftOuter), "K", {"NameCount"}),
+				    WithName0 = Table.AddColumn(WithCount, "PlayerName0", each
+				        if [NameCount] = 1 then [BaseName]
+				        else [BaseName] & " (" & (if [CricsheetName] <> null and [CricsheetName] <> [BaseName] then [CricsheetName] else [PlayerID]) & ")", type text),
+				    // Optional DisplayName overrides from name_fixes.csv (for odd auction spellings).
+				    Overrides = Table.Distinct(Table.SelectRows(Table.SelectColumns(stg_NameFixesRaw, {"PlayerID", "DisplayName"}), each fnCleanText([DisplayName]) <> null), {"PlayerID"}),
+				    WithOverride = Table.ExpandTableColumn(Table.NestedJoin(WithName0, {"PlayerID"}, Overrides, {"PlayerID"}, "D", JoinKind.LeftOuter), "D", {"DisplayName"}),
+				    WithName = Table.AddColumn(WithOverride, "PlayerName", each if [DisplayName] <> null then [DisplayName] else [PlayerName0], type text),
+				    WithTeam = Table.AddColumn(WithName, "LatestTeamKey", each if [StatsTeamKey] <> null then [StatsTeamKey] else [AuctionTeamKey], type text),
+				    WithMatched = Table.AddColumn(WithTeam, "HasCricsheetID", each not Text.StartsWith([PlayerID], "A_"), type logical),
+				    WithAuctioned = Table.AddColumn(WithMatched, "EverAuctioned", each [AuctionsBought] <> null, type logical),
+				    Final = Table.SelectColumns(WithAuctioned, {"PlayerID", "PlayerName", "CricsheetName", "Role", "RoleSource", "Nationality", "LatestTeamKey", "FirstSeason", "LastSeason", "HasCricsheetID", "EverAuctioned"}),
+				    Typed = Table.TransformColumnTypes(Final, {{"FirstSeason", Int64.Type}, {"LastSeason", Int64.Type}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

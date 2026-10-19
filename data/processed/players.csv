@@ -1,0 +1,779 @@
+PlayerID,PlayerName,CricsheetName,Role,RoleSource,Nationality,LatestTeamKey,FirstSeason,LastSeason,HasCricsheetID,EverAuctioned,SeasonsPlayed,CareerMatches,CareerRuns,CareerWickets,CareerCatches,CareerImpactPoints,AuctionBuys,TotalAuctionSpendCr,CareerSpendCr,CareerFairValueCr,CareerOverpayCr,CareerValueIndex
+99b202b3,A Chandila,A Chandila,Bowler,Derived from stats,Unknown,RR,2013,2013,True,False,1,8,4,6,4,251,,,,,,
+b2b4f545,A Mhatre,A Mhatre,Batter,Derived from stats,Unknown,CSK,2025,2026,True,False,2,13,441,0,4,570,,,,,,
+6165bca6,A Mukund,A Mukund,Batter,Derived from stats,Unknown,RCB,2013,2013,True,False,1,1,19,0,0,20,,,,,,
+29d72eb2,AA Chavan,AA Chavan,Bowler,Derived from stats,Unknown,RR,2013,2013,True,False,1,3,0,1,0,53,,,,,,
+b8d490fd,Aaron Finch,AJ Finch,Batter,Auction file,Overseas,KKR,2013,2022,True,True,8,83,1968,1,24,2553,5,18.8,19.8,16.484,3.316,0.9096
+d405c0d5,Aaron Hardie,,All-Rounder,Auction file,Overseas,PBKS,,,True,True,,0,0,0,0,0,1,1.25,1.25,0,1.25,0
+fa463154,AB Agarkar,AB Agarkar,Bowler,Derived from stats,Unknown,DC,2013,2013,True,False,1,4,12,0,1,38,,,,,,
+c4487b84,AB de Villiers,AB de Villiers,Wicket-Keeper,Derived from stats,Unknown,RCB,2013,2021,True,False,9,124,3860,0,85,5303,,,,,,
+16043342,AB McDonald,AB McDonald,Bowler,Derived from stats,Unknown,RCB,2013,2013,True,False,1,1,0,1,0,29,,,,,,
+cc777ffa,Abdul Basith,Abdul Basith,Batter,Derived from stats,Unknown,RR,2023,2023,True,False,1,1,1,0,0,1,,,,,,
+A_abdul_pa,Abdul P A,,All-Rounder,Auction file,Indian,RR,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+8e514b4c,Abdul Samad,Abdul Samad,All-Rounder,Auction file,Indian,LSG,2020,2026,True,True,7,71,857,2,33,1348,2,4.4,8.8,11.5397,-2.7397,1.6439
+aa5d8c9e,Abhijeet Tomar,A Tomar,Batter,Auction file,Indian,KKR,2022,2022,True,True,1,1,4,0,0,5,1,0.4,0.4,0.0633,0.3367,0.1583
+66cf56a5,Abhimanyu Mithun,A Mithun,Bowler,Auction file,Indian,RCB,2013,2013,True,True,1,1,2,1,0,36,2,0.6,0.6,0,0.6,0
+82c10dac,Abhinandan Singh,Abhinandan Singh,Bowler,Auction file,Indian,RCB,2026,2026,True,True,1,3,0,3,2,106,2,0.9,1.2,1.7553,-0.5553,1.3349
+0890552f,Abhinav Manohar,A Manohar,Batter,Auction file,Indian,SRH,2022,2025,True,True,4,27,292,0,17,491,1,3.2,3.2,2.1984,1.0016,0.687
+A_abhinav_sadarangani,Abhinav Sadarangani,,Batter,Auction file,Indian,GT,,,False,True,,0,0,0,0,0,1,2.6,2.6,0,2.6,0
+a45a5e8d,Abhishek Nayar,AM Nayar,All-Rounder,Auction file,Indian,RR,2013,2014,True,True,2,16,109,2,2,206,2,4.645,4.645,1.8345,2.8105,0.3802
+f29185a1,Abhishek Sharma,Abhishek Sharma,All-Rounder,Auction file,Indian,SRH,2018,2026,True,True,9,92,2379,11,35,3556,2,7.05,20.05,23.4881,-3.4381,1.1723
+A_abid_mushtaq,Abid Mushtaq,,All-Rounder,Auction file,Indian,RR,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+ad3b6e95,Abishek Porel,Abishek Porel,Batter,Derived from stats,Unknown,DC,2023,2026,True,False,4,36,769,0,9,995,,,,,,
+2af1b6d2,Abu Nechim Ahmed,AN Ahmed,Bowler,Auction file,Indian,RCB,2013,2015,True,True,3,9,14,7,1,283,1,0.3,0.6,1.444,-0.844,2.3772
+2b6e6dec,AC Gilchrist,AC Gilchrist,Batter,Derived from stats,Unknown,PBKS,2013,2013,True,False,1,13,294,1,12,481,,,,,,
+3edb58fc,AD Mascarenhas,AD Mascarenhas,Bowler,Derived from stats,Unknown,PBKS,2013,2013,True,False,1,1,5,0,0,12,,,,,,
+350bb1b1,Adam Milne,AF Milne,Bowler,Auction file,Overseas,RR,2016,2026,True,True,5,11,25,7,7,338,4,8.2,9.6,3.2098,6.3902,0.425
+14f96089,Adam Zampa,A Zampa,Bowler,Auction file,Overseas,SRH,2016,2025,True,True,5,22,15,31,1,942,3,4.2,4.5,8.7954,-4.2954,2.8653
+249d60c9,Adil Rashid,AU Rashid,Bowler,Auction file,Overseas,SRH,2021,2023,True,True,2,3,22,2,0,96,1,2,2,1.2579,0.7421,0.629
+8e02f42b,Aditya Garhwal,,All-Rounder,Auction file,Indian,KKR,,,True,True,,0,0,0,0,0,1,0.25,0.25,0,0.25,0
+855a210c,Aditya Tare,AP Tare,Wicket-Keeper,Auction file,Indian,MI,2013,2018,True,True,5,28,289,0,2,404,4,3.25,4.85,2.1048,2.7452,0.4125
+ef5da05c,AG Murtaza,AG Murtaza,Bowler,Derived from stats,Unknown,PWI,2013,2013,True,False,1,3,5,3,1,114,,,,,,
+A_agnivesh_ayachi,Agnivesh Ayachi,,All-Rounder,Auction file,Indian,PBKS,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+A_aiden_blizzard,Aiden Blizzard,,Batter,Auction file,Overseas,MI,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+6a26221c,Aiden Markram,AK Markram,Batter,Auction file,Overseas,LSG,2021,2026,True,True,6,69,1671,6,40,2464,2,4.6,11.8,34.4601,-22.6601,2.8601
+ea0cdc12,Ajantha Mendis,BAW Mendis,Bowler,Auction file,Overseas,PWI,2013,2013,True,True,1,3,2,2,0,81,1,3.915,3.915,0.7464,3.1686,0.1906
+31ee319e,Ajay Mandal,,All-Rounder,Auction file,Indian,DC,,,True,True,,0,0,0,0,0,2,0.5,0.5,0,0.5,0
+29e95537,Ajinkya Rahane,AM Rahane,Batter,Auction file,Indian,KKR,2013,2026,True,True,14,176,4539,0,70,5840,4,7,13,40.6129,-27.6129,2.7527
+0a67aec0,Akash Deep,Akash Deep,Bowler,Auction file,Indian,LSG,2022,2025,True,True,4,14,25,10,3,397,3,9.2,9.6,5.7359,3.8641,0.6506
+4bd09374,Akash Madhwal,Akash Madhwal,Bowler,Auction file,Indian,RR,2023,2025,True,True,3,17,8,23,1,709,1,1.2,1.2,2.1984,-0.9984,1.832
+b483905d,Akash Singh,Akash Singh,Bowler,Auction file,Indian,LSG,2021,2026,True,True,4,12,0,13,2,432,4,0.9,1.2,4.2461,-3.0461,2.8748
+35ccfdd4,Akash Vashisht,,All-Rounder,Auction file,Indian,RR,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+4d7f517e,Akeal Hosein,AJ Hosein,Bowler,Auction file,Overseas,CSK,2023,2026,True,True,2,8,21,9,2,329,2,3,3,5.3189,-2.3189,1.7141
+4ed49d3d,Akhil Arvind Herwadkar,,All-Rounder,Auction file,Indian,DC,,,True,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+5b16a806,Akila Dananjaya,A Dananjaya,Bowler,Auction file,Overseas,MI,2018,2018,True,True,1,1,4,0,0,10,2,0.608,0.608,0.1161,0.4919,0.0947
+d8d67045,Akshat Raghuwanshi,Akshat Raghuwanshi,Batter,Derived from stats,Indian,LSG,2026,2026,True,True,1,3,29,0,1,40,1,2.2,2.2,0.6624,1.5376,0.3011
+e1e7f950,Akshay Karnewar,,All-Rounder,Auction file,Indian,RCB,,,True,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+ec9fc54b,Akshay Wakhare,,Bowler,Auction file,Indian,MI,,,True,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+f10e94c4,Akshdeep Nath,AD Nath,All-Rounder,Auction file,Indian,RCB,2016,2019,True,True,4,14,90,0,2,117,4,4.8,4.8,1.329,3.471,0.2933
+8291f939,AL Menaria,AL Menaria,Batter,Derived from stats,Unknown,RR,2013,2013,True,False,1,1,1,0,0,1,,,,,,
+c3d35165,Albie Morkel,JA Morkel,All-Rounder,Auction file,Overseas,RPS,2013,2016,True,True,4,21,193,16,6,824,2,2.7,2.7,3.3343,-0.6343,1.2883
+69d03465,Alex Carey,AT Carey,Wicket-Keeper,Auction file,Overseas,DC,2020,2020,True,True,1,3,32,0,2,50,1,2.4,2.4,0.5828,1.8172,0.2428
+92aeac25,Alex Hales,AD Hales,Batter,Auction file,Overseas,SRH,2018,2018,True,True,1,6,148,0,2,189,1,1.5,1.5,0,1.5,0
+9ca68676,Allah Ghazanfar,AM Ghazanfar,Bowler,Auction file,Overseas,MI,2026,2026,True,True,1,11,2,15,1,455,1,4.8,9.6,7.5345,2.0655,0.7714
+b0946605,Alzarri Joseph,AS Joseph,Bowler,Auction file,Overseas,RCB,2019,2024,True,True,4,22,27,21,4,771,2,13.9,16.3,7.6647,8.6353,0.4789
+378daa89,Aman Khan,Aman Hakim Khan,All-Rounder,Auction file,Indian,DC,2022,2023,True,True,2,12,115,0,9,208,2,0.6,0.6,0.0887,0.5113,0.1661
+A_aman_rao_perala,Aman Rao Perala,,Unknown,Derived from stats,Indian,RR,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+70d205c9,Ambati Rayudu,AT Rayudu,Wicket-Keeper,Auction file,Indian,CSK,2013,2023,True,True,11,157,3264,0,49,4214,2,8.95,22.3,29.3863,-7.0863,1.4608
+A_amit_kumar,Amit Kumar,,Unknown,Derived from stats,Indian,SRH,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+6b19d823,Amit Mishra,A Mishra,Bowler,Auction file,Indian,LSG,2013,2024,True,True,11,103,195,100,14,3559,6,12.95,25.45,20.8807,4.5693,0.7409
+3a02626a,Amit Paunikar,,Wicket-Keeper,Auction file,Indian,SRH,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+d2340a43,Anand Rajan,Anand Rajan,Bowler,Derived from stats,Unknown,SRH,2013,2013,True,False,1,2,0,2,1,83,,,,,,
+bbd41817,Andre Russell,AD Russell,All-Rounder,Auction file,Overseas,KKR,2013,2025,True,True,12,135,2604,122,41,7245,1,0.6,1.8,13.202,-11.402,7.562
+A_andre_siddarth,Andre Siddarth,,Batter,Auction file,Indian,CSK,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+7c7d63a2,Andrew Tye,AJ Tye,Bowler,Auction file,Overseas,LSG,2017,2022,True,True,5,30,91,42,8,1445,4,8.9,16.6,14.1107,2.4893,0.9173
+A_aneeshwar_gautam,Aneeshwar Gautam,,All-Rounder,Auction file,Indian,RCB,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+896d78ad,Angelo Mathews,AD Mathews,All-Rounder,Auction file,Overseas,DC,2013,2017,True,True,3,25,348,12,12,923,2,9.5,9.5,3.9782,5.5218,0.4196
+d7017798,Angkrish Raghuvanshi,A Raghuvanshi,Batter,Auction file,Indian,KKR,2024,2026,True,True,3,35,885,0,11,1147,2,3.2,6.2,18.893,-12.693,3.0979
+18e6906e,Aniket Choudhary (A Choudhary),A Choudhary,Bowler,Auction file,Indian,RCB,2017,2017,True,True,1,5,25,5,0,195,1,2,2,1.4166,0.5834,0.7083
+A_aniket_choudhary,Aniket Choudhary (A_aniket_choudhary),,Bowler,Auction file,Indian,RCB,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+a3b0600d,Aniket Verma,Aniket Verma,Batter,Auction file,Indian,SRH,2025,2026,True,True,2,24,315,0,11,477,1,0.3,0.6,8.1557,-7.5557,13.6981
+40c1eeeb,Anirudha Ashok Joshi,,All-Rounder,Auction file,Indian,RR,,,True,True,,0,0,0,0,0,2,0.4,0.4,0,0.4,0
+afe3355a,Ankeet Bawane,AR Bawne,Batter,Auction file,Indian,DC,2017,2017,True,True,1,1,12,0,0,13,1,0.1,0.1,0.0944,0.0056,0.9444
+24d94623,Ankit Sharma,Ankit Sharma,All-Rounder,Auction file,Indian,RR,2013,2018,True,True,6,13,69,8,4,388,3,0.4,0.6,2.9981,-2.3981,5.7457
+db31895a,Ankit Singh Rajpoot,AS Rajpoot,Bowler,Auction file,Indian,RR,2013,2020,True,True,6,29,26,24,4,881,3,5,9.5,7.7629,1.7371,0.7809
+f18ba07f,Ankit Soni,Ankit Soni,Bowler,Derived from stats,Unknown,GL,2017,2017,True,False,1,7,7,2,1,105,,,,,,
+cb932841,Ankush Bains,,Wicket-Keeper,Auction file,Indian,DC,,,True,True,,0,0,0,0,0,4,0.5,0.5,0,0.5,0
+1399b39c,Anmolpreet Singh,Anmolpreet Singh,Batter,Auction file,Indian,SRH,2019,2024,True,True,4,9,139,0,2,180,3,1.2,3,2.4448,0.5552,0.6408
+acdc62f5,Anrich Nortje,A Nortje,Bowler,Auction file,Overseas,LSG,2020,2026,True,True,7,49,49,61,11,2127,3,8.7,8.7,0.9814,7.7186,0.1117
+9e76cdb3,Ansh Patel,,All-Rounder,Auction file,Indian,PBKS,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+fcc21ace,Anshul Kamboj,A Kamboj,All-Rounder,Auction file,Indian,CSK,2024,2026,True,True,3,25,74,31,6,1109,2,3.6,7,18.4171,-11.4171,2.6302
+c8f5f961,Anuj Rawat,Anuj Rawat,Wicket-Keeper,Auction file,Indian,RCB,2021,2024,True,True,4,24,318,0,18,528,3,4.5,12.1,7.1905,4.9095,0.5752
+e4cdf230,Anukul Roy,AS Roy,All-Rounder,Auction file,Indian,KKR,2019,2026,True,True,6,25,78,15,18,728,3,0.8,1.8,10.9544,-9.1544,5.4542
+a3350945,Anunay Singh,,All-Rounder,Auction file,Indian,RR,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+69be866a,Anureet Singh,Anureet Singh,Bowler,Auction file,Indian,RR,2015,2018,True,True,4,20,36,16,5,622,2,0.5,1.1,5.1005,-4.0005,5.2254
+5708d0b6,Apoorv Vijay Wankhade,,Batter,Auction file,Indian,MI,2014,2014,True,True,,0,0,0,1,8,2,0.3,0.3,0.0649,0.2351,0.2929
+44aac2f0,Arjun Tendulkar,Arjun Tendulkar,Bowler,Auction file,Indian,LSG,2023,2026,True,True,3,6,18,4,1,167,3,0.8,1.4,1.7258,-0.3258,1.1906
+a83208cd,Armaan Jaffer,,Batter,Auction file,Indian,PBKS,,,True,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+244048f6,Arshdeep Singh,Arshdeep Singh,Bowler,Auction file,Overseas,PBKS,2019,2026,True,True,8,97,32,111,20,3743,2,18.2,36.6,31.7209,4.8791,1.0611
+2d140b79,Arshin Kulkarni,AA Kulkarni,All-Rounder,Auction file,Indian,LSG,2024,2026,True,True,2,4,26,0,0,29,2,0.5,0.8,0.4622,0.3378,0.5793
+A_aryaman_vikram_birla,Aryaman Vikram Birla,,All-Rounder,Auction file,Indian,RR,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+5f2732f7,Aryan Juyal,,Wicket-Keeper,Auction file,Indian,LSG,,,True,True,,0,0,0,0,0,2,0.5,0.5,0,0.5,0
+770494eb,Asela Gunarathna,,Batter,Auction file,Overseas,MI,,,True,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+96fd40ae,Ashish Nehra,A Nehra,Bowler,Auction file,Indian,SRH,2013,2017,True,True,5,44,3,58,6,1920,2,7.5,15,12.2158,2.7842,0.8191
+1c2a64cd,Ashish Reddy,A Ashish Reddy,Bowler,Auction file,Indian,SRH,2013,2016,True,True,3,22,245,7,9,566,1,0.2,0.6,2.2438,-1.6438,3.8733
+66b30f71,Ashok Dinda,AB Dinda,Bowler,Auction file,Indian,RPS,2013,2017,True,True,5,36,20,33,4,1176,2,2,4,5.0086,-1.0086,1.247
+50c09020,Ashok Sharma,Ashok Sharma,Bowler,Auction file,Indian,GT,2025,2026,True,True,1,6,1,6,2,220,3,1.75,1.75,3.6491,-1.8991,1.9541
+ff1e12a0,Ashton Turner,AJ Turner,Batter,Auction file,Overseas,LSG,2019,2024,True,True,2,6,24,0,0,28,2,1.5,1.5,0.4096,1.0904,0.2487
+84d9c311,Ashutosh Sharma,Ashutosh Sharma,All-Rounder,Auction file,Indian,DC,2024,2026,True,True,3,32,564,0,6,731,2,4,7.8,11.8981,-4.0981,1.5836
+d45c29b1,Ashwani Kumar,Ashwani Kumar,Bowler,Auction file,Indian,MI,2025,2026,True,True,2,10,1,17,2,501,1,0.3,0.6,8.5426,-7.9426,14.318
+b11d8647,Ashwin Hebbar,,Batter,Auction file,Indian,DC,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+d6cd318e,Atharva Ankolekar,,Unknown,Derived from stats,Indian,MI,,,True,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+1ac746c8,Atharva Taide,Atharva Taide,Batter,Auction file,Indian,SRH,2023,2025,True,True,3,10,260,0,5,346,2,0.5,0.9,4.9572,-4.0572,5.6703
+7c3c0337,Auqib Dar,Auqib Nabi,Bowler,Derived from stats,Indian,DC,2026,2026,True,True,1,5,14,0,1,52,1,8.4,8.4,0.8611,7.5389,0.1025
+A_avanish_rao_aravelly,Avanish Rao Aravelly,,Wicket-Keeper,Auction file,Indian,CSK,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+eef2536f,Avesh Khan,Avesh Khan,Bowler,Auction file,Indian,LSG,2017,2026,True,True,10,82,68,93,15,3178,3,20.45,42.3,34.389,7.911,0.9162
+2e171977,Axar Rajesh Patel,AR Patel,All-Rounder,Auction file,Indian,DC,2013,2026,True,True,13,177,2089,139,85,7833,2,5.75,18,41.1612,-23.1612,2.7459
+872b03f7,Ayush Badoni,A Badoni,All-Rounder,Auction file,Indian,LSG,2022,2026,True,True,5,66,1178,4,19,1641,1,0.2,0.6,12.4652,-11.8652,20.7644
+9a158001,Azhar Mahmood,Azhar Mahmood,All-Rounder,Derived from stats,Unknown,KKR,2013,2015,True,False,2,12,202,15,1,733,,,,,,
+8f6dd463,Azmatullah Omarzai,Azmatullah Omarzai,All-Rounder,Auction file,Overseas,PBKS,2024,2026,True,True,3,20,151,15,1,691,2,2.9,5.3,11.3487,-6.0487,2.1994
+5451a2c1,B Chipli,B Chipli,Batter,Derived from stats,Unknown,DC,2013,2013,True,False,1,1,16,0,0,19,,,,,,
+dd09ff8e,B Lee,B Lee,Bowler,Derived from stats,Unknown,KKR,2013,2013,True,False,1,3,21,4,1,171,,,,,,
+449f4e3c,B Muzarabani,B Muzarabani,Bowler,Derived from stats,Unknown,KKR,2026,2026,True,False,1,2,0,4,0,113,,,,,,
+d5130a30,B. Sai Sudharsan,B Sai Sudharsan,All-Rounder,Auction file,Indian,GT,2022,2026,True,True,5,57,2515,0,14,3061,1,0.2,0.6,17.4162,-16.8162,28.7939
+dc4686e6,BA Bhatt,BA Bhatt,Bowler,Derived from stats,Unknown,PBKS,2013,2013,True,False,1,2,0,1,0,37,,,,,,
+5b627626,Baba Aparajith,,All-Rounder,Auction file,Indian,CSK,2015,2015,True,True,,0,0,0,1,8,2,0.2,0.2,0,0.2,0
+ff1e68fa,Baba Indrajith,B Indrajith,Wicket-Keeper,Auction file,Indian,KKR,2022,2022,True,True,1,3,21,0,1,37,1,0.2,0.2,0.4686,-0.2686,2.3431
+A_baltej_dhanda,Baltej Dhanda,,Bowler,Auction file,Indian,PBKS,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+cb4f31e2,Bandaru Ayyappa,,Bowler,Auction file,Indian,DC,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+d8b2f218,Barinder Sran,BB Sran,Bowler,Auction file,Indian,MI,2015,2019,True,True,5,24,10,18,4,679,4,6.9,8.1,6.0594,2.0406,0.8953
+871e9faf,Basil Thampi,Basil Thampi,Bowler,Auction file,Indian,MI,2017,2022,True,True,5,25,32,22,5,794,3,2.1,4,7.6485,-3.6485,1.9976
+53f27a35,BB Samantray,BB Samantray,Batter,Derived from stats,Unknown,SRH,2013,2013,True,False,1,8,123,0,3,170,,,,,,
+2e11c706,Ben Cutting,BCJ Cutting,All-Rounder,Auction file,Overseas,MI,2014,2019,True,True,5,21,238,10,10,711,4,4.25,6.95,6.6948,0.2552,1.0904
+5f26f677,Ben Duckett,,Unknown,Derived from stats,Overseas,DC,,,True,True,,0,0,0,0,0,1,2,2,0,2,0
+272d796e,Ben Dunk,BR Dunk,Wicket-Keeper,Auction file,Overseas,MI,2014,2014,True,True,1,3,40,0,4,79,1,0.2,0.2,0.6412,-0.4412,3.2062
+e1b9f3a9,Ben Dwarshuis,BJ Dwarshuis,Bowler,Auction file,Overseas,PBKS,2026,2026,True,True,1,1,0,1,1,39,2,5.8,5.8,0.6458,5.1542,0.0987
+f3171936,Ben Hilfenhaus,BW Hilfenhaus,Bowler,Auction file,Overseas,CSK,2014,2014,True,True,1,8,0,8,1,289,1,1,1,2.3458,-1.3458,2.3458
+b2a79f17,Ben Laughlin,B Laughlin,Bowler,Auction file,Overseas,RR,2013,2018,True,True,2,9,5,10,1,307,3,0.908,0.908,3.4715,-2.5635,3.1301
+e087956b,Ben Stokes,BA Stokes,All-Rounder,Auction file,Overseas,CSK,2017,2023,True,True,6,45,935,28,23,2226,3,43.25,80.75,22.5198,58.2302,0.307
+0bec3a6c,Benny Howell,,All-Rounder,Auction file,Overseas,PBKS,,,True,True,,0,0,0,0,0,1,0.4,0.4,0,0.4,0
+b56dc5f7,Beuran Hendricks,BE Hendricks,Bowler,Auction file,Overseas,PBKS,2014,2015,True,True,2,7,1,9,3,305,1,1.8,3.6,2.4539,1.1461,0.6858
+A_bevan_john_jacobs,Bevan John Jacobs,,Batter,Auction file,Overseas,MI,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+5438ffba,Bhagath Varma,,All-Rounder,Auction file,Indian,CSK,,,True,True,,0,0,0,0,0,3,0.6,0.6,0,0.6,0
+6c882e9a,Bhanuka Rajapaksa,PBB Rajapaksa,Batter,Auction file,Overseas,PBKS,2022,2023,True,True,2,13,277,0,4,361,1,0.5,1,4.6785,-3.6785,4.7037
+2e81a32d,Bhuvneshwar Kumar,B Kumar,Bowler,Auction file,Indian,RCB,2013,2026,True,True,14,191,313,215,37,7957,3,19.2,51.1,70.3218,-19.2218,1.3857
+6834d1f2,Billy Stanlake,B Stanlake,Batter,Auction file,Overseas,SRH,2017,2018,True,True,2,6,5,7,1,253,2,0.8,0.8,2.6119,-1.8119,2.9305
+c18496e1,Bipul Sharma,Bipul Sharma,All-Rounder,Auction file,Indian,SRH,2013,2017,True,True,4,19,83,10,3,464,1,0.2,0.2,0,0.2,0
+27af6414,BJ Rohrer,BJ Rohrer,Batter,Derived from stats,Unknown,DC,2013,2013,True,False,1,8,193,0,3,261,,,,,,
+5d1e7582,BKG Mendis,BKG Mendis,Batter,Derived from stats,Unknown,GT,2025,2025,True,False,1,1,20,0,1,33,,,,,,
+c2dd89ea,BR Sharath,BR Sharath,Batter,Derived from stats,Unknown,GT,2024,2024,True,False,1,1,2,0,1,10,,,,,,
+b57f8a9a,Brad Hodge,BJ Hodge,Batter,Auction file,Overseas,RR,2013,2014,True,True,2,21,394,0,8,528,1,2.4,2.4,1.0796,1.3204,0.4498
+f708a0bc,Brad Hogg,GB Hogg,Bowler,Auction file,Overseas,KKR,2013,2016,True,True,3,12,7,13,3,454,1,0.5,1,3.5852,-2.5852,3.5972
+53597be1,Brendan Taylor,,Wicket-Keeper,Auction file,Overseas,SRH,,,True,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+b8a55852,Brendon McCullum,BB McCullum,Batter,Auction file,Overseas,RCB,2013,2018,True,True,6,62,1647,0,18,2152,2,6.85,10.1,10.6217,-0.5217,1.1457
+133bbd61,Brijesh Sharma,Brijesh Sharma,Bowler,Derived from stats,Indian,RR,2026,2026,True,True,1,13,2,14,1,446,1,0.3,0.3,7.3855,-7.0855,24.6184
+cad40f5e,Brydon Carse,,All-Rounder,Auction file,Overseas,SRH,,,True,True,,0,0,0,0,0,1,1,1,0,1,0
+172dff15,C Bosch,C Bosch,Bowler,Derived from stats,Unknown,MI,2025,2026,True,False,2,9,97,13,6,564,,,,,,
+c3f37533,C.Hari Nishaanth,,Batter,Auction file,Indian,CSK,,,True,True,,0,0,0,0,0,2,0.4,0.4,0,0.4,0
+30a2649b,C.M. Gautam,CM Gautam,Wicket-Keeper,Auction file,Indian,DC,2013,2015,True,True,3,13,169,0,3,282,2,0.4,0.4,1.8811,-1.4811,4.4817
+afa78c3a,Cameron Delport,,All-Rounder,Auction file,Overseas,KKR,,,True,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+eaa76d3c,Cameron Green,C Green,All-Rounder,Auction file,Overseas,KKR,2023,2026,True,True,3,43,1029,23,18,2155,2,42.7,42.7,22.4567,20.2433,0.5345
+e342e5fb,Carlos Brathwaite,CR Brathwaite,All-Rounder,Auction file,Overseas,KKR,2016,2019,True,True,4,16,181,13,6,680,3,11.2,15.4,6.3935,9.0065,0.399
+e793a8ed,Chaitanya Bishnoi,,All-Rounder,Auction file,Indian,CSK,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+7b5b6311,Chama Milind,,Bowler,Auction file,Indian,RCB,,,True,True,,0,0,0,0,0,3,0.45,0.45,0,0.45,0
+fb3e0d39,Chamika Karunaratne,,All-Rounder,Auction file,Overseas,KKR,,,True,True,,0,0,0,0,0,1,0.5,0.5,0,0.5,0
+2cdce1be,Chetan Sakariya,C Sakariya,Bowler,Auction file,Indian,KKR,2021,2025,True,True,4,20,20,20,6,725,3,5.9,10.1,8.8098,1.2902,1.0621
+d4f9dbd4,Cheteshwar Pujara,CA Pujara,Batter,Auction file,Indian,PBKS,2013,2014,True,True,2,10,217,0,1,256,2,2.4,2.4,1.1526,1.2474,0.517
+6176f240,Chirag Suri,,Batter,Auction file,Indian,GL,,,True,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+19b9f399,Chris Green,CJ Green,All-Rounder,Auction file,Overseas,KKR,2020,2020,True,True,1,1,0,0,1,14,1,0.2,0.2,0.1632,0.0368,0.8159
+ffe699c0,Chris Jordan,CJ Jordan,All-Rounder,Auction file,Overseas,MI,2016,2023,True,True,7,34,81,30,15,1196,4,8.1,11.1,8.1036,2.9964,0.7685
+45eda7c8,Chris Lynn,CA Lynn,Batter,Auction file,Overseas,MI,2014,2021,True,True,6,41,1323,0,11,1674,3,12.9,28.4,17.6987,10.7013,0.6281
+4c5d73db,Chris Woakes,CR Woakes,All-Rounder,Auction file,Overseas,DC,2017,2021,True,True,3,21,78,30,7,1068,4,17.3,18.8,9.7419,9.0581,0.6298
+A_christopher_barnwell,Christopher Barnwell,,All-Rounder,Auction file,Overseas,RCB,,,False,True,,0,0,0,0,0,1,0.27,0.27,0,0.27,0
+db584dad,Christopher Gayle,CH Gayle,Batter,Auction file,Overseas,PBKS,2013,2021,True,True,9,99,3161,5,18,4181,1,2,8,19.9474,-11.9474,2.4789
+fb66ce1f,Christopher Morris,CH Morris,All-Rounder,Auction file,Overseas,RR,2013,2021,True,True,8,81,618,95,38,4137,5,38.025,45.025,32.0856,12.9394,0.9408
+1cb14aa4,CJ Dala,CJ Dala,Bowler,Derived from stats,Unknown,DC,2018,2018,True,False,1,1,0,0,0,7,,,,,,
+d0513f63,CL White,CL White,Batter,Derived from stats,Unknown,SRH,2013,2013,True,False,1,13,209,1,10,357,,,,,,
+94eac556,Clinton McKay,,Bowler,Auction file,Overseas,SRH,,,True,True,,0,0,0,0,0,1,0.54,0.54,0,0.54,0
+94d7f855,Colin De Grandhomme,C de Grandhomme,All-Rounder,Auction file,Overseas,RCB,2017,2019,True,True,3,25,303,6,6,623,1,2.2,4.4,3.7427,0.6573,0.8351
+c995d726,Colin Ingram,CA Ingram,Batter,Auction file,Overseas,DC,2019,2019,True,True,1,12,184,0,1,222,1,6.4,6.4,2.7109,3.6891,0.4236
+af2c687b,Colin Munro,C Munro,All-Rounder,Auction file,Overseas,DC,2016,2019,True,True,3,13,177,0,4,249,2,2.2,4.1,2.7557,1.3443,0.712
+fe366f34,Cooper Connolly,C Connolly,Batter,Derived from stats,Overseas,PBKS,2026,2026,True,True,1,14,491,0,4,636,1,3,3,10.5318,-7.5318,3.5106
+8abdf100,Corey Anderson,CJ Anderson,All-Rounder,Auction file,Overseas,RCB,2014,2018,True,True,4,30,538,11,11,1089,2,5.5,10,7.6645,2.3355,0.7576
+6c79c098,DA Payne,DA Payne,Bowler,Derived from stats,Unknown,SRH,2026,2026,True,False,1,2,6,2,0,61,,,,,,
+A_daksh_kamra,Daksh Kamra,,Unknown,Derived from stats,Indian,KKR,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+8fd1a8f5,Dale Steyn,DW Steyn,Bowler,Auction file,Overseas,RCB,2013,2020,True,True,6,43,97,38,12,1623,2,4.3,4.3,0.6306,3.6694,0.1171
+2a2e6343,Dan Christian,DT Christian,All-Rounder,Auction file,Overseas,RCB,2013,2021,True,True,4,28,125,19,17,911,4,7.84,7.84,8.3349,-0.4949,1.0747
+caf69bf7,Daniel Sams,DR Sams,All-Rounder,Auction file,Overseas,LSG,2020,2023,True,True,3,16,44,14,11,633,2,3.35,3.35,6.8626,-3.5126,2.0574
+9e6032fa,Danish Malewar,DV Malewar,Batter,Derived from stats,Indian,MI,2026,2026,True,True,1,2,2,0,0,2,1,0.3,0.3,0.0331,0.2669,0.1104
+1a156c88,Darcy Short,DJM Short,All-Rounder,Auction file,Overseas,RR,2018,2018,True,True,1,7,115,1,2,185,1,4,4,2.1483,1.8517,0.5371
+14b14cd8,Darren Bravo,DM Bravo,Batter,Auction file,Overseas,KKR,2017,2017,True,True,1,1,6,0,0,7,1,0.5,0.5,0.0509,0.4491,0.1017
+c03c6200,Darren Sammy,DJG Sammy,All-Rounder,Auction file,Overseas,RCB,2013,2015,True,True,3,22,295,11,9,792,4,8.895,8.895,6.9656,1.9294,1.2853
+cd8d2859,Darshan Nalkande,DG Nalkande,All-Rounder,Auction file,Indian,GT,2022,2024,True,True,3,6,12,6,2,204,3,0.8,1.2,2.8807,-1.6807,2.2345
+eade4650,Daryl Mitchell,DJ Mitchell,All-Rounder,Auction file,Overseas,CSK,2022,2024,True,True,2,15,351,1,11,517,2,14.75,14.75,7.5979,7.1521,0.5158
+d67d5f00,David Miller,DA Miller,Batter,Auction file,Overseas,DC,2013,2026,True,True,14,146,3190,0,90,4477,5,16.25,26,33.5258,-7.5258,1.2719
+dcce6f09,David Warner,DA Warner,Batter,Auction file,Overseas,DC,2013,2024,True,True,11,145,5540,0,70,7060,2,11.75,40.75,45.7615,-5.0115,1.1454
+aa8d28ae,David Wiese,D Wiese,All-Rounder,Auction file,Overseas,KKR,2015,2023,True,True,3,18,148,16,9,732,2,3.8,6.6,6.1714,0.4286,0.9627
+7f048519,David Willey,DJ Willey,All-Rounder,Auction file,Overseas,RCB,2018,2023,True,True,3,11,53,6,4,326,2,4,6,3.2483,2.7517,0.5446
+ad9c32a2,Dawid Malan,DJ Malan,All-Rounder,Auction file,Overseas,PBKS,2021,2021,True,True,1,1,26,0,1,37,1,1.5,1.5,0.4353,1.0647,0.2902
+b720a5d6,DB Ravi Teja,DB Ravi Teja,Batter,Derived from stats,Unknown,SRH,2013,2013,True,False,1,2,14,0,0,14,,,,,,
+7050a1e7,Debabrata Das,DB Das,Wicket-Keeper,Auction file,Indian,KKR,2013,2013,True,True,1,10,75,0,2,112,1,0.2,0.2,0,0.2,0
+23eeb873,Deepak Chahar,DL Chahar,Bowler,Auction file,Indian,MI,2016,2026,True,True,10,103,142,96,16,3594,4,24.15,63.9,47.5863,16.3137,0.9035
+73ad96ed,Deepak Hooda,DJ Hooda,All-Rounder,Auction file,Indian,CSK,2015,2025,True,True,11,125,1496,10,59,2570,6,16.15,36.35,29.3117,7.0383,0.7923
+5a004050,Deepak Punia,,All-Rounder,Auction file,Indian,MI,,,True,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+2c25d4f5,Devdutt Padikkal,D Padikkal,Batter,Auction file,Indian,RCB,2020,2026,True,True,7,90,2270,0,42,3023,3,9.95,20.1,40.6572,-20.5572,2.2285
+df5a6881,Devon Conway,DP Conway,Batter,Auction file,Overseas,CSK,2022,2025,True,True,3,29,1080,0,10,1350,2,7.25,8.25,19.1061,-10.8561,2.495
+844e79d1,Dewald Brevis,D Brevis,Batter,Auction file,Overseas,CSK,2022,2026,True,True,4,27,606,1,22,938,1,3,9,4.4711,4.5289,0.5009
+d2a989fc,Dhawal Kulkarni,DS Kulkarni,Bowler,Auction file,Indian,MI,2013,2021,True,True,9,65,81,58,16,2207,3,3.85,7.7,17.1706,-9.4706,2.1198
+bcf325d2,Dhruv Jurel,Dhruv Jurel,Wicket-Keeper,Auction file,Indian,RR,2023,2026,True,True,4,57,1195,0,37,1755,1,0.2,0.6,7.341,-6.741,12.0774
+faa7365d,Dhruv Shorey,DR Shorey,All-Rounder,Auction file,Indian,CSK,2018,2019,True,True,2,2,13,0,6,63,1,0.2,0.4,0.7585,-0.3585,1.9231
+13fc5c6d,Digvesh Singh,DS Rathi,Bowler,Auction file,Indian,LSG,2025,2026,True,True,2,23,3,19,7,688,1,0.3,0.6,11.7481,-11.1481,19.7124
+ddc7a53d,Digvijay Deshmukh,,All-Rounder,Auction file,Indian,MI,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+de7d833e,Dilshan Madushanka,D Madushanka,Bowler,Auction file,Overseas,SRH,2026,2026,True,True,1,1,0,1,2,49,1,4.6,4.6,0,4.6,0
+c03f1114,Dinesh Karthik,KD Karthik,Wicket-Keeper,Auction file,Indian,RCB,2013,2024,True,True,12,184,3611,0,109,5502,5,38.2,73.7,51.4936,22.2064,0.6439
+0264c10e,Dinesh Salunkhe,,All-Rounder,Auction file,Indian,RR,,,True,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+c404f58a,Dirk Nannes,DP Nannes,Bowler,Auction file,Overseas,CSK,2013,2013,True,True,1,5,0,4,3,178,1,3.24,3.24,1.6402,1.5998,0.5062
+063b3673,Dishant Yagnik,DH Yagnik,Wicket-Keeper,Auction file,Indian,RR,2013,2014,True,True,2,13,129,0,7,242,1,0.3,0.3,0.0974,0.2026,0.3247
+fd835ab3,DJ Hussey,DJ Hussey,All-Rounder,Derived from stats,Unknown,CSK,2013,2014,True,False,2,17,351,2,5,518,,,,,,
+34b332d3,Dominic Drakes,,All-Rounder,Auction file,Overseas,GT,,,True,True,,0,0,0,0,0,1,1.1,1.1,0,1.1,0
+2c76b512,Domnic Joseph Muthuswamy,DJ Muthuswami,Bowler,Auction file,Overseas,DC,2015,2015,True,True,1,6,1,4,0,148,1,0.75,0.75,1.1825,-0.4325,1.5766
+f0af99a7,Donovan Ferreira,D Ferreira,Wicket-Keeper,Auction file,Overseas,RR,2023,2026,True,True,3,18,326,1,16,552,2,1.25,1.75,0.4872,1.2628,0.2896
+d18f9182,DPMD Jayawardene,DPMD Jayawardene,Batter,Derived from stats,Unknown,DC,2013,2013,True,False,1,15,331,0,4,420,,,,,,
+8dc152d1,Duan Jansen,D Jansen,All-Rounder,Auction file,Overseas,MI,2023,2023,True,True,1,1,0,1,2,47,1,0.2,0.2,0.6569,-0.4569,3.2846
+327b58d3,Dushmantha Chameera,PVD Chameera,Bowler,Auction file,Overseas,DC,2022,2026,True,True,4,21,53,13,3,574,3,3.25,4,7.8731,-3.8731,1.923
+11614d87,Dwaine Pretorius,D Pretorius,All-Rounder,Auction file,Overseas,CSK,2022,2023,True,True,2,7,44,6,3,279,1,0.5,1,3.556,-2.556,3.5882
+87e562a9,Dwayne Bravo,DJ Bravo,All-Rounder,Auction file,Overseas,CSK,2013,2022,True,True,9,106,721,136,53,5376,2,10.8,30,28.6168,1.3832,0.9194
+35205dfc,Dwayne Smith,DR Smith,All-Rounder,Auction file,Overseas,GL,2013,2017,True,True,5,69,1946,17,32,3116,2,6.8,13.6,19.788,-6.188,1.4497
+b274dbbd,Eklavya Dwivedi,ER Dwivedi,Wicket-Keeper,Auction file,Indian,GL,2016,2016,True,True,1,4,24,0,2,46,3,1.85,1.85,0.3669,1.4831,0.1975
+d2a6c0e6,Eoin Morgan,EJG Morgan,Batter,Auction file,Overseas,KKR,2013,2021,True,True,6,65,1233,0,29,1696,3,8.75,15.5,12.8984,2.6016,0.8356
+5750bcb4,Eshan Malinga,E Malinga,Bowler,Auction file,Overseas,SRH,2025,2026,True,True,2,22,7,33,8,1093,1,1.2,2.4,18.4141,-16.0141,7.6446
+0ebfb1ad,Evin Lewis,E Lewis,Batter,Auction file,Overseas,LSG,2018,2022,True,True,4,27,654,0,9,860,2,5.8,9.6,8.0265,1.5735,0.8271
+3355b542,Faf Du Plessis,F du Plessis,Batter,Auction file,Overseas,DC,2014,2025,True,True,12,142,4375,0,81,5765,4,15.35,38.9,66.9628,-28.0628,1.6336
+dce2019b,Farhaan Behardien,F Behardien,All-Rounder,Auction file,Overseas,PBKS,2016,2016,True,True,1,3,14,0,1,24,1,0.3,0.3,0.1914,0.1086,0.6381
+e9c7f0d0,Fazalhaq Farooqi,Fazalhaq Farooqi,Bowler,Auction file,Overseas,RR,2022,2025,True,True,3,12,5,6,1,246,2,2.5,3,3.4287,-0.4287,1.2236
+ff154ecd,ff154ecd,,Unknown,Derived from stats,Unknown,RCB,2026,2026,True,False,,0,0,0,1,8,,,,,,
+bf74b130,FH Allen,FH Allen,Batter,Derived from stats,Unknown,KKR,2026,2026,True,False,1,11,349,0,1,446,,,,,,
+a7c226e1,Fidel Edwards,,Bowler,Auction file,Overseas,RR,,,True,True,,0,0,0,0,0,1,1.134,1.134,0,1.134,0
+b52ffbbd,Finn Allen,FA Allen,All-Rounder,Auction file,Overseas,MI,2021,2022,True,True,2,5,14,2,2,107,5,4.8,4.8,1.2949,3.5051,0.3208
+bb345e0b,Gautam Gambhir,G Gambhir,Batter,Auction file,Indian,DC,2013,2018,True,True,6,82,2152,0,16,2598,1,2.8,2.8,1.1961,1.6039,0.4272
+5056011d,George Bailey,GJ Bailey,Batter,Auction file,Overseas,RPS,2014,2016,True,True,3,36,600,0,11,812,1,3.25,6.5,5.6344,0.8656,0.861
+3204c99f,Gerald Coetzee,G Coetzee,Bowler,Auction file,Overseas,GT,2024,2025,True,True,2,14,31,15,4,546,2,7.4,7.4,8.4038,-1.0038,1.1478
+e5437608,GF Linde,GF Linde,All-Rounder,Derived from stats,Unknown,LSG,2026,2026,True,False,1,3,31,1,0,72,,,,,,
+be869ccf,GHS Garton,GHS Garton,Bowler,Derived from stats,Unknown,RCB,2021,2021,True,False,1,5,2,3,1,117,,,,,,
+b681e71e,Glenn Maxwell,GJ Maxwell,All-Rounder,Auction file,Overseas,PBKS,2013,2025,True,True,12,139,2813,40,52,5155,6,49.6,67.6,36.0448,31.5552,0.4272
+9a46c4e5,Glenn Phillips,GD Phillips,Batter,Auction file,Overseas,GT,2021,2026,True,True,3,14,132,2,11,303,2,3.5,7,3.6436,3.3564,0.5082
+9f77963a,Gulbadin Naib,Gulbadin Naib,All-Rounder,Derived from stats,Unknown,DC,2024,2024,True,False,1,2,19,0,1,31,,,,,,
+1558d83b,Gurinder Sandhu,GS Sandhu,Bowler,Auction file,Indian,DC,2015,2015,True,True,1,3,0,1,0,35,1,1.7,1.7,0.2796,1.4204,0.1645
+cc61ee8f,Gurjapneet Singh,Gurjapneet Singh,Bowler,Auction file,Indian,CSK,2026,2026,True,True,1,8,0,4,5,186,1,2.2,4.4,3.0801,1.3199,0.688
+6eb146d2,Gurkeerat Singh,Gurkeerat Singh,All-Rounder,Auction file,Indian,RCB,2013,2020,True,True,6,36,425,5,17,791,4,3.05,7.45,5.8679,1.5821,0.7502
+99258814,Gurnoor Singh Brar,Gurnoor Brar,Bowler,Auction file,Indian,PBKS,2023,2023,True,True,1,1,0,0,0,7,1,1.3,1.3,0,1.3,0
+A_gus_atkinson,Gus Atkinson,,Bowler,Auction file,Overseas,KKR,,,False,True,,0,0,0,0,0,1,1,1,0,1,0
+94253925,Hanuma Vihari,GH Vihari,Batter,Auction file,Indian,DC,2013,2019,True,True,3,24,284,1,6,412,2,2.1,2.1,0.5841,1.5159,0.4466
+8b5b6769,Harbhajan Singh,Harbhajan Singh,Bowler,Auction file,Indian,KKR,2013,2021,True,True,8,100,403,96,30,3954,2,4,6,10.6693,-4.6693,1.7685
+dbe50b21,Hardik Pandya,HH Pandya,All-Rounder,Auction file,Indian,MI,2015,2026,True,True,12,162,2955,82,75,6802,1,0.1,0.3,8.0366,-7.7366,26.7741
+a316d663,Hardus Viljoen,GC Viljoen,Bowler,Auction file,Overseas,PBKS,2019,2019,True,True,1,6,3,7,0,225,1,0.75,0.75,2.7476,-1.9976,3.6634
+0bf15e52,Harmeet Singh (0bf15e52),Harmeet Singh,Bowler,Derived from stats,Unknown,RR,2013,2013,True,False,1,1,0,1,0,37,,,,,,
+2a72fd4f,Harmeet Singh (2a72fd4f),Harmeet Singh,Bowler,Derived from stats,Unknown,PBKS,2013,2013,True,False,1,3,3,5,1,171,,,,,,
+A_harnoor_pannu,Harnoor Pannu,,Batter,Auction file,Indian,PBKS,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+28c78fb3,Harpreet Bhatia,Harpreet Singh,Batter,Auction file,Indian,PBKS,2023,2024,True,True,2,5,103,0,1,127,1,0.4,0.8,1.8024,-1.0024,2.2643
+c05edf8e,Harpreet Brar,Harpreet Brar,All-Rounder,Auction file,Indian,PBKS,2019,2026,True,True,8,51,249,37,15,1629,3,5.5,15,23.4449,-8.4449,1.6181
+4ae1755b,Harry Brook,HC Brook,Batter,Auction file,Overseas,SRH,2023,2023,True,True,1,11,190,0,3,245,3,23.5,23.5,3.4244,20.0756,0.151
+e412cb64,Harry Gurney,HF Gurney,Bowler,Auction file,Overseas,KKR,2019,2019,True,True,1,8,1,7,0,227,1,0.75,0.75,2.772,-2.022,3.696
+25228673,Harsh Dubey,Harsh Dubey,Bowler,Derived from stats,Unknown,SRH,2025,2026,True,False,2,11,13,13,4,428,,,,,,
+f986ca1a,Harshal Patel,HV Patel,All-Rounder,Auction file,Indian,SRH,2014,2026,True,True,13,112,265,142,20,4840,5,31.1,51.45,48.7575,2.6925,1.139
+77b1aa15,Harshit Rana,Harshit Rana,Bowler,Derived from stats,Unknown,KKR,2022,2025,True,False,4,33,59,40,12,1428,,,,,,
+235c2bb6,Heinrich Klaasen,H Klaasen,Wicket-Keeper,Auction file,Overseas,SRH,2018,2026,True,True,6,64,2104,0,35,2902,2,5.75,11,18.5035,-7.5035,1.6579
+52294a79,Himanshu Sharma,H Sharma,Bowler,Auction file,Indian,RCB,2023,2024,True,True,2,2,0,0,0,4,1,0.2,0.4,0.0559,0.3441,0.1411
+ebcfef83,Himmat Singh,Himmat Singh,Batter,Auction file,Indian,LSG,2025,2026,True,True,2,9,92,0,2,123,2,0.95,1.25,2.0428,-0.7928,1.2251
+e798611a,HM Amla,HM Amla,Batter,Derived from stats,Unknown,PBKS,2016,2017,True,False,2,16,577,0,0,679,,,,,,
+0c9652b0,Hrithik Shokeen,HR Shokeen,All-Rounder,Auction file,Indian,MI,2022,2023,True,True,2,13,66,5,5,328,1,0.2,0.4,4.3786,-3.9786,10.936
+A_hs_sharath,HS Sharath,,Bowler,Auction file,Indian,DC,,,False,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+acee4cc4,Imran Tahir,Imran Tahir,Bowler,Auction file,Overseas,CSK,2014,2021,True,True,8,59,33,82,13,2643,1,1,4,14.1991,-10.1991,3.5074
+85aae393,Iqbal Abdullah,Iqbal Abdulla,All-Rounder,Auction file,Indian,RCB,2013,2017,True,True,5,21,70,19,6,743,2,0.75,0.85,2.6782,-1.8282,3.351
+5fa06777,Irfan Pathan,IK Pathan,All-Rounder,Auction file,Indian,GL,2013,2017,True,True,4,30,210,14,7,863,3,4.9,4.9,2.089,2.811,0.4098
+641ac5ff,IS Sodhi,IS Sodhi,Bowler,Derived from stats,Unknown,RR,2018,2019,True,False,2,8,7,9,0,298,,,,,,
+752f7486,Ishan Kishan,Ishan Kishan,Wicket-Keeper,Auction file,Indian,SRH,2016,2026,True,True,11,134,3600,0,67,4978,4,33.05,93.75,66.9033,26.8467,0.7393
+fdf7491e,Ishan Porel,IC Porel,Bowler,Auction file,Indian,PBKS,2021,2021,True,True,1,1,0,1,0,35,2,0.45,0.65,0.4118,0.2382,0.6977
+dded65e7,Ishank Jaggi,IR Jaggi,Batter,Auction file,Indian,KKR,2017,2017,True,True,1,2,33,0,0,36,2,0.3,0.3,0.2615,0.0385,1.2389
+5bb1a1c4,Ishant Sharma,I Sharma,Bowler,Auction file,Indian,GT,2013,2025,True,True,11,74,20,60,13,2267,5,8.75,14.05,20.7809,-6.7309,0.9559
+e0407c01,Ishwar Chandra Pandey,IC Pandey,Bowler,Auction file,Indian,CSK,2013,2015,True,True,3,25,0,18,6,721,2,1.7,3.2,5.5434,-2.3434,1.7398
+ac5ae4af,Isuru Udana,I Udana,All-Rounder,Auction file,Overseas,RCB,2020,2020,True,True,1,10,15,8,3,291,1,0.5,0.5,3.3917,-2.8917,6.7833
+4125d931,J Suchith,J Suchith,Bowler,Auction file,Indian,SRH,2015,2022,True,True,5,22,70,19,18,861,3,0.6,0.7,7.5314,-6.8314,11.6866
+c64c2443,J Syed Mohammad,J Syed Mohammad,Bowler,Derived from stats,Unknown,RCB,2013,2013,True,False,1,4,10,3,0,103,,,,,,
+A_jack_edwards,Jack Edwards,,Unknown,Derived from stats,Overseas,SRH,,,False,True,,0,0,0,0,0,1,3,3,0,3,0
+3c55c703,Jacob Bethell,JG Bethell,All-Rounder,Auction file,Overseas,RCB,2025,2026,True,True,2,9,163,0,5,236,1,2.6,5.2,3.9756,1.2244,0.7617
+dadbdb68,Jacob Duffy,JA Duffy,Bowler,Derived from stats,Overseas,RCB,2026,2026,True,True,1,6,0,9,1,290,1,2,2,4.8022,-2.8022,2.4011
+3eac9d95,Jacob Oram,JDP Oram,All-Rounder,Auction file,Overseas,MI,2013,2013,True,True,1,1,0,0,0,14,1,0.27,0.27,0.129,0.141,0.4778
+86dc8f2e,Jacques Kallis,JH Kallis,All-Rounder,Auction file,Overseas,KKR,2013,2014,True,True,2,24,462,20,5,1244,1,5.5,5.5,2.6867,2.8133,0.4885
+9b6e1b3f,Jake Fraser-Mcgurk,J Fraser-McGurk,Batter,Auction file,Overseas,DC,2024,2025,True,True,2,15,385,0,8,554,1,9,9,1.5579,7.4421,0.1731
+249abedf,Jalaj Saxena,Jalaj S Saxena,All-Rounder,Auction file,Indian,PBKS,2021,2021,True,True,1,1,0,0,0,5,4,1.5,1.5,0.0588,1.4412,0.029
+808f425a,James Faulkner,JP Faulkner,All-Rounder,Auction file,Overseas,GL,2013,2017,True,True,5,57,513,55,15,2551,1,2.16,2.16,9.0671,-6.9071,4.1977
+9219eff0,James Neesham,JDS Neesham,All-Rounder,Auction file,Overseas,RR,2014,2022,True,True,4,14,92,8,2,386,5,4,4,4.2511,-0.2511,1.0099
+59559bc2,Jamie Overton,J Overton,All-Rounder,Auction file,Overseas,CSK,2025,2026,True,True,2,13,151,14,1,607,1,1.5,3,10.0726,-7.0726,3.3055
+A_jaskaran_singh,Jaskaran Singh,,Bowler,Auction file,Indian,RPS,,,False,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+4933f499,Jason Behrendorff,JP Behrendorff,Bowler,Auction file,Overseas,MI,2019,2023,True,True,2,17,6,19,2,643,2,2.25,3.75,2.1859,1.5641,0.6318
+0f721006,Jason Holder,JO Holder,All-Rounder,Auction file,Overseas,GT,2013,2026,True,True,8,57,324,70,22,2760,6,23.058,23.058,22.9195,0.1385,1.2887
+d1c36f5c,Jason Roy,JJ Roy,Batter,Auction file,Overseas,KKR,2017,2023,True,True,4,21,614,0,10,811,4,6,6,2.5988,3.4012,0.4647
+462411b3,Jasprit Bumrah,JJ Bumrah,Bowler,Auction file,Indian,MI,2013,2026,True,True,13,158,75,187,19,6465,1,1.2,4.8,11.6152,-6.8152,2.4303
+0b960e01,Jatin Saxena,,All-Rounder,Auction file,Indian,RR,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+99ed60f8,Javon Searles,JPR Scantlebury-Searles,All-Rounder,Auction file,Indian,KKR,2018,2018,True,True,1,4,8,2,4,99,1,0.3,0.3,1.1496,-0.8496,3.8321
+81049310,Jayant Yadav,J Yadav,All-Rounder,Auction file,Indian,GT,2015,2023,True,True,7,20,40,8,9,471,4,3.05,5.05,1.9459,3.1041,0.7293
+3c9b7d18,Jaydev Shah,,All-Rounder,Auction file,Indian,GL,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+1e66c162,Jaydev Unadkat,JD Unadkat,Bowler,Auction file,Indian,SRH,2013,2026,True,True,14,105,201,104,27,3804,12,35.935,39.935,42.7708,-2.8358,1.1414
+2e8994e7,Jean-Paul Duminy,JP Duminy,All-Rounder,Auction file,Overseas,MI,2014,2018,True,True,4,44,1051,13,16,1783,2,3.2,7.6,14.5784,-6.9784,1.9841
+9868bc75,Jeevan Mendis,BMAJ Mendis,All-Rounder,Auction file,Overseas,DC,2013,2013,True,True,1,3,23,1,2,81,1,0.27,0.27,0.7464,-0.4764,2.7644
+91ffa6c6,Jesse Ryder,,All-Rounder,Auction file,Overseas,DC,,,True,True,,0,0,0,0,0,1,1.404,1.404,0,1.404,0
+eb19d010,Jhathavedh Subramanyan,,Bowler,Auction file,Indian,SRH,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+1ee08e9a,Jhye Richardson,JA Richardson,Bowler,Auction file,Overseas,DC,2021,2024,True,True,2,4,17,3,1,134,3,20.5,20.5,1.608,18.892,0.0843
+800d2d97,Jitesh Sharma,JM Sharma,Wicket-Keeper,Auction file,Indian,RCB,2022,2026,True,True,5,71,1107,0,59,1939,3,11.3,22.7,29.2959,-6.5959,1.3868
+f752db61,JL Pattinson,JL Pattinson,Bowler,Derived from stats,Unknown,MI,2020,2020,True,False,1,10,15,11,2,386,,,,,,
+bdadf7da,Joe Denly,JL Denly,Batter,Auction file,Overseas,KKR,2019,2019,True,True,1,1,0,0,0,0,1,1,1,0,1,0
+a343262c,Joe Root,JE Root,Batter,Auction file,Overseas,RR,2023,2023,True,True,1,3,10,0,2,29,1,1,1,0.4053,0.5947,0.4053
+7c8f533d,Joel Paris,,Bowler,Auction file,Overseas,DC,,,True,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+5574750c,Jofra Archer,JC Archer,All-Rounder,Auction file,Overseas,RR,2018,2026,True,True,6,68,326,84,19,3362,3,27.7,62.6,46.9253,15.6747,0.7746
+7c503806,Johan Botha,J Botha,All-Rounder,Auction file,Overseas,KKR,2013,2015,True,True,2,10,74,6,9,369,1,2.43,2.43,2.3405,0.0895,0.9632
+012829ff,John Hastings,JW Hastings,Bowler,Auction file,Overseas,KKR,2014,2016,True,True,2,3,0,3,0,106,2,1.8,1.8,0.8503,0.9497,0.4706
+abb83e27,Jonny Bairstow,JM Bairstow,Wicket-Keeper,Auction file,Overseas,MI,2019,2025,True,True,6,52,1674,0,29,2293,2,8.95,26.85,27.5631,-0.7131,1.1699
+A_jordan_cox,Jordan Cox,,Unknown,Derived from stats,Overseas,RCB,,,False,True,,0,0,0,0,0,1,0.75,0.75,0,0.75,0
+99b75528,Jos Buttler,JC Buttler,Wicket-Keeper,Auction file,Overseas,GT,2016,2026,True,True,11,138,4646,0,88,6326,3,23.95,56.7,55.0118,1.6882,0.9654
+03806cf8,Josh Hazlewood,JR Hazlewood,Bowler,Auction file,Overseas,RCB,2020,2026,True,True,6,52,19,72,11,2424,4,22.75,45,35.7985,9.2015,0.799
+989889ff,Josh Inglis,JP Inglis,Wicket-Keeper,Auction file,Overseas,LSG,2025,2026,True,True,2,17,544,0,10,750,2,11.2,11.2,12.735,-1.535,1.1504
+9061a703,Joshua Little,J Little,Bowler,Auction file,Overseas,GT,2023,2024,True,True,2,11,0,11,5,399,1,4.4,8.8,5.6795,3.1205,0.6481
+39086549,Joshua Philippe,JR Philippe,Wicket-Keeper,Auction file,Overseas,RCB,2020,2020,True,True,1,5,78,0,0,89,1,0.2,0.2,1.0373,-0.8373,5.1865
+dec8e038,Juan Theron,J Theron,Bowler,Auction file,Overseas,RR,2015,2015,True,True,1,1,1,1,0,31,1,0.3,0.3,0.2477,0.0523,0.8256
+27e71d47,K Upadhyay,K Upadhyay,Bowler,Derived from stats,Unknown,PWI,2013,2013,True,False,1,2,1,0,1,19,,,,,,
+90de905a,K. Gowtham,K Gowtham,All-Rounder,Auction file,Indian,LSG,2018,2024,True,True,6,36,247,21,22,1213,4,18.35,26.35,13.9492,12.4008,0.4451
+edb3d4f8,K.C Cariappa,KC Cariappa,Bowler,Auction file,Indian,KKR,2015,2019,True,True,4,11,24,8,3,314,4,3.7,4.5,2.3154,2.1846,0.5391
+A_kk_jiyaz,K.K. Jiyaz,,Bowler,Auction file,Indian,DC,,,False,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+798cc28e,K.M. Asif,KM Asif,Bowler,Auction file,Indian,RR,2018,2023,True,True,3,7,0,7,1,229,3,0.9,2.1,2.9259,-0.8259,1.2331
+44a89551,K.S. Bharat,KS Bharat,Wicket-Keeper,Auction file,Indian,GT,2021,2023,True,True,2,10,199,0,5,279,5,4,4,3.3091,0.6909,1.0773
+0b60eb09,KA Maharaj,KA Maharaj,Bowler,Derived from stats,Unknown,RR,2024,2024,True,False,1,2,1,2,1,70,,,,,,
+e62dd25d,Kagiso Rabada,K Rabada,Bowler,Auction file,Overseas,GT,2017,2026,True,True,9,101,262,148,37,5267,4,29.2,71.05,68.8927,2.1573,0.9996
+08548b13,Kamindu Mendis,PHKD Mendis,All-Rounder,Auction file,Overseas,SRH,2025,2025,True,True,1,5,92,2,1,172,1,0.75,0.75,2.9774,-2.2274,3.9698
+b4f5c2d9,Kamlesh Nagarkoti,KL Nagarkoti,All-Rounder,Auction file,Indian,DC,2020,2022,True,True,3,12,22,5,9,272,3,4.6,14.2,3.1933,11.0067,0.2384
+dfc4d8b5,Kane Richardson,KW Richardson,Bowler,Auction file,Overseas,RCB,2013,2021,True,True,4,15,36,19,6,705,4,10.78,14.78,5.9578,8.8222,0.3881
+d027ba9f,Kane Williamson,KS Williamson,Batter,Auction file,Overseas,GT,2015,2024,True,True,10,79,2128,0,40,2769,3,5.6,17.8,26.5066,-8.7066,1.6068
+A_kanishk_chouhan,Kanishk Chouhan,,Unknown,Derived from stats,Indian,RCB,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+98f27d4b,Kanishk Seth,,All-Rounder,Auction file,Indian,CSK,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+39ed0d2f,Karan Sharma,KS Sharma,All-Rounder,Auction file,Indian,LSG,2022,2023,True,True,2,3,16,0,0,17,1,0.2,0.4,0.2311,0.1689,0.5749
+1647bd37,Karanveer Singh,Karanveer Singh,All-Rounder,Auction file,Indian,PBKS,2014,2015,True,True,2,9,12,12,2,395,1,0.1,0.2,3.1974,-2.9974,15.4172
+62175638,Karim Janat,Karim Janat,All-Rounder,Auction file,Overseas,GT,2025,2025,True,True,1,1,0,0,0,0,1,0.75,0.75,0,0.75,0
+119678fd,Karn Sharma,KV Sharma,Bowler,Auction file,Indian,MI,2013,2025,True,True,11,89,351,83,23,3209,5,12.95,31.45,28.5765,2.8735,0.8079
+7b679de5,Kartik Sharma,Kartik Sharma,Batter,Derived from stats,Indian,CSK,2026,2026,True,True,1,11,295,0,1,359,1,14.2,14.2,5.9448,8.2552,0.4187
+5d2eea49,Kartik Tyagi,Kartik Tyagi,Bowler,Auction file,Indian,KKR,2020,2026,True,True,6,34,24,33,7,1183,4,6.2,11.5,16.9715,-5.4715,1.4208
+944533a5,Karun Nair,KK Nair,Batter,Auction file,Indian,DC,2013,2026,True,True,11,86,1712,0,29,2278,6,12.75,29.2,22.5671,6.6329,0.7943
+7daedf2f,KB Arun Karthik,KB Arun Karthik,Wicket-Keeper,Derived from stats,Unknown,RCB,2013,2013,True,False,1,12,41,0,9,160,,,,,,
+6b71e6cf,KC Sangakkara,KC Sangakkara,Batter,Derived from stats,Unknown,SRH,2013,2013,True,False,1,9,120,0,3,157,,,,,,
+99d63244,Kedar Jadhav,KM Jadhav,All-Rounder,Auction file,Indian,RCB,2013,2023,True,True,10,84,1114,0,29,1636,3,11.8,29.4,8.8594,20.5406,0.3603
+75224f22,Keemo Paul,KMA Paul,All-Rounder,Auction file,Overseas,DC,2019,2020,True,True,1,8,18,9,6,348,1,0.5,0.5,4.1519,-3.6519,8.3038
+39f01cdb,Kevin Pietersen,KP Pietersen,Batter,Auction file,Overseas,RPS,2014,2016,True,True,2,15,367,0,3,449,3,14.5,14.5,3.6318,10.8682,0.2457
+557153ca,Kevon Cooper,KK Cooper,All-Rounder,Auction file,Overseas,RR,2013,2014,True,True,2,19,78,23,10,914,1,0.3,0.3,1.6721,-1.3721,5.5736
+a757b0d8,Kieron Pollard,KA Pollard,All-Rounder,Auction file,Overseas,MI,2013,2022,True,True,10,145,2773,28,81,4887,1,5.4,21.6,19.0578,2.5422,0.8945
+A_kishore_pramod_kamath,Kishore Pramod Kamath,,All-Rounder,Auction file,Indian,MI,,,False,True,,0,0,0,0,0,1,1.4,1.4,0,1.4,0
+b17e2f24,KL Rahul,KL Rahul,Wicket-Keeper,Auction file,Indian,DC,2013,2026,True,True,13,160,5815,0,83,7621,3,26,74,66.05,7.95,0.9111
+A_krains_fuletra,Krains Fuletra,,Unknown,Derived from stats,Indian,SRH,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+e48a4814,Krish Bhagat,Krish Bhagat,All-Rounder,Derived from stats,Unknown,MI,2026,2026,True,False,1,3,10,0,1,33,,,,,,
+531f0278,Krismar Santokie,K Santokie,Bowler,Auction file,Overseas,MI,2014,2014,True,True,1,2,0,3,1,99,1,0.3,0.3,0.8036,-0.5036,2.6786
+5b8c830e,Krunal Pandya,KH Pandya,All-Rounder,Auction file,Indian,RCB,2016,2026,True,True,11,158,1982,107,54,6303,4,24.8,75.45,79.8652,-4.4152,1.053
+c910e89d,Kshitiz Sharma,,All-Rounder,Auction file,Indian,CSK,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+2e78f685,Kuldeep Sen,KR Sen,Bowler,Auction file,Indian,RR,2022,2024,True,True,3,12,0,14,4,471,3,1.75,2.15,6.3834,-4.2334,3.2954
+8d2c70ad,Kuldeep Yadav,Kuldeep Yadav,Bowler,Auction file,Indian,DC,2016,2026,True,True,10,111,210,112,22,3936,3,8.2,25,37.0594,-12.0594,1.3722
+030f3089,Kuldip Yadav,K Yadav,Bowler,Auction file,Indian,RR,2021,2023,True,True,2,3,0,2,0,64,2,0.4,0.6,0.8835,-0.2835,1.3213
+fa2f1dde,Kulwant Khejroliya,K Khejroliya,Bowler,Auction file,Indian,GT,2018,2026,True,True,5,9,0,6,1,201,4,1.45,2.6,2.7161,-0.1161,0.9382
+f6d8a7ab,Kumar Kartikeya Singh,K Kartikeya,Bowler,Auction file,Indian,RR,2022,2025,True,True,3,16,12,12,1,411,1,0.3,0.3,1.1944,-0.8944,3.9814
+57ca01b3,Kumar Kushagra,Kumar Kushagra,Wicket-Keeper,Auction file,Indian,GT,2024,2026,True,True,2,5,21,0,2,40,2,7.85,8.5,0.6443,7.8557,0.0696
+e3851766,Kunal Rathore,KS Rathore,Wicket-Keeper,Auction file,Indian,RR,2025,2025,True,True,1,1,0,0,0,0,2,0.5,0.5,0,0.5,0
+f21043a5,Kusal Janith Perera,MDKJ Perera,Wicket-Keeper,Auction file,Indian,RR,2013,2013,True,True,1,2,14,0,0,17,1,0.108,0.108,0.1566,-0.0486,1.4504
+107c26fb,Kwena Maphaka,KT Maphaka,Bowler,Auction file,Overseas,RR,2024,2025,True,True,2,4,8,2,2,100,1,1.5,1.5,1.0906,0.4094,0.727
+a9da7784,Kyle Abbott,KJ Abbott,Bowler,Auction file,Overseas,PBKS,2016,2016,True,True,1,5,13,2,0,95,2,2.4,2.4,0.7578,1.6422,0.3148
+68c56d09,Kyle Jamieson,KA Jamieson,Bowler,Auction file,Overseas,DC,2021,2026,True,True,3,15,77,16,2,622,3,18,18,5.8116,12.1884,0.314
+73c18486,Kyle Mayers,KR Mayers,All-Rounder,Auction file,Overseas,LSG,2023,2023,True,True,1,13,379,0,2,491,1,0.5,1,6.8628,-5.8628,6.7911
+b2b50355,Lakshmipathy Balaji,L Balaji,Bowler,Auction file,Indian,PBKS,2013,2014,True,True,2,22,10,24,4,855,1,1.8,1.8,3.0763,-1.2763,1.7091
+ad427b5c,Lalit Yadav,Lalit Yadav,All-Rounder,Auction file,Indian,DC,2020,2024,True,True,4,27,305,10,19,846,2,0.85,2.35,10.7643,-8.4143,4.7996
+a12e1d51,Lasith Malinga,SL Malinga,Bowler,Auction file,Overseas,MI,2013,2019,True,True,5,66,24,87,7,2865,1,2,2,6.0935,-4.0935,3.0468
+b1451597,Laxmi Ratan Shukla,LR Shukla,All-Rounder,Auction file,Indian,DC,2013,2014,True,True,2,9,34,2,3,143,2,1.8,1.8,0.7468,1.0532,0.4071
+9a963804,LE Plunkett,LE Plunkett,Bowler,Derived from stats,Unknown,DC,2018,2018,True,False,1,7,1,4,2,159,,,,,,
+60aa2db3,LG Pretorius,LG Pretorius,Batter,Derived from stats,Unknown,RR,2026,2026,True,False,1,2,7,0,0,7,,,,,,
+50c6bc2b,Liam Livingstone,LS Livingstone,All-Rounder,Auction file,Overseas,SRH,2019,2026,True,True,7,51,1066,13,27,1911,5,34.5,57.5,26.458,31.042,0.4888
+0404d43c,Litton Das,Liton Das,Wicket-Keeper,Auction file,Overseas,KKR,2023,2023,True,True,1,1,4,0,0,5,1,0.5,0.5,0.0699,0.4301,0.1398
+a1d95bd8,Lizaad Williams,LB Williams,Bowler,Auction file,Overseas,DC,2024,2024,True,True,1,2,1,1,1,47,1,0.75,0.75,0,0.75,0
+cca50cd6,LJ Wright,LJ Wright,All-Rounder,Derived from stats,Unknown,PWI,2013,2013,True,False,1,6,106,2,2,213,,,,,,
+89f64c19,LMP Simmons,LMP Simmons,Batter,Derived from stats,Unknown,MI,2014,2017,True,False,4,29,1079,1,10,1389,,,,,,
+2f9d0389,Lockie Ferguson,LH Ferguson,Bowler,Auction file,Overseas,PBKS,2017,2026,True,True,9,52,72,52,9,1899,5,16.1,21.3,23.7464,-2.4464,1.207
+b63ab531,Luke Pomersbach,LA Pomersbach,Batter,Auction file,Overseas,PBKS,2013,2013,True,True,1,3,58,0,0,65,1,1.62,1.62,0.5989,1.0211,0.3697
+65b6943c,Luke Wood,L Wood,Bowler,Derived from stats,Overseas,MI,2024,2024,True,True,1,2,9,1,0,45,1,0.75,0.75,0,0.75,0
+d3611425,Lukman Hussain Meriwala,LI Meriwala,Bowler,Auction file,Indian,DC,2021,2021,True,True,1,1,0,1,0,31,1,0.2,0.2,0.3647,-0.1647,1.8236
+f834dcfc,Lungi Ngidi,L Ngidi,Bowler,Auction file,Overseas,DC,2018,2026,True,True,5,28,4,42,2,1324,4,4,5.5,18.1861,-12.6861,3.4648
+a689af4b,Luvnith Sisodia,,Wicket-Keeper,Auction file,Indian,KKR,,,True,True,,0,0,0,0,0,2,0.5,0.5,0,0.5,0
+de8d3876,M Rawat,M Rawat,Wicket-Keeper,Derived from stats,Unknown,PWI,2013,2013,True,False,1,2,5,0,1,25,,,,,,
+791c088d,M. Harisankar Reddy,,Bowler,Auction file,Indian,CSK,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+cf0ccafa,M. Siddharth,M Siddharth,Bowler,Auction file,Indian,LSG,2024,2026,True,True,3,9,0,9,3,309,4,3.55,4.3,5.0923,-0.7923,1.0544
+fb5f69e4,Madhav Tiwari,M Tiwari,All-Rounder,Auction file,Indian,DC,2025,2026,True,True,2,5,21,4,3,169,1,0.4,0.8,2.8128,-2.0128,3.4698
+f24c6701,Maheesh Theekshana,M Theekshana,Bowler,Auction file,Overseas,RR,2022,2025,True,True,4,38,17,36,4,1236,2,5.1,6.5,18.0891,-11.5891,2.9124
+da934ee8,Mahipal Lomror,MK Lomror,All-Rounder,Auction file,Indian,GT,2018,2025,True,True,7,40,527,1,12,763,4,2.95,5.45,10.1158,-4.6658,1.9958
+bfcff6cd,Manan Ajay Sharma,,All-Rounder,Auction file,Indian,KKR,,,True,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+c03e2850,Manan Vohra,M Vohra,Batter,Auction file,Indian,LSG,2013,2023,True,True,9,56,1083,0,13,1383,3,1.5,2.1,1.8126,0.2874,0.8519
+025c4400,Manav Suthar,MJ Suthar,Bowler,Auction file,Indian,GT,2024,2026,True,True,2,5,1,2,2,84,2,0.5,0.8,1.3828,-0.5828,1.658
+c3a96caf,Mandeep Singh,Mandeep Singh,Batter,Auction file,Indian,KKR,2013,2023,True,True,11,86,1223,0,32,1664,4,3.8,3.8,4.6188,-0.8188,1.1777
+A_mangesh_yadav,Mangesh Yadav,,Unknown,Derived from stats,Indian,RCB,,,False,True,,0,0,0,0,0,1,5.2,5.2,0,5.2,0
+93b4fc78,Manish Pandey,MK Pandey,Batter,Auction file,Indian,KKR,2013,2026,True,True,14,139,3203,0,71,4283,6,20.95,59.8,43.3637,16.4363,0.794
+f047e7ff,Manjot Kalra,,Batter,Auction file,Indian,DC,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+e96801ea,Manoj Bhandage,MS Bhandage,All-Rounder,Auction file,Indian,RCB,2025,2025,True,True,1,1,1,0,2,17,2,0.5,0.5,0.2943,0.2057,0.5585
+26e5cabf,Manoj Tiwary,MK Tiwary,Batter,Auction file,Indian,PBKS,2013,2018,True,True,5,43,726,0,24,1032,3,4.3,7.1,6.381,0.719,0.8942
+ae78bc32,Manpreet Gony,MS Gony,Bowler,Auction file,Indian,GL,2013,2017,True,True,2,9,45,7,0,298,2,3.3,3.3,2.7381,0.5619,0.9497
+605b7efa,Manprit Juneja,MC Juneja,Batter,Auction file,Indian,DC,2013,2013,True,True,1,7,125,0,0,138,1,0.1,0.1,0,0.1,0
+A_manvanth_kumar_l,Manvanth Kumar L,,All-Rounder,Auction file,Indian,DC,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+5afd4539,Manvinder Bisla,MS Bisla,Wicket-Keeper,Auction file,Indian,RCB,2013,2015,True,True,3,17,295,0,9,507,1,0.6,0.6,0.138,0.462,0.23
+91a260d3,Manzoor Dar,,All-Rounder,Auction file,Indian,PBKS,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+d4eef961,Marchant De Lange,M de Lange,Bowler,Auction file,Overseas,MI,2014,2015,True,True,2,2,1,2,0,74,1,0.3,0.6,0.5987,0.0013,0.9653
+81c36ee9,Marco Jansen,M Jansen,All-Rounder,Auction file,Overseas,PBKS,2021,2026,True,True,6,49,192,45,28,1956,3,11.4,26.8,30.2204,-3.4204,1.1272
+d9273ee7,Marcus Stoinis,MP Stoinis,All-Rounder,Auction file,Overseas,PBKS,2016,2026,True,True,11,123,2242,46,26,4309,5,22.8,39.15,28.2085,10.9415,0.872
+8d92a2c3,Mark Wood,MA Wood,Bowler,Auction file,Overseas,LSG,2018,2023,True,True,2,5,12,11,3,368,2,9,16.5,5.1081,11.3919,0.3015
+2be41edb,Martin Guptill,MJ Guptill,Batter,Auction file,Overseas,SRH,2016,2019,True,True,3,13,270,0,7,380,2,1.5,1.5,2.8104,-1.3104,2.0858
+64839cb3,Matheesha Pathirana,M Pathirana,Bowler,Derived from stats,Overseas,KKR,2022,2026,True,True,5,33,0,47,9,1511,1,18,18,0.0662,17.9338,0.0037
+e84ac20c,Matt Henry,MJ Henry,Bowler,Auction file,Overseas,CSK,2017,2026,True,True,3,9,7,4,1,159,3,2.8,2.8,1.491,1.309,0.4595
+35f173a0,Matthew Breetzke,MP Breetzke,Batter,Auction file,Overseas,LSG,2025,2025,True,True,1,1,14,0,0,17,1,0.75,0.75,0.2943,0.4557,0.3924
+a90e53ec,Matthew Short,MW Short,All-Rounder,Derived from stats,Overseas,CSK,2023,2026,True,True,2,9,177,0,7,280,1,1.5,1.5,1.4738,0.0262,0.9825
+afa7e784,Matthew Wade,MS Wade,Wicket-Keeper,Auction file,Overseas,GT,2022,2024,True,True,2,12,161,0,8,270,1,2.4,7.2,3.4467,3.7533,0.4875
+00ea847a,Mayank Agarwal,MA Agarwal,Batter,Auction file,Indian,RCB,2013,2025,True,True,13,107,2390,0,47,3178,3,10.85,25.3,30.0871,-4.7871,1.3122
+a457cfb5,Mayank Dagar,Mayank Dagar,All-Rounder,Auction file,Indian,RCB,2023,2024,True,True,2,8,0,2,3,118,2,2,2,0.6569,1.3431,0.3187
+a9fd84fb,Mayank Markande,M Markande,Bowler,Auction file,Indian,MI,2018,2026,True,True,7,40,48,37,9,1275,4,1.65,2.35,16.4662,-14.1162,7.4952
+2b801189,Mayank Rawat,Mayank Rawat,Batter,Derived from stats,Indian,MI,2026,2026,True,True,1,1,0,0,0,0,1,0.3,0.3,0,0.3,0
+b1ad996b,Mayank Yadav,MP Yadav,Bowler,Auction file,Indian,LSG,2024,2026,True,True,3,10,5,9,3,351,1,0.2,0.6,3.3566,-2.7566,5.484
+3ff033bb,MD Shanaka,MD Shanaka,All-Rounder,Derived from stats,Unknown,RR,2023,2026,True,False,2,10,89,1,4,169,,,,,,
+e38bce7a,MG Bracewell,MG Bracewell,All-Rounder,Derived from stats,Unknown,RCB,2023,2023,True,False,1,5,58,6,1,250,,,,,,
+0164b064,MG Neser,MG Neser,Bowler,Derived from stats,Unknown,PBKS,2013,2013,True,False,1,1,0,0,0,5,,,,,,
+f842c2cf,Michael Clarke,,Batter,Auction file,Overseas,PWI,,,True,True,,0,0,0,0,0,1,2.16,2.16,0,2.16,0
+48fd7349,Michael Hussey,MEK Hussey,Batter,Auction file,Overseas,CSK,2013,2015,True,True,3,30,1019,0,14,1294,2,6.5,6.5,2.9099,3.5901,0.4493
+ade90de7,Midhun S,S Midhun,All-Rounder,Auction file,Indian,RR,2019,2019,True,True,1,1,0,0,1,12,1,0.2,0.4,0.1465,0.2535,0.3778
+b4296080,Milind Kumar,,All-Rounder,Auction file,Indian,RCB,2019,2019,True,True,,0,0,0,1,8,2,0.3,0.3,0.0977,0.2023,0.2757
+A_milind_tandon,Milind Tandon,,All-Rounder,Auction file,Indian,RPS,,,False,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+f5180fe6,Mitchell Johnson,MG Johnson,Bowler,Auction file,Overseas,KKR,2013,2018,True,True,6,54,167,61,15,2415,3,10.5,23.5,12.4447,11.0553,0.5128
+3d8feaf8,Mitchell Marsh,MR Marsh,All-Rounder,Auction file,Overseas,LSG,2013,2026,True,True,8,60,1777,28,15,3099,4,16.7,33.1,40.3895,-7.2895,0.9748
+51a3c5ef,Mitchell McClenaghan,MJ McClenaghan,Bowler,Auction file,Overseas,MI,2015,2019,True,True,5,56,85,71,1,2427,1,0.3,0.9,14.1362,-13.2362,15.7072
+e4a0deae,Mitchell Santner,MJ Santner,All-Rounder,Auction file,Overseas,MI,2019,2026,True,True,7,35,136,30,17,1309,3,4.4,11.2,19.557,-8.357,1.7257
+3fb19989,Mitchell Starc,MA Starc,Bowler,Auction file,Overseas,DC,2014,2026,True,True,5,58,111,76,33,2813,4,50.9,67.65,34.523,33.127,0.5802
+c42aaf71,Mithun Manhas,M Manhas,All-Rounder,Auction file,Indian,CSK,2013,2014,True,True,2,15,48,0,5,94,1,0.3,0.3,0.5195,-0.2195,1.7316
+f2c936d7,MJ Owen,MJ Owen,Batter,Derived from stats,Unknown,PBKS,2025,2025,True,False,1,1,0,0,2,16,,,,,,
+f846de6a,MN Samuels,MN Samuels,All-Rounder,Derived from stats,Unknown,DC,2013,2017,True,False,2,7,37,1,2,97,,,,,,
+bb351c23,Moeen Ali,MM Ali,All-Rounder,Auction file,Overseas,KKR,2018,2025,True,True,8,73,1167,41,24,2927,3,10.7,14.1,20.5612,-6.4612,1.4316
+A_mohammad_izhar,Mohammad Izhar,,Unknown,Derived from stats,Indian,MI,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+62af8546,Mohammad Nabi,Mohammad Nabi,All-Rounder,Auction file,Overseas,MI,2017,2024,True,True,6,24,215,15,18,939,4,3.8,6.8,11.409,-4.609,1.75
+8cf9814c,Mohammad Shami,Mohammed Shami,Bowler,Auction file,Indian,LSG,2013,2026,True,True,12,132,115,145,24,5237,5,28.3,56.9,56.425,0.475,0.8651
+2f49c897,Mohammad Siraj,Mohammed Siraj,Bowler,Auction file,Indian,GT,2017,2026,True,True,10,125,117,128,38,4828,3,17.45,37.5,42.4357,-4.9357,1.1925
+4ae89f36,Mohammed Azharuddeen,,Wicket-Keeper,Auction file,Indian,RCB,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+12314277,Mohd. Arshad Khan,Arshad Khan,All-Rounder,Auction file,Indian,GT,2023,2026,True,True,4,27,147,18,9,842,3,1.7,3.2,13.3968,-10.1968,4.2875
+9a5f2863,Mohit Rathee,Mohit Rathee,Bowler,Auction file,Indian,PBKS,2023,2023,True,True,1,1,1,0,0,4,2,0.5,0.5,0.0559,0.4441,0.1204
+759ac88f,Mohit Sharma,MM Sharma,Bowler,Auction file,Indian,DC,2013,2025,True,True,11,120,125,134,29,4595,7,19.1,28.1,40.8292,-12.7292,1.2139
+c33d8116,Mohsin Khan,Mohsin Khan,Bowler,Auction file,Indian,LSG,2022,2026,True,True,4,31,25,38,4,1292,3,0.6,1,12.7033,-11.7033,10.9987
+32198ae0,Moises Henriques,MC Henriques,All-Rounder,Auction file,Overseas,PBKS,2013,2021,True,True,6,57,951,39,26,2558,4,7.82,10.82,21.3977,-10.5777,2.4478
+fb24e76c,Monu Kumar,Monu Kumar,Bowler,Derived from stats,Unknown,CSK,2020,2020,True,False,1,1,0,0,0,4,,,,,,
+A_monu_singh,Monu Singh,,Bowler,Auction file,Indian,CSK,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+5bb5a915,Morne Morkel,M Morkel,Bowler,Auction file,Overseas,KKR,2013,2016,True,True,4,39,66,39,7,1546,1,2.8,8.4,9.6076,-1.2076,1.1336
+4a8a2e3b,MS Dhoni,MS Dhoni,Wicket-Keeper,Derived from stats,Unknown,CSK,2013,2025,True,False,13,200,3656,0,126,5842,,,,,,
+7d92277a,Mujeeb Ur Rahman,Mujeeb Ur Rahman,Bowler,Auction file,Overseas,MI,2018,2025,True,True,5,20,12,20,2,686,3,7.5,15.5,7.7112,7.7888,0.4951
+765a4731,Mukesh Choudhary,Mukesh Choudhary,Bowler,Auction file,Indian,CSK,2022,2026,True,True,4,24,8,25,6,892,2,0.5,1.2,12.6531,-11.4531,10.6925
+2cffab74,Mukesh Kumar,Mukesh Kumar,Bowler,Auction file,Overseas,DC,2023,2026,True,True,4,42,10,42,12,1461,2,13.5,27,22.8935,4.1065,0.8613
+1c84109e,Mukul Choudhary,MD Choudhary,Batter,Derived from stats,Indian,LSG,2026,2026,True,True,1,10,170,0,3,229,1,2.6,2.6,3.7921,-1.1921,1.4585
+f0f628c7,Munaf Patel,MM Patel,Bowler,Auction file,Indian,GL,2013,2017,True,True,2,6,0,4,0,144,1,0.3,0.3,0.2615,0.0385,0.8718
+abfeb126,Murali Kartik,M Kartik,Bowler,Auction file,Indian,PBKS,2013,2014,True,True,2,13,2,10,5,376,1,1,1,0.349,0.651,0.349
+4b57e452,Murali Vijay,M Vijay,Batter,Auction file,Indian,CSK,2013,2020,True,True,7,57,1331,0,23,1723,3,10,17,10.9706,6.0294,0.717
+e2db2409,Murugan Ashwin,M Ashwin,Bowler,Auction file,Indian,RR,2016,2023,True,True,7,44,35,35,8,1276,6,9.7,10.1,14.4585,-4.3585,1.1239
+d621b427,Musheer Khan,Musheer Khan,All-Rounder,Auction file,Indian,PBKS,2025,2025,True,True,1,1,0,1,0,26,1,0.3,0.3,0.4501,-0.1501,1.5002
+0a8fce53,Mustafizur Rahman,Mustafizur Rahman,Bowler,Auction file,Overseas,DC,2016,2025,True,True,8,60,13,65,7,2207,6,17.8,21.2,23.9833,-2.7833,1.3537
+4ba44e19,Muttiah Muralitharan,M Muralitharan,Bowler,Auction file,Overseas,RCB,2013,2014,True,True,2,11,0,6,1,253,1,1,1,0.9091,0.0909,0.9091
+bd54eef5,N. Jagadeesan,N Jagadeesan,Wicket-Keeper,Auction file,Indian,KKR,2020,2023,True,True,3,13,162,0,1,195,3,1.3,1.7,2.5806,-0.8806,1.4438
+b0482a1d,N. Tilak Varma,Tilak Varma,All-Rounder,Auction file,Indian,MI,2022,2026,True,True,5,68,1858,0,44,2567,1,1.7,5.1,21.8617,-16.7617,4.2812
+fffa744b,Naman Dhir,Naman Dhir,All-Rounder,Auction file,Overseas,MI,2024,2026,True,True,3,37,710,0,24,1058,2,5.45,10.7,17.4883,-6.7883,1.6674
+890946a0,Naman Ojha,NV Ojha,Wicket-Keeper,Auction file,Indian,DC,2013,2018,True,True,6,59,594,0,37,1062,2,1.9,3.4,8.2884,-4.8884,2.9366
+A_naman_tiwari,Naman Tiwari,,Unknown,Derived from stats,Indian,LSG,,,False,True,,0,0,0,0,0,1,1,1,0,1,0
+465aa633,Nandre Burger,N Burger,Bowler,Auction file,Overseas,RR,2024,2026,True,True,2,18,14,21,6,749,1,0.5,0.5,3.5953,-3.0953,7.1907
+56ab442f,Nathan Coulter-Nile,NM Coulter-Nile,Bowler,Auction file,Overseas,RR,2013,2022,True,True,8,39,82,48,12,1792,7,27.38,35.88,15.8723,20.0077,0.4285
+9eb1455b,Nathan Ellis,NT Ellis,Bowler,Auction file,Overseas,CSK,2021,2025,True,True,5,17,19,19,3,644,2,2.75,4.25,8.0433,-3.7933,1.9919
+5673a3fc,Nathan McCullum,,Bowler,Auction file,Overseas,SRH,,,True,True,,0,0,0,0,0,1,0.54,0.54,0,0.54,0
+b822e99c,Nathu Singh,NB Singh,Bowler,Auction file,Indian,GL,2017,2017,True,True,1,2,0,1,0,41,3,3.9,3.9,0.2979,3.6021,0.0784
+21d4e29b,Navdeep Saini,Navdeep Saini,Bowler,Auction file,Indian,KKR,2019,2026,True,True,6,34,33,23,8,965,3,5.7,17.3,11.7309,5.5691,0.7047
+c0c411cb,Naveen Ul Haq,Naveen-ul-Haq,Bowler,Auction file,Overseas,LSG,2023,2024,True,True,2,18,18,25,6,839,1,0.5,1,12.1561,-11.1561,12.1421
+d1a60072,Nehal Wadhera,N Wadhera,Batter,Auction file,Indian,PBKS,2023,2026,True,True,4,45,784,0,14,1055,2,4.4,8.8,16.752,-7.952,2.0168
+44afbf2d,Nic Maddinson,NJ Maddinson,Batter,Auction file,Overseas,RCB,2014,2015,True,True,2,3,20,0,1,32,1,0.5,1,0.2591,0.7409,0.2494
+3241e3fd,Nicholas Pooran,N Pooran,Wicket-Keeper,Auction file,Overseas,LSG,2019,2026,True,True,8,104,2527,0,45,3511,4,31.25,55.65,32.7725,22.8775,0.6032
+96513a65,Nidheesh M D Dinesan,,Bowler,Auction file,Indian,MI,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+aedc3b7c,Nikhil Shankar Naik,NS Naik,Wicket-Keeper,Auction file,Indian,KKR,2016,2020,True,True,3,4,31,0,3,63,3,0.7,1,0.5695,0.4305,0.5761
+3cea23da,Nishant Sindhu,N Sindhu,All-Rounder,Auction file,Indian,GT,2026,2026,True,True,1,8,63,0,3,98,2,0.9,1.2,1.6228,-0.4228,1.2341
+aad0c365,Nitish Kumar Reddy,Nithish Kumar Reddy,Wicket-Keeper,Auction file,Indian,SRH,2023,2026,True,True,4,42,787,13,23,1546,1,0.2,0.4,7.7257,-7.3257,19.1405
+fb2d1dda,Nitish Rana,N Rana,All-Rounder,Auction file,Indian,DC,2016,2026,True,True,11,127,3078,10,29,4228,4,15.7,42.1,47.3073,-5.2073,1.2956
+efc04be7,Noor Ahmad,Noor Ahmad,Bowler,Auction file,Overseas,CSK,2023,2026,True,True,4,51,31,61,13,2049,2,10.3,20.9,32.5784,-11.6784,1.6371
+ee1b6c27,Nuwan Thushara,N Thushara,Bowler,Auction file,Overseas,RCB,2024,2025,True,True,2,8,0,9,1,300,2,6.4,6.4,4.5592,1.8408,0.7211
+7bf96684,OA Shah,OA Shah,Batter,Derived from stats,Unknown,RR,2013,2013,True,False,1,2,25,0,0,27,,,,,,
+529eb9e0,Obed Mccoy,OC McCoy,Bowler,Auction file,Overseas,RR,2022,2023,True,True,2,8,8,11,1,343,1,0.75,1.5,4.3469,-2.8469,2.9278
+23cca426,Odean Smith,OF Smith,All-Rounder,Auction file,Overseas,PBKS,2022,2022,True,True,1,6,51,6,2,270,2,6.5,6.5,3.4197,3.0803,0.5269
+A_onkar_tarmale,Onkar Tarmale,,Unknown,Derived from stats,Indian,SRH,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+c6097d68,Oshane Thomas,O Thomas,Bowler,Auction file,Overseas,RR,2019,2019,True,True,1,4,0,5,1,155,2,1.6,1.6,1.8928,-0.2928,1.1588
+2461eef2,PA Reddy,PA Reddy,Batter,Derived from stats,Unknown,SRH,2013,2013,True,False,1,7,91,0,2,122,,,,,,
+3bc10d5b,Pankaj Jaswal,,All-Rounder,Auction file,Overseas,MI,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+e32d22f6,Pankaj Singh,,Bowler,Auction file,Indian,RCB,,,True,True,,0,0,0,0,0,1,0.81,0.81,0,0.81,0
+2728e7e9,Paras Dogra,P Dogra,Batter,Auction file,Indian,KKR,2013,2013,True,True,1,1,5,0,1,13,1,0.1,0.1,0,0.1,0
+9a0146b3,Pardeep Sahu,P Sahu,Bowler,Auction file,Indian,PBKS,2016,2016,True,True,1,5,19,3,0,124,3,0.4,0.4,0.9891,-0.5891,3.147
+b5da6c24,Parthiv Patel,PA Patel,Wicket-Keeper,Auction file,Indian,RCB,2013,2019,True,True,7,85,1936,0,47,2866,2,3.1,4.8,11.5753,-6.7753,2.3863
+9170ff49,Parveez Rasool,Parvez Rasool,All-Rounder,Auction file,Indian,RCB,2013,2016,True,True,4,11,17,4,3,204,1,0.95,1.9,0.6931,1.2069,0.3628
+1a0c3177,Parvinder Awana,P Awana,Bowler,Auction file,Indian,PBKS,2013,2014,True,True,2,21,1,22,1,747,1,0.65,0.65,1.8344,-1.1844,2.8222
+ded9240e,Pat Cummins,PJ Cummins,All-Rounder,Auction file,Overseas,SRH,2014,2026,True,True,9,80,642,87,22,3818,6,54.15,70.65,32.9435,37.7065,0.4762
+8ee36b18,Pathum Nissanka,P Nissanka,Batter,Derived from stats,Overseas,DC,2026,2026,True,True,1,10,278,0,2,351,1,4,4,5.8124,-1.8124,1.4531
+436b8481,Pavan Deshpande,,All-Rounder,Auction file,Indian,RCB,,,True,True,,0,0,0,0,0,2,0.4,0.4,0,0.4,0
+f62772e5,Pawan Negi,P Negi,All-Rounder,Auction file,Indian,RCB,2013,2020,True,True,7,42,329,27,16,1408,5,11.1,12.2,11.2397,0.9603,0.9393
+cedc1d9a,Pawan Suyal,P Suyal,Bowler,Auction file,Indian,MI,2013,2015,True,True,3,5,0,2,1,97,2,0.2,0.3,0.4356,-0.1356,1.4202
+25eeb281,PC Valthaty,PC Valthaty,Batter,Derived from stats,Unknown,PBKS,2013,2013,True,False,1,1,6,0,0,6,,,,,,
+ada15e88,Peter Handscomb,PSP Handscomb,Wicket-Keeper,Auction file,Overseas,RPS,2016,2016,True,True,1,2,6,0,0,6,1,0.3,0.3,0.0479,0.2521,0.1595
+3d284ca3,Phil Salt,PD Salt,Wicket-Keeper,Auction file,Overseas,RCB,2023,2026,True,True,4,40,1258,0,32,1822,2,13.5,25,19.0568,5.9432,0.7836
+004c9e85,Philip Hughes,,Batter,Auction file,Overseas,MI,,,True,True,,0,0,0,0,0,1,0.54,0.54,0,0.54,0
+98ae73b1,Piyush Chawla,PP Chawla,Bowler,Auction file,Indian,MI,2013,2024,True,True,11,121,287,119,22,4320,5,18.1,35.55,42.1969,-6.6469,0.9688
+9418198b,Prabhsimran Singh,P Simran Singh,Wicket-Keeper,Auction file,Indian,PBKS,2019,2026,True,True,8,66,1865,0,13,2383,3,5.95,7.7,13.4665,-5.7665,1.3637
+9fc0ef64,Pradeep Sangwan,PJ Sangwan,All-Rounder,Auction file,Indian,GT,2013,2022,True,True,5,13,8,8,2,315,3,1.9,2.1,2.8057,-0.7057,1.526
+ece7b6b3,Praful Hinge,PP Hinge,Bowler,Derived from stats,Indian,SRH,2026,2026,True,True,1,7,3,14,3,439,1,0.3,0.3,7.2696,-6.9696,24.232
+6c6591ab,Pragyan Ojha,PP Ojha,Bowler,Auction file,Indian,MI,2013,2015,True,True,3,29,6,20,2,752,2,3.75,3.75,1.6801,2.0699,0.4415
+ddb00822,Prasanth Padmanabhan,,All-Rounder,Auction file,Indian,SRH,,,True,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+A_prasanth_parameswaran,Prasanth Parameswaran,,Bowler,Auction file,Indian,SRH,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+8ac93ca2,Prashant Chopra,P Chopra,Wicket-Keeper,Auction file,Indian,RR,2018,2019,True,True,2,2,8,0,1,18,1,0.2,0.4,0.2138,0.1862,0.5331
+c695b423,Prashant Solanki,PH Solanki,Bowler,Auction file,Indian,CSK,2022,2022,True,True,1,2,0,2,0,62,2,1.5,1.5,0.7853,0.7147,0.5415
+e148e6bd,Prashant Veer,PR Veer,All-Rounder,Derived from stats,Indian,CSK,2026,2026,True,True,1,6,90,0,0,111,1,14.2,14.2,1.8381,12.3619,0.1294
+85e0cf10,Prasidh Krishna,M Prasidh Krishna,Bowler,Auction file,Indian,GT,2018,2026,True,True,7,78,15,90,19,3147,2,19.5,29,31.7522,-2.7522,1.086
+f9f21866,Pratham Singh,,Batter,Auction file,Indian,KKR,,,True,True,,0,0,0,0,0,2,0.3,0.3,0,0.3,0
+456af189,Pratyush Singh,,All-Rounder,Auction file,Indian,DC,,,True,True,,0,0,0,0,0,2,0.2,0.2,0,0.2,0
+e938e1bc,Praveen Kumar,P Kumar,Bowler,Auction file,Indian,GL,2013,2017,True,True,5,52,97,37,6,1565,2,5.7,9.2,7.0644,2.1356,0.7688
+ed5a5510,Pravin Dubey,P Dubey,All-Rounder,Auction file,Indian,PBKS,2020,2026,True,True,3,5,23,2,4,131,5,1.55,2.05,1.6183,0.4317,0.582
+6aed7e79,Pravin Tambe,PV Tambe,Bowler,Auction file,Indian,GL,2013,2016,True,True,4,33,18,28,4,966,4,0.6,0.7,7.3791,-6.6791,11.4217
+441c72ae,Prayas Ray Barman,P Ray Barman,All-Rounder,Auction file,Indian,RCB,2019,2019,True,True,1,1,19,0,0,23,1,1.5,1.5,0.2809,1.2191,0.1872
+663b5e34,Prerak Mankad,PN Mankad,All-Rounder,Auction file,Indian,LSG,2022,2023,True,True,2,6,97,0,6,162,2,0.4,0.4,2.2473,-1.8473,5.568
+A_prince_balwant_rai_singh,Prince Balwant Rai Singh,,All-Rounder,Auction file,Indian,MI,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+A_prince_choudhary,Prince Choudhary,,Bowler,Auction file,Indian,PBKS,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+80b2fb19,Prince Yadav,Prince Yadav,Bowler,Auction file,Indian,LSG,2025,2026,True,True,2,20,5,19,6,703,1,0.3,0.6,11.7547,-11.1547,19.4046
+8b3e9c7c,Prithvi Shaw,PP Shaw,Batter,Auction file,Indian,DC,2018,2024,True,True,7,79,1892,0,18,2396,2,1.95,5.55,19.3813,-13.8313,3.6892
+cfa4bd2b,Prithviraj Yarra,Y Prithvi Raj,Bowler,Auction file,Indian,KKR,2019,2019,True,True,1,2,0,1,0,33,2,0.5,0.5,0.403,0.097,1.05
+bb965e9a,Priyam Garg,PK Garg,Batter,Auction file,Indian,DC,2020,2023,True,True,4,23,273,0,11,395,2,2.1,4,4.4233,-0.4233,1.0578
+b5797845,Priyansh Arya,Priyansh Arya,All-Rounder,Auction file,Indian,PBKS,2025,2026,True,True,2,31,909,0,10,1202,1,3.8,7.6,20.4534,-12.8534,2.7022
+c27b5a0e,PVSN Raju,PVSN Raju,Bowler,Derived from stats,Unknown,MI,2025,2025,True,False,1,2,1,1,1,38,,,,,,
+c96f6ac5,PWA Mulder,PWA Mulder,All-Rounder,Derived from stats,Unknown,SRH,2025,2025,True,False,1,1,9,0,1,19,,,,,,
+A_pyla_avinash,Pyla Avinash,,Batter,Auction file,Indian,PBKS,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+372455c4,Quinton De Kock,Q de Kock,Wicket-Keeper,Auction file,Overseas,MI,2013,2026,True,True,13,118,3441,0,75,4937,6,17.758,38.258,35.3997,2.8583,0.9292
+0184dc35,R Dravid,R Dravid,Batter,Derived from stats,Unknown,RR,2013,2013,True,False,1,18,471,0,3,581,,,,,,
+A_r_samarth,R Samarth,,Batter,Auction file,Indian,SRH,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+5d9a1a73,R Sharma,R Sharma,Bowler,Derived from stats,Unknown,DC,2013,2014,True,False,2,13,11,10,2,373,,,,,,
+c1e53c3f,R Smaran,R Smaran,Batter,Derived from stats,Unknown,SRH,2026,2026,True,False,1,6,19,0,4,54,,,,,,
+c7a995d3,R. Sai Kishore,R Sai Kishore,All-Rounder,Auction file,Overseas,GT,2022,2026,True,True,4,28,18,33,10,1067,3,5.2,13.2,16.944,-3.744,1.2239
+fe93fd9d,RA Jadeja,RA Jadeja,Bowler,Derived from stats,Unknown,RR,2013,2026,True,False,14,208,2622,154,96,8862,,,,,,
+ba5e1069,Rachin Ravindra,R Ravindra,All-Rounder,Auction file,Overseas,CSK,2024,2025,True,True,2,18,413,0,10,576,3,7.8,7.8,9.1503,-1.3503,1.2259
+266849c1,Raghav Goyal,R Goyal,Bowler,Auction file,Indian,MI,2023,2023,True,True,1,1,0,0,1,15,1,0.2,0.2,0.2097,-0.0097,1.0483
+5b615e7c,Raghu Sharma,Raghu Sharma,Bowler,Derived from stats,Unknown,MI,2026,2026,True,False,1,6,0,1,1,56,,,,,,
+0bacade8,Rahmanullah Gurbaz,Rahmanullah Gurbaz,Wicket-Keeper,Auction file,Overseas,KKR,2023,2025,True,True,3,18,363,0,17,583,1,2,2,1.8349,0.1651,0.9174
+70a9b353,Rahul Buddhi,,Batter,Auction file,Indian,MI,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+2ed569a0,Rahul Chahar,RD Chahar,Bowler,Auction file,Indian,CSK,2017,2026,True,True,9,80,129,75,25,2823,5,15.65,31.85,35.4619,-3.6119,1.2906
+714cf6e4,Rahul Sharma,,Bowler,Auction file,Indian,CSK,,,True,True,,0,0,0,0,0,2,2.2,2.2,0,2.2,0
+de4b0555,Rahul Shukla,R Shukla,Bowler,Auction file,Indian,DC,2013,2014,True,True,2,6,19,5,3,226,1,0.4,0.4,0.9091,-0.5091,2.2727
+39a2dfa8,Rahul Tewatia,R Tewatia,All-Rounder,Auction file,Indian,GT,2014,2026,True,True,12,124,1302,32,47,2994,4,12.35,33.45,17.4435,16.0065,0.5983
+77255a9e,Rahul Tripathi,RA Tripathi,Batter,Auction file,Indian,CSK,2017,2025,True,True,9,100,2291,0,34,2968,6,16.75,37.75,34.9307,2.8193,1.1417
+ba6b2f91,Raj Angad Bawa,RA Bawa,All-Rounder,Auction file,Indian,MI,2022,2026,True,True,3,8,35,2,6,148,2,2.3,2.6,2.4326,0.1674,0.8263
+626c5379,Rajagopal Sathish,R Sathish,All-Rounder,Auction file,Indian,KKR,2013,2016,True,True,2,13,133,1,3,238,1,0.2,0.2,0.7658,-0.5658,3.8289
+cd474693,Rajan Kumar,,Bowler,Auction file,Indian,RCB,,,True,True,,0,0,0,0,0,1,0.7,0.7,0,0.7,0
+33a364a6,Rajat Bhatia,R Bhatia,All-Rounder,Auction file,Indian,RPS,2013,2017,True,True,5,42,216,31,9,1297,2,2.3,4.6,6.7659,-2.1659,1.4317
+c740ea83,Rajat Patidar,RM Patidar,Batter,Auction file,Indian,RCB,2021,2026,True,True,5,57,1612,0,20,2098,1,0.2,0.2,1.0353,-0.8353,5.1766
+c3c92b42,Rajvardhan Hangargekar,RS Hangargekar,All-Rounder,Auction file,Indian,CSK,2023,2023,True,True,1,2,0,3,0,89,2,1.8,3.3,1.244,2.056,0.3774
+dee07622,Ramakrishna Ghosh,RS Ghosh,All-Rounder,Auction file,Indian,CSK,2026,2026,True,True,1,1,0,1,1,39,1,0.3,0.6,0.6458,-0.0458,1.0579
+be24ead0,Ramandeep Singh,Ramandeep Singh,All-Rounder,Auction file,Indian,KKR,2022,2026,True,True,4,38,299,7,22,731,2,0.4,0.4,6.2168,-5.8168,15.5186
+A_ramesh_kumar,Ramesh Kumar,,Batter,Auction file,Indian,KKR,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+41eb4a4f,Ranganath Vinay Kumar,R Vinay Kumar,Bowler,Auction file,Indian,KKR,2013,2018,True,True,6,44,93,44,17,1709,2,3.8,3.8,3.0186,0.7814,0.7776
+5f547c8b,Rashid Khan,Rashid Khan,Bowler,Auction file,Overseas,GT,2017,2026,True,True,10,153,635,179,53,7017,2,13,40,38.742,1.258,0.977
+b8527c3d,Rasikh Dar,Rasikh Salam,Bowler,Auction file,Indian,RCB,2019,2026,True,True,5,25,43,29,6,977,4,6.6,12.6,15.5565,-2.9565,1.2673
+9948e262,Rassie Van Der Dussen,HE van der Dussen,Batter,Auction file,Overseas,RR,2022,2022,True,True,1,3,22,0,0,30,1,1,1,0.38,0.62,0.38
+df064e1a,Ravi Bishnoi,Ravi Bishnoi,Bowler,Auction file,Indian,RR,2020,2026,True,True,7,86,45,83,31,3016,2,9.2,11.2,15.9336,-4.7336,1.6405
+7ca5e05d,Ravi Bopara,RS Bopara,All-Rounder,Auction file,Indian,SRH,2015,2015,True,True,1,9,145,6,2,369,1,1,1,2.9481,-1.9481,2.9481
+d68e7f48,Ravi Rampaul,R Rampaul,Bowler,Auction file,Overseas,RCB,2013,2014,True,True,2,12,51,14,4,574,2,2.466,2.466,5.2255,-2.7595,2.7267
+548516a6,Ravi Singh,Ravi Singh,Batter,Derived from stats,Indian,RR,2026,2026,True,True,1,1,4,0,0,11,1,0.95,0.95,0.1822,0.7678,0.1917
+495d42a5,Ravichandran Ashwin,R Ashwin,All-Rounder,Auction file,Indian,CSK,2013,2025,True,True,12,171,775,138,39,5879,3,22.35,39.95,40.3737,-0.4237,1.0014
+05c2ca46,RE van der Merwe,RE van der Merwe,Bowler,Derived from stats,Unknown,DC,2013,2013,True,False,1,3,22,3,0,124,,,,,,
+8db7f47f,Reece Topley,RJW Topley,Bowler,Auction file,Overseas,MI,2023,2025,True,True,3,6,3,5,2,188,2,2.65,4.55,2.808,1.742,0.619
+740742ef,RG Sharma,RG Sharma,Batter,Derived from stats,Unknown,MI,2013,2026,True,False,14,203,5354,1,60,6884,,,,,,
+b63e358a,Ricky Bhui,RK Bhui,Wicket-Keeper,Auction file,Indian,DC,2018,2024,True,True,3,4,10,0,0,10,3,0.5,0.7,0.1302,0.5698,0.1713
+7d415ea5,Ricky Ponting,RT Ponting,Batter,Auction file,Overseas,MI,2013,2013,True,True,1,6,52,0,2,73,1,2.16,2.16,0.6727,1.4873,0.3114
+cad00a4d,Rilee Rossouw,RR Rossouw,Batter,Auction file,Overseas,PBKS,2014,2024,True,True,4,22,473,0,10,648,2,12.6,12.6,8.1281,4.4719,0.6464
+64775749,Riley Meredith,RP Meredith,Bowler,Auction file,Overseas,MI,2021,2023,True,True,3,18,0,19,2,647,2,9,10,8.3655,1.6345,0.6835
+0a509d6b,Rinku Singh,RK Singh,Batter,Auction file,Indian,KKR,2018,2026,True,True,8,72,1394,0,51,2068,3,1.45,4.15,17.9067,-13.7567,3.5472
+60500956,Ripal Patel,RV Patel,All-Rounder,Auction file,Indian,DC,2021,2023,True,True,3,9,80,0,3,119,2,0.4,0.6,1.5516,-0.9516,2.5553
+919a3be2,Rishabh Pant,RR Pant,Batter,Auction file,Indian,LSG,2016,2026,True,True,10,139,3865,0,90,5626,2,28.9,57.8,20.0635,37.7365,0.4712
+26a85969,Rishi Dhawan,R Dhawan,All-Rounder,Auction file,Indian,PBKS,2013,2024,True,True,7,39,210,25,13,1207,3,4.1,11.2,10.3272,0.8728,0.7365
+04a418e8,Riyan Parag,R Parag,All-Rounder,Auction file,Indian,RR,2019,2026,True,True,8,97,1875,9,49,2932,2,4,12,24.4444,-12.4444,2.2255
+402f8494,RJ Gleeson,RJ Gleeson,Bowler,Derived from stats,Unknown,MI,2024,2025,True,False,2,3,2,2,0,77,,,,,,
+12eddf28,RJ Harris,RJ Harris,Bowler,Derived from stats,Unknown,PBKS,2013,2013,True,False,1,3,2,1,0,69,,,,,,
+bafd0398,Robin Minz,R Minz,Wicket-Keeper,Auction file,Indian,MI,2025,2026,True,True,2,4,12,0,0,13,2,4.25,4.9,0.2198,4.6802,0.0408
+1c17e270,Robin Uthappa,RV Uthappa,Batter,Auction file,Indian,CSK,2013,2022,True,True,10,130,3414,0,51,4825,4,16.4,37.8,38.2001,-0.4001,1.0098
+c5aef772,Romario Shepherd,R Shepherd,All-Rounder,Auction file,Overseas,RCB,2022,2026,True,True,5,33,268,17,7,922,3,9.75,11.25,12.9097,-1.6597,1.0462
+b2b23612,Ronit More,RG More,Bowler,Auction file,Indian,CSK,2015,2015,True,True,1,2,2,1,1,40,1,0.1,0.2,0.3196,-0.1196,1.6848
+b61a3e1a,Ross Taylor,LRPL Taylor,Batter,Auction file,Overseas,DC,2013,2014,True,True,2,9,122,0,4,164,1,2,2,0.6575,1.3425,0.3287
+650d5e49,Rovman Powell,R Powell,Batter,Auction file,Overseas,KKR,2017,2026,True,True,5,39,555,1,26,906,4,12,16.3,13.0381,3.2619,0.7683
+c3d1402f,Rudra Pratap Singh,RP Singh,Bowler,Auction file,Indian,RPS,2013,2016,True,True,2,15,0,16,4,559,2,2.46,2.46,5.0185,-2.5585,1.9609
+45a43fe2,Ruturaj Gaikwad,RD Gaikwad,Batter,Auction file,Indian,CSK,2020,2026,True,True,7,85,2839,0,44,3683,1,0.2,0.6,12.4066,-11.8066,20.709
+b2570b38,RV Gomez,RV Gomez,Bowler,Derived from stats,Unknown,PWI,2013,2013,True,False,1,2,4,0,2,25,,,,,,
+c654af19,Ryan McLaren,R McLaren,Bowler,Auction file,Overseas,KKR,2013,2013,True,True,1,2,3,3,1,104,1,0.27,0.27,0.9583,-0.6883,3.5493
+e66732f8,Ryan Rickelton,RD Rickelton,Wicket-Keeper,Auction file,Overseas,MI,2025,2026,True,True,2,26,836,0,20,1268,1,1,2,21.4787,-19.4787,10.7455
+4ec07775,Ryan Ten Doeschate,RN ten Doeschate,All-Rounder,Auction file,Overseas,KKR,2013,2015,True,True,3,20,198,1,5,335,1,1,2,1.8136,0.1864,0.9009
+957532de,S Aravind,S Aravind,Bowler,Derived from stats,Unknown,RCB,2015,2017,True,False,3,24,32,24,5,850,,,,,,
+97290faf,S Joseph,S Joseph,Bowler,Derived from stats,Unknown,LSG,2024,2024,True,False,1,1,0,0,0,12,,,,,,
+6b8eb6e5,S Sreesanth,S Sreesanth,Bowler,Derived from stats,Unknown,RR,2013,2013,True,False,1,7,1,5,0,197,,,,,,
+dc9dd038,Sachin Baby,Sachin Baby,Batter,Auction file,Indian,SRH,2013,2025,True,True,5,20,144,2,5,278,4,0.8,0.9,2.0212,-1.1212,3.6391
+90edaaa9,Sachin Rana,S Rana,Bowler,Auction file,Indian,RCB,2014,2014,True,True,1,9,73,0,3,109,1,0.2,0.2,0.8847,-0.6847,4.4237
+4c4fa80b,Sachithra Senanayake,SMSM Senanayake,All-Rounder,Auction file,Overseas,KKR,2013,2013,True,True,1,8,10,9,2,326,1,3.375,3.375,3.0039,0.3711,0.8901
+8da6dbf1,Sagar Trivedi,,All-Rounder,Auction file,Indian,RR,,,True,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+926c7443,Sahil Parakh,SU Parakh,Batter,Derived from stats,Indian,DC,2026,2026,True,True,1,4,46,0,1,63,1,0.3,0.3,1.0432,-0.7432,3.4775
+280fff14,Sakib Hussain,Sakib Hussain,Bowler,Auction file,Indian,SRH,2026,2026,True,True,1,11,5,15,1,476,2,0.5,0.5,7.8823,-7.3823,14.8624
+d7423da1,Salil Arora,S Arora,Batter,Derived from stats,Indian,SRH,2026,2026,True,True,1,14,156,0,3,213,1,1.5,1.5,3.5272,-2.0272,2.3514
+c16d4035,Sam Billings,SW Billings,Wicket-Keeper,Auction file,Overseas,KKR,2016,2022,True,True,5,30,503,0,19,753,4,5.3,6.6,7.7177,-1.1177,1.3009
+e94915e6,Sam Curran,SM Curran,All-Rounder,Auction file,Overseas,CSK,2019,2025,True,True,6,64,997,59,25,3259,4,33.6,57.6,43.7944,13.8056,0.7878
+34819e70,Samarth Vyas,,All-Rounder,Auction file,Indian,SRH,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+f89d3b11,Sameer Rizvi,Sameer Rizvi,All-Rounder,Auction file,Indian,DC,2024,2026,True,True,3,25,424,0,9,584,2,9.35,10.3,9.643,0.657,0.8569
+76388dc8,Samuel Badree,S Badree,Bowler,Auction file,Overseas,RCB,2013,2017,True,True,3,12,13,11,2,418,2,0.8,1.3,3.0569,-1.7569,2.3548
+A_sandeep_bavanaka,Sandeep Bavanaka,,All-Rounder,Auction file,Overseas,SRH,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+b410bd3d,Sandeep Lamichhane,S Lamichhane,Bowler,Auction file,Overseas,DC,2018,2019,True,True,2,9,0,13,2,418,1,0.2,0.4,5.0116,-4.6116,12.6396
+ce820073,Sandeep Sharma,Sandeep Sharma,Bowler,Auction file,Indian,RR,2013,2026,True,True,14,142,60,151,25,5312,3,4.35,15.9,35.8718,-19.9718,2.5856
+cdc6bdba,Sandeep Warrier,S Sandeep Warrier,Bowler,Auction file,Indian,GT,2019,2024,True,True,4,10,0,8,1,283,1,0.1,0.1,0,0.1,0
+33ffc3dd,Sanjay Yadav,R Sanjay Yadav,All-Rounder,Auction file,Indian,MI,2022,2022,True,True,1,1,0,0,0,6,3,0.8,0.8,0.076,0.724,0.0745
+a4cc73aa,Sanju Samson,SV Samson,Wicket-Keeper,Auction file,Indian,CSK,2013,2026,True,True,14,190,5181,0,90,7203,2,12.2,40.4,32.4204,7.9796,0.7993
+b0f2baf4,Sanvir Singh,Sanvir Singh,All-Rounder,Auction file,Indian,SRH,2023,2024,True,True,2,6,25,0,3,53,1,0.2,0.4,0.7775,-0.3775,1.9345
+fb693839,Sarabjit Ladda,S Ladda,Bowler,Auction file,Indian,GL,2013,2016,True,True,2,2,0,1,0,31,1,0.1,0.1,0.0239,0.0761,0.2393
+f088b960,Sarfaraz Khan,SN Khan,All-Rounder,Auction file,Indian,CSK,2015,2026,True,True,9,58,746,0,16,1018,4,1.7,2.9,11.8327,-8.9327,3.3473
+d7cdefa9,Sarthak Ranjan,,Unknown,Derived from stats,Indian,KKR,,,True,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+A_satvik_deswal,Satvik Deswal,,Unknown,Derived from stats,Indian,RCB,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+66317b81,Saurabh Dubey,,Bowler,Auction file,Indian,SRH,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+A_saurabh_kumar,Saurabh Kumar,,All-Rounder,Auction file,Indian,PBKS,,,False,True,,0,0,0,0,0,2,0.3,0.3,0,0.3,0
+709b0bac,Saurabh Tiwary,SS Tiwary,Batter,Auction file,Indian,MI,2013,2021,True,True,6,39,658,0,13,873,4,2.3,3.5,4.8541,-1.3541,1.3636
+9e7225b0,Saurav Chauhan,Saurav Chauhan,Batter,Auction file,Indian,RCB,2024,2024,True,True,1,3,18,0,0,21,1,0.2,0.2,0.3133,-0.1133,1.5664
+d4b8ea98,Sayan Ghosh,,Bowler,Auction file,Indian,DC,,,True,True,,0,0,0,0,0,2,0.3,0.3,0,0.3,0
+c14721ab,Sayan Sekhar Mandal,,All-Rounder,Auction file,Indian,KKR,,,True,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+fef92afc,SC Kuggeleijn,SC Kuggeleijn,Bowler,Derived from stats,Unknown,CSK,2019,2019,True,False,1,2,0,2,0,67,,,,,,
+d167edd3,Scott Boland,SM Boland,Bowler,Auction file,Overseas,RPS,2016,2016,True,True,1,2,0,2,0,65,1,0.5,0.5,0.5185,-0.0185,1.037
+1a2676c5,Sean Abbott,SA Abbott,Bowler,Auction file,Overseas,SRH,2015,2022,True,True,2,3,22,1,1,73,2,3.4,3.4,0.8124,2.5876,0.2256
+3c28853f,Sediqullah Atal,Sediqullah Atal,Batter,Derived from stats,Unknown,DC,2025,2025,True,False,1,1,22,0,0,26,,,,,,
+c8179c68,Shadab Jakati,SB Jakati,All-Rounder,Auction file,Indian,GL,2014,2017,True,True,3,9,1,2,4,130,2,0.4,0.6,1.0347,-0.4347,1.7642
+f9e6e7ef,Shahbaz Ahmed,Shahbaz Ahmed,All-Rounder,Auction file,Indian,LSG,2020,2026,True,True,7,63,603,27,21,1723,3,5,10,16.2785,-6.2785,1.8373
+9d80c5e1,Shahbaz Nadeem,S Nadeem,Bowler,Auction file,Indian,SRH,2013,2021,True,True,9,55,39,36,13,1402,3,4.55,7.1,6.2015,0.8985,1.0199
+7dcb9bc9,Shahrukh Khan,M Shahrukh Khan,All-Rounder,Auction file,Indian,GT,2021,2026,True,True,6,64,775,1,28,1188,3,21.65,30.65,11.1357,19.5143,0.37
+1fc6ef83,Shai Hope,SD Hope,Wicket-Keeper,Auction file,Overseas,DC,2024,2024,True,True,1,9,183,0,6,273,1,0.75,0.75,4.0727,-3.3227,5.4303
+cbf58a86,Shaik Rasheed,SK Rasheed,Batter,Auction file,Indian,CSK,2023,2025,True,True,1,5,71,0,2,100,2,0.5,0.5,1.7044,-1.2044,3.2632
+7dc35884,Shakib Al Hasan,Shakib Al Hasan,All-Rounder,Auction file,Overseas,KKR,2014,2021,True,True,7,56,673,40,13,2302,4,9.5,19.9,22.4151,-2.5151,1.0455
+A_shamar_joseph,Shamar Joseph,,Bowler,Auction file,Overseas,LSG,,,False,True,,0,0,0,0,0,1,0.75,0.75,0,0.75,0
+9d704f6f,Shams Mulani,SZ Mulani,All-Rounder,Auction file,Indian,MI,2024,2024,True,True,1,2,1,0,0,8,1,0.2,0.4,0.1193,0.2807,0.2955
+4329fbb5,Shane Watson,SR Watson,All-Rounder,Auction file,Overseas,CSK,2013,2020,True,True,8,106,2632,57,29,5312,2,13.5,31,30.4958,0.5042,0.8276
+03c29939,Sharad Lumba,,Batter,Auction file,Indian,MI,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+1abb78f8,Shardul Thakur,SN Thakur,All-Rounder,Auction file,Indian,MI,2015,2026,True,True,11,114,349,119,36,4460,4,17.55,25.55,34.9062,-9.3562,1.4585
+26989d80,Shashank Singh,Shashank Singh,Batter,Auction file,Indian,PBKS,2022,2026,True,True,4,54,905,5,18,1371,4,0.8,0.8,8.9935,-8.1935,8.4339
+508a1ea7,Shaun Marsh,SE Marsh,Batter,Auction file,Overseas,PBKS,2013,2017,True,True,5,29,874,0,8,1078,1,2.2,8.8,5.4226,3.3774,0.6204
+a1d053dd,Sheldon Cottrell,SS Cottrell,Bowler,Auction file,Overseas,PBKS,2020,2020,True,True,1,6,0,6,0,209,1,8.5,8.5,2.4359,6.0641,0.2866
+acc1aeda,Sheldon Jackson,SP Jackson,Wicket-Keeper,Auction file,Indian,KKR,2017,2022,True,True,2,9,61,0,7,160,3,0.95,1.25,1.6754,-0.4254,1.1949
+A_shelley_shaurya,Shelley Shaurya,,Bowler,Auction file,Indian,GL,,,False,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+d014d5ac,Sherfane Rutherford,SE Rutherford,Batter,Auction file,Overseas,MI,2019,2026,True,True,4,31,520,1,7,715,4,7.1,7.1,8.614,-1.514,1.1452
+0a476045,Shikhar Dhawan,S Dhawan,Batter,Auction file,Indian,PBKS,2013,2024,True,True,12,164,5229,0,74,6661,2,13.45,29.95,25.3298,4.6202,0.8825
+48a1d7b7,Shimron Hetmyer,SO Hetmyer,Batter,Auction file,Overseas,RR,2019,2026,True,True,8,94,1560,0,50,2280,3,20.45,45.2,22.5991,22.6009,0.4904
+A_shishir_bhavane,Shishir Bhavane,,Batter,Auction file,Indian,RCB,,,False,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+0ebaa16a,Shivalik Sharma,,All-Rounder,Auction file,Indian,MI,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+a4e37e47,Shivam Dube,S Dube,All-Rounder,Auction file,Indian,CSK,2019,2026,True,True,8,92,2129,6,27,2934,3,13.4,26.4,27.8304,-1.4304,0.9531
+c38d3503,Shivam Mavi,Shivam Mavi,Bowler,Auction file,Indian,GT,2018,2023,True,True,4,32,51,30,18,1226,5,23.4,32.4,14.5576,17.8424,0.5248
+6f49cc6e,Shivam Sharma,Shivam Sharma,Bowler,Auction file,Indian,PBKS,2014,2015,True,True,2,5,5,4,1,151,1,0.1,0.2,1.2221,-1.0221,5.8997
+e1d9ae9c,Shivam Singh,Shivam Singh,All-Rounder,Auction file,Indian,PBKS,2024,2024,True,True,1,1,2,0,2,18,1,0.2,0.4,0.2685,0.1315,0.6649
+7b44eb3e,Shivang Kumar,Shivang Kumar,Bowler,Derived from stats,Indian,SRH,2026,2026,True,True,1,13,53,9,0,361,1,0.3,0.3,5.978,-5.678,19.9265
+1da489ff,Shivil Kaushik,S Kaushik,Bowler,Auction file,Indian,GL,2016,2017,True,True,2,10,0,6,0,222,1,0.1,0.2,1.7559,-1.5559,8.7554
+541f85c9,Shreevats Goswami,SP Goswami,Wicket-Keeper,Auction file,Indian,SRH,2018,2020,True,True,2,8,52,0,7,116,1,1,3,1.3477,1.6523,0.429
+7a8bd078,Shreyas Gopal,S Gopal,Bowler,Auction file,Indian,MI,2014,2024,True,True,9,52,180,52,12,1925,5,1.55,2.35,22.3319,-19.9819,10.4852
+85ec8e33,Shreyas Iyer,SS Iyer,Batter,Auction file,Indian,PBKS,2015,2026,True,True,11,147,4229,0,64,5516,3,41.6,98.05,46.6484,51.4016,0.5357
+A_shrijith_krishnan,Shrijith Krishnan,,Wicket-Keeper,Auction file,Indian,MI,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+A_shrikant_mundhe,Shrikant Mundhe,,All-Rounder,Auction file,Indian,KKR,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+b51f72a5,Shubam Agrawal,SS Agarwal,All-Rounder,Auction file,Indian,GL,2017,2017,True,True,1,1,0,1,1,40,1,0.1,0.1,0.2906,-0.1906,2.9059
+6b2ff18f,Shubham Dubey,SB Dubey,Batter,Auction file,Indian,RR,2024,2026,True,True,3,20,220,0,1,277,2,6.6,7.4,4.6136,2.7864,0.5777
+A_shubham_garhwal,Shubham Garhwal,,All-Rounder,Auction file,Indian,RR,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+6c7a68d0,Shubham Ranjane,,All-Rounder,Auction file,Indian,RR,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+b4b99816,Shubman Gill,Shubman Gill,Batter,Auction file,Indian,GT,2018,2026,True,True,9,134,4598,0,57,5816,1,1.8,7.2,21.3693,-14.1693,3.0024
+dcf81436,Siddharth Kaul,S Kaul,Bowler,Auction file,Indian,RCB,2013,2022,True,True,8,55,20,58,8,1945,4,5.1,16.7,18.4783,-1.7783,1.2261
+9601c534,Siddhesh Dinesh Lad,SD Lad,Batter,Auction file,Indian,MI,2019,2019,True,True,1,1,15,0,0,18,2,0.3,0.5,0.2198,0.2802,0.3926
+26d041c4,Sikandar Raza,Sikandar Raza,All-Rounder,Auction file,Overseas,PBKS,2023,2024,True,True,2,9,182,3,5,347,1,0.5,1,4.8981,-3.8981,4.9306
+30df8c66,Simarjeet Singh,Simarjeet Singh,Bowler,Auction file,Indian,SRH,2022,2025,True,True,3,14,10,11,3,422,2,1.7,2.1,6.0875,-3.9875,3.0844
+1dc12ab9,SK Raina,SK Raina,Batter,Derived from stats,Unknown,CSK,2013,2021,True,False,8,124,3274,5,67,4606,,,,,,
+3d7e087f,SK Trivedi,SK Trivedi,Bowler,Derived from stats,Unknown,RR,2013,2013,True,False,1,17,3,12,4,470,,,,,,
+6ab96cc2,Sonu Yadav,,All-Rounder,Auction file,Indian,RCB,2023,2023,True,True,,0,0,0,0,6,1,0.2,0.2,0.0839,0.1161,0.4193
+9d430b40,SP Narine,SP Narine,Bowler,Derived from stats,Unknown,KKR,2013,2026,True,False,14,186,1811,183,38,8837,,,,,,
+83c3e8e3,Spencer Johnson,SH Johnson,Bowler,Auction file,Overseas,CSK,2024,2026,True,True,3,12,8,7,4,305,2,12.8,12.8,3.413,9.387,0.2641
+11061889,SR Dubey,SR Dubey,Bowler,Derived from stats,Unknown,KKR,2026,2026,True,False,1,4,4,5,0,171,,,,,,
+d2c2b2d5,SR Tendulkar,SR Tendulkar,Batter,Derived from stats,Unknown,MI,2013,2013,True,False,1,14,287,0,4,373,,,,,,
+95a2ea61,Srikkanth Anirudha,S Anirudha,Batter,Auction file,Indian,SRH,2013,2014,True,True,2,2,3,0,0,3,1,0.2,0.2,0.0244,0.1756,0.1218
+8361e524,SSB Magala,SSB Magala,Bowler,Derived from stats,Unknown,CSK,2023,2023,True,False,1,2,0,1,1,39,,,,,,
+30a45b23,Steven Smith,SPD Smith,Batter,Auction file,Overseas,DC,2013,2021,True,True,8,88,2123,0,44,2798,2,6.2,10.2,8.1447,2.0553,0.7552
+bd17b45f,Stuart Binny,STR Binny,All-Rounder,Auction file,Indian,RR,2013,2019,True,True,7,80,745,19,16,1676,2,2.5,5,4.9465,0.0535,0.8826
+0edcb652,Subhranshu Senapati,,Batter,Auction file,Indian,CSK,2023,2023,True,True,,0,0,0,0,6,1,0.2,0.2,0,0.2,0
+3576e47e,Subramaniam Badrinath,S Badrinath,Batter,Auction file,Indian,CSK,2013,2013,True,True,1,18,124,0,1,149,1,0.3,0.3,0,0.3,0
+A_sudeep_tyagi,Sudeep Tyagi,,Bowler,Auction file,Indian,SRH,,,False,True,,0,0,0,0,0,1,0.54,0.54,0,0.54,0
+8998a68f,Sumit Kumar,Sumit Kumar,All-Rounder,Auction file,Indian,DC,2024,2024,True,True,1,4,18,0,1,46,1,1,1,0.6862,0.3138,0.6862
+287686fd,Sumit Narwal,S Narwal,All-Rounder,Auction file,Indian,KKR,2013,2013,True,True,1,2,23,0,0,33,1,0.1,0.1,0,0.1,0
+271f83cd,Suryakumar Yadav,SA Yadav,Batter,Auction file,Indian,MI,2014,2026,True,True,13,178,4581,0,77,6049,2,3.9,15.6,34.0814,-18.4814,2.2216
+970ddd24,Suryansh Shedge,Suryansh Shedge,All-Rounder,Auction file,Indian,PBKS,2025,2026,True,True,2,12,165,0,4,231,1,0.3,0.6,3.8372,-3.2372,6.3016
+A_sushant_marathe,Sushant Marathe,,Wicket-Keeper,Auction file,Indian,MI,,,False,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+A_sushant_mishra,Sushant Mishra (A_sushant_mishra),,Bowler,Auction file,Indian,GT,,,False,True,,0,0,0,0,0,1,2.2,2.2,0,2.2,0
+92500ad5,Sushant Mishra (SS Mishra),SS Mishra,Bowler,Derived from stats,Indian,RR,2026,2026,True,True,1,2,1,2,0,67,1,0.9,0.9,1.1095,-0.2095,1.2328
+9385de2e,Suyash Prabhudessai,SS Prabhudessai,All-Rounder,Auction file,Indian,RCB,2022,2024,True,True,3,11,126,0,10,243,2,0.5,1.1,3.2514,-2.1514,2.7702
+9440ef41,Suyash Sharma,Suyash Sharma,Bowler,Auction file,Indian,RCB,2023,2026,True,True,4,39,0,27,2,960,2,2.8,5.6,15.2331,-9.6331,2.8275
+addfb70e,SW Tait,SW Tait,Bowler,Derived from stats,Unknown,RR,2013,2013,True,False,1,3,1,1,0,51,,,,,,
+983f2f61,Swapnil Singh,Swapnil Singh,All-Rounder,Auction file,Overseas,RCB,2016,2024,True,True,4,14,51,7,3,304,4,1,1.1,4.1126,-3.0126,3.5124
+A_swastik_chhikara,Swastik Chhikara,,Batter,Auction file,Indian,RCB,,,False,True,,0,0,0,0,0,2,0.5,0.5,0,0.5,0
+A_syed_khaleel_ahmed,Syed Khaleel Ahmed (A_syed_khaleel_ahmed),,All-Rounder,Auction file,Indian,DC,,,False,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+a2f46292,Syed Khaleel Ahmed (KK Ahmed),KK Ahmed,Bowler,Auction file,Indian,CSK,2018,2026,True,True,9,76,2,91,5,3050,3,13.05,37.35,42.4497,-5.0997,1.1313
+a03bba42,T Shamsi,T Shamsi,Bowler,Derived from stats,Unknown,RR,2016,2021,True,False,2,5,2,3,1,117,,,,,,
+ce794613,T. Natarajan,T Natarajan,Bowler,Auction file,Indian,DC,2017,2026,True,True,8,74,4,73,11,2433,4,18.15,38.1,32.4754,5.6246,0.9055
+f9d99806,Tajinder Dhillon,,All-Rounder,Auction file,Indian,PBKS,,,True,True,,0,0,0,0,0,2,0.75,0.75,0,0.75,0
+f1809c03,Tanay Thyagarajan,,All-Rounder,Auction file,Indian,PBKS,2024,2024,True,True,,0,0,0,1,14,1,0.2,0.2,0.2089,-0.0089,1.0443
+e6e9b619,Tanmay Agarwal,,Batter,Auction file,Indian,SRH,,,True,True,,0,0,0,0,0,2,0.3,0.3,0,0.3,0
+A_tanmay_mishra,Tanmay Mishra,,Batter,Auction file,Indian,RCB,,,False,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+5724e517,Tanush Kotian,Tanush Kotian,Batter,Derived from stats,Unknown,RR,2024,2024,True,False,1,1,24,0,0,33,,,,,,
+c28e9f12,Tejas Baroka,Tejas Baroka,Bowler,Auction file,Indian,GL,2017,2017,True,True,1,1,0,0,0,6,2,0.3,0.3,0.0436,0.2564,0.2332
+f12fe2a1,Tejasvi Singh,T Dahiya,Batter,Derived from stats,Indian,KKR,2026,2026,True,True,1,2,12,0,1,22,1,3,3,0.3643,2.6357,0.1214
+0f12f9df,Thisara Perera,NLTC Perera,All-Rounder,Auction file,Overseas,RPS,2013,2016,True,True,3,30,395,29,10,1504,3,6.245,7.845,13.1736,-5.3286,2.0962
+f1f99156,Tim David,TH David,All-Rounder,Auction file,Overseas,RCB,2021,2026,True,True,6,66,1151,0,32,1674,2,11.25,30.75,25.357,5.393,0.7924
+4663bd23,Tim Seifert,TL Seifert,Wicket-Keeper,Auction file,Overseas,KKR,2021,2026,True,True,3,6,45,0,3,95,2,2,2,1.3998,0.6002,0.71
+13c35c9e,Tim Southee,TG Southee,Bowler,Auction file,Overseas,KKR,2014,2023,True,True,9,49,120,43,23,1838,4,6.2,12.4,17.5625,-5.1625,1.219
+aaa1b522,Tirumalasetti Suman,TL Suman,Batter,Auction file,Indian,PWI,2013,2013,True,True,1,7,52,1,2,105,1,0.1,0.1,0,0.1,0
+5bdcdb72,TM Dilshan,TM Dilshan,Batter,Derived from stats,Unknown,RCB,2013,2013,True,False,1,5,76,0,2,104,,,,,,
+25f7b7d6,Tom Banton,T Banton,Batter,Auction file,Overseas,KKR,2020,2020,True,True,1,2,18,0,0,21,2,3,3,0.2448,2.7552,0.1139
+e86754b2,Tom Curran,TK Curran,All-Rounder,Auction file,Overseas,DC,2018,2021,True,True,3,13,127,13,2,543,3,7.75,7.75,4.025,3.725,0.564
+f836b33d,Tom Kohler-Cadmore,T Kohler-Cadmore,Wicket-Keeper,Auction file,Overseas,RR,2024,2024,True,True,1,3,48,0,1,65,1,0.4,0.4,0.9697,-0.5697,2.4242
+12b610c2,Travis Head,TM Head,Batter,Auction file,Overseas,SRH,2016,2026,True,True,5,53,1556,3,6,2018,3,7.6,8.1,12.7227,-4.6227,1.6089
+a818c1be,Trent Boult,TA Boult,Bowler,Auction file,Overseas,MI,2015,2026,True,True,12,124,93,145,36,5209,5,31.5,66,51.2559,14.7441,0.7234
+51ec3919,Tripurana Vijay,T Vijay,All-Rounder,Auction file,Indian,DC,2025,2026,True,True,1,1,0,0,2,18,1,0.3,0.6,0.3041,0.2959,0.506
+85b3fab2,Tristan Stubbs,T Stubbs,Wicket-Keeper,Auction file,Overseas,DC,2022,2026,True,True,5,47,980,4,24,1463,1,0.5,0.5,8.9063,-8.4063,17.8126
+46a9bea1,Tushar Deshpande,TU Deshpande,Bowler,Auction file,Indian,RR,2020,2026,True,True,6,53,54,55,10,1926,3,6.9,13.8,28.5854,-14.7854,2.3108
+245c97cb,Tymal Mills,TS Mills,Bowler,Auction file,Overseas,MI,2017,2022,True,True,2,10,8,11,1,368,2,13.5,13.5,3.6456,9.8544,0.1862
+91b9300b,UA Birla,UA Birla,Batter,Derived from stats,Unknown,PWI,2013,2013,True,False,1,2,7,0,1,16,,,,,,
+6f0f39fb,Umang Sharma,,Batter,Auction file,Indian,GL,,,True,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+cc1e8c68,Umesh Yadav,UT Yadav,Bowler,Auction file,Indian,GT,2013,2024,True,True,11,117,202,117,32,4439,5,15.6,33.8,39.6664,-5.8664,1.1697
+81c08fa3,Umran Malik,Umran Malik,Bowler,Auction file,Indian,SRH,2021,2024,True,True,4,26,23,29,6,1030,1,0.75,0.75,0,0.75,0
+0c94f480,Unmukt Chand,UBT Chand,Batter,Auction file,Indian,MI,2013,2016,True,True,4,17,262,0,8,368,1,0.65,0.65,0.0162,0.6338,0.025
+80ffea17,Upendra Singh Yadav,,Wicket-Keeper,Auction file,Indian,SRH,,,True,True,,0,0,0,0,0,1,0.25,0.25,0,0.25,0
+cf59b3f0,Urvil Patel,Urvil Patel,Wicket-Keeper,Auction file,Indian,CSK,2025,2026,True,True,2,10,197,0,8,312,1,0.2,0.2,0,0.2,0
+331ea488,UT Khawaja,UT Khawaja,Batter,Derived from stats,Unknown,RPS,2016,2016,True,False,1,6,127,0,1,155,,,,,,
+b2a55ac1,Utkarsh Singh,,All-Rounder,Auction file,Indian,PBKS,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+ba607b88,V Kohli,V Kohli,Batter,Derived from stats,Unknown,RCB,2013,2026,True,False,14,206,7697,0,98,9792,,,,,,
+03a83c50,V Viyaskanth,V Viyaskanth,Bowler,Derived from stats,Unknown,SRH,2024,2024,True,False,1,3,7,1,2,67,,,,,,
+7c3b3b78,Vaibhav Arora,VG Arora,Bowler,Auction file,Indian,KKR,2022,2026,True,True,5,43,10,47,11,1611,4,4.6,7,25.5321,-18.5321,3.5263
+A_vaibhav_rawal,Vaibhav Rawal,,All-Rounder,Auction file,Indian,KKR,,,False,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+470f446b,Vaibhav Suryavanshi,V Suryavanshi,Batter,Auction file,Indian,RR,2025,2026,True,True,2,23,1028,0,2,1317,1,1.1,2.2,22.0476,-19.8476,9.9356
+A_vansh_bedi,Vansh Bedi,,Wicket-Keeper,Auction file,Indian,CSK,,,False,True,,0,0,0,0,0,1,0.55,0.55,0,0.55,0
+0a3d54b9,Varun Aaron,VR Aaron,Bowler,Auction file,Indian,GT,2014,2022,True,True,7,40,49,34,2,1232,4,7.7,14.1,10.6746,3.4254,0.7724
+5b7ab5a9,Varun Chakravarthy,CV Varun,All-Rounder,Auction file,Indian,KKR,2019,2026,True,True,8,94,31,111,18,3779,2,12.4,16.4,14.3525,2.0475,0.8916
+d718440b,Veer Pratap Singh,,Bowler,Auction file,Indian,KKR,,,True,True,,0,0,0,0,0,1,0.4,0.4,0,0.4,0
+A_venkata_satyanarayana_penmetsa,Venkata Satyanarayana Penmetsa,,Bowler,Auction file,Indian,MI,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+a24be938,Venkatesh Iyer,VR Iyer,All-Rounder,Auction file,Indian,RCB,2021,2026,True,True,6,68,1677,3,23,2284,3,30.95,30.95,14.78,16.17,0.6097
+fe763256,Venugopal Rao,Y Venugopal Rao,Batter,Auction file,Indian,SRH,2013,2014,True,True,2,8,71,0,2,98,1,0.55,0.55,0.7955,-0.2455,1.4463
+A_vicky_ostwal,Vicky Ostwal,,All-Rounder,Auction file,Indian,RCB,,,False,True,,0,0,0,0,0,2,0.5,0.5,0,0.5,0
+d4d929b0,Vidwath Kaverappa,V Kaverappa,Bowler,Auction file,Indian,PBKS,2024,2024,True,True,1,1,0,2,0,61,1,0.2,0.4,0.91,-0.51,2.2532
+1e030637,Vignesh Puthur,V Puthur,All-Rounder,Auction file,Indian,MI,2025,2025,True,True,1,5,0,6,2,190,2,0.6,0.6,3.289,-2.689,5.5756
+A_vihaan_malhotra,Vihaan Malhotra,,Unknown,Derived from stats,Indian,RCB,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+0994d0ae,Vijay Shankar,V Shankar,All-Rounder,Auction file,Indian,CSK,2014,2025,True,True,10,78,1233,9,36,2034,5,6.25,9.4,15.5013,-6.1013,1.588
+6dbcf855,Vijay Zol,VH Zol,Batter,Auction file,Indian,RCB,2014,2014,True,True,1,3,29,0,0,34,1,0.3,0.3,0.276,0.024,0.9199
+cce2bcb2,Vikas Tokas,,Bowler,Auction file,Indian,RCB,,,True,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+5f26df4f,Vikramjeet Malik,VS Malik,Bowler,Auction file,Indian,RR,2013,2014,True,True,2,4,1,3,1,121,2,0.4,0.4,0.3328,0.0672,0.7968
+5ffc0565,Vipraj Nigam,V Nigam,All-Rounder,Auction file,Indian,DC,2025,2026,True,True,2,19,157,13,3,639,1,0.5,1,11.0005,-10.0005,11.1431
+26d76ad9,Virat Singh,Virat Singh,Batter,Auction file,Indian,SRH,2021,2021,True,True,1,3,15,0,2,32,1,1.9,3.8,0.3765,3.4235,0.0967
+8ba8195d,Virender Sehwag,V Sehwag,Batter,Auction file,Indian,PBKS,2013,2015,True,True,3,38,849,0,10,1092,1,3.2,6.4,5.6994,0.7006,0.858
+A_vishal_nishad,Vishal Nishad,,Unknown,Derived from stats,Indian,PBKS,,,False,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+0494fa6e,Vishnu Vinod,Vishnu Vinod,Wicket-Keeper,Auction file,Indian,PBKS,2017,2026,True,True,3,7,71,0,1,115,4,1.85,2.8,1.0109,1.7891,0.3662
+A_vishwanath_pratap_singh,Vishwanath Pratap Singh,,All-Rounder,Auction file,Indian,PBKS,,,False,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+1b7b0fa7,Vivrant Sharma,Vivrant Sharma,All-Rounder,Auction file,Indian,SRH,2023,2023,True,True,1,3,69,0,0,87,1,2.6,2.6,1.216,1.384,0.4677
+54e52590,Vyshak Vijaykumar,Vijaykumar Vyshak,Bowler,Auction file,Indian,PBKS,2023,2026,True,True,4,26,16,26,6,874,1,1.8,3.6,7.2415,-3.6415,2
+cb9b8664,W O'Rourke,W O'Rourke,Bowler,Derived from stats,Unknown,LSG,2025,2025,True,False,1,3,0,6,1,173,,,,,,
+a97c8ec2,Wanindu Hasaranga,PWH de Silva,Bowler,Auction file,Overseas,RR,2021,2025,True,True,4,37,81,46,5,1574,4,19.5,30.25,21.9385,8.3115,0.7249
+f19ccfad,Washington Sundar,Washington Sundar,All-Rounder,Auction file,Indian,GT,2017,2026,True,True,10,83,888,40,21,2596,3,15.15,45.45,31.3108,14.1392,0.6881
+3a60e0b5,Wayne Parnell,WD Parnell,Bowler,Auction file,Overseas,RCB,2013,2023,True,True,3,19,9,21,8,777,1,1,1,2.151,-1.151,2.151
+9caf69a1,Will Jacks,WG Jacks,All-Rounder,Auction file,Overseas,MI,2024,2026,True,True,3,28,602,10,11,1135,2,8.45,16.9,18.5779,-1.6779,1.0879
+fe11caa6,Wriddhiman Saha,WP Saha,Wicket-Keeper,Auction file,Indian,GT,2013,2024,True,True,12,126,2562,0,77,3926,4,10.3,23.1,40.8512,-17.7512,1.6581
+a00e1842,Writtick Chatterjee,,All-Rounder,Auction file,Indian,PBKS,,,True,True,,0,0,0,0,0,1,0.2,0.2,0,0.2,0
+1763bc6c,X Thalaivan Sargunam,X Thalaivan Sargunam,Batter,Derived from stats,Unknown,SRH,2013,2013,True,False,1,1,10,0,0,10,,,,,,
+3b53243a,Xavier Bartlett,XC Bartlett,Bowler,Auction file,Overseas,PBKS,2025,2026,True,True,2,13,40,7,15,426,1,0.8,1.6,7.1519,-5.5519,4.4415
+7210d461,Yash Dayal,Yash Dayal,Bowler,Auction file,Indian,RCB,2022,2025,True,True,4,43,4,41,8,1424,2,8.2,11.4,13.6311,-2.2311,1.194
+dd7e9b3b,Yash Dhull,YV Dhull,All-Rounder,Auction file,Indian,DC,2023,2023,True,True,1,4,16,0,2,39,1,0.5,1,0.5451,0.4549,0.5394
+02dfebbe,Yash Raj Punja,Yash Raj Punja,Bowler,Derived from stats,Indian,RR,2026,2026,True,True,1,8,0,9,0,274,1,0.3,0.3,4.5373,-4.2373,15.1243
+4b31f3a3,Yash Thakur,Yash Thakur,Bowler,Auction file,Indian,PBKS,2023,2026,True,True,4,22,0,27,2,854,2,2.05,4.1,12.5367,-8.4367,3.3349
+6c19c6e5,Yashasvi Jaiswal,YBK Jaiswal,All-Rounder,Auction file,Indian,RR,2020,2026,True,True,7,82,2593,0,32,3397,1,2.4,4.8,4.453,0.347,0.9119
+A_yogesh_gowalkar,Yogesh Gowalkar,,All-Rounder,Auction file,Indian,PBKS,,,False,True,,0,0,0,0,0,1,0.1,0.1,0,0.1,0
+4e04666c,Yogesh Takawale,YV Takawale,Wicket-Keeper,Auction file,Indian,RCB,2014,2014,True,True,1,5,104,0,2,163,1,0.1,0.1,1.3231,-1.2231,13.2307
+4885bbe6,Yudhvir Charak,Yudhvir Singh,All-Rounder,Auction file,Indian,RR,2023,2025,True,True,3,9,22,8,0,283,3,0.75,0.95,4.4282,-3.4782,4.2061
+3c6ffae8,Yusuf Pathan,YK Pathan,All-Rounder,Auction file,Indian,SRH,2013,2019,True,True,7,99,1716,6,21,2400,2,5.15,16.8,16.8282,-0.0282,0.972
+1730e08e,Yuvraj Chaudhary,,All-Rounder,Auction file,Indian,LSG,,,True,True,,0,0,0,0,0,1,0.3,0.3,0,0.3,0
+1c914163,Yuvraj Singh,Yuvraj Singh,All-Rounder,Auction file,Indian,MI,2013,2019,True,True,7,75,1513,13,12,2349,5,40,47,15.5569,31.4431,0.3156
+57ee1fde,Yuzvendra Chahal,YS Chahal,Bowler,Auction file,Indian,PBKS,2013,2026,True,True,14,189,37,233,35,7548,4,30.6,79.9,88.3447,-8.4447,1.4259
+91a4a398,Zaheer Khan,Z Khan,Bowler,Auction file,Indian,DC,2013,2017,True,True,5,38,18,37,5,1357,2,6.6,14.6,9.3867,5.2133,0.6424
+A_zahir_khan_pakteen,Zahir Khan Pakteen,,Bowler,Auction file,Indian,RR,,,False,True,,0,0,0,0,0,1,0.6,0.6,0,0.6,0
+30f92334,Zak Foulkes,,Unknown,Derived from stats,Overseas,CSK,,,True,True,,0,0,0,0,0,1,0.75,0.75,0,0.75,0
+36619795,Zeeshan Ansari,Zeeshan Ansari,Bowler,Auction file,Indian,SRH,2025,2025,True,True,1,10,0,6,4,236,1,0.4,0.4,4.0852,-3.6852,10.2131

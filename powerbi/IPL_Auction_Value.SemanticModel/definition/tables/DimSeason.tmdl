@@ -1,0 +1,53 @@
+table DimSeason
+	lineageTag: 37895049-a9e2-5903-b75c-6d87cfce7bd8
+
+	column Season
+		dataType: int64
+		formatString: 0
+		lineageTag: a66994a4-e479-56c1-90da-c812edbc5212
+		summarizeBy: none
+		sourceColumn: Season
+
+		annotation SummarizationSetBy = User
+
+	column SeasonLabel
+		dataType: string
+		lineageTag: 5cf29a58-55a5-5087-a331-7939368a9542
+		summarizeBy: none
+		sourceColumn: SeasonLabel
+		sortByColumn: Season
+
+		annotation SummarizationSetBy = User
+
+	column IsMegaAuction
+		dataType: boolean
+		lineageTag: eedc916f-ea16-5c04-8084-6bad311c4fa7
+		summarizeBy: none
+		sourceColumn: IsMegaAuction
+
+		annotation SummarizationSetBy = User
+
+	column AuctionType
+		dataType: string
+		lineageTag: 15262c60-fee3-5d55-a54b-1157edd04182
+		summarizeBy: none
+		sourceColumn: AuctionType
+
+		annotation SummarizationSetBy = User
+
+	partition DimSeason = m
+		mode: import
+		queryGroup: Model
+		source =
+				let
+				    Seasons = List.Numbers(FirstSeason, LastSeason - FirstSeason + 1),
+				    MegaAuctions = {2014, 2018, 2022, 2025},
+				    Base = Table.FromList(Seasons, Splitter.SplitByNothing(), type table [Season = Int64.Type]),
+				    WithLabel = Table.AddColumn(Base, "SeasonLabel", each "IPL " & Text.From([Season]), type text),
+				    WithMega = Table.AddColumn(WithLabel, "IsMegaAuction", each List.Contains(MegaAuctions, [Season]), type logical),
+				    WithType = Table.AddColumn(WithMega, "AuctionType", each if [IsMegaAuction] then "Mega auction" else "Mini auction", type text)
+				in
+				    WithType
+
+	annotation PBI_ResultType = Table
+

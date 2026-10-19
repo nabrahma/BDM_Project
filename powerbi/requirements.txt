@@ -1,0 +1,7 @@
+# Python tooling for powerbi/scripts (install into the repo-root .venv)
+pandas==3.0.6
+numpy==2.5.4
+RapidFuzz==3.14.6
+jsonschema==4.26.0
+pypdfium2==5.14.0
+pillow==13.0.0

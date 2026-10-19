@@ -1,0 +1,106 @@
+table FactTeamMatch
+	lineageTag: 52a98f41-d010-50a9-abbf-ec05d57f187f
+
+	column TeamMatchKey
+		dataType: string
+		isHidden
+		lineageTag: 1da69c0e-6fe4-5da6-9d68-dd8eb320b148
+		summarizeBy: none
+		sourceColumn: TeamMatchKey
+
+		annotation SummarizationSetBy = User
+
+	column TeamSeasonKey
+		dataType: string
+		isHidden
+		lineageTag: 070cd2da-e8e4-5141-8be4-220bc28566af
+		summarizeBy: none
+		sourceColumn: TeamSeasonKey
+
+		annotation SummarizationSetBy = User
+
+	column MatchID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c158df08-a929-544a-b4a3-d86ce5dd1065
+		summarizeBy: none
+		sourceColumn: MatchID
+
+		annotation SummarizationSetBy = User
+
+	column TeamKey
+		dataType: string
+		isHidden
+		lineageTag: f0578171-9bac-58f4-81d0-804e3cc4986c
+		summarizeBy: none
+		sourceColumn: TeamKey
+
+		annotation SummarizationSetBy = User
+
+	column Season
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 45f8d8d1-bbfa-59c5-a08f-38bcec42ded8
+		summarizeBy: none
+		sourceColumn: Season
+
+		annotation SummarizationSetBy = User
+
+	column MatchDate
+		dataType: dateTime
+		formatString: dd mmm yyyy
+		lineageTag: f4a98a1f-18f1-5642-9071-117a6438526c
+		summarizeBy: none
+		sourceColumn: MatchDate
+
+		annotation SummarizationSetBy = User
+
+	column Venue
+		dataType: string
+		lineageTag: 3e14c82d-52a9-58d6-a475-a8e375fd379d
+		summarizeBy: none
+		sourceColumn: Venue
+
+		annotation SummarizationSetBy = User
+
+	column Won
+		dataType: int64
+		formatString: 0
+		lineageTag: 4deaccbc-07ff-567a-8fa8-3dce1789e53e
+		summarizeBy: sum
+		sourceColumn: Won
+
+		annotation SummarizationSetBy = User
+
+	column NoResult
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e255869-8d4c-5436-b879-85922559dfe5
+		summarizeBy: sum
+		sourceColumn: NoResult
+
+		annotation SummarizationSetBy = User
+
+	partition FactTeamMatch = m
+		mode: import
+		queryGroup: Model
+		source =
+				let
+				    Source = Table.SelectColumns(stg_Matches, {"MatchID", "Season", "MatchDate", "Venue", "Team1", "Team2", "Winner", "NoResult"}),
+				    // Unpivot team 1 and team 2 into one row per team per match.
+				    Rows = Table.Combine({
+				        Table.RenameColumns(Table.RemoveColumns(Source, {"Team2"}), {{"Team1", "TeamName"}}),
+				        Table.RenameColumns(Table.RemoveColumns(Source, {"Team1"}), {{"Team2", "TeamName"}})}),
+				    WithKey = Table.AddColumn(Rows, "TeamKey", each fnTeamKey([TeamName]), type text),
+				    WithWon = Table.AddColumn(WithKey, "Won", each if [Winner] <> null and [Winner] = [TeamName] then 1 else 0, Int64.Type),
+				    WithRowKey0 = Table.AddColumn(WithWon, "TeamMatchKey", each Text.From([MatchID]) & "|" & [TeamKey], type text),
+				    WithRowKey = Table.AddColumn(WithRowKey0, "TeamSeasonKey", each [TeamKey] & "|" & Text.From([Season]), type text),
+				    Kept = Table.SelectColumns(WithRowKey, {"TeamMatchKey", "TeamSeasonKey", "MatchID", "TeamKey", "Season", "MatchDate", "Venue", "Won", "NoResult"}),
+				    Typed = Table.TransformColumnTypes(Kept, {{"MatchID", Int64.Type}, {"Season", Int64.Type}, {"MatchDate", type date}, {"Venue", type text}, {"NoResult", Int64.Type}})
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

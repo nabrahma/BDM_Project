@@ -1,0 +1,110 @@
+// QA checks (PRD section 9) and the numbers behind the page titles.
+// Run: powershell -File scripts/pbi_engine.ps1 -QueryFile scripts/qa_queries.dax
+EVALUATE
+SUMMARIZECOLUMNS (
+    DimSeason[Season],
+    "Matches", [QA Matches],
+    "LeagueVI", [QA League Value Index],
+    "AvgWinPct", [QA Avg Win %],
+    "OrangeCap", [Top Run Scorer],
+    "Runs", [Top Run Scorer Runs],
+    "PurpleCap", [Top Wicket Taker],
+    "Wkts", [Top Wicket Taker Wickets],
+    "Buys", [Players Bought],
+    "AuctionSpend", [Total Auction Spend Cr],
+    "AvgPrice", [Avg Auction Price Cr],
+    "PricedSpend", [Spend Cr],
+    "MegaAvg", [Mega Auction Avg Price Cr]
+)
+ORDER BY DimSeason[Season]
+-- next
+EVALUATE
+ROW (
+    "Buys2026", [QA 2026 Buys],
+    "Spend2026", [QA 2026 Spend Cr],
+    "MaxPrice", [Top Buy Price Cr],
+    "MaxPlayer", [Top Buy Player],
+    "BadPrices", [QA Bad Prices],
+    "SpendMatched", [Spend Matched %],
+    "Unmapped", [QA Unmapped Team Rows],
+    "BeyondMega", [QA Contract Rows Beyond Mega],
+    "TeamKeys", [QA Team Keys],
+    "TotalSpend", [Total Auction Spend Cr],
+    "PlayersBought", [Players Bought],
+    "AvgPrice", [Avg Auction Price Cr],
+    "AllSeasonsLeagueVI", [QA League Value Index],
+    "Premium2526", [Auction Premium %],
+    "Players", COUNTROWS ( DimPlayer ),
+    "FactRows", COUNTROWS ( FactPlayerSeason )
+)
+-- next
+// Spot checks against the Python reference (V Kohli 2016 = 1187)
+EVALUATE
+CALCULATETABLE (
+    SUMMARIZECOLUMNS ( DimPlayer[PlayerName], DimSeason[Season], "Impact", [Impact Points], "Runs", [Runs], "Wkts", [Wickets], "Ct", [Catches], "M", [Player Matches] ),
+    DimPlayer[CricsheetName] IN { "V Kohli", "JJ Bumrah", "Rashid Khan" },
+    DimSeason[Season] IN { 2016, 2020, 2024 }
+)
+-- next
+// Franchise efficiency, all seasons
+EVALUATE
+SUMMARIZECOLUMNS (
+    DimTeam[ShortCode],
+    "VI", [Value Index],
+    "Spend", [Spend Cr],
+    "Impact", [Priced Impact],
+    "LakhPerPt", [Lakh per Point],
+    "WinPct", [Win %]
+)
+ORDER BY [VI] DESC
+-- next
+// Team-season spend vs win % (for the correlation)
+EVALUATE
+SUMMARIZECOLUMNS ( DimTeamSeason[TeamSeasonLabel], "Spend", [Spend Cr], "WinPct", [Win %], "VI", [Value Index] )
+-- next
+// Price brackets, all seasons
+EVALUATE
+SUMMARIZECOLUMNS ( FactPlayerSeason[PriceBracket], TREATAS ( { "Auction" }, FactPlayerSeason[PriceSource] ),
+    "VI", [Value Index], "Spend", [Spend Cr], "LakhPerPt", [Lakh per Point], "AboveMedian", [Above Median Impact %], "N", [Player Seasons] )
+-- next
+// Role x nationality, all seasons
+EVALUATE
+SUMMARIZECOLUMNS ( DimPlayer[Role], DimPlayer[Nationality], "AvgPrice", [Avg Auction Price Cr], "VI", [Value Index], "LakhPerPt", [Lakh per Point], "Buys", [Players Bought] )
+-- next
+EVALUATE
+ROW ( "OverseasPremium", [Overseas Price Premium %], "OverseasVI", [Overseas Value Index], "IndianVI", [Indian Value Index],
+      "BaseVI", [Base Price Value Index], "MarqueeVI", [Marquee Value Index], "MarqueeAbove", [Marquee Above Median %], "BaseAbove", [Base Price Above Median %] )
+-- next
+// 2026 steals and overpaid
+EVALUATE
+TOPN ( 10, SUMMARIZECOLUMNS ( DimPlayer[PlayerName], TREATAS ( { 2026 }, DimSeason[Season] ), "VI", [Value Index (min 5 matches)], "Spend", [Spend Cr], "Impact", [Priced Impact], "Team", [Teams Played For] ), [VI], DESC )
+-- next
+EVALUATE
+TOPN ( 10, SUMMARIZECOLUMNS ( DimPlayer[PlayerName], TREATAS ( { 2026 }, DimSeason[Season] ), "Over", [Overpay Cr (min 5 matches)], "Spend", [Spend Cr], "Impact", [Priced Impact], "VI", [Value Index], "Team", [Teams Played For] ), [Over], DESC )
+-- next
+// Cameron Green by season
+EVALUATE
+SUMMARIZECOLUMNS ( DimSeason[Season], TREATAS ( { "Cameron Green" }, DimPlayer[PlayerName] ), "Spend", [Spend Cr], "Impact", [Impact Points], "VI", [Value Index], "Quadrant", [Value Quadrant Label], "M", [Player Matches] )
+-- next
+// Quadrant mix 2026 and Bargain XI 2026
+EVALUATE
+SUMMARIZECOLUMNS ( FactPlayerSeason[Value Quadrant], TREATAS ( { 2026 }, DimSeason[Season] ), "N", [Player Seasons], "Spend", [Spend Cr] )
+-- next
+EVALUATE
+FILTER ( SUMMARIZECOLUMNS ( DimPlayer[Role], DimPlayer[PlayerName], TREATAS ( { 2026 }, DimSeason[Season] ), "Flag", [Bargain XI Flag], "VI", [Value Index], "Spend", [Spend Cr] ), [Flag] = 1 )
+-- next
+EVALUATE
+FILTER ( SUMMARIZECOLUMNS ( DimPlayer[Role], DimPlayer[PlayerName], TREATAS ( { 2026 }, DimSeason[Season] ), "Flag", [Overpaid XI Flag], "Over", [Overpay Cr], "Spend", [Spend Cr] ), [Flag] = 1 )
+-- next
+EVALUATE
+TOPN ( 8, ADDCOLUMNS ( VALUES ( UnsoldPlayers[Player] ), "Impact", [Unsold Career Impact], "Rank", [Unsold Rank] ), [Impact], DESC )
+-- next
+// Spend vs win %: correlation across team-seasons
+EVALUATE
+VAR t = FILTER ( ADDCOLUMNS ( VALUES ( DimTeamSeason[TeamSeasonLabel] ), "s", [Spend Cr], "w", [Win %], "v", [Value Index] ), NOT ISBLANK ( [s] ) && NOT ISBLANK ( [w] ) )
+VAR n = COUNTROWS ( t )
+VAR ms = AVERAGEX ( t, [s] ) VAR mw = AVERAGEX ( t, [w] ) VAR mv = AVERAGEX ( t, [v] )
+VAR cov = SUMX ( t, ( [s] - ms ) * ( [w] - mw ) )
+VAR covv = SUMX ( t, ( [v] - mv ) * ( [w] - mw ) )
+VAR ss = SQRT ( SUMX ( t, ( [s] - ms ) ^ 2 ) ) VAR sw = SQRT ( SUMX ( t, ( [w] - mw ) ^ 2 ) ) VAR sv = SQRT ( SUMX ( t, ( [v] - mv ) ^ 2 ) )
+RETURN ROW ( "n", n, "corr_spend_win", DIVIDE ( cov, ss * sw ), "corr_vi_win", DIVIDE ( covv, sv * sw ) )
