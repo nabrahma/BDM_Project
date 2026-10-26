@@ -1,13 +1,19 @@
 /**
- * app.js — Express server for IPL Auction Value Intelligence.
+ * app.js — Express app for IPL Auction Value Intelligence.
  *
- * Mounts all API routes and connects to MongoDB via Mongoose.
+ * Mounts all API routes. It does not listen on a port itself, so the same app runs:
+ *   - locally / on Render:  src/index.js connects to MongoDB and calls app.listen()
+ *   - on Vercel:            ../../api/index.js exports it as a serverless function
+ * Every /api request first makes sure the (cached) MongoDB connection is open.
  */
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+import { connectDB, getMongoUri } from './db.js';
 import summaryRoutes from './routes/summary.js';
 import seasonsRoutes from './routes/seasons.js';
 import teamSeasonsRoutes from './routes/teamSeasons.js';
@@ -17,35 +23,15 @@ import breakdownRoutes from './routes/breakdown.js';
 import playersRoutes from './routes/players.js';
 import squadBuilderRoutes from './routes/squadBuilder.js';
 
-dotenv.config();
-
 const app = express();
-const PORT = process.env.PORT || 5000;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/ipl_auction';
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// Routes
-app.use('/api/summary', summaryRoutes);
-app.use('/api/seasons', seasonsRoutes);
-app.use('/api/team-seasons', teamSeasonsRoutes);
-app.use('/api/player-seasons', playerSeasonsRoutes);
-app.use('/api/rankings', rankingsRoutes);
-app.use('/api/breakdown', breakdownRoutes);
-app.use('/api/players', playersRoutes);
-app.use('/api/squad-builder', squadBuilderRoutes);
-
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const clientDist = path.resolve(__dirname, '../../client/dist');
-
-// Health check with live MongoDB stats
+// Health check with live MongoDB stats (reports "disconnected" instead of failing)
 app.get('/api/health', async (_req, res) => {
+  try { await connectDB(); } catch (err) { console.error('MongoDB connection failed:', err.message); }
   const isConnected = mongoose.connection.readyState === 1;
   const start = Date.now();
   let collections = [];
@@ -65,7 +51,7 @@ app.get('/api/health', async (_req, res) => {
     console.error('Failed to get DB stats:', err);
   }
 
-  const maskedUri = MONGODB_URI.replace(/\/\/([^:]+):([^@]+)@/, '//$1:****@');
+  const maskedUri = getMongoUri().replace(/\/\/([^:]+):([^@]+)@/, '//$1:****@');
   const latencyMs = Date.now() - start;
   res.json({
     status: 'ok',
@@ -78,8 +64,31 @@ app.get('/api/health', async (_req, res) => {
   });
 });
 
-// Production: serve Vite build if present
-if (process.env.SERVE_STATIC === 'true' || process.env.NODE_ENV === 'production') {
+// Every other API call needs the database
+app.use('/api', async (_req, _res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    next(err);
+  }
+});
+
+// Routes
+app.use('/api/summary', summaryRoutes);
+app.use('/api/seasons', seasonsRoutes);
+app.use('/api/team-seasons', teamSeasonsRoutes);
+app.use('/api/player-seasons', playerSeasonsRoutes);
+app.use('/api/rankings', rankingsRoutes);
+app.use('/api/breakdown', breakdownRoutes);
+app.use('/api/players', playersRoutes);
+app.use('/api/squad-builder', squadBuilderRoutes);
+
+// Production on a single server (Render / VPS): serve the Vite build if present.
+// On Vercel the static files are served by Vercel itself, so this is skipped.
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const clientDist = path.resolve(__dirname, '../../client/dist');
+if (!process.env.VERCEL && (process.env.SERVE_STATIC === 'true' || process.env.NODE_ENV === 'production')) {
   app.use(express.static(clientDist));
   app.get('*', (req, res, next) => {
     if (req.path.startsWith('/api')) return next();
@@ -94,18 +103,5 @@ app.use((err, _req, res, _next) => {
   console.error('API Error:', err);
   res.status(500).json({ error: err.message || 'Internal server error' });
 });
-
-// Connect to MongoDB and start server
-mongoose.connect(MONGODB_URI)
-  .then(() => {
-    console.log('🏏 Connected to MongoDB');
-    app.listen(PORT, () => {
-      console.log(`🚀 API server running on http://localhost:${PORT}`);
-    });
-  })
-  .catch(err => {
-    console.error('Failed to connect to MongoDB:', err);
-    process.exit(1);
-  });
 
 export default app;

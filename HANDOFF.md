@@ -16,7 +16,7 @@ The Power BI dashboard is finished and checked. The next step is a **MERN web ap
 
 All QA checks pass: Orange and Purple Caps match the official winners, the 2026 auction has 77 buys for ₹215.45 Cr, league Value Index is 1.00 in every season, and 99% of auction spend is matched to ball-by-ball data. The full table is in [`powerbi/README.md`](powerbi/README.md#qa-results-prd-section-9).
 
-**Still open on the Power BI side (optional):** save a single-file `.pbix` copy (in Desktop: File → Save as → Browse this device → *Power BI file (\*.pbix)*). Add teammate names on the Home page and in the project report, which currently say "Prepared by Nabaskar".
+**Single-file copy for submission:** [`Handover/IPL_Auction_Value.pbix`](Handover/IPL_Auction_Value.pbix) (data included, opens with a double-click). Still optional: add teammate names on the Home page and in the project report, which currently say "Prepared by Nabaskar".
 
 ## 2. Read these first (15 minutes)
 

@@ -4,9 +4,9 @@
   "description": "Express + MongoDB API for IPL Auction Value Intelligence",
   "type": "module",
   "scripts": {
-    "dev": "node --watch src/app.js",
+    "dev": "node --watch src/index.js",
     "seed": "node scripts/seed.js",
-    "start": "node src/app.js"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

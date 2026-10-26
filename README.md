@@ -7,7 +7,8 @@ The project has two front ends on one shared dataset:
 | Part | Status | Folder |
 | --- | --- | --- |
 | **Power BI dashboard**: 9 pages, star schema, 93 DAX measures, QA checks, PDF, report, demo script | ✅ Done | [`powerbi/`](powerbi/) |
-| **MERN web app**: interactive version of the dashboard on MongoDB, Express, React and Node | 🚧 To build | [`web/`](web/) |
+| **MERN web app**: interactive version of the dashboard on MongoDB, Express, React and Node, plus a Squad Builder | ✅ Done (deploy on Vercel) | [`web/`](web/) |
+| **Submission copy**: single-file Power BI report (`.pbix`, data included) | ✅ Ready | [`Handover/`](Handover/) |
 
 **New to the repo? Start with [HANDOFF.md](HANDOFF.md).** It covers what is finished, what the data means, and how to build the web app on top of it.
 
@@ -16,6 +17,8 @@ The project has two front ends on one shared dataset:
 ```
 .
 ├── HANDOFF.md              ← start here (status, data contract, web-app plan)
+├── DEPLOYMENT.md           how to put the web app online (MongoDB Atlas + Vercel)
+├── Handover/               IPL_Auction_Value.pbix: the single file to submit / double-click
 ├── docs/                   project brief: PRD and the data-kit PDF
 ├── data/
 │   ├── raw/                every source file (auction CSVs, Cricsheet ball-by-ball JSON, register, mappings)
@@ -28,14 +31,14 @@ The project has two front ends on one shared dataset:
 │   ├── deliverables/                     PDF export, project report, demo script, screenshots, theme JSON
 │   ├── scripts/                          Python/PowerShell tooling that generates and checks the PBIP
 │   └── README.md                         how to open, refresh and rebuild the dashboard
-└── web/                    MERN app (client + server): to build, see web/README.md
+└── web/                    MERN app: client/ (React + Vite), server/ (Express + Mongoose), api/ + vercel.json (Vercel)
 ```
 
 ## Quick start
 
-**Look at the finished dashboard:** open [`powerbi/deliverables/IPL_Auction_Value.pdf`](powerbi/deliverables/IPL_Auction_Value.pdf), or open `powerbi/IPL_Auction_Value.pbip` in Power BI Desktop. Full steps are in [powerbi/README.md](powerbi/README.md).
+**Look at the finished dashboard:** double-click [`Handover/IPL_Auction_Value.pbix`](Handover/IPL_Auction_Value.pbix) (Power BI Desktop), or open the PDF [`powerbi/deliverables/IPL_Auction_Value.pdf`](powerbi/deliverables/IPL_Auction_Value.pdf). To edit, open `powerbi/IPL_Auction_Value.pbip`. Full steps are in [powerbi/README.md](powerbi/README.md).
 
-**Build the web app:** load `data/processed/*.json` into MongoDB and build the API and UI on top. See [HANDOFF.md](HANDOFF.md) and [web/README.md](web/README.md).
+**Run the web app:** see [web/README.md](web/README.md) for local dev and [DEPLOYMENT.md](DEPLOYMENT.md) (Option 1) to deploy it on Vercel with MongoDB Atlas.
 
 ## Headline findings (2013–2026)
 

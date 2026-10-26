@@ -5,7 +5,6 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   plugins: [react()],
   build: {
-    minify: 'esbuild',
     chunkSizeWarningLimit: 1500,
   },
 });
