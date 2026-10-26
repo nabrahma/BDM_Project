@@ -22,3 +22,6 @@ npm-debug.log*
 Thumbs.db
 .vscode/
 .idea/
+
+# Local portable tools (Atlas CLI) and their config
+.tools/

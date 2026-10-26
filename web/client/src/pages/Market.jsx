@@ -149,7 +149,7 @@ export default function Market() {
       </div>
 
       <SoWhat>
-        Average auction price has more than doubled from ₹1.73 Cr in 2013 to ₹2.80 Cr in 2026.
+        Average auction price has doubled: ₹1.73 Cr per buy in 2013, ₹3.51 Cr at the 2025 mega auction (₹2.80 Cr in the 2026 mini auction).
         Mega auctions (2014, 2018, 2022, 2025) step-change the spending — the 2025 mega auction
         saw ₹639 Cr spent, the most ever.
       </SoWhat>

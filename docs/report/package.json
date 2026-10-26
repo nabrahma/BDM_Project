@@ -1,0 +1,8 @@
+{
+  "name": "bdm-report",
+  "private": true,
+  "description": "Generates Handover/BDM_Project_Report.docx",
+  "dependencies": {
+    "docx": "^9.14.0"
+  }
+}

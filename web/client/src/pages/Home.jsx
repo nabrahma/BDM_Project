@@ -62,7 +62,7 @@ export default function Home() {
         </div>
         <div className="card kpi">
           <div className="kpi__value">{data.priceInflation}x</div>
-          <div className="kpi__label">Price inflation, 2025 vs 2013</div>
+          <div className="kpi__label">Price inflation, {data.priceInflationSeason ?? 2025} vs {data.firstSeason}</div>
         </div>
         <div className="card kpi">
           <div className="kpi__value">{data.matchPct}%</div>
