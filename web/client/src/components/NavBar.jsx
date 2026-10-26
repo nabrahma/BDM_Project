@@ -28,14 +28,7 @@ const TEAM = [
 ];
 
 function BrandMark() {
-  return (
-    <span className="brand__mark" aria-hidden="true">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-        <rect x="2.2" y="2.2" width="11.6" height="11.6" rx="2" stroke="#fff" strokeWidth="1.6" />
-        <path d="M5 11 11 5" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
-    </span>
-  );
+  return <img className="brand__logo" src="/ipl-logo.png" alt="" width="58" height="40" />;
 }
 
 export default function NavBar() {
