@@ -1,23 +1,24 @@
 /**
  * chart.jsx — chart palette and Recharts helpers so every chart shares one look:
  * recessive axes, horizontal hairline grid, striped fills, white pill tooltips.
- * Palette validated with the dataviz validate_palette script (light mode, all pairs).
+ * Colours are CSS variables from index.css, so charts follow the light/dark theme; both palettes were
+ * validated with the dataviz validate_palette script (all pairs, against each mode's card surface).
  */
 export const C = {
-  blue: '#3366FF',
-  blue2: '#7A9BFF',
-  blueSoft: '#E8EEFF',
-  green: '#2BAF66',
-  pink: '#B8165A',
-  rose: '#E64A8B',
-  accent: '#F5821F',
-  neutral: '#9A9AA5',
-  neutral2: '#D4D4DA',
-  neutral3: '#E4E4E9',
-  grid: '#EFEFF2',
-  faint: '#A3A3AD',
-  muted: '#6C6C75',
-  ink: '#121214',
+  blue: 'var(--blue)',
+  blue2: 'var(--blue-2)',
+  blueSoft: 'var(--blue-soft)',
+  green: 'var(--green)',
+  pink: 'var(--pink)',
+  rose: 'var(--rose)',
+  accent: 'var(--accent)',
+  neutral: 'var(--neutral)',
+  neutral2: 'var(--neutral-2)',
+  neutral3: 'var(--neutral-3)',
+  grid: 'var(--grid)',
+  faint: 'var(--faint)',
+  muted: 'var(--muted)',
+  ink: 'var(--ink)',
 };
 
 /** Fixed meaning on every page. */

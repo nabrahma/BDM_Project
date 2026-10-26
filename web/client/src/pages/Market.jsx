@@ -48,7 +48,7 @@ export default function Market() {
                 <CartesianGrid vertical={false} stroke={C.grid} />
                 <XAxis dataKey="Season" {...axis} tickFormatter={v => `’${String(v).slice(2)}`} />
                 <YAxis {...axis} tickFormatter={v => `₹${v}`} />
-                <Tooltip cursor={{ fill: 'rgba(51,102,255,0.06)' }}
+                <Tooltip cursor={{ fill: 'color-mix(in srgb, var(--blue) 6%, transparent)' }}
                   content={tip(s => ({ title: `${s.Season} · ${s.AuctionType}`, rows: [['Average price', formatMoney(s.AvgPriceCr)], ['Buys', s.PlayersBought], ['Spend', formatMoney(s.AuctionSpendCr)]] }))} />
                 <Bar dataKey="AvgPriceCr" radius={[4, 4, 0, 0]} isAnimationActive={false}>
                   {seasons.map(s => <Cell key={s.Season} fill={s.IsMegaAuction ? 'url(#grad-mega)' : 'url(#stripe-mini)'} />)}
@@ -70,7 +70,7 @@ export default function Market() {
                 <Tooltip cursor={{ stroke: C.blue, strokeOpacity: 0.25 }}
                   content={tip(s => ({ title: `${s.Season} · ${s.AuctionType}`, rows: [['Spend', formatMoney(s.AuctionSpendCr)], ['Buys', s.PlayersBought]] }))} />
                 <Area type="monotone" dataKey="AuctionSpendCr" stroke={C.blue} strokeWidth={2} fill="url(#vline-spend)" isAnimationActive={false}
-                  dot={false} activeDot={{ r: 4, fill: C.blue, stroke: '#fff', strokeWidth: 2 }} />
+                  dot={false} activeDot={{ r: 4, fill: C.blue, stroke: 'var(--card)', strokeWidth: 2 }} />
               </AreaChart>
             </ResponsiveContainer>
           </div>

@@ -209,11 +209,11 @@ export default function Home() {
                 <Tooltip cursor={{ stroke: C.rose, strokeOpacity: 0.25 }}
                   content={tip(s => ({ title: `${s.Season} · ${s.AuctionType}`, rows: [['Average price', formatMoney(s.AvgPriceCr)], ['Buys', s.PlayersBought]] }))} />
                 <Area type="stepAfter" dataKey="AvgPriceCr" stroke={C.rose} strokeWidth={2} fill="url(#vline-avg)" isAnimationActive={false}
-                  activeDot={{ r: 4, fill: C.rose, stroke: '#fff', strokeWidth: 2 }} />
-                <ReferenceDot x={d.peakPrice.Season} y={d.peakPrice.AvgPriceCr} r={3.5} fill={C.rose} stroke="#fff" strokeWidth={1.5}
+                  activeDot={{ r: 4, fill: C.rose, stroke: 'var(--card)', strokeWidth: 2 }} />
+                <ReferenceDot x={d.peakPrice.Season} y={d.peakPrice.AvgPriceCr} r={3.5} fill={C.rose} stroke="var(--card)" strokeWidth={1.5}
                   label={({ viewBox }) => (
                     <g transform={`translate(${viewBox.x},${viewBox.y - 22})`}>
-                      <rect x={-34} y={-12} width={68} height={22} rx={8} fill="#fff" stroke={C.grid} />
+                      <rect x={-34} y={-12} width={68} height={22} rx={8} fill="var(--card)" stroke={C.grid} />
                       <text x={0} y={3} textAnchor="middle" fontSize={11} fontWeight={600} fill={C.ink}>{formatMoney(d.peakPrice.AvgPriceCr)}</text>
                     </g>
                   )} />

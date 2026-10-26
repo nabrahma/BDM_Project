@@ -70,7 +70,7 @@ export default function ValueMap() {
                     ['Price', formatMoney(p.PriceCr)], ['Impact', `${formatNum(p.ImpactPoints)} pts`],
                     ...(p.ValueIndex != null ? [['Value Index', formatVI(p.ValueIndex)]] : []), ['Quadrant', p.ValueQuadrant]] }))} />
                 <Scatter data={points} isAnimationActive={false} onClick={p => p?.PlayerID && navigate(`/players/${p.PlayerID}`)} style={{ cursor: 'pointer' }}>
-                  {points.map(p => <Cell key={p.PlayerSeasonKey} fill={QUADRANT[p.ValueQuadrant] || C.neutral} stroke="#fff" strokeWidth={1.5} />)}
+                  {points.map(p => <Cell key={p.PlayerSeasonKey} fill={QUADRANT[p.ValueQuadrant] || C.neutral} stroke="var(--card)" strokeWidth={1.5} />)}
                 </Scatter>
               </ScatterChart>
             </ResponsiveContainer>

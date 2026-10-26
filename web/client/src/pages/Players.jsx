@@ -141,7 +141,7 @@ function SeasonBars({ id, data, dataKey, color, format, title, sub, colorBy, leg
             <CartesianGrid vertical={false} stroke={C.grid} />
             <XAxis dataKey="season" {...axis} tick={{ fontSize: 11, fill: C.muted }} />
             <YAxis {...axis} tickFormatter={format} />
-            <Tooltip cursor={{ fill: 'rgba(51,102,255,0.06)' }}
+            <Tooltip cursor={{ fill: 'color-mix(in srgb, var(--blue) 6%, transparent)' }}
               content={tip(s => ({ title: `${s.season} · ${s.team}`, rows: [['Price', s.price != null ? formatMoney(s.price) : 'Unpriced'], ['Impact', `${formatNum(s.impact)} pts`], ['Matches', s.matches], ['Quadrant', s.quadrant]] }))} />
             <Bar dataKey={dataKey} radius={[4, 4, 0, 0]} isAnimationActive={false}>
               {data.map(s => <Cell key={s.season + s.team} fill={colorBy ? colorBy(s) : `url(#stripe-${id})`} />)}

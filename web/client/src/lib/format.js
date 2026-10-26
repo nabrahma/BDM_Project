@@ -48,12 +48,12 @@ export function quadrantColour(q) {
 /** Raw hex colour for Recharts (CSS vars don't work there); same values as lib/chart.jsx QUADRANT */
 export function quadrantHex(q) {
   const map = {
-    'Steal': '#2BAF66',
-    'Star': '#3366FF',
-    'Overpaid': '#B8165A',
-    'Passenger': '#9A9AA5',
-    'Too few matches': '#D4D4DA',
-    'Unpriced': '#E4E4E9',
+    'Steal': 'var(--green)',
+    'Star': 'var(--blue)',
+    'Overpaid': 'var(--pink)',
+    'Passenger': 'var(--neutral)',
+    'Too few matches': 'var(--neutral-2)',
+    'Unpriced': 'var(--neutral-3)',
   };
-  return map[q] || '#A3A3AD';
+  return map[q] || 'var(--faint)';
 }

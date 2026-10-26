@@ -23,7 +23,7 @@ function GroupChart({ id, title, sub, rows, height = 280, groupLabel }) {
             <CartesianGrid vertical={false} stroke={C.grid} />
             <XAxis dataKey="group" {...axis} interval={0} tick={{ fontSize: 11, fill: C.muted }} />
             <YAxis {...axis} tickFormatter={v => `${v}×`} />
-            <Tooltip cursor={{ fill: 'rgba(51,102,255,0.06)' }}
+            <Tooltip cursor={{ fill: 'color-mix(in srgb, var(--blue) 6%, transparent)' }}
               content={tip(r => ({ title: r.group, rows: [['Value Index', formatVI(r.valueIndex)], ['Spend', formatMoney(r.spendCr)], ['Player-seasons', r.players]] }))} />
             <ReferenceLine y={1} stroke={C.ink} strokeOpacity={0.45} strokeDasharray="4 4" />
             <Bar dataKey="valueIndex" radius={[4, 4, 0, 0]} isAnimationActive={false}>

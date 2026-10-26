@@ -76,7 +76,7 @@ export default function Franchises() {
                 <CartesianGrid horizontal={false} stroke={C.grid} />
                 <XAxis type="number" {...axis} tickFormatter={v => `${v}×`} />
                 <YAxis type="category" dataKey="team" {...axis} width={46} tick={{ fontSize: 12, fill: C.muted }} />
-                <Tooltip cursor={{ fill: 'rgba(51,102,255,0.05)' }}
+                <Tooltip cursor={{ fill: 'color-mix(in srgb, var(--blue) 5%, transparent)' }}
                   content={tip(x => ({ title: x.teamName, rows: [['Value Index', formatVI(x.vi)], ['Spend', formatMoney(x.spend)], ['Win %', formatPct(x.winPct)]] }))} />
                 <ReferenceLine x={1} stroke={C.ink} strokeOpacity={0.45} strokeDasharray="4 4" />
                 <Bar dataKey="vi" radius={[0, 4, 4, 0]} isAnimationActive={false}>
@@ -101,7 +101,7 @@ export default function Franchises() {
                 <Tooltip cursor={{ strokeDasharray: '3 3' }}
                   content={tip(x => ({ title: x.teamName, rows: [['Spend', formatMoney(x.spend)], ['Win %', formatPct(x.winPct)], ['Value Index', formatVI(x.vi)]] }))} />
                 <Scatter data={rows} isAnimationActive={false}>
-                  {rows.map(x => <Cell key={x.team} fill={x.colour} stroke="#fff" strokeWidth={2} />)}
+                  {rows.map(x => <Cell key={x.team} fill={x.colour} stroke="var(--card)" strokeWidth={2} />)}
                   <LabelList dataKey="team" position="right" offset={8} style={{ fontSize: 11, fill: C.muted }} />
                 </Scatter>
               </ScatterChart>

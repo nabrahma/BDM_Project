@@ -16,6 +16,8 @@ const PATHS = {
   bulb: <><path d="M9 18h6M10 21h4" /><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2V16h5v-.2c.1-.8.5-1.5 1.1-2A6 6 0 0 0 12 3Z" /></>,
   enter: <path d="M20 5v7a3 3 0 0 1-3 3H6m4-4-4 4 4 4" />,
   close: <path d="M6 6l12 12M18 6 6 18" />,
+  sun: <><circle cx="12" cy="12" r="4" /><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4" /></>,
+  moon: <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" />,
 };
 
 export default function Icon({ name, size = 18, stroke = 1.8, ...rest }) {

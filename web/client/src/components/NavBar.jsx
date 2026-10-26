@@ -1,6 +1,6 @@
 /**
- * NavBar — top bar: brand, pill navigation, search, live MongoDB status (opens the
- * database inspector) and the project team.
+ * NavBar — top bar: brand, pill navigation, light/dark toggle, search, live MongoDB status
+ * (opens the database inspector) and the project team.
  */
 import { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -42,6 +42,15 @@ export default function NavBar() {
   const [showDbModal, setShowDbModal] = useState(false);
   const [dbStats, setDbStats] = useState(null);
   const navigate = useNavigate();
+  // index.html sets data-theme before first paint (saved choice, else the OS preference)
+  const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || 'light');
+
+  const toggleTheme = () => {
+    const next = theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch { /* storage blocked: theme lasts for this visit */ }
+    setTheme(next);
+  };
 
   useEffect(() => {
     fetch(`${API_BASE}/health`)
@@ -71,6 +80,11 @@ export default function NavBar() {
         </nav>
 
         <div className="topbar__actions">
+          <button type="button" className="icon-btn" onClick={toggleTheme}
+            title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}>
+            <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={18} />
+          </button>
           <button type="button" className="icon-btn" onClick={() => navigate('/players')}
             title="Search players" aria-label="Search players">
             <Icon name="search" size={18} />
@@ -79,7 +93,7 @@ export default function NavBar() {
             title={connected ? `MongoDB connected · ${dbStats.totalDocs?.toLocaleString()} documents` : 'MongoDB status'}
             aria-label="Database status">
             <Icon name="database" size={18} />
-            <span className="icon-btn__dot" style={{ background: connected ? '#2BAF66' : dbStats ? '#B8165A' : '#D4D4DA' }} />
+            <span className="icon-btn__dot" style={{ background: connected ? 'var(--green)' : dbStats ? 'var(--pink)' : 'var(--neutral-2)' }} />
           </button>
           <div style={{ display: 'flex' }} title={`Project team: ${TEAM.map(t => t[1]).join(', ')}`}>
             {TEAM.map(([ini, name], i) => (

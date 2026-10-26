@@ -350,7 +350,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
       <div className="kpi-strip" id="squad-kpis" style={{ marginBottom: '16px' }}>
         {/* Remaining Purse Card */}
         <div className="card kpi">
-          <div className="kpi__value" style={{ color: metrics.isOverBudget ? '#B8165A' : '#121214' }}>
+          <div className="kpi__value" style={{ color: metrics.isOverBudget ? 'var(--pink)' : 'var(--ink)' }}>
             {formatMoney(metrics.purseRemaining)}
           </div>
           <div className="kpi__label">
@@ -361,7 +361,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
               style={{
                 width: `${spendPct}%`,
                 height: '100%',
-                background: metrics.isOverBudget ? '#B8165A' : spendPct > 85 ? '#F5821F' : '#2BAF66',
+                background: metrics.isOverBudget ? 'var(--pink)' : spendPct > 85 ? 'var(--accent)' : 'var(--green)',
                 transition: 'width 0.3s ease',
               }}
             />
@@ -438,16 +438,16 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px', fontSize: '0.78rem', fontWeight: 700, flexWrap: 'wrap' }}>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: '#3366FF' }}>
-                  <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: '#3366FF' }} />
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: 'var(--blue)' }}>
+                  <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: 'var(--blue)' }} />
                   Retentions: ₹{metrics.retentionSpend} Cr ({metrics.squadCounts.Retained} players)
                 </span>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: '#D97706' }}>
-                  <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: '#D97706' }} />
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: 'var(--amber)' }}>
+                  <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: 'var(--amber)' }} />
                   Auction Buys: ₹{metrics.auctionSpend} Cr ({metrics.squadCounts.Auction} players)
                 </span>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: metrics.isOverBudget ? '#B8165A' : '#15803D' }}>
-                  <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: metrics.isOverBudget ? '#B8165A' : '#15803D' }} />
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: metrics.isOverBudget ? 'var(--pink)' : 'var(--green-ink)' }}>
+                  <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: metrics.isOverBudget ? 'var(--pink)' : 'var(--green-ink)' }} />
                   {metrics.isOverBudget ? 'Deficit' : 'Unspent Purse'}: ₹{metrics.purseRemaining} Cr
                 </span>
               </div>
@@ -457,15 +457,15 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
             <div style={{ width: '100%', height: '8px', background: 'var(--card-alt)', borderRadius: '4px', overflow: 'hidden', display: 'flex' }}>
               <div
                 title={`Retentions: ₹${metrics.retentionSpend} Cr (${retPct}%)`}
-                style={{ width: `${retPct}%`, height: '100%', background: '#3366FF', transition: 'width 0.3s ease' }}
+                style={{ width: `${retPct}%`, height: '100%', background: 'var(--blue)', transition: 'width 0.3s ease' }}
               />
               <div
                 title={`Auction Buys: ₹${metrics.auctionSpend} Cr (${aucPct}%)`}
-                style={{ width: `${aucPct}%`, height: '100%', background: '#D97706', transition: 'width 0.3s ease' }}
+                style={{ width: `${aucPct}%`, height: '100%', background: 'var(--amber)', transition: 'width 0.3s ease' }}
               />
               <div
                 title={`Remaining Purse: ₹${metrics.purseRemaining} Cr (${remPct}%)`}
-                style={{ width: `${remPct}%`, height: '100%', background: metrics.isOverBudget ? '#B8165A' : '#15803D', opacity: 0.35, transition: 'width 0.3s ease' }}
+                style={{ width: `${remPct}%`, height: '100%', background: metrics.isOverBudget ? 'var(--pink)' : 'var(--green-ink)', opacity: 0.35, transition: 'width 0.3s ease' }}
               />
             </div>
           </div>
@@ -494,9 +494,9 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
           <span
             className="pill"
             style={{
-              background: metrics.squadChecks.minSize ? 'rgba(43, 175, 102, 0.15)' : 'rgba(184, 22, 90, 0.12)',
-              color: metrics.squadChecks.minSize ? '#15803D' : '#A3124F',
-              border: `1px solid ${metrics.squadChecks.minSize ? '#2BAF66' : '#B8165A'}`,
+              background: metrics.squadChecks.minSize ? 'color-mix(in srgb, var(--green) 15%, transparent)' : 'color-mix(in srgb, var(--pink) 12%, transparent)',
+              color: metrics.squadChecks.minSize ? 'var(--green-ink)' : 'var(--pink-ink)',
+              border: `1px solid ${metrics.squadChecks.minSize ? 'var(--green)' : 'var(--pink)'}`,
             }}
           >
             {metrics.squadChecks.minSize ? '✓' : '✗'} Squad: {squad.length}/{IPL_RULES.MIN_SQUAD_SIZE} min (max 25)
@@ -505,9 +505,9 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
           <span
             className="pill"
             style={{
-              background: metrics.squadChecks.retentions ? 'rgba(43, 175, 102, 0.15)' : 'rgba(184, 22, 90, 0.12)',
-              color: metrics.squadChecks.retentions ? '#15803D' : '#A3124F',
-              border: `1px solid ${metrics.squadChecks.retentions ? '#2BAF66' : '#B8165A'}`,
+              background: metrics.squadChecks.retentions ? 'color-mix(in srgb, var(--green) 15%, transparent)' : 'color-mix(in srgb, var(--pink) 12%, transparent)',
+              color: metrics.squadChecks.retentions ? 'var(--green-ink)' : 'var(--pink-ink)',
+              border: `1px solid ${metrics.squadChecks.retentions ? 'var(--green)' : 'var(--pink)'}`,
             }}
           >
             {metrics.squadChecks.retentions ? '✓' : '✗'} Retentions: {metrics.squadCounts.Retained}/{IPL_RULES.MAX_RETENTIONS} max
@@ -516,9 +516,9 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
           <span
             className="pill"
             style={{
-              background: metrics.squadChecks.overseas ? 'rgba(43, 175, 102, 0.15)' : 'rgba(184, 22, 90, 0.12)',
-              color: metrics.squadChecks.overseas ? '#15803D' : '#A3124F',
-              border: `1px solid ${metrics.squadChecks.overseas ? '#2BAF66' : '#B8165A'}`,
+              background: metrics.squadChecks.overseas ? 'color-mix(in srgb, var(--green) 15%, transparent)' : 'color-mix(in srgb, var(--pink) 12%, transparent)',
+              color: metrics.squadChecks.overseas ? 'var(--green-ink)' : 'var(--pink-ink)',
+              border: `1px solid ${metrics.squadChecks.overseas ? 'var(--green)' : 'var(--pink)'}`,
             }}
           >
             {metrics.squadChecks.overseas ? '✓' : '✗'} Squad Overseas: {metrics.squadCounts.Overseas}/{IPL_RULES.MAX_OVERSEAS_SQUAD} max
@@ -527,9 +527,9 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
           <span
             className="pill"
             style={{
-              background: metrics.xiChecks.size ? 'rgba(43, 175, 102, 0.15)' : 'rgba(184, 22, 90, 0.12)',
-              color: metrics.xiChecks.size ? '#15803D' : '#A3124F',
-              border: `1px solid ${metrics.xiChecks.size ? '#2BAF66' : '#B8165A'}`,
+              background: metrics.xiChecks.size ? 'color-mix(in srgb, var(--green) 15%, transparent)' : 'color-mix(in srgb, var(--pink) 12%, transparent)',
+              color: metrics.xiChecks.size ? 'var(--green-ink)' : 'var(--pink-ink)',
+              border: `1px solid ${metrics.xiChecks.size ? 'var(--green)' : 'var(--pink)'}`,
             }}
           >
             {metrics.xiChecks.size ? '✓' : '✗'} Playing XI: {metrics.playingXI.length}/11
@@ -538,9 +538,9 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
           <span
             className="pill"
             style={{
-              background: metrics.xiChecks.overseas ? 'rgba(43, 175, 102, 0.15)' : 'rgba(184, 22, 90, 0.12)',
-              color: metrics.xiChecks.overseas ? '#15803D' : '#A3124F',
-              border: `1px solid ${metrics.xiChecks.overseas ? '#2BAF66' : '#B8165A'}`,
+              background: metrics.xiChecks.overseas ? 'color-mix(in srgb, var(--green) 15%, transparent)' : 'color-mix(in srgb, var(--pink) 12%, transparent)',
+              color: metrics.xiChecks.overseas ? 'var(--green-ink)' : 'var(--pink-ink)',
+              border: `1px solid ${metrics.xiChecks.overseas ? 'var(--green)' : 'var(--pink)'}`,
             }}
           >
             {metrics.xiChecks.overseas ? '✓' : '✗'} XI Overseas: {metrics.xiCounts.Overseas}/{IPL_RULES.MAX_OVERSEAS_XI} max
@@ -556,7 +556,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
               padding: '6px 14px',
               borderRadius: 'var(--radius-pill)',
               background: 'var(--dark)',
-              color: '#fff',
+              color: 'var(--on-dark)',
               fontSize: '0.8rem',
               fontWeight: 700,
               display: 'flex',
@@ -574,8 +574,8 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
             style={{
               padding: '6px 12px',
               borderRadius: 'var(--radius-pill)',
-              background: 'var(--yellow)',
-              color: 'var(--dark)',
+              background: 'var(--accent)',
+              color: '#1A1A1E',
               fontSize: '0.8rem',
               fontWeight: 700,
               cursor: squad.length < 11 ? 'not-allowed' : 'pointer',
@@ -629,8 +629,8 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
               padding: '6px 12px',
               borderRadius: 'var(--radius-pill)',
               background: 'transparent',
-              color: '#B8165A',
-              border: '1px solid rgba(184, 22, 90, 0.4)',
+              color: 'var(--pink)',
+              border: '1px solid color-mix(in srgb, var(--pink) 40%, transparent)',
               fontSize: '0.8rem',
               fontWeight: 600,
               cursor: squad.length === 0 ? 'not-allowed' : 'pointer',
@@ -642,9 +642,9 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
         </div>
       </div>
 
-      {/* Two-Pane Workspace */}
+      {/* Workspace: squad on top, marketplace below */}
       <div className="squad-workspace">
-        {/* Left Pane: Roster Management (Playing XI vs Bench) */}
+        {/* Squad: Playing XI vs full squad */}
         <div className="card" style={{ padding: '20px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '8px' }}>
             <div style={{ display: 'flex', gap: '4px', background: 'var(--card-alt)', padding: '4px', borderRadius: 'var(--radius-pill)', border: '1px solid var(--line)' }}>
@@ -657,7 +657,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                   fontSize: '0.8rem',
                   fontWeight: 700,
                   background: activeTab === 'xi' ? 'var(--dark)' : 'transparent',
-                  color: activeTab === 'xi' ? '#fff' : 'var(--muted)',
+                  color: activeTab === 'xi' ? 'var(--on-dark)' : 'var(--muted)',
                   cursor: 'pointer',
                 }}
               >
@@ -672,7 +672,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                   fontSize: '0.8rem',
                   fontWeight: 700,
                   background: activeTab === 'squad' ? 'var(--dark)' : 'transparent',
-                  color: activeTab === 'squad' ? '#fff' : 'var(--muted)',
+                  color: activeTab === 'squad' ? 'var(--on-dark)' : 'var(--muted)',
                   cursor: 'pointer',
                 }}
               >
@@ -681,14 +681,14 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
             </div>
 
             {metrics.isPlayingXIValid && (
-              <span className="pill" style={{ background: '#2BAF66', color: '#fff', fontSize: '0.72rem', fontWeight: 700 }}>
+              <span className="pill" style={{ background: 'var(--green)', color: '#fff', fontSize: '0.72rem', fontWeight: 700 }}>
                 ✓ Valid XI Ready
               </span>
             )}
           </div>
 
           {squad.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--muted)', background: 'var(--card-alt)', borderRadius: 'var(--radius-sm)', border: '1px dashed var(--line)' }}>
+            <div style={{ textAlign: 'center', padding: '28px 20px', color: 'var(--muted)', background: 'var(--card-alt)', borderRadius: 'var(--radius-sm)', border: '1px dashed var(--line)' }}>
               
               <p style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--ink)' }}>Your franchise squad is currently empty</p>
               <p style={{ fontSize: '0.8rem', marginTop: '4px' }}>
@@ -710,7 +710,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                       </span>
                     </div>
 
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <div className="squad-grid">
                       {playersInRole.map(p => (
                         <div
                           key={p.playerKey}
@@ -730,7 +730,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                                 {p.name}
                               </span>
                               {p.isRetained && (
-                                <span className="pill" style={{ fontSize: '0.65rem', padding: '1px 6px', background: 'rgba(242, 201, 76, 0.25)', color: '#B4560B', fontWeight: 700 }}>
+                                <span className="pill" style={{ fontSize: '0.65rem', padding: '1px 6px', background: 'color-mix(in srgb, var(--accent) 25%, transparent)', color: 'var(--accent-ink)', fontWeight: 700 }}>
                                   Retained ({p.retentionType})
                                 </span>
                               )}
@@ -738,7 +738,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                             <div style={{ fontSize: '0.75rem', color: 'var(--muted)', display: 'flex', gap: '8px', alignItems: 'center', marginTop: '2px' }}>
                               <span>{p.team}</span>
                               <span>•</span>
-                              <span style={{ color: p.nationality === 'Overseas' ? '#1F48C7' : '#15803D', fontWeight: 600 }}>
+                              <span style={{ color: p.nationality === 'Overseas' ? 'var(--blue-ink)' : 'var(--green-ink)', fontWeight: 600 }}>
                                 {p.nationality}
                               </span>
                               <span>•</span>
@@ -746,7 +746,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                               {p.valueIndex != null && (
                                 <>
                                   <span>•</span>
-                                  <span style={{ color: '#15803D', fontWeight: 700 }}>
+                                  <span style={{ color: 'var(--green-ink)', fontWeight: 700 }}>
                                     VI: {formatVI(p.valueIndex)}
                                   </span>
                                 </>
@@ -809,7 +809,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                 <h3 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--muted)', textTransform: 'uppercase', marginBottom: '8px' }}>
                   Starting Playing XI ({metrics.playingXI.length}/11)
                 </h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <div className="squad-grid">
                   {metrics.playingXI.map(p => (
                     <div
                       key={p.playerKey}
@@ -818,15 +818,15 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                         alignItems: 'center',
                         justifyContent: 'space-between',
                         padding: '8px 12px',
-                        background: 'rgba(43, 175, 102, 0.05)',
+                        background: 'color-mix(in srgb, var(--green) 5%, transparent)',
                         borderRadius: 'var(--radius-sm)',
-                        border: '1px solid rgba(43, 175, 102, 0.3)',
+                        border: '1px solid color-mix(in srgb, var(--green) 30%, transparent)',
                       }}
                     >
                       <div>
                         <span style={{ fontWeight: 700, fontSize: '0.85rem' }}>{p.name}</span>
                         {p.isRetained && (
-                          <span style={{ fontSize: '0.68rem', marginLeft: '6px', color: '#B4560B', fontWeight: 700 }}>
+                          <span style={{ fontSize: '0.68rem', marginLeft: '6px', color: 'var(--accent-ink)', fontWeight: 700 }}>
                             [Retained]
                           </span>
                         )}
@@ -855,7 +855,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                             fontSize: '0.7rem',
                             padding: '2px 6px',
                             borderRadius: 'var(--radius-pill)',
-                            color: '#B8165A',
+                            color: 'var(--pink)',
                           }}
                         >
                           ×
@@ -875,7 +875,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                     No bench reserves drafted yet. Draft more players to build depth!
                   </div>
                 ) : (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <div className="squad-grid">
                     {metrics.bench.map(p => (
                       <div
                         key={p.playerKey}
@@ -892,7 +892,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                         <div>
                           <span style={{ fontWeight: 600, fontSize: '0.85rem' }}>{p.name}</span>
                           {p.isRetained && (
-                            <span style={{ fontSize: '0.68rem', marginLeft: '6px', color: '#B4560B', fontWeight: 700 }}>
+                            <span style={{ fontSize: '0.68rem', marginLeft: '6px', color: 'var(--accent-ink)', fontWeight: 700 }}>
                               [Retained]
                             </span>
                           )}
@@ -910,7 +910,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                               padding: '2px 8px',
                               borderRadius: 'var(--radius-pill)',
                               background: 'var(--dark)',
-                              color: '#fff',
+                              color: 'var(--on-dark)',
                               opacity: metrics.playingXI.length >= 11 ? 0.5 : 1,
                             }}
                           >
@@ -923,7 +923,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                               fontSize: '0.7rem',
                               padding: '2px 6px',
                               borderRadius: 'var(--radius-pill)',
-                              color: '#B8165A',
+                              color: 'var(--pink)',
                             }}
                           >
                             ×
@@ -938,7 +938,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
           )}
         </div>
 
-        {/* Right Pane: Auction & Retention Player Marketplace */}
+        {/* Marketplace: auction buys and retention candidates */}
         <div className="card" style={{ padding: '20px' }}>
           <div style={{ marginBottom: '14px' }}>
             <h2 style={{ fontSize: '1.15rem', fontWeight: 800 }}>Player Marketplace</h2>
@@ -959,7 +959,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                 fontSize: '0.75rem',
                 fontWeight: 700,
                 background: marketTab === 'all' ? 'var(--dark)' : 'transparent',
-                color: marketTab === 'all' ? '#fff' : 'var(--muted)',
+                color: marketTab === 'all' ? 'var(--on-dark)' : 'var(--muted)',
                 cursor: 'pointer',
               }}
             >
@@ -975,7 +975,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                 fontSize: '0.75rem',
                 fontWeight: 700,
                 background: marketTab === 'auction' ? 'var(--dark)' : 'transparent',
-                color: marketTab === 'auction' ? '#fff' : 'var(--muted)',
+                color: marketTab === 'auction' ? 'var(--on-dark)' : 'var(--muted)',
                 cursor: 'pointer',
               }}
             >
@@ -991,7 +991,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                 fontSize: '0.75rem',
                 fontWeight: 700,
                 background: marketTab === 'retained' ? 'var(--dark)' : 'transparent',
-                color: marketTab === 'retained' ? '#fff' : 'var(--muted)',
+                color: marketTab === 'retained' ? 'var(--on-dark)' : 'var(--muted)',
                 cursor: 'pointer',
               }}
             >
@@ -1024,7 +1024,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                       fontSize: '0.75rem',
                       fontWeight: 600,
                       background: roleFilter === r ? 'var(--dark)' : 'transparent',
-                      color: roleFilter === r ? '#fff' : 'var(--muted)',
+                      color: roleFilter === r ? 'var(--on-dark)' : 'var(--muted)',
                     }}
                   >
                     {r === 'All-Rounder' ? 'AR' : r === 'Wicket-Keeper' ? 'WK' : r}
@@ -1060,11 +1060,11 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
               style={{
                 padding: '8px 12px',
                 marginBottom: '10px',
-                background: 'rgba(43, 108, 176, 0.08)',
-                border: '1px solid rgba(43, 108, 176, 0.25)',
+                background: 'color-mix(in srgb, var(--blue) 8%, transparent)',
+                border: '1px solid color-mix(in srgb, var(--blue) 25%, transparent)',
                 borderRadius: 'var(--radius-sm)',
                 fontSize: '0.78rem',
-                color: '#3366FF',
+                color: 'var(--blue)',
                 lineHeight: 1.4,
               }}
             >
@@ -1073,9 +1073,9 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
           )}
 
           {/* Player Cards List */}
-          <div style={{ maxHeight: '650px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '8px', paddingRight: '4px' }}>
+          <div className="market-grid">
             {filteredPool.length === 0 ? (
-              <div style={{ textAlign: 'center', padding: '40px 10px', color: 'var(--muted)', fontSize: '0.85rem' }}>
+              <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '40px 10px', color: 'var(--muted)', fontSize: '0.85rem' }}>
                 No players match your search and filter criteria.
               </div>
             ) : (
@@ -1098,9 +1098,9 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                       alignItems: 'center',
                       justifyContent: 'space-between',
                       padding: '10px 14px',
-                      background: isDrafted ? 'rgba(43, 175, 102, 0.06)' : 'var(--card)',
+                      background: isDrafted ? 'color-mix(in srgb, var(--green) 6%, transparent)' : 'var(--card)',
                       borderRadius: 'var(--radius-sm)',
-                      border: `1px solid ${isDrafted ? '#2BAF66' : 'var(--line)'}`,
+                      border: `1px solid ${isDrafted ? 'var(--green)' : 'var(--line)'}`,
                       opacity: overseasSquadMaxed || squadMaxed ? 0.6 : 1,
                       transition: 'all 0.15s ease',
                     }}
@@ -1119,20 +1119,20 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                             style={{
                               fontSize: '0.65rem',
                               padding: '2px 6px',
-                              background: p.retentionType === 'Uncapped' ? 'rgba(43, 175, 102, 0.15)' : 'rgba(242, 201, 76, 0.25)',
-                              color: p.retentionType === 'Uncapped' ? '#15803D' : '#B4560B',
+                              background: p.retentionType === 'Uncapped' ? 'color-mix(in srgb, var(--green) 15%, transparent)' : 'color-mix(in srgb, var(--accent) 25%, transparent)',
+                              color: p.retentionType === 'Uncapped' ? 'var(--green-ink)' : 'var(--accent-ink)',
                               fontWeight: 700,
                             }}
                           >
                             {p.retentionType === 'Uncapped' ? 'Uncapped ₹4 Cr' : 'Capped Ret.'}
                           </span>
                         ) : (
-                          <span className="pill" style={{ fontSize: '0.65rem', padding: '2px 6px', background: 'rgba(0, 0, 0, 0.06)' }}>
+                          <span className="pill" style={{ fontSize: '0.65rem', padding: '2px 6px', background: 'color-mix(in srgb, var(--ink) 6%, transparent)' }}>
                             Auction
                           </span>
                         )}
                         {isOverseas && (
-                          <span className="pill" style={{ fontSize: '0.65rem', padding: '2px 6px', background: 'rgba(74, 144, 226, 0.12)', color: '#1F48C7' }}>
+                          <span className="pill" style={{ fontSize: '0.65rem', padding: '2px 6px', background: 'color-mix(in srgb, var(--blue) 12%, transparent)', color: 'var(--blue-ink)' }}>
                             Overseas
                           </span>
                         )}
@@ -1143,7 +1143,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                         {p.valueIndex != null && (
                           <>
                             {' '}·{' '}
-                            <span style={{ color: '#15803D', fontWeight: 700 }}>
+                            <span style={{ color: 'var(--green-ink)', fontWeight: 700 }}>
                               VI: {formatVI(p.valueIndex)}
                             </span>
                           </>
@@ -1162,7 +1162,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                             style={{
                               padding: '4px 8px',
                               borderRadius: 'var(--radius-pill)',
-                              background: isStarter ? '#2BAF66' : 'var(--card-alt)',
+                              background: isStarter ? 'var(--green)' : 'var(--card-alt)',
                               color: isStarter ? '#fff' : 'var(--muted)',
                               fontSize: '0.72rem',
                               fontWeight: 700,
@@ -1175,7 +1175,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                             type="button"
                             onClick={() => handleRemovePlayer(p.playerKey)}
                             style={{
-                              color: '#B8165A',
+                              color: 'var(--pink)',
                               fontSize: '0.85rem',
                               fontWeight: 700,
                               padding: '2px 6px',
@@ -1194,7 +1194,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                             padding: '5px 12px',
                             borderRadius: 'var(--radius-pill)',
                             background: overseasSquadMaxed || squadMaxed ? 'var(--card-alt)' : 'var(--dark)',
-                            color: overseasSquadMaxed || squadMaxed ? 'var(--faint)' : '#fff',
+                            color: overseasSquadMaxed || squadMaxed ? 'var(--faint)' : 'var(--on-dark)',
                             fontSize: '0.75rem',
                             fontWeight: 700,
                             cursor: overseasSquadMaxed || squadMaxed ? 'not-allowed' : 'pointer',

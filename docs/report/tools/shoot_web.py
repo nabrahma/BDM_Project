@@ -1,6 +1,7 @@
 """Screenshot pages of the running web app in real time via Edge's DevTools protocol (charts finish animating).
 
 Usage:  .venv/Scripts/python -I docs/report/tools/shoot_web.py <base_url> <out_dir> name:/path [name:/path ...]
+Env:    SHOT_WAIT (seconds per page), SHOT_WIDTH (px), SHOT_THEME (light | dark)
 """
 import base64, json, os, subprocess, sys, time, urllib.request
 import websocket
@@ -25,6 +26,9 @@ try:
             m = json.loads(ws.recv())
             if m.get("id") == n[0]: return m.get("result", {})
     call("Emulation.setDeviceMetricsOverride", width=int(os.environ.get("SHOT_WIDTH", "1440")), height=1000, deviceScaleFactor=1, mobile=False)
+    if os.environ.get("SHOT_THEME"):  # light | dark, stored the way the app's toggle stores it
+        call("Page.navigate", url=base + "/"); time.sleep(2)
+        call("Runtime.evaluate", expression=f"localStorage.setItem('theme', '{os.environ['SHOT_THEME']}')")
     for name, path in pages:
         call("Page.navigate", url=base + path)
         time.sleep(float(os.environ.get("SHOT_WAIT", "7")))  # data fetch + chart animations

@@ -47,7 +47,7 @@ export default function ValueFunnel({ data, height = 290 }) {
         <div key={`col-${d.group}`} style={{
           position: 'absolute', top: 0, bottom: 0, left: GUTTER + i * cw, width: cw,
           borderLeft: `1px solid ${C.grid}`,
-          background: i === active ? 'linear-gradient(180deg, rgba(232,238,255,0) 0%, rgba(232,238,255,0.95) 100%)' : 'transparent',
+          background: i === active ? 'linear-gradient(180deg, transparent 0%, var(--blue-soft) 100%)' : 'transparent',
           transition: 'background 0.2s ease',
         }} onMouseEnter={() => setActive(i)} />
       ))}
@@ -58,7 +58,7 @@ export default function ValueFunnel({ data, height = 290 }) {
           <div style={{ fontSize: '0.74rem', color: i === active ? C.ink : C.faint, fontWeight: i === active ? 500 : 400, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
             {LABELS[d.group] || d.group}
           </div>
-          <div style={{ fontSize: Math.max(13, Math.min(24.8, cw / 4.4)), letterSpacing: '-0.03em', color: i === active ? C.ink : '#B9B9C2', marginTop: 2, fontVariantNumeric: 'tabular-nums' }}>
+          <div style={{ fontSize: Math.max(13, Math.min(24.8, cw / 4.4)), letterSpacing: '-0.03em', color: i === active ? C.ink : 'var(--faint)', marginTop: 2, fontVariantNumeric: 'tabular-nums' }}>
             {formatVI(d.valueIndex)}
           </div>
         </div>
@@ -94,10 +94,10 @@ export default function ValueFunnel({ data, height = 290 }) {
                 <rect x={x} y={top} width={bw} height={height - top}
                   fill={i === active ? 'url(#grad-funnel)' : 'url(#stripe-funnel)'}
                   opacity={i === active ? 1 : 0.92} />
-                {i === active && <rect x={x} y={top} width={bw} height={2} fill="#1F48C7" />}
+                {i === active && <rect x={x} y={top} width={bw} height={2} fill="var(--blue-ink)" />}
                 {/* fair value marker (1.0×) */}
                 <rect x={x + bw / 2 - 11} y={y(1) - 2.5} width={22} height={5} rx={2.5}
-                  fill="#FFFFFF" stroke={C.blue2} strokeWidth="1.2" />
+                  fill="var(--card)" stroke={C.blue2} strokeWidth="1.2" />
               </g>
             );
           })}
