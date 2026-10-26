@@ -1,5 +1,5 @@
 /**
- * Builds the BDM project report (Word .docx).
+ * Builds the short BDM project report (Word .docx, about 13 pages).
  *
  *   node docs/report/make_report.js <out.docx> [pagemap.json]
  *
@@ -56,12 +56,12 @@ function H1(title) {
   chapter += 1; section = 0; figN = 0; tabN = 0;
   const text = `${chapter}. ${title}`;
   toc.push({ level: 1, text });
-  return new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, children: [new TextRun({ text, font: FONT })] });
+  return new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun({ text, font: FONT })] });
 }
 function H1plain(text, label = null) {   // unnumbered chapter-level heading (References, appendices)
   toc.push({ level: 1, text });
   if (label) { chapter = label; section = 0; figN = 0; tabN = 0; }
-  return new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, children: [new TextRun({ text, font: FONT })] });
+  return new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun({ text, font: FONT })] });
 }
 function H2(title) {
   section += 1;
@@ -94,11 +94,11 @@ function Tbl(caption, headers, rows, widths, o = {}) {
   const label = `Table ${chapter}.${tabN}: ${caption}`;
   tables.push(label);
   const total = widths.reduce((a, b) => a + b, 0);
-  const cell = (text, w, head, align) => new TableCell({
+  const cell = (text, w, head, align, keep = true) => new TableCell({
     width: { size: w, type: WidthType.DXA }, borders: BORDERS, verticalAlign: VerticalAlign.CENTER,
     shading: head ? { fill: 'E7E3D8', type: ShadingType.CLEAR, color: 'auto' } : undefined,
     margins: { top: 60, bottom: 60, left: 100, right: 100 },
-    children: [new Paragraph({ alignment: align, spacing: { after: 0, line: 260 },
+    children: [new Paragraph({ alignment: align, keepNext: keep, spacing: { after: 0, line: 260 },
       children: runs(text, { size: o.size ?? 20, bold: head }) })],
   });
   const align = i => (o.right || []).includes(i) ? AlignmentType.RIGHT : AlignmentType.LEFT;
@@ -110,7 +110,7 @@ function Tbl(caption, headers, rows, widths, o = {}) {
       alignment: AlignmentType.CENTER,
       rows: [
         new TableRow({ tableHeader: true, children: headers.map((h, i) => cell(h, widths[i], true, align(i))) }),
-        ...rows.map(r => new TableRow({ cantSplit: true, children: r.map((c, i) => cell(String(c), widths[i], false, align(i))) })),
+        ...rows.map((r, ri) => new TableRow({ cantSplit: true, children: r.map((c, i) => cell(String(c), widths[i], false, align(i), ri < rows.length - 1)) })),
       ],
     }),
     new Paragraph({ spacing: { after: 160 }, children: [] }),
@@ -185,346 +185,140 @@ const add = (...xs) => xs.forEach(x => (Array.isArray(x) ? body.push(...x) : bod
 
 // 1 Introduction
 add(H1('Introduction'));
-add(H2('Background'));
-add(P('The Indian Premier League (IPL) is the richest T20 cricket league in the world and, for its franchises, a business with a fixed and highly visible cost line: the player auction. Every year ten franchises bid for players out of a capped purse (₹120 Cr per franchise for 2025–2027). Every three to four years a mega auction resets most squads (2014, 2018, 2022 and 2025 in our period); in between, smaller mini auctions fill gaps. Players enter at a base price and are sold to the highest bidder; a few core players are retained outside the auction at fixed retention prices.'));
-add(P('Between 2013 and 2026 the franchises spent ₹3,269 Cr on 1,380 auction buys. Prices are set in a few minutes of competitive bidding, under time pressure and with strong reputational effects, while the return on that money is decided over a season of runs, wickets and catches. That gap between what is paid and what is delivered is a classic business-analytics problem: it can be measured, compared across buyers, and used to make better decisions at the next auction.'));
-add(H2('Problem Statement'));
-add(P([['Which IPL auction buys earned their price? ', { bold: true }], 'Franchises pay for reputation but win with on-field output. This project takes the point of view of a franchise analytics team and measures, for every auction buy from 2013 to 2026, how much on-field impact each crore bought, so that franchises can be compared and the next auction can be planned on evidence rather than on headlines.']));
-add(H2('Objectives'));
+add(P('Every year IPL franchises spend hundreds of crores at the player auction. Prices are set in a few minutes of bidding, often driven by reputation, while the return on that money is decided over a season of runs, wickets and catches. Between 2013 and 2026 the franchises spent ₹3,269 Cr on 1,380 auction buys.'));
+add(P([['Problem statement. ', { bold: true }], 'Which IPL auction buys earned their price? Taking the view of a franchise analytics team, we measure how much on-field impact each crore bought, so that franchises can be compared and the next auction planned on evidence.']));
 add(P('The project answers six business questions:', { keepNext: true }));
 add(N('Which franchise gets the most on-field impact per crore spent?'));
-add(N('Which players were the best bargains and the worst buys in each season?'));
+add(N('Which players were the best bargains and the worst buys?'));
 add(N('Do franchises that spend efficiently win more matches?'));
-add(N('Are batters, bowlers, all-rounders or wicket-keepers over- or under-priced, and do overseas players earn their premium?'));
-add(N('How much have auction prices inflated since 2013, and does a high price predict high output?'));
-add(N('How often do base-price buys outperform expensive marquee signings?'));
-add(H2('Scope and Deliverables'));
-add(P('The analysis covers every auction purchase from the 2013 to the 2026 auction and every IPL match played in those seasons (921 matches). Retained players are part of the performance data but, because they have no auction price, they are excluded from the value metrics. The project produced two front ends on one shared, validated dataset:'));
-add(B([['Power BI dashboard: ', { bold: true }], 'a star-schema model with 93 DAX measures and a nine-page report (plus a drill-through player profile, a tooltip page and a QA page), exported to PDF and delivered as a single .pbix file.']));
-add(B([['MERN web application: ', { bold: true }], 'MongoDB, Express, React and Node.js, serving the same analysis in any browser, plus an interactive Squad Builder and Salary Cap Simulator, deployed on Vercel with MongoDB Atlas.']));
-add(P(`All code, data and documentation are in the project repository: ${REPO_URL}.`, { align: AlignmentType.LEFT }));
+add(N('Are some roles over- or under-priced, and do overseas players earn their premium?'));
+add(N('How much have auction prices inflated since 2013?'));
+add(N('Do base-price buys outperform expensive marquee signings?'));
+add(P('The results are delivered in two front ends built on one dataset: a Power BI dashboard (Handover/IPL_Auction_Value.pbix) and a MERN web application with the same pages, which stores the data in MongoDB.'));
 
-// 2 Data
-add(H1('Data Sources and Understanding'));
+// 2 Data and Methodology
+add(H1('Data and Methodology'));
 add(H2('Data Sources'));
-add(P('The analysis combines auction records with ball-by-ball match data. Table 2.1 lists every source. The two hand-made mapping files are the only manual inputs, and each entry in them was checked by hand.'));
-add(Tbl('Data sources used in the project', ['Source', 'What it provides', 'Grain / size'], [
-  ['Kaggle: IPL Auction Dataset 2013–2026 (sunnyyadav754)', 'Price, team, role, nationality; base price for 2025–26', 'One CSV per auction; 1,380 buys'],
-  ['Cricsheet IPL ball-by-ball JSON (Oct 2026 release)', 'Every delivery, fielders, playing XIs, results', '1,243 matches (921 in 2013–2026)'],
-  ['Cricsheet Register (people.csv, names.csv)', 'Unique player IDs and name variants', 'One row per person / name variant'],
-  ['Kaggle: IPL Player Auction Dataset 2013–2022 (kalilurrahman)', 'Role and Indian/Overseas flags missing in some years', 'One row per buy'],
-  ['Official TATA IPL 2025 Auction List', 'Roles and base prices for 2025', 'One row per registered player'],
-  ['Wisden: IPL 2026 unsold list', 'Players who went unsold at the latest auction', '79 players'],
-  ['team_map.csv (hand-made)', 'Franchise renames → one team key, team colours', '13 franchises'],
-  ['name_fixes.csv (hand-made)', 'Checked auction-name → Cricsheet-ID matches', '96 entries'],
-], [3300, 3600, 2126]));
-add(P('The project brief named a Kaggle ball-by-ball CSV as the performance source. That file has no fielder column, so catches, stumpings and run-outs could not be scored from it. We used Cricsheet\'s JSON instead, which is the upstream source of that CSV and additionally gives playing XIs and a stable identifier for every player.'));
-add(H2('Data Quality Challenges'));
-add(P('The raw data could not be joined directly. The main problems, and how they were handled, were:', { keepNext: true }));
-add(B([['Different file layouts per year. ', { bold: true }], 'Auction files use different column names and price formats (rupee strings such as "14,20,00,000", lakh values, and US dollars in 2013). One standardising function maps each year to a common layout and converts every price to crores (2013 at ₹54 per US$).']));
-add(B([['Player names do not match across sources. ', { bold: true }], 'The auction lists "Virat Kohli" while Cricsheet records "V Kohli"; spellings, initials and nicknames vary. A six-pass matching process (Section 3.2) links 99.0% of auction spend to a Cricsheet player ID.']));
-add(B([['Franchise renames and defunct teams. ', { bold: true }], 'Delhi Daredevils became Delhi Capitals, Kings XI Punjab became Punjab Kings, and Pune Warriors, Rising Pune Supergiant and Gujarat Lions no longer exist. A mapping table assigns every historical name to one of 13 team keys.']));
-add(B([['Missing attributes. ', { bold: true }], 'Role and nationality are missing for some years; they are filled from the 2013–2022 backup dataset and the official 2025 list, and otherwise derived from the player\'s bowling and batting record.']));
-add(B([['Season labels and super overs. ', { bold: true }], 'Seasons such as "2020/21" are mapped to the calendar year in which the IPL was played; super-over deliveries are excluded from player statistics.']));
-add(H2('Data Volume after Preparation'));
-add(Tbl('Size of the prepared tables', ['Table', 'Grain', 'Rows'], [
-  ['FactPlayerSeason', 'player × season × team (statistics + auction price)', '2,910'],
-  ['FactAuction', 'one auction purchase', '1,380'],
-  ['FactTeamMatch', 'team × match (won / no result)', '1,842'],
-  ['DimPlayer', 'one player (Cricsheet ID)', '778'],
-  ['DimTeam · DimSeason · DimTeamSeason', 'franchise · season · franchise-season', '13 · 14 · 123'],
-], [3000, 4526, 1500], { right: [2] }));
-
-// 3 Methodology
-add(H1('Methodology'));
-add(H2('Data Preparation Pipeline'));
-add(P('All cleaning is done in Power Query (M) inside Power BI, so a single Refresh rebuilds the entire model from the raw files. Every query reads one parameter, DataFolder, so the project can be moved to another computer by changing one value. Intermediate staging queries are not loaded into the model. The pipeline has six stages:'));
-add(N([['Auction files: ', { bold: true }], 'one function standardises each year\'s columns and converts prices to crores; role and nationality gaps are filled from the backup datasets.'], 'steps'));
-add(N([['Match JSON: ', { bold: true }], 'a parsing function turns each of the 1,243 match files into three tables: playing XIs, deliveries and fielding credits.'], 'steps'));
-add(N([['Player-season statistics: ', { bold: true }], 'batting (runs, balls faced excluding wides, fours, sixes), bowling (legal balls, runs conceded excluding byes and leg-byes, dot balls, wickets excluding run-outs) and fielding (catches, stumpings, run-out involvements) are aggregated by season, player and team.'], 'steps'));
-add(N([['Name matching: ', { bold: true }], 'each auction name is linked to a Cricsheet player ID (Section 3.2).'], 'steps'));
-add(N([['Contracts: ', { bold: true }], 'auction prices are carried forward to the seasons they cover (Section 3.3).'], 'steps'));
-add(N([['Facts and dimensions: ', { bold: true }], 'statistics and contracts are joined into FactPlayerSeason; players without an auction price that season (retained or traded) are labelled Unpriced.'], 'steps'));
-add(H2('Player Name Matching'));
-add(P('Matching auction names to ball-by-ball identities is the step on which every value metric depends. It runs as a sequence of passes; each pass only handles names that the earlier passes left unmatched, and the later, looser passes only search within the buying franchise\'s roster for that season, which prevents false matches between players with similar names.'));
-add(Tbl('Name-matching passes and their results', ['Pass', 'Rule', 'Auction buys matched'], [
-  ['1. Manual', 'Hand-checked fixes from name_fixes.csv (96 entries)', '177'],
-  ['2. Exact (IPL)', 'Exact, unique name among IPL players', '861'],
-  ['3. Exact (register)', 'Exact, unique name in the full Cricsheet register', '70'],
-  ['4. Initials', '"Virat Kohli" → "V Kohli" within the team\'s roster', '162'],
-  ['5. Surname', 'Surname + first initial within the roster', '44'],
-  ['6. Fuzzy', 'Power Query fuzzy merge (similarity ≥ 0.8) within the roster', '0 (safety net)'],
-  ['Unmatched', 'Mostly players who never played an IPL match', '66'],
-], [2000, 5226, 1800], { right: [2] }));
-add(P('In total 1,314 of 1,380 buys are matched, covering ₹3,237.6 Cr of ₹3,269.2 Cr, i.e. 99.0% of auction spend against a target of 95%. The 66 unmatched buys keep a synthetic identifier so that their spend is still counted.'));
-add(H2('Contract Carry-Forward Rule'));
-add(P('An auction price pays for more than one season. A price therefore covers the auction season and later seasons until the earliest of: the player\'s next auction minus one, the next mega auction minus one (2014, 2018, 2022, 2025), or 2026. Later seasons only count while the player is still playing for the same franchise, so released players stop carrying spend. A QA check confirms that no contract row extends beyond the next mega auction.'));
+add(Tbl('Data sources', ['Source', 'What it provides', 'Size'], [
+  ['Kaggle: IPL Auction Dataset 2013–2026', 'Price, team, role, nationality; base price for 2025–26', '1,380 buys'],
+  ['Cricsheet IPL ball-by-ball JSON', 'Every delivery, fielders, playing XIs, results', '921 matches (2013–2026)'],
+  ['Cricsheet Register', 'Unique player IDs and name variants', 'All players'],
+  ['Kaggle 2013–22 list; official 2025 list', 'Missing roles and Indian/Overseas flags', 'Supplementary'],
+  ['Wisden: IPL 2026 unsold list', 'Players unsold at the latest auction', '79 players'],
+], [3500, 3700, 1826]));
+add(H2('Data Preparation'));
+add(P('All cleaning is done in Power Query inside Power BI, so one Refresh rebuilds the model from the raw files. The main steps were:', { keepNext: true }));
+add(B([['Standardising auction files: ', { bold: true }], 'each year has different columns and price formats; all prices were converted to crores (2013 from US dollars at ₹54 per $).']));
+add(B([['Matching player names: ', { bold: true }], '"Virat Kohli" in the auction is "V Kohli" in Cricsheet. Six matching passes (manual fixes, exact, initials, surname, fuzzy) link 99.0% of auction spend to a player.']));
+add(B([['Team renames: ', { bold: true }], 'e.g. Delhi Daredevils → Delhi Capitals, Kings XI Punjab → Punjab Kings; 13 team keys in total.']));
+add(B([['Contracts: ', { bold: true }], 'a price covers the auction season and later seasons with the same team, until the next auction or mega auction.']));
 add(H2('Data Model'));
-add(P('The model is a star schema (Kimball and Ross, 2013): three fact tables surrounded by four dimensions, every relationship one-to-many and single-direction, so that every filter flows predictably from dimension to fact (Figure 3.1). All 93 measures live in one _Measures table, organised in display folders (Money, Performance, Value, Team, QA, Formatting).'));
-add(Fig(A('diagram_star_schema.png'), 'Star schema of the Power BI model'));
+add(P('The model is a star schema with three fact tables (player-season, auction buy, team-match) and four dimensions (player, team, season, team-season), all relationships one-to-many. The 93 measures are written in DAX.'));
+add(Fig(A('diagram_star_schema.png'), 'Star schema of the Power BI model', 520));
 add(H2('Value Metrics'));
-add(H3('Impact Points'));
-add(P('To compare batters, bowlers and fielders on one scale, every contribution is converted into Impact Points using fantasy-style weights (Table 3.2). One run is worth one point; a wicket is worth 25, roughly what a T20 wicket is worth in runs saved.'));
-add(Tbl('Impact Points weights', ['Contribution', 'Points'], [
-  ['Run scored', '1'], ['Boundary four (bonus)', '+1'], ['Six (bonus)', '+2'], ['Wicket (bowler)', '25'],
-  ['Dot ball bowled', '1'], ['Catch', '8'], ['Stumping', '12'], ['Run-out involvement', '6'],
-], [5000, 2000], { right: [1] }));
-add(Formula('Impact Points = Runs + Fours + 2·Sixes + 25·Wickets + Dot balls + 8·Catches + 12·Stumpings + 6·Run-outs'));
-add(H3('Value Index'));
-add(P('The Value Index compares a player\'s share of the league\'s on-field output with his share of the league\'s auction spend in the same season. A value of 1.00 means fair value; 2.00 means twice as much output as the money suggests; 0.50 means half.'));
-add(Formula('Value Index = (Impact Points ÷ League priced Impact Points) ÷ (Price ÷ League auction spend)'));
-add(P('For groups that span several seasons (a franchise over 14 years, a price bracket, a role) the shares are summed season by season before dividing, so that a 2013 buy is judged against the 2013 market and a 2025 buy against the 2025 market:'));
-add(Formula('Value Index(group) = Σₛ (Impactₛ ÷ League Impactₛ) ÷ Σₛ (Spendₛ ÷ League Spendₛ)'));
-add(P('By construction the league as a whole has a Value Index of exactly 1.00 in every season, which is one of the model\'s QA checks.'));
-add(H3('Fair Value and Overpay'));
-add(P('Fair value is what a player\'s output would have cost at that season\'s league price per Impact Point; Overpay is the difference between the price paid and that fair value. Overpay is measured in crores, which makes it the better ranking for "worst buys": a ratio such as the Value Index becomes extreme for very cheap players, whereas crores lost is what hurts a franchise\'s purse.'));
-add(Formula('Fair Value = Impact Points × (League spend ÷ League priced Impact Points);   Overpay = Price − Fair Value'));
-add(H3('Value Quadrant and Price Brackets'));
-add(P('Each priced player-season is compared with that season\'s median price and median Impact Points and placed in one of four quadrants: Star (price and impact above the medians), Steal (cheap but high impact), Overpaid (expensive but low impact) and Passenger (cheap and low impact). Players with fewer than five matches are labelled Too few matches and excluded from rankings. Buys are also grouped into price brackets: base-price buy, under ₹2 Cr, ₹2–5 Cr, ₹5–10 Cr and ₹10 Cr and above.'));
+add(P([['Impact Points ', { bold: true }], 'put batting, bowling and fielding on one scale (a run is 1 point, a wicket 25, a catch 8):']));
+add(Formula('Impact = Runs + Fours + 2·Sixes + 25·Wickets + Dot balls + 8·Catches + 12·Stumpings + 6·Run-outs'));
+add(P([['Value Index ', { bold: true }], 'compares a player\'s share of the league\'s impact with their share of the league\'s auction spend in that season. 1.00 is fair value; above 1 is a bargain, below 1 is overpaid. For groups across seasons the shares are summed season by season, so each buy is judged against its own year\'s market.']));
+add(Formula('Value Index = (Impact ÷ League Impact) ÷ (Price ÷ League Spend)'));
+add(P([['Fair value and overpay: ', { bold: true }], 'fair value is what the output would have cost at the league\'s price per Impact Point; Overpay = Price − Fair value, in crores. ', ['Value quadrants: ', { bold: true }], 'each buy is compared with the season\'s median price and median impact and labelled Star (high price, high impact), Steal (low price, high impact), Overpaid (high price, low impact) or Passenger (low price, low impact).']));
 
-// 4 Power BI
+// 3 Power BI Dashboard
 add(H1('Power BI Dashboard'));
-add(H2('Design Principles'));
-add(P('The report is built for a franchise owner who has a few minutes before an auction meeting. Every page follows the same pattern:'));
-add(B([['Finding as the headline. ', { bold: true }], 'Each page title states its conclusion with numbers (for example, "2026: RR got 1.63× fair value from ₹34 Cr of buys; PBKS spent the most (₹108 Cr) for 0.72×"), with the business question underneath.']));
-add(B([['"So what" panel. ', { bold: true }], 'A dark panel at the bottom of every page states the decision the page supports.']));
-add(B([['Fixed colour meaning. ', { bold: true }], 'Green is always Steal, yellow Star, red Overpaid and grey Passenger or Unpriced; team colours appear only on the franchise page.']));
-add(B([['Consistent layout. ', { bold: true }], 'A light canvas with white rounded cards, pill navigation at the top (the current page shown as a dark pill), a strip of large KPI numbers, and alt text on every visual for screen readers.']));
-add(H2('Report Pages'));
-add(Tbl('Pages of the Power BI report', ['Page', 'Business question', 'Main visuals'], [
-  ['Home', 'Overview and navigation', 'KPI strip, page cards, key findings'],
-  ['1 Auction Market', 'How much have prices inflated?', 'Average price per season (mega auctions highlighted), spend, top buys'],
-  ['2 Franchise Efficiency', 'Who gets most impact per crore, and does it win?', 'Value Index by team, spend vs win % scatter, team × season matrix'],
-  ['3 Player Value Map', 'Which buys were Stars, Steals, Overpaid?', 'Price vs Impact scatter with median lines, quadrant colours'],
-  ['4 Steals and Overpaid', 'Best bargains and worst buys', 'Top-10 tables, Bargain XI, Overpaid XI, unsold list'],
-  ['5 Role and Nationality', 'Are roles / overseas players worth it?', 'Value Index by role × Indian/Overseas'],
-  ['6 Price Brackets', 'Do base-price buys beat marquee signings?', 'Value Index and % above median impact by bracket'],
-  ['7 Player Profile', 'One player\'s history (drill-through)', 'Price bars vs Impact line by season, career table'],
-  ['8 Methodology', 'How is value measured?', 'Definitions, weights, data sources'],
-], [2200, 3300, 3526]));
-add(P('A hidden QA page shows every validation check live (Chapter 7), and a tooltip page shows a player card when hovering over any dot on the Value Map.'));
-add(H2('Page Walkthrough'));
-add(Fig(PBI('00_home.png'), 'Power BI Home page: KPI strip and navigation cards'));
-add(Fig(PBI('01_auction_market.png'), 'Auction Market: average price per season, mega auctions highlighted'));
-add(Fig(PBI('02_franchise_efficiency.png'), 'Franchise Efficiency: Value Index by franchise and spend vs win %'));
-add(Fig(PBI('03_player_value_map.png'), 'Player Value Map: price vs Impact Points, coloured by quadrant'));
-add(Fig(PBI('04_steals_and_overpaid.png'), 'Steals and Overpaid: top-10 tables, Bargain XI and Overpaid XI'));
-add(Fig(PBI('05_role_and_nationality.png'), 'Role and Nationality: Value Index by role and Indian/Overseas'));
-add(Fig(PBI('06_price_brackets.png'), 'Price Brackets: Value Index and hit rate by price bracket'));
-add(Fig(PBI('08_methodology.png'), 'Methodology page: definitions and data sources'));
-add(H2('DAX Measures'));
-add(P('The 93 measures are grouped by purpose. The central measure, Value Index, is computed season by season so that any filter combination (one team, one role, all seasons) returns the correct multi-season value:'));
-add(Code([
-  "Value Index =",
-  "VAR bySeason =",
-  "    ADDCOLUMNS (",
-  "        VALUES ( DimSeason[Season] ),",
-  "        \"@impShare\",   DIVIDE ( [Priced Impact], [League Priced Impact] ),",
-  "        \"@spendShare\", DIVIDE ( [Spend Cr], [League Spend] )",
-  "    )",
-  "RETURN",
-  "    DIVIDE ( SUMX ( bySeason, [@impShare] ), SUMX ( bySeason, [@spendShare] ) )",
-]));
-add(Tbl('Measure groups', ['Display folder', 'Examples'], [
-  ['Money', 'Spend Cr, Average and Median Auction Price, Top Buy, Auction Premium %, Spend Matched %'],
-  ['Performance', 'Impact Points, Runs, Wickets, Strike Rate, Economy, Orange / Purple Cap leaders'],
-  ['Value', 'Value Index, Fair Value Cr, Overpay Cr, Steal / Overpaid Rank, Bargain XI and Overpaid XI flags'],
-  ['Team', 'Team Wins, Team Results, Win %'],
-  ['QA', 'Matches per season, League Value Index, bad prices, unmapped teams, contract rows beyond mega'],
-  ['Formatting', 'Colour measures for conditional formatting and dynamic labels'],
-], [2200, 6826]));
+add(P('Each page title states its finding with numbers, a "So what" panel states the decision it supports, and colours keep a fixed meaning (green Steal, yellow Star, red Overpaid, grey Passenger). Table 3.1 lists the pages.'));
+add(Tbl('Pages of the Power BI report', ['Page', 'Question answered', 'Main visuals'], [
+  ['Home', 'Overview', 'KPI strip and page cards'],
+  ['1 Auction Market', 'How much have prices inflated?', 'Average price per season, spend by role'],
+  ['2 Franchise Efficiency', 'Who gets most impact per crore; does it win?', 'Value Index by team, spend vs win % scatter'],
+  ['3 Player Value Map', 'Stars, Steals, Overpaid', 'Price vs Impact scatter with median lines'],
+  ['4 Steals and Overpaid', 'Best and worst buys', 'Top-10 tables, Bargain XI, Overpaid XI'],
+  ['5 Role and Nationality', 'Are roles / overseas players worth it?', 'Value Index by role, Indian vs overseas'],
+  ['6 Price Brackets', 'Do cheap buys beat marquee buys?', 'Value Index and quadrant mix by bracket'],
+  ['7 Player Profile', 'One player\'s history (drill-through)', 'Price and impact by season'],
+  ['8 Methodology', 'How is value measured?', 'Definitions and sources'],
+], [2300, 3300, 3426]));
+add(Fig(PBI('00_home.png'), 'Home page', 560));
+add(Fig(PBI('02_franchise_efficiency.png'), 'Franchise Efficiency', 560));
+add(Fig(PBI('03_player_value_map.png'), 'Player Value Map', 560));
+add(Fig(PBI('04_steals_and_overpaid.png'), 'Steals and Overpaid', 560));
 
-// 5 Web app
-add(H1('MERN Web Application'));
-add(H2('Motivation'));
-add(P('A Power BI file needs Power BI Desktop or a Power BI licence to open. To make the analysis available to anyone with a browser, and to add interactive features that a static report cannot offer, the same dataset was served through a MERN web application (MongoDB, Express, React, Node.js). Both front ends read the same validated tables, so every number in the web app matches the Power BI report.'));
-add(H2('System Architecture'));
-add(P('The Power BI model is the single source of truth. Its tables, with the value metrics already calculated, are exported to CSV and JSON (data/processed), loaded into MongoDB Atlas, and served by an Express API to a React front end (Figure 5.1).'));
-add(Fig(A('diagram_architecture.png'), 'System architecture: one dataset, two front ends'));
-add(Tbl('Technology stack of the web application', ['Layer', 'Technology', 'Role'], [
-  ['Database', 'MongoDB Atlas (M0, AWS Mumbai) + Mongoose', '8 collections, 7,139 documents, indexes on season / player / team'],
-  ['API', 'Node.js + Express', '8 REST route groups; Value Index aggregation pipeline'],
-  ['Front end', 'React 19 + Vite + Recharts', '10 pages mirroring the dashboard, plus the Squad Builder'],
-  ['Hosting', 'Vercel', 'Static site + Express API as a serverless function at /api'],
-], [1600, 3400, 4026]));
-add(H2('Database Design'));
-add(Tbl('MongoDB collections', ['Collection', 'Documents', 'Key / use'], [
-  ['players', '778', 'PlayerID; career totals and career Value Index'],
-  ['teams', '13', 'TeamKey; name and colour'],
-  ['seasons', '14', 'Season; league totals, Orange/Purple Cap, top buy'],
-  ['team_seasons', '123', 'TeamSeasonKey; spend, wins, Value Index'],
-  ['player_seasons', '2,910', 'PlayerSeasonKey; statistics, price, quadrant, Value Index, Overpay'],
-  ['auction_buys', '1,380', 'AuctionKey; every purchase and its match pass'],
-  ['team_matches', '1,842', 'TeamMatchKey; results per team and match'],
-  ['unsold_players', '79', '2026 unsold players with career record'],
-], [2200, 1300, 5526], { right: [1] }));
-add(P('Because the Value Index is a ratio, it must never be averaged. The API computes it for any group (role, nationality, price bracket, franchise) with a MongoDB aggregation pipeline that groups by key and season, divides by the league totals from the seasons collection and sums the shares, exactly as the DAX measure does.'));
-add(H2('REST API'));
-add(Tbl('API endpoints', ['Endpoint', 'Returns'], [
-  ['GET /api/summary', 'Home KPIs: total spend, buys, average price, inflation, spend matched %'],
-  ['GET /api/seasons', 'Season-level market data, Orange and Purple Caps'],
-  ['GET /api/team-seasons?season=  ·  /matrix', 'Franchise Value Index, spend and win %; team × season matrix'],
-  ['GET /api/player-seasons?season=&priced=true', 'Points for the Value Map scatter'],
-  ['GET /api/rankings/steals | overpaid | bargain-xi | overpaid-xi | unsold', 'Ranked lists (minimum 5 matches)'],
-  ['GET /api/breakdown?by=Role | Nationality | PriceBracket', 'Value Index by group (aggregation pipeline)'],
-  ['GET /api/players?q=  ·  /api/players/:id', 'Player search and full profile'],
-  ['GET /api/squad-builder/pool?season=', 'Draftable player pool with prices and retention data'],
-  ['GET /api/health', 'Database connection status and collection counts'],
-], [4300, 4726]));
-add(H2('Front-end Pages'));
-add(P('The React client has ten pages: the eight analytical pages of the dashboard, a searchable player directory with full profiles, and the Squad Builder. A shared season filter, the same colour meanings and the same "So what" panels keep the web app consistent with the Power BI report.'));
-add(Fig(A('web_crop/home.png'), 'Web app Home page: live KPIs from MongoDB'));
-add(Fig(A('web_crop/valuemap.png'), 'Web app Player Value Map (2026)'));
-add(Fig(A('web_crop/franchises.png'), 'Web app Franchise Efficiency (2026)'));
-add(Fig(A('web_crop/steals.png'), 'Web app Steals and Overpaid page with Bargain XI and Overpaid XI'));
-add(Fig(A('web_crop/players.png'), 'Web app player profile: Cameron Green'));
-add(H2('Squad Builder and Salary Cap Simulator'));
-add(P('The Squad Builder turns the analysis into a decision tool. A user picks a franchise preset (its actual pre-auction retentions) or starts from a blank slate, then drafts players from the 2026 pool under the real IPL rules:'));
-add(B('Purse cap of ₹120 Cr shared between retentions and auction buys.'));
-add(B('Retention ladder for capped players (₹18 Cr, ₹14 Cr, ₹11 Cr, ₹18 Cr, ₹14 Cr) and a flat ₹4 Cr for uncapped retentions; at most six retentions, at most five capped.'));
-add(B('Squad of 18 to 25 players with at most 8 overseas players; Playing XI of exactly 11 with at most 4 overseas.'));
-add(P('The simulator shows the remaining purse, a live checklist of the rules, the squad\'s total Impact Points and its Value Index, and can auto-draft a full squad or auto-select the best Playing XI from the drafted players.'));
-add(Fig(A('web_crop/squad.png'), 'Squad Builder and Salary Cap Simulator'));
-add(H2('Deployment'));
-add(P(`The application is deployed as a single Vercel project. Vercel builds the React client and serves it as static files, and runs the Express API as a serverless function at /api; the database is a MongoDB Atlas M0 cluster in the AWS Mumbai region. The API keeps one cached database connection per serverless container, so repeated requests do not reconnect. The only configuration is one environment variable, MONGODB_URI. Every push to the repository's main branch redeploys the site automatically.${LIVE_URL ? ` The live application is available at ${LIVE_URL}.` : ''}`));
-
-// 6 Results
+// 4 Results
 add(H1('Results and Analysis'));
-add(H2('The Auction Market'));
-add(P('Prices have doubled. The average auction buy cost ₹1.73 Cr in 2013 and ₹3.51 Cr at the 2025 mega auction (2.0×); the 2026 mini auction averaged ₹2.80 Cr. Spending moves in steps with the mega auctions: the 2025 mega auction alone saw ₹639 Cr spent on 182 players, the most ever. In 2025–26, where base prices are published, teams paid on average 245% above the base price. The highest price in the data is ₹27 Cr for Rishabh Pant (LSG, 2025).'));
+add(H2('Auction Market'));
+add(P('Prices have doubled: the average buy cost ₹1.73 Cr in 2013 and ₹3.51 Cr at the 2025 mega auction (2.0×). In 2025–26, bids ended on average 245% above the base price. The highest price is ₹27 Cr for Rishabh Pant (LSG, 2025).'));
 add(H2('Franchise Efficiency and Winning'));
-add(P('Across all 123 franchise-seasons, auction spend has essentially no relationship with winning: the correlation between spend and win percentage is r = −0.03. Spending efficiently does matter: the correlation between Value Index and win percentage is r = +0.35. Money does not buy wins; value does.'));
-add(P('Over 2013–2026, Chennai Super Kings (Value Index 1.19) and Rajasthan Royals (1.14) ran the most efficient auctions among current franchises, and Delhi Capitals (0.85) the least. Table 6.1 shows the 2026 season.'));
-add(Tbl('Franchise efficiency in 2026', ['Franchise', 'Spend on priced players', 'Win %', 'Value Index'], [
-  ['Rajasthan Royals (RR)', '₹34.3 Cr', '56.3%', '1.63'], ['Sunrisers Hyderabad (SRH)', '₹41.8 Cr', '60.0%', '1.33'],
-  ['Gujarat Titans (GT)', '₹69.3 Cr', '58.8%', '1.22'], ['Royal Challengers Bengaluru (RCB)', '₹85.7 Cr', '68.8%', '1.13'],
-  ['Mumbai Indians (MI)', '₹43.5 Cr', '28.6%', '1.08'], ['Lucknow Super Giants (LSG)', '₹69.4 Cr', '28.6%', '0.93'],
-  ['Chennai Super Kings (CSK)', '₹63.5 Cr', '42.9%', '0.93'], ['Delhi Capitals (DC)', '₹73.2 Cr', '50.0%', '0.83'],
-  ['Kolkata Knight Riders (KKR)', '₹72.8 Cr', '46.2%', '0.81'], ['Punjab Kings (PBKS)', '₹108.1 Cr', '53.8%', '0.72'],
-], [3800, 2200, 1300, 1726], { right: [1, 2, 3] }));
-add(H2('Steals and Overpaid Buys'));
-add(P('The best value sits in ₹30-lakh buys. In 2026, of 171 priced players, 57 were Stars, 24 Steals, 8 Overpaid and 6 Passengers (76 played fewer than five matches). Kartik Tyagi, bought by KKR for ₹0.3 Cr, returned 33.95× fair value. At the other end, every one of the five most overpaid 2026 players cost ₹14 Cr or more.'));
-add(Tbl('Top five steals of 2026 (minimum 5 matches)', ['Player', 'Team', 'Price', 'Impact Points', 'Value Index'], [
-  ['Kartik Tyagi', 'KKR', '₹0.3 Cr', '615', '33.95'], ['Prince Yadav', 'LSG', '₹0.3 Cr', '552', '30.47'],
-  ['Sakib Hussain', 'SRH', '₹0.3 Cr', '476', '26.27'], ['Brijesh Sharma', 'RR', '₹0.3 Cr', '446', '24.62'],
-  ['Praful Hinge', 'SRH', '₹0.3 Cr', '439', '24.23'],
-], [2800, 1200, 1500, 1800, 1726], { right: [2, 3, 4] }));
-add(Tbl('Five most overpaid buys of 2026 (minimum 5 matches)', ['Player', 'Team', 'Price', 'Impact Points', 'Overpaid by'], [
-  ['Rishabh Pant', 'LSG', '₹27.0 Cr', '450', '₹19.5 Cr'], ['Shreyas Iyer', 'PBKS', '₹26.75 Cr', '661', '₹15.8 Cr'],
-  ['Cameron Green', 'KKR', '₹25.2 Cr', '664', '₹14.2 Cr'], ['Prashant Veer', 'CSK', '₹14.2 Cr', '111', '₹12.4 Cr'],
-  ['Yuzvendra Chahal', 'PBKS', '₹18.0 Cr', '381', '₹11.7 Cr'],
-], [2800, 1200, 1500, 1800, 1726], { right: [2, 3, 4] }));
-add(P('The case of Cameron Green illustrates the difference between impact and value: at KKR in 2026 he was a Star by output (664 Impact Points, above the season median), but at ₹25.2 Cr his Value Index was only 0.44. Meanwhile experienced players such as Karn Sharma, Deepak Hooda and Jonny Bairstow went unsold despite strong IPL records.'));
+add(P('Across 123 franchise-seasons, spend has no link with winning (r = −0.03 between spend and win %), but spending efficiently does (r = +0.35 between Value Index and win %). Over 2013–2026, CSK (1.19) and RR (1.14) ran the most efficient auctions.'));
+add(Tbl('Franchise efficiency in 2026 (top and bottom three)', ['Franchise', 'Spend', 'Win %', 'Value Index'], [
+  ['Rajasthan Royals', '₹34.3 Cr', '56.3%', '1.63'], ['Sunrisers Hyderabad', '₹41.8 Cr', '60.0%', '1.33'],
+  ['Gujarat Titans', '₹69.3 Cr', '58.8%', '1.22'], ['Delhi Capitals', '₹73.2 Cr', '50.0%', '0.83'],
+  ['Kolkata Knight Riders', '₹72.8 Cr', '46.2%', '0.81'], ['Punjab Kings', '₹108.1 Cr', '53.8%', '0.72'],
+], [3800, 1900, 1500, 1826], { right: [1, 2, 3] }));
+add(H2('Steals and Overpaid'));
+add(P('In 2026, of 171 priced players, 57 were Stars, 24 Steals, 8 Overpaid and 6 Passengers. The best value sat in ₹30-lakh buys, and all five most overpaid players cost ₹14 Cr or more.'));
+add(Tbl('Top steals and most overpaid buys, 2026 (minimum 5 matches)', ['Top steals', 'Price', 'Value Index', 'Most overpaid', 'Price', 'Overpaid by'], [
+  ['Kartik Tyagi (KKR)', '₹0.3 Cr', '33.95', 'Rishabh Pant (LSG)', '₹27.0 Cr', '₹19.5 Cr'],
+  ['Prince Yadav (LSG)', '₹0.3 Cr', '30.47', 'Shreyas Iyer (PBKS)', '₹26.75 Cr', '₹15.8 Cr'],
+  ['Sakib Hussain (SRH)', '₹0.3 Cr', '26.27', 'Cameron Green (KKR)', '₹25.2 Cr', '₹14.2 Cr'],
+  ['Brijesh Sharma (RR)', '₹0.3 Cr', '24.62', 'Prashant Veer (CSK)', '₹14.2 Cr', '₹12.4 Cr'],
+  ['Praful Hinge (SRH)', '₹0.3 Cr', '24.23', 'Yuzvendra Chahal (PBKS)', '₹18.0 Cr', '₹11.7 Cr'],
+], [2050, 1000, 1150, 2400, 1150, 1276], { right: [1, 2, 4, 5], size: 18 }));
 add(H2('Role and Nationality'));
-add(P('Overseas premiums are not earned on average. In 2026 overseas buys cost 2.4× as much as Indian buys (₹4.42 Cr vs ₹1.82 Cr on average) yet returned less per crore: a Value Index of 0.88 against 1.11. Over 2013–2026 the overseas price premium is 84% and the Value Index 0.90 against 1.10 for Indian buys. By role, Indian bowlers are the best-value group (1.22) and overseas bowlers the worst (0.84).'));
+add(P('In 2026 overseas buys cost 2.4× as much as Indian buys but returned less per crore (Value Index 0.88 against 1.11). Over all seasons, Indian bowlers are the best-value role (1.22) and overseas bowlers the worst (0.84).'));
 add(H2('Price Brackets'));
 add(Tbl('Value Index by price bracket, 2013–2026', ['Price bracket', 'Player-seasons', 'Spend', 'Value Index'], [
   ['Base price buy', '569', '₹189.2 Cr', '4.11'], ['Under ₹2 Cr', '708', '₹592.6 Cr', '1.93'],
   ['₹2 to 5 Cr', '494', '₹1,531.5 Cr', '1.01'], ['₹5 to 10 Cr', '271', '₹1,868.3 Cr', '0.67'],
   ['₹10 Cr and above', '107', '₹1,466.6 Cr', '0.49'],
 ], [3000, 2000, 2200, 1826], { right: [1, 2, 3] }));
-add(P('Value per crore falls steadily with price: base-price buys return 4.11× fair value, ₹10 Cr+ signings 0.49×. This does not mean that marquee players are poor cricketers: 88% of ₹10 Cr+ player-seasons beat the season\'s median Impact Points, against only 24% of base-price buys. Marquee players do win games, but each crore buys far more output in the cheap brackets.'));
+add(P('Value per crore falls steadily with price. Marquee players still perform (88% of ₹10 Cr+ player-seasons beat the median impact), but each crore buys far more output in the cheap brackets.'));
+add(H2('Validation'));
+add(P('Matches per season, Orange and Purple Cap winners and the 2026 auction total (77 players, ₹215.45 Cr) match official records; the league Value Index is exactly 1.00 in every season; and an independent Python re-computation gives identical numbers.'));
 
-// 7 Validation
-add(H1('Validation and Quality Assurance'));
-add(P('Every number in the report was checked against independent references. The checks below are built into the model as measures and shown live on a hidden QA page; in addition, a separate Python (pandas) implementation of the whole pipeline reproduces the model\'s numbers, and automated tests in the web application check the API against the same values.'));
-add(Tbl('Validation checks and results', ['Check', 'Result'], [
-  ['Matches per season', '2013: 76; 2014–2021: 59–60; 2022–2026: 74 (2024: 71, three washouts); 921 in total'],
-  ['Orange and Purple Cap winners', '2016 Kohli 973 runs / Bhuvneshwar 23 wkts; 2023 Gill 890 / Shami 28; 2024 Kohli 741 / Harshal 24: all match iplt20.com'],
-  ['2026 auction totals', '77 players, ₹215.45 Cr'],
-  ['Highest price', 'Rishabh Pant, ₹27 Cr (2025)'],
-  ['Null, zero or negative prices', '0'],
-  ['Unmapped team names', '0 (13 team keys)'],
-  ['Auction spend matched to Cricsheet', '99.0% (target ≥ 95%)'],
-  ['Contract rows beyond the next mega auction', '0'],
-  ['League Value Index per season', '1.00 in all 14 seasons'],
-  ['Average win % per season', '49–50%'],
-  ['Independent re-computation (pandas)', 'Identical results, e.g. V Kohli 2016: 1,187 Impact Points'],
-  ['Web application tests', '16/16 API routes, 6/6 QA value checks and the squad-rules test pass against MongoDB Atlas'],
-], [3400, 5626]));
+// 5 Web application
+add(H1('Web Application (MERN)'));
+add(P('The web app shows the same pages and numbers as the dashboard, so anyone can open it in a browser without Power BI. The only difference is the data layer: the cleaned Power BI tables were exported to JSON and loaded into MongoDB Atlas (8 collections, 7,139 documents). An Express API reads them, React draws the charts, and the site is deployed on Vercel. The web app also adds player search and a Squad Builder that drafts a squad under the ₹120 Cr purse and IPL squad rules.'));
+add(Fig(A('diagram_architecture.png'), 'Architecture: one dataset, two front ends', 520));
+add(Fig(A('web_crop/home.png'), 'Web app Home page', 470));
 
-// 8 Recommendations
-add(H1('Business Recommendations'));
-add(P('For a franchise preparing for its next auction, the analysis supports five concrete decisions:'));
-add(N([['Keep the Steals and Stars, release the Overpaid and Passengers. ', { bold: true }], 'The Value Map gives a ready-made retention and release shortlist for every franchise.'], 'recs'));
-add(N([['Build depth from the base-price pool. ', { bold: true }], 'Base-price and sub-₹2 Cr buys return 2–4× fair value; scouting uncapped domestic players is the cheapest source of impact.'], 'recs'));
-add(N([['Spend overseas slots only on proven match-winners. ', { bold: true }], 'Overseas buys cost 2.4× as much but return less per crore; the premium pays for scarcity, not output.'], 'recs'));
-add(N([['Cap marquee bids at fair value. ', { bold: true }], 'Marquee players beat the median, but beyond a point every extra crore is overpay; the fair-value measure gives a walk-away price for each target.'], 'recs'));
-add(N([['Manage to Value Index, not to spend. ', { bold: true }], 'Value Index correlates with winning (r = +0.35) while spend does not (r = −0.03); RR in 2026 showed that a small, efficient auction can outperform the biggest spender.'], 'recs'));
-
-// 9 Limitations
-add(H1('Limitations and Future Scope'));
+// 6 Conclusion
+add(H1('Recommendations and Conclusion'));
+add(H2('Recommendations'));
+add(N([['Keep Steals and Stars; release Overpaid and Passengers. ', { bold: true }], 'The Value Map gives a ready release shortlist.'], 'recs'));
+add(N([['Build depth from base-price and under-₹2 Cr buys, ', { bold: true }], 'which return 2–4× fair value.'], 'recs'));
+add(N([['Use overseas slots only on proven match-winners; ', { bold: true }], 'the premium is not earned on average.'], 'recs'));
+add(N([['Cap marquee bids at fair value ', { bold: true }], 'and manage to Value Index, not to spend.'], 'recs'));
 add(H2('Limitations'));
-add(B('Retained players (for example Kohli and Bumrah for long periods) have no auction price and are excluded from value measures, so the analysis evaluates auction decisions rather than whole squads.'));
-add(B('2013 prices were in US dollars and are converted at a single rate of ₹54 per dollar.'));
-add(B('Base prices are published only for 2025–26; earlier, a buy at that era\'s minimum price is treated as a base-price buy.'));
-add(B('Impact Points weights are a judgement call. The runs-only and wickets-only views put the same players at the top, so the conclusions are robust to the weights, but match situation (pressure overs, chases) is not weighted.'));
-add(B('About 1% of auction spend (66 buys, mostly players who never played) could not be matched to ball-by-ball data.'));
-add(H2('Future Scope'));
-add(B('Context-aware impact: weighting runs and wickets by match situation (phase of innings, required run rate, win probability added).'));
-add(B('Price prediction: a regression model of auction price from past performance, age and role, to estimate a fair bid before the auction.'));
-add(B('Including retention prices to evaluate whole squads, and extending the Squad Builder into a full auction-day simulator with rival franchises.'));
-add(B('Automatic yearly refresh: the pipeline is parameterised, so adding the next auction file and Cricsheet release rebuilds every page and the web database.'));
-
-// 10 Conclusion
-add(H1('Conclusion'));
-add(P('This project set out to answer a simple business question: which IPL auction buys earned their price? By linking 14 years of auction records to ball-by-ball data for 921 matches, and expressing every player\'s contribution in one Impact Points scale, we built a Value Index that compares output with spend fairly across seasons, roles and franchises.'));
-add(P('The answer is clear and consistent across every view. Auction prices have doubled since 2013, but the most expensive buys deliver the least per crore: base-price buys return 4.1× fair value and ₹10 Cr+ signings 0.49×. Spending more does not win more matches, while spending efficiently does. Overseas premiums are not earned on average, and in 2026 the five most overpaid players all cost ₹14 Cr or more, while ₹30-lakh players such as Kartik Tyagi returned more than 30× fair value.'));
-add(P('The results are delivered in two complementary forms built on one validated dataset: a Power BI dashboard for analysts and decision-makers, and a MERN web application that brings the same analysis, and an interactive Squad Builder, to any browser. Validation against official records (auction totals, Orange and Purple Caps) and an independent re-implementation give confidence that the numbers are correct. Together they show how business data management turns scattered public data into a decision tool: in the IPL auction, as in any investment, the question is not how much is spent, but how much each rupee returns.'));
+add(B('Retained players have no auction price and are excluded from value measures.'));
+add(B('Base prices exist only for 2025–26; Impact Points do not weight match situation.'));
+add(H2('Conclusion'));
+add(P('By linking 14 years of auction prices to ball-by-ball data and scoring every player on one Impact Points scale, we built a Value Index that compares output with spend fairly across seasons. The answer to our question is consistent: prices have doubled, the most expensive buys deliver the least per crore, and spending more does not win matches while spending well does. The Power BI dashboard and the MongoDB-backed web app turn this into a practical tool for the next auction.'));
 
 // References
 add(H1plain('References'));
 const refs = [
-  'Cricsheet (2026). Indian Premier League match data, JSON format (October 2026 release). https://cricsheet.org/downloads/',
-  'Cricsheet (2026). JSON data format documentation. https://cricsheet.org/format/json/',
-  'Cricsheet (2026). The Cricsheet Register (people.csv, names.csv). https://cricsheet.org/register/',
+  'Cricsheet (2026). Indian Premier League ball-by-ball data (JSON) and Register. https://cricsheet.org/',
   'sunnyyadav754 (2026). IPL Auction Dataset 2013–2026. Kaggle. https://www.kaggle.com/',
   'kalilurrahman (2022). IPL Player Auction Dataset 2013–2022. Kaggle. https://www.kaggle.com/',
-  'Indian Premier League (2024). TATA IPL 2025 Auction List. https://www.iplt20.com/',
-  'Indian Premier League (2024). TATA IPL Player Regulations 2025–27 (retention rules and purse). https://www.iplt20.com/',
+  'Indian Premier League (2024). TATA IPL 2025 Auction List and Player Regulations 2025–27. https://www.iplt20.com/',
   'Wisden (2025). IPL 2026 auction: full list of unsold players. https://www.wisden.com/',
-  'Kimball, R. and Ross, M. (2013). The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling (3rd ed.). Wiley.',
-  'Microsoft (2026). Power BI Desktop projects (PBIP) and TMDL documentation. https://learn.microsoft.com/power-bi/developer/projects/projects-overview',
-  'Microsoft (2026). DAX function reference. https://learn.microsoft.com/dax/',
-  'Microsoft (2026). Power Query M formula language reference. https://learn.microsoft.com/powerquery-m/',
-  'MongoDB, Inc. (2026). MongoDB Atlas and aggregation pipeline documentation. https://www.mongodb.com/docs/',
-  'OpenJS Foundation (2026). Express.js documentation. https://expressjs.com/',
-  'Meta Open Source (2026). React documentation. https://react.dev/',
-  'Vite (2026). Vite documentation. https://vite.dev/ ; Recharts (2026). https://recharts.org/',
-  'Vercel (2026). Vercel documentation: Express on Vercel and serverless functions. https://vercel.com/docs',
+  'Kimball, R. and Ross, M. (2013). The Data Warehouse Toolkit (3rd ed.). Wiley.',
+  'Microsoft (2026). Power BI, DAX and Power Query documentation. https://learn.microsoft.com/power-bi/',
+  'MongoDB, Inc. (2026). MongoDB Atlas documentation. https://www.mongodb.com/docs/',
+  'Express, React and Vercel documentation (2026). https://expressjs.com/ · https://react.dev/ · https://vercel.com/docs',
 ];
-refs.forEach((r, i) => add(new Paragraph({ spacing: { after: 100, line: 300 }, indent: { left: 560, hanging: 560 },
-  alignment: AlignmentType.LEFT, children: runs(`[${i + 1}]  ${r}`, { size: 22 }) })));
+refs.forEach((r, i) => add(new Paragraph({ spacing: { after: 80, line: 280 }, indent: { left: 560, hanging: 560 },
+  alignment: AlignmentType.LEFT, children: runs(`[${i + 1}]  ${r}`, { size: 22 }) })));
+add(P(`Project repository: ${REPO_URL}`, { align: AlignmentType.LEFT, size: 22 }));
 
-// Appendix
-add(H1plain('Appendix A: Project Repository and How to Run', 'A'));
-add(P(`Repository: ${REPO_URL}`, { align: AlignmentType.LEFT }));
-add(Tbl('Repository structure', ['Folder', 'Contents'], [
-  ['Handover/', 'IPL_Auction_Value.pbix (single-file Power BI report with data) and this report'],
-  ['powerbi/', 'Power BI project (PBIP: TMDL model + PBIR report), build and QA scripts, PDF export, screenshots'],
-  ['data/raw/', 'All source files: auction CSVs, Cricsheet JSON, register, mappings, supplementary files'],
-  ['data/processed/', 'Model tables exported as CSV + JSON with value metrics; loaded into MongoDB'],
-  ['web/', 'MERN application: client/ (React + Vite), server/ (Express + Mongoose), api/ + vercel.json'],
-  ['docs/', 'Project brief (PRD), data kit and this report\'s source'],
-], [2200, 6826]));
-add(B([['Power BI: ', { bold: true }], 'open Handover/IPL_Auction_Value.pbix in Power BI Desktop (data included). To refresh from the raw files, open powerbi/IPL_Auction_Value.pbip, set the DataFolder parameter to the data\\raw\\ folder and click Refresh.']));
-add(B([['Web application (local): ', { bold: true }], 'start MongoDB, run "node scripts/seed.js" in web/server, then "npm run dev" in web/server and web/client. Deployment steps for MongoDB Atlas and Vercel are in DEPLOYMENT.md.']));
-
-// ---------------------------------------------------------------- front matter (needs toc/figures lists built above)
+// ---------------------------------------------------------------- front matter (needs the toc list built above)
 const page = key => (PAGEMAP[key] != null ? PAGEMAP[key] : null);
 const front = [];
 front.push(new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun({ text: 'Abstract', font: FONT })] }));
-front.push(P('Every year IPL franchises spend hundreds of crores at the player auction, paying largely for reputation, while matches are won with runs, wickets and catches. This project, written from the point of view of a franchise analytics team, asks which auction buys earned their price. We combined fourteen years of auction records (1,380 buys from 2013 to 2026, ₹3,269 Cr in total) with Cricsheet ball-by-ball data for 921 matches, matched 99.0% of auction spend to individual players through a six-pass name-matching process, and expressed batting, bowling and fielding on one Impact Points scale.'));
-front.push(P('From these we built a Value Index, a player\'s share of league output divided by his share of league spend, computed season by season, together with fair value, overpay and a four-way value quadrant. The analysis is delivered as a Power BI dashboard (star schema, 93 DAX measures, nine report pages with QA checks) and as a MERN web application deployed on Vercel with MongoDB Atlas, which adds a Squad Builder and Salary Cap Simulator.'));
-front.push(P('The results are consistent: auction prices have doubled since 2013; base-price buys return 4.1× fair value per crore while ₹10 Cr+ signings return 0.49×; spending is unrelated to winning (r = −0.03) while spending efficiently is not (r = +0.35); and overseas premiums are not earned on average. All key numbers were validated against official auction totals and Orange and Purple Cap winners, and reproduced by an independent implementation.'));
-front.push(P([['Keywords: ', { bold: true }], 'IPL auction, player valuation, sports analytics, Power BI, DAX, star schema, MongoDB, MERN stack, business data management']));
-
-front.push(new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, children: [new TextRun({ text: 'Table of Contents', font: FONT })] }));
+front.push(P('IPL franchises pay at the auction largely for reputation, while matches are won with runs, wickets and catches. This project asks which auction buys earned their price. We combined auction records for 2013–2026 (1,380 buys, ₹3,269 Cr) with ball-by-ball data for 921 matches, scored every player on one Impact Points scale, and built a Value Index: a player\'s share of league output divided by their share of league spend.'));
+front.push(P('The analysis is delivered as a Power BI dashboard and as a MERN web application backed by MongoDB Atlas. The findings are consistent: prices have doubled since 2013; base-price buys return 4.1× fair value per crore while ₹10 Cr+ signings return 0.49×; and spending is unrelated to winning (r = −0.03) while spending efficiently is not (r = +0.35).'));
+front.push(P([['Keywords: ', { bold: true }], 'IPL auction, player valuation, Power BI, DAX, MongoDB, data analytics']));
+front.push(new Paragraph({ heading: HeadingLevel.HEADING_1, spacing: { before: 480, after: 280 }, children: [new TextRun({ text: 'Table of Contents', font: FONT })] }));
 toc.forEach(t => front.push(tocLine(t.text, t.level, page('toc:' + t.text))));
-front.push(new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, children: [new TextRun({ text: 'List of Figures', font: FONT })] }));
-figures.forEach(f => front.push(tocLine(f, 2, page('fig:' + f.split(':')[0]))));
-front.push(new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakBefore: true, children: [new TextRun({ text: 'List of Tables', font: FONT })] }));
-tables.forEach(t => front.push(tocLine(t, 2, page('tab:' + t.split(':')[0]))));
+
 
 // ---------------------------------------------------------------- document
 const PAGE = { size: { width: 11906, height: 16838 }, margin: { top: 1440, bottom: 1440, left: 1440, right: 1440, header: 708, footer: 708 } };

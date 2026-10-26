@@ -75,7 +75,7 @@ def architecture():
 def crops():
     out = f"{A}/web_crop"; os.makedirs(out, exist_ok=True)
     limits = {"steals": 1430, "squad": 1250, "methodology": 1250, "market": 1686, "franchises": 1492,
-              "valuemap": 1461, "players": 1348, "home": 830, "roles": 1124, "brackets": 860}
+              "valuemap": 1440, "players": 1348, "home": 1320, "roles": 1124, "brackets": 860}
     for name, h in limits.items():
         im = Image.open(f"{A}/web/{name}.png").convert("RGB")
         im.crop((0, 0, im.width, min(h, im.height))).save(f"{out}/{name}.png", optimize=True)
