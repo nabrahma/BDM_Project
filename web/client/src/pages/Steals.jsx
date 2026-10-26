@@ -1,7 +1,6 @@
 /**
- * Steals and Overpaid page — Top 10 steals, top 10 overpaid,
- * Bargain XI, Overpaid XI, unsold players.
- * Matches Power BI page 4.
+ * Steals and Overpaid — top 10 steals, top 10 overpaid, Bargain XI, Overpaid XI and
+ * the latest unsold list. Rankings use player-seasons with at least 5 matches.
  */
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -9,182 +8,105 @@ import { useApi } from '../hooks/useApi';
 import { formatMoney, formatVI, formatNum } from '../lib/format';
 import Loading from '../components/Loading';
 import SeasonFilter from '../components/SeasonFilter';
-import SoWhat from '../components/SoWhat';
+import { PageHeader, CardHead, Kpi, SoWhat } from '../components/ui';
+
+function RankTable({ rows, cols, onRow }) {
+  return (
+    <div className="table-container">
+      <table className="data-table">
+        <thead><tr>{cols.map(c => <th key={c.h} className={c.num ? 'num' : undefined}>{c.h}</th>)}</tr></thead>
+        <tbody>
+          {rows?.map((p, i) => (
+            <tr key={p.PlayerSeasonKey || i} className={onRow ? 'is-link' : undefined} onClick={onRow ? () => onRow(p) : undefined}>
+              {cols.map(c => <td key={c.h} className={[c.num && 'num', c.cls].filter(Boolean).join(' ') || undefined}>{c.v(p, i)}</td>)}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+const rank = (_, i) => <span style={{ color: 'var(--faint)' }}>{i + 1}</span>;
 
 export default function Steals() {
   const [season, setSeason] = useState(2026);
   const navigate = useNavigate();
-
-  const { data: steals, loading: l1 } = useApi(`/rankings/steals?season=${season}`);
-  const { data: overpaid, loading: l2 } = useApi(`/rankings/overpaid?season=${season}`);
-  const { data: bargainXI, loading: l3 } = useApi(`/rankings/bargain-xi?season=${season}`);
-  const { data: overpaidXI, loading: l4 } = useApi(`/rankings/overpaid-xi?season=${season}`);
+  const yr = season || 2026;
+  const { data: steals, loading: l1 } = useApi(`/rankings/steals?season=${yr}`);
+  const { data: overpaid, loading: l2 } = useApi(`/rankings/overpaid?season=${yr}`);
+  const { data: bargainXI, loading: l3 } = useApi(`/rankings/bargain-xi?season=${yr}`);
+  const { data: overpaidXI, loading: l4 } = useApi(`/rankings/overpaid-xi?season=${yr}`);
   const { data: unsold, loading: l5 } = useApi('/rankings/unsold');
 
   if (l1 || l2 || l3 || l4 || l5) return <Loading />;
 
-  const topSteal = steals?.[0];
-  const topOverpaid = overpaid?.[0];
+  const s0 = steals?.[0], o0 = overpaid?.[0];
+  const open = p => navigate(`/players/${p.PlayerID}`);
+  const xiSpend = xs => (xs || []).reduce((a, p) => a + (p.PriceCr || 0), 0);
 
   return (
     <div className="page" id="page-steals">
-      <div className="page-header">
-        <h1 className="page-header__title">
-          {season}: {topSteal ? `₹${topSteal.PriceCr} Cr ${topSteal.PlayerName} returned ${topSteal.ValueIndex?.toFixed(0)}× fair value` : ''}
-          {topOverpaid ? ` while ₹${topOverpaid.PriceCr} Cr ${topOverpaid.PlayerName} was overpaid by ${formatMoney(topOverpaid.OverpayCr)}` : ''}
-        </h1>
-        <p className="page-header__sub">
-          Best bargains and worst buys of the season (min 5 matches).
-        </p>
-      </div>
+      <PageHeader
+        title="Steals & Overpaid"
+        finding={s0 && o0 && <>{yr}: {formatMoney(s0.PriceCr)} <strong>{s0.PlayerName}</strong> returned {s0.ValueIndex.toFixed(0)}× fair value, while {formatMoney(o0.PriceCr)} <strong>{o0.PlayerName}</strong> was overpaid by {formatMoney(o0.OverpayCr)}.</>}
+        controls={<SeasonFilter season={yr} onChange={v => setSeason(v || 2026)} allowAll={false} />}
+      />
 
-      <SeasonFilter season={season} onChange={setSeason} />
+      <div className="kpi-strip">
+        <Kpi label="Top steal" value={s0 ? formatVI(s0.ValueIndex) : '—'} hint={s0 && `${s0.PlayerName} · ${formatMoney(s0.PriceCr)}`} />
+        <Kpi label="Most overpaid" value={o0 ? formatMoney(o0.OverpayCr) : '—'} hint={o0 && `${o0.PlayerName} · ${formatMoney(o0.PriceCr)}`} />
+        <Kpi label="Bargain XI cost" value={formatMoney(xiSpend(bargainXI))} hint="11 best-value buys" />
+        <Kpi label="Overpaid XI cost" value={formatMoney(xiSpend(overpaidXI))} hint="11 biggest overpays" />
+      </div>
 
       <div className="grid-2">
-        {/* Top 10 Steals */}
         <div className="card" id="table-steals">
-          <h3 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '12px' }}>
-            Top 10 steals · highest Value Index
-          </h3>
-          <table className="data-table">
-            <thead>
-              <tr>
-                <th>Player</th>
-                <th>Team</th>
-                <th className="num">Price</th>
-                <th className="num">Impact</th>
-                <th className="num">Value Index</th>
-              </tr>
-            </thead>
-            <tbody>
-              {steals?.map(p => (
-                <tr key={p.PlayerSeasonKey} onClick={() => navigate(`/players/${p.PlayerID}`)} style={{ cursor: 'pointer' }}>
-                  <td>{p.PlayerName}</td>
-                  <td>{p.TeamKey}</td>
-                  <td className="num">{formatMoney(p.PriceCr)}</td>
-                  <td className="num">{formatNum(p.ImpactPoints)}</td>
-                  <td className="num cell--steal">{formatVI(p.ValueIndex)}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <CardHead title="Top 10 steals" sub="Highest Value Index · minimum 5 matches" />
+          <RankTable rows={steals} onRow={open} cols={[
+            { h: '#', v: rank }, { h: 'Player', v: p => p.PlayerName, cls: 'cell--strong' }, { h: 'Team', v: p => p.TeamKey },
+            { h: 'Price', num: true, v: p => formatMoney(p.PriceCr) }, { h: 'Impact', num: true, v: p => formatNum(p.ImpactPoints) },
+            { h: 'Value Index', num: true, cls: 'cell--steal', v: p => formatVI(p.ValueIndex) },
+          ]} />
         </div>
-
-        {/* Top 10 Overpaid */}
         <div className="card" id="table-overpaid">
-          <h3 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '12px' }}>
-            Top 10 overpaid · price above output value
-          </h3>
-          <table className="data-table">
-            <thead>
-              <tr>
-                <th>Player</th>
-                <th>Team</th>
-                <th className="num">Price</th>
-                <th className="num">Impact</th>
-                <th className="num">Overpaid by</th>
-              </tr>
-            </thead>
-            <tbody>
-              {overpaid?.map(p => (
-                <tr key={p.PlayerSeasonKey} onClick={() => navigate(`/players/${p.PlayerID}`)} style={{ cursor: 'pointer' }}>
-                  <td>{p.PlayerName}</td>
-                  <td>{p.TeamKey}</td>
-                  <td className="num">{formatMoney(p.PriceCr)}</td>
-                  <td className="num">{formatNum(p.ImpactPoints)}</td>
-                  <td className="num cell--overpaid">{formatMoney(p.OverpayCr)}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <CardHead title="Top 10 overpaid" sub="Price above the value of the output · minimum 5 matches" />
+          <RankTable rows={overpaid} onRow={open} cols={[
+            { h: '#', v: rank }, { h: 'Player', v: p => p.PlayerName, cls: 'cell--strong' }, { h: 'Team', v: p => p.TeamKey },
+            { h: 'Price', num: true, v: p => formatMoney(p.PriceCr) }, { h: 'Impact', num: true, v: p => formatNum(p.ImpactPoints) },
+            { h: 'Overpaid by', num: true, cls: 'cell--overpaid', v: p => formatMoney(p.OverpayCr) },
+          ]} />
         </div>
       </div>
 
-      {/* Bargain XI & Overpaid XI */}
-      <div className="grid-2" style={{ marginTop: '20px' }}>
+      <div className="grid-2 mt">
         <div className="card" id="table-bargain-xi">
-          <h3 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '12px' }}>
-            Bargain XI · best value XI
-          </h3>
-          <table className="data-table">
-            <thead>
-              <tr>
-                <th>Role</th>
-                <th>Player</th>
-                <th className="num">Price</th>
-                <th className="num">VI</th>
-              </tr>
-            </thead>
-            <tbody>
-              {bargainXI?.map(p => (
-                <tr key={p.PlayerSeasonKey} onClick={() => navigate(`/players/${p.PlayerID}`)} style={{ cursor: 'pointer' }}>
-                  <td>{p.Role}</td>
-                  <td>{p.PlayerName}</td>
-                  <td className="num">{formatMoney(p.PriceCr)}</td>
-                  <td className="num cell--steal">{formatVI(p.ValueIndex)}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <CardHead title="Bargain XI" sub="Best-value XI by role" />
+          <RankTable rows={bargainXI} onRow={open} cols={[
+            { h: 'Role', v: p => <span className="pill pill--grey">{p.Role}</span> }, { h: 'Player', v: p => p.PlayerName, cls: 'cell--strong' },
+            { h: 'Price', num: true, v: p => formatMoney(p.PriceCr) }, { h: 'VI', num: true, cls: 'cell--steal', v: p => formatVI(p.ValueIndex) },
+          ]} />
         </div>
-
         <div className="card" id="table-overpaid-xi">
-          <h3 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '12px' }}>
-            Overpaid XI · biggest gap between price and output
-          </h3>
-          <table className="data-table">
-            <thead>
-              <tr>
-                <th>Role</th>
-                <th>Player</th>
-                <th className="num">Price</th>
-                <th className="num">Overpaid by</th>
-              </tr>
-            </thead>
-            <tbody>
-              {overpaidXI?.map(p => (
-                <tr key={p.PlayerSeasonKey} onClick={() => navigate(`/players/${p.PlayerID}`)} style={{ cursor: 'pointer' }}>
-                  <td>{p.Role}</td>
-                  <td>{p.PlayerName}</td>
-                  <td className="num">{formatMoney(p.PriceCr)}</td>
-                  <td className="num cell--overpaid">{formatMoney(p.OverpayCr)}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <CardHead title="Overpaid XI" sub="Biggest gap between price and output, by role" />
+          <RankTable rows={overpaidXI} onRow={open} cols={[
+            { h: 'Role', v: p => <span className="pill pill--grey">{p.Role}</span> }, { h: 'Player', v: p => p.PlayerName, cls: 'cell--strong' },
+            { h: 'Price', num: true, v: p => formatMoney(p.PriceCr) }, { h: 'Overpaid by', num: true, cls: 'cell--overpaid', v: p => formatMoney(p.OverpayCr) },
+          ]} />
         </div>
       </div>
 
-      {/* Unsold */}
-      <div className="card" style={{ marginTop: '20px' }} id="table-unsold">
-        <h3 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '12px' }}>
-          Unsold in {season || 2026}
-        </h3>
-        <table className="data-table">
-          <thead>
-            <tr>
-              <th>Player</th>
-              <th className="num">Base Price</th>
-              <th className="num">Career Matches</th>
-              <th className="num">Career Impact</th>
-            </tr>
-          </thead>
-          <tbody>
-            {unsold?.slice(0, 15).map((p, i) => (
-              <tr key={i}>
-                <td>{p.Player}</td>
-                <td className="num">{formatMoney(p.BasePriceCr)}</td>
-                <td className="num">{p.CareerMatches}</td>
-                <td className="num">{formatNum(p.CareerImpact)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="card mt" id="table-unsold">
+        <CardHead title="Unsold at the 2026 auction" sub="Ranked by career Impact Points" />
+        <RankTable rows={unsold?.slice(0, 12)} cols={[
+          { h: '#', v: rank }, { h: 'Player', v: p => p.Player, cls: 'cell--strong' },
+          { h: 'Base price', num: true, v: p => formatMoney(p.BasePriceCr) }, { h: 'Career matches', num: true, v: p => p.CareerMatches },
+          { h: 'Career impact', num: true, v: p => formatNum(p.CareerImpact) }, { h: 'Last IPL season', num: true, v: p => p.LastIplSeason ?? '—' },
+        ]} />
       </div>
 
       <SoWhat>
-        Every one of the five most overpaid {season || 2026} players cost ₹14 Cr or more;
-        the best value sat in ₹30-lakh buys.
+        The best value sat in ₹30-lakh buys, while the most overpaid {yr} players were marquee signings: price the next bid on expected output, not reputation.
       </SoWhat>
     </div>
   );

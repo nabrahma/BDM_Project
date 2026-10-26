@@ -1,96 +1,89 @@
 /**
- * Methodology page — static explanation of the Value metric.
- * Content adapted from the project report.
- * Matches Power BI page 8.
+ * Methodology — how Impact Points, Fair Value, Value Index and quadrants are defined,
+ * the weights, the data sources and the limitations.
  */
+import { PageHeader, CardHead } from '../components/ui';
+import { QUADRANT } from '../lib/chart';
+
+const WEIGHTS = [
+  ['Run', '1'], ['Four (bonus)', '+1'], ['Six (bonus)', '+2'], ['Wicket', '25'],
+  ['Dot ball', '1'], ['Catch', '8'], ['Stumping', '12'], ['Run-out involvement', '6'],
+];
+const QUADS = [
+  ['Star', 'price ≥ median, impact ≥ median'],
+  ['Steal', 'price < median, impact ≥ median'],
+  ['Overpaid', 'price ≥ median, impact < median'],
+  ['Passenger', 'price < median, impact < median'],
+];
+const SOURCES = [
+  ['Auction prices 2013–2026', 'Kaggle IPL Auction Dataset (14 auctions, 1,380 buys)'],
+  ['Ball-by-ball data', 'Cricsheet IPL JSON (921 matches, 2013–2026)'],
+  ['Player identities', 'Cricsheet Register; 96 hand-checked name fixes'],
+  ['Roles & nationality', 'Kaggle 2013–22 auction list, official 2025 auction list'],
+  ['Unsold 2026', 'Wisden unsold list (79 players)'],
+];
+
+const formula = { fontFamily: 'ui-monospace, Consolas, monospace', fontSize: '0.84rem', background: 'var(--card-alt)', border: '1px solid var(--line)', borderRadius: 12, padding: '14px 16px', margin: '12px 0', lineHeight: 1.6 };
+const p = { color: 'var(--muted)', fontSize: '0.88rem', lineHeight: 1.65 };
+
 export default function Methodology() {
   return (
     <div className="page" id="page-methodology">
-      <div className="page-header">
-        <h1 className="page-header__title">Methodology</h1>
-        <p className="page-header__sub">How the value metric works.</p>
+      <PageHeader title="Methodology" finding="One score for bat, ball and field, judged against each season's own market." />
+
+      <div className="grid-3">
+        <div className="card">
+          <CardHead title="Impact Points" sub="On-field output on one scale" />
+          <div style={formula}>Runs + Fours + 2×Sixes + 25×Wickets + Dot balls + 8×Catches + 12×Stumpings + 6×Run-outs</div>
+          <table className="data-table">
+            <thead><tr><th>Contribution</th><th className="num">Points</th></tr></thead>
+            <tbody>{WEIGHTS.map(([k, v]) => <tr key={k}><td>{k}</td><td className="num cell--strong">{v}</td></tr>)}</tbody>
+          </table>
+        </div>
+
+        <div className="card">
+          <CardHead title="Value Index" sub="Output share ÷ spend share, per season" />
+          <div style={formula}>(Impact ÷ League priced impact) ÷ (Price ÷ League auction spend)</div>
+          <p style={p}><strong style={{ color: 'var(--ink)' }}>1.00</strong> is fair value; above 1 means more output than the money suggests, below 1 less.</p>
+          <p style={{ ...p, marginTop: 10 }}>For a group (team, role, bracket, several seasons) the shares are <strong style={{ color: 'var(--ink)' }}>summed season by season, then divided</strong>. Value Index values are never averaged.</p>
+          <div style={formula}>VI(group) = Σ(Impact ÷ League impact) ÷ Σ(Price ÷ League spend)</div>
+        </div>
+
+        <div className="card">
+          <CardHead title="Fair value & overpay" sub="What the output would have cost" />
+          <div style={formula}>Fair value = Impact × (League spend ÷ League priced impact)</div>
+          <div style={formula}>Overpay = Price − Fair value</div>
+          <p style={p}>Positive overpay means overpaid. “Most overpaid” ranks by crores lost, because a ratio becomes extreme for ₹30-lakh players.</p>
+        </div>
       </div>
 
-      <div className="card" style={{ maxWidth: '860px', lineHeight: 1.8 }}>
-        <h2 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '12px' }}>Impact Points</h2>
-        <p style={{ marginBottom: '16px', color: 'var(--muted)', fontSize: '0.9rem' }}>
-          A single score that captures a player's on-field contribution across batting, bowling, and fielding:
-        </p>
-        <div className="card card--alt" style={{ padding: '16px', fontFamily: 'monospace', fontSize: '0.85rem', marginBottom: '20px' }}>
-          Impact Points = Runs + Fours + 2×Sixes + 25×Wickets + DotBalls + 8×Catches + 12×Stumpings + 6×RunOuts
-        </div>
-        <p style={{ marginBottom: '24px', color: 'var(--muted)', fontSize: '0.9rem' }}>
-          The weights are in the spirit of fantasy-scoring systems. Higher-impact events
-          (wickets, stumpings) receive more points. The same players top both runs-only and
-          wickets-only views, so the conclusions are robust to reasonable weight changes.
-        </p>
-
-        <h2 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '12px' }}>Fair Value</h2>
-        <p style={{ marginBottom: '16px', color: 'var(--muted)', fontSize: '0.9rem' }}>
-          What a player's output would have cost at the league's average price per Impact Point
-          that season:
-        </p>
-        <div className="card card--alt" style={{ padding: '16px', fontFamily: 'monospace', fontSize: '0.85rem', marginBottom: '20px' }}>
-          FairValue (₹ Cr) = ImpactPoints × (LeagueSpendCr ÷ LeaguePricedImpact)
-        </div>
-        <p style={{ marginBottom: '24px', color: 'var(--muted)', fontSize: '0.9rem' }}>
-          <strong>Overpay</strong> = AuctionPrice − FairValue. Positive means overpaid.
-        </p>
-
-        <h2 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '12px' }}>Value Index</h2>
-        <p style={{ marginBottom: '16px', color: 'var(--muted)', fontSize: '0.9rem' }}>
-          The ratio of a player's share of the league's impact to their share of the league's spend:
-        </p>
-        <div className="card card--alt" style={{ padding: '16px', fontFamily: 'monospace', fontSize: '0.85rem', marginBottom: '20px' }}>
-          Value Index = (ImpactPoints ÷ LeaguePricedImpact) ÷ (PriceCr ÷ LeagueSpendCr)
-        </div>
-        <ul style={{ marginBottom: '24px', color: 'var(--muted)', fontSize: '0.9rem', paddingLeft: '20px' }}>
-          <li><strong>1.00</strong> = fair value (the league average)</li>
-          <li><strong>&gt; 1</strong> = more output than the money suggests (steal)</li>
-          <li><strong>&lt; 1</strong> = less output than the money suggests (overpaid)</li>
-        </ul>
-
-        <h2 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '12px' }}>Combining Value Index</h2>
-        <p style={{ marginBottom: '16px', color: 'var(--muted)', fontSize: '0.9rem' }}>
-          <strong>Never average Value Index values.</strong> For any group (team, role, bracket,
-          several seasons), sum the shares per season and then divide:
-        </p>
-        <div className="card card--alt" style={{ padding: '16px', fontFamily: 'monospace', fontSize: '0.85rem', marginBottom: '20px' }}>
-          VI(group) = Σ(ImpactPts / LeaguePricedImpact) ÷ Σ(PriceCr / LeagueSpendCr)
-        </div>
-
-        <h2 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '12px' }}>Quadrants</h2>
-        <p style={{ marginBottom: '16px', color: 'var(--muted)', fontSize: '0.9rem' }}>
-          Each season, players are placed into quadrants based on that season's median price and median impact:
-        </p>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '20px' }}>
-          <div className="card" style={{ borderLeft: '4px solid #F2C94C', padding: '12px' }}>
-            <strong>Star</strong> — price ≥ median, impact ≥ median
+      <div className="grid-2 mt">
+        <div className="card">
+          <CardHead title="Value quadrants" sub="Compared with that season's median price and median Impact Points" />
+          <div className="grid-2" style={{ gap: 10 }}>
+            {QUADS.map(([q, rule]) => (
+              <div key={q} className="card card--alt" style={{ padding: '14px 16px' }}>
+                <div style={{ fontWeight: 500 }}><span className="swatch" style={{ background: QUADRANT[q] }} />{q}</div>
+                <div style={{ ...p, fontSize: '0.8rem', marginTop: 4 }}>{rule}</div>
+              </div>
+            ))}
           </div>
-          <div className="card" style={{ borderLeft: '4px solid #3BA55C', padding: '12px' }}>
-            <strong>Steal</strong> — price &lt; median, impact ≥ median
-          </div>
-          <div className="card" style={{ borderLeft: '4px solid #E5484D', padding: '12px' }}>
-            <strong>Overpaid</strong> — price ≥ median, impact &lt; median
-          </div>
-          <div className="card" style={{ borderLeft: '4px solid #A3A3A3', padding: '12px' }}>
-            <strong>Passenger</strong> — price &lt; median, impact &lt; median
-          </div>
+          <p style={{ ...p, marginTop: 12 }}>Fewer than 5 matches: <strong style={{ color: 'var(--ink)' }}>Too few matches</strong>. Retained players with no auction price: <strong style={{ color: 'var(--ink)' }}>Unpriced</strong>, excluded from value measures.</p>
         </div>
-        <p style={{ color: 'var(--muted)', fontSize: '0.9rem' }}>
-          Players with fewer than 5 matches are classified as <strong>Too few matches</strong>.
-          Retained players with no auction price are <strong>Unpriced</strong> and excluded from
-          value calculations.
-        </p>
 
-        <h2 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '12px', marginTop: '24px' }}>Limitations</h2>
-        <ul style={{ color: 'var(--muted)', fontSize: '0.9rem', paddingLeft: '20px', lineHeight: 1.8 }}>
-          <li>Retained players have no auction price and are excluded from value metrics.</li>
-          <li>2013 prices are converted at a single ₹54/$ rate.</li>
-          <li>Base prices exist only for 2025–26.</li>
-          <li>66 auction buys (1% of spend) could not be matched to Cricsheet.</li>
-          <li>Impact Points weights are a judgement call; conclusions hold for reasonable alternatives.</li>
-        </ul>
+        <div className="card">
+          <CardHead title="Data sources" sub="Validated against official auction totals and Orange/Purple Caps" />
+          <table className="data-table">
+            <tbody>{SOURCES.map(([k, v]) => <tr key={k}><td className="cell--strong">{k}</td><td style={{ color: 'var(--muted)' }}>{v}</td></tr>)}</tbody>
+          </table>
+          <CardHead title="Limitations" />
+          <ul style={{ ...p, paddingLeft: 18 }}>
+            <li>Retained players have no auction price and are excluded from value measures.</li>
+            <li>2013 prices are converted at a single ₹54 per US$.</li>
+            <li>Base prices exist only for 2025–26.</li>
+            <li>66 buys (1% of spend, mostly players who never played) are not matched to Cricsheet.</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

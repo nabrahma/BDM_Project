@@ -215,25 +215,25 @@ export function computeSquadMetrics(squad, playingXIKeys = new Set(), leagueSpen
   if (val.isOverBudget) {
     tier = 'Over Budget';
     tierLabel = 'Cap Exceeded';
-    tierColor = '#E5484D';
+    tierColor = '#B8165A';
   } else if (val.isFullSquadValid && val.isPlayingXIValid) {
     if (ratingScore >= 88 && squadValueIndex >= 1.8) {
       tier = 'S Tier';
       tierLabel = 'Elite Championship Squad';
-      tierColor = '#3BA55C';
+      tierColor = '#2BAF66';
     } else if (ratingScore >= 75) {
       tier = 'A Tier';
       tierLabel = 'Playoff Contender';
-      tierColor = '#F2C94C';
+      tierColor = '#F5821F';
     } else {
       tier = 'B Tier';
       tierLabel = 'Balanced Squad';
-      tierColor = '#4A90E2';
+      tierColor = '#3366FF';
     }
   } else if (val.isPlayingXIValid) {
     tier = 'XI Ready';
     tierLabel = `Need ${IPL_RULES.MIN_SQUAD_SIZE - squad.length} more squad players`;
-    tierColor = '#F2C94C';
+    tierColor = '#F5821F';
   }
 
   return {

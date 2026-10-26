@@ -24,16 +24,16 @@ try:
         while True:
             m = json.loads(ws.recv())
             if m.get("id") == n[0]: return m.get("result", {})
-    call("Emulation.setDeviceMetricsOverride", width=1440, height=1000, deviceScaleFactor=1, mobile=False)
+    call("Emulation.setDeviceMetricsOverride", width=int(os.environ.get("SHOT_WIDTH", "1440")), height=1000, deviceScaleFactor=1, mobile=False)
     for name, path in pages:
         call("Page.navigate", url=base + path)
         time.sleep(float(os.environ.get("SHOT_WAIT", "7")))  # data fetch + chart animations
         h = call("Runtime.evaluate", expression="document.documentElement.scrollHeight", returnByValue=True)["result"]["value"]
-        call("Emulation.setDeviceMetricsOverride", width=1440, height=min(int(h), 2400), deviceScaleFactor=1, mobile=False)
+        call("Emulation.setDeviceMetricsOverride", width=int(os.environ.get("SHOT_WIDTH", "1440")), height=min(int(h), 2400), deviceScaleFactor=1, mobile=False)
         time.sleep(1.5)
         img = call("Page.captureScreenshot", format="png")["data"]
         open(os.path.join(out, f"{name}.png"), "wb").write(base64.b64decode(img))
-        call("Emulation.setDeviceMetricsOverride", width=1440, height=1000, deviceScaleFactor=1, mobile=False)
+        call("Emulation.setDeviceMetricsOverride", width=int(os.environ.get("SHOT_WIDTH", "1440")), height=1000, deviceScaleFactor=1, mobile=False)
         print("saved", name, h)
 finally:
     proc.terminate()

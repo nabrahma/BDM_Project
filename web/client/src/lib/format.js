@@ -10,6 +10,7 @@ export function formatMoney(cr) {
     const lakhs = cr * 100;
     return `₹${Number(lakhs.toFixed(0))} L`;
   }
+  if (Math.abs(cr) >= 100) return `₹${Math.round(cr).toLocaleString('en-IN')} Cr`;
   return `₹${Number(cr.toFixed(1))} Cr`;
 }
 
@@ -44,15 +45,15 @@ export function quadrantColour(q) {
   return map[q] || 'var(--faint)';
 }
 
-/** Get raw hex colour for Recharts (CSS vars don't work there) */
+/** Raw hex colour for Recharts (CSS vars don't work there); same values as lib/chart.jsx QUADRANT */
 export function quadrantHex(q) {
   const map = {
-    'Steal': '#3BA55C',
-    'Star': '#F2C94C',
-    'Overpaid': '#E5484D',
-    'Passenger': '#A3A3A3',
-    'Too few matches': '#D6D3CC',
-    'Unpriced': '#C9C5BC',
+    'Steal': '#2BAF66',
+    'Star': '#3366FF',
+    'Overpaid': '#B8165A',
+    'Passenger': '#9A9AA5',
+    'Too few matches': '#D4D4DA',
+    'Unpriced': '#E4E4E9',
   };
-  return map[q] || '#A8A396';
+  return map[q] || '#A3A3AD';
 }

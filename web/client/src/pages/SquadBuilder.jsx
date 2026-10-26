@@ -21,6 +21,8 @@ import {
 } from '../lib/optimizer';
 import Loading from '../components/Loading';
 import SoWhat from '../components/SoWhat';
+import Icon from '../components/Icon';
+import { PageHeader } from '../components/ui';
 
 export default function SquadBuilder() {
   const [season, setSeason] = useState(2026);
@@ -317,68 +319,49 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
 
   return (
     <div className="page" id="page-squad-builder">
-      {/* Header */}
-      <div className="page-header" style={{ marginBottom: '18px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '16px' }}>
-          <div>
-            <h1 className="page-header__title" style={{ fontSize: '1.75rem' }}>
-              IPL Franchise Squad Builder & Salary Cap Simulator
-            </h1>
-            <p className="page-header__sub">
-              Manage pre-auction retentions with the BCCI Retention Ladder, then draft an 18–25 player roster with your remaining purse under ₹120.0 Cr.
-            </p>
-          </div>
-
-          {/* Franchise Template & Purse Selector */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--muted)' }}>Franchise Preset:</span>
-              <select
-                value={selectedFranchise}
-                onChange={e => handleSelectTemplate(e.target.value)}
-                style={{
-                  padding: '6px 12px',
-                  borderRadius: 'var(--radius-sm)',
-                  border: '1px solid var(--line)',
-                  background: 'var(--card)',
-                  fontSize: '0.85rem',
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                }}
-              >
-                <option value="CUSTOM">Blank Slate (0 Retentions · Full ₹120.0 Cr for Auction)</option>
-                <option value="RCB">RCB (Retained: Kohli, Patidar · ₹37 Cr Deducted · ₹83.0 Cr Auction Purse)</option>
-                <option value="MI">MI (Retained: Bumrah, Surya, Hardik, Rohit, Tilak · ₹75 Cr Deducted · ₹45.0 Cr Auction Purse)</option>
-                <option value="CSK">CSK (Retained: Ruturaj, Jadeja, Dube, Pathirana, Dhoni · ₹65 Cr Deducted · ₹55.0 Cr Auction Purse)</option>
-                <option value="SRH">SRH (Retained: Klaasen, Cummins, Abhishek, Head, Nitish · ₹75 Cr Deducted · ₹45.0 Cr Auction Purse)</option>
-                <option value="PBKS">PBKS (Retained: Shashank, Prabhsimran · ₹9.5 Cr Deducted · ₹110.5 Cr Auction Purse)</option>
-                <option value="KKR">KKR (Retained: Rinku, Varun, Narine, Ramandeep · ₹57 Cr Deducted · ₹63.0 Cr Auction Purse)</option>
-                <option value="RR">RR (Retained: Samson, Jaiswal, Parag, Jurel, Sandeep · ₹79 Cr Deducted · ₹41.0 Cr Auction Purse)</option>
-                <option value="GT">GT (Retained: Rashid, Gill, Sudharsan, Tewatia · ₹51 Cr Deducted · ₹69.0 Cr Auction Purse)</option>
-                <option value="DC">DC (Retained: Axar, Kuldeep, Stubbs, Porel · ₹43.75 Cr Deducted · ₹76.25 Cr Auction Purse)</option>
-                <option value="LSG">LSG (Retained: Pooran, Mayank Yadav, Badoni · ₹48 Cr Deducted · ₹72.0 Cr Auction Purse)</option>
+      <PageHeader
+        title="Squad Builder"
+        finding={<>Start from a franchise's real retentions or a blank slate, then draft an 18–25 player squad under the <strong>₹{purseCap} Cr</strong> purse. Every pick is scored on Value Index.</>}
+        controls={
+          <div className="chip-group">
+            <span className="chip__note">Franchise</span>
+            <label className="chip-select">
+              <Icon name="database" size={14} style={{ display: 'none' }} />
+              <select value={selectedFranchise} onChange={e => handleSelectTemplate(e.target.value)} aria-label="Franchise preset" style={{ paddingLeft: 14 }}>
+                <option value="CUSTOM">Blank slate · ₹120 Cr purse</option>
+                <option value="RCB">RCB · 2 retained · ₹83 Cr left</option>
+                <option value="MI">MI · 5 retained · ₹45 Cr left</option>
+                <option value="CSK">CSK · 5 retained · ₹55 Cr left</option>
+                <option value="SRH">SRH · 5 retained · ₹45 Cr left</option>
+                <option value="PBKS">PBKS · 2 retained · ₹110.5 Cr left</option>
+                <option value="KKR">KKR · 4 retained · ₹63 Cr left</option>
+                <option value="RR">RR · 5 retained · ₹41 Cr left</option>
+                <option value="GT">GT · 4 retained · ₹69 Cr left</option>
+                <option value="DC">DC · 4 retained · ₹76.25 Cr left</option>
+                <option value="LSG">LSG · 3 retained · ₹72 Cr left</option>
               </select>
-            </div>
+              <Icon name="chevronDown" size={14} />
+            </label>
           </div>
-        </div>
-      </div>
+        }
+      />
 
       {/* Live Financial & Valuation KPI Strip */}
       <div className="kpi-strip" id="squad-kpis" style={{ marginBottom: '16px' }}>
         {/* Remaining Purse Card */}
-        <div className="card kpi" style={{ borderLeft: `5px solid ${metrics.isOverBudget ? '#E5484D' : '#3BA55C'}` }}>
-          <div className="kpi__value" style={{ color: metrics.isOverBudget ? '#E5484D' : '#1A1A1A' }}>
+        <div className="card kpi">
+          <div className="kpi__value" style={{ color: metrics.isOverBudget ? '#B8165A' : '#121214' }}>
             {formatMoney(metrics.purseRemaining)}
           </div>
           <div className="kpi__label">
-            {metrics.isOverBudget ? '⚠️ Budget Exceeded' : 'Purse Remaining'}
+            {metrics.isOverBudget ? 'Over budget' : 'Purse Remaining'}
           </div>
           <div style={{ width: '100%', height: '6px', background: 'var(--card-alt)', borderRadius: '3px', marginTop: '8px', overflow: 'hidden' }}>
             <div
               style={{
                 width: `${spendPct}%`,
                 height: '100%',
-                background: metrics.isOverBudget ? '#E5484D' : spendPct > 85 ? '#F2C94C' : '#3BA55C',
+                background: metrics.isOverBudget ? '#B8165A' : spendPct > 85 ? '#F5821F' : '#2BAF66',
                 transition: 'width 0.3s ease',
               }}
             />
@@ -410,7 +393,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
         </div>
 
         {/* Playing XI Value Index & Rating */}
-        <div className="card kpi" style={{ borderLeft: `5px solid ${metrics.tierColor}` }}>
+        <div className="card kpi">
           <div className="kpi__value" style={{ color: metrics.tierColor }}>
             {metrics.xiValueIndex > 0 ? `${metrics.xiValueIndex}×` : '—'}
           </div>
@@ -434,13 +417,12 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
               padding: '12px 18px',
               marginBottom: '16px',
               background: 'var(--card)',
-              borderLeft: '5px solid #2B6CB0',
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', marginBottom: '8px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
                 <span style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--dark)' }}>
-                  💰 Salary Cap Ledger (₹{purseCap.toFixed(1)} Cr Total):
+                  Salary cap ledger (₹{purseCap.toFixed(1)} Cr Total):
                 </span>
                 <span style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>
                   {metrics.squadCounts.Retained > 0 ? (
@@ -456,16 +438,16 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px', fontSize: '0.78rem', fontWeight: 700, flexWrap: 'wrap' }}>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: '#2B6CB0' }}>
-                  <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: '#2B6CB0' }} />
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: '#3366FF' }}>
+                  <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: '#3366FF' }} />
                   Retentions: ₹{metrics.retentionSpend} Cr ({metrics.squadCounts.Retained} players)
                 </span>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: '#D97706' }}>
                   <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: '#D97706' }} />
                   Auction Buys: ₹{metrics.auctionSpend} Cr ({metrics.squadCounts.Auction} players)
                 </span>
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: metrics.isOverBudget ? '#E5484D' : '#16A34A' }}>
-                  <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: metrics.isOverBudget ? '#E5484D' : '#16A34A' }} />
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: metrics.isOverBudget ? '#B8165A' : '#15803D' }}>
+                  <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: metrics.isOverBudget ? '#B8165A' : '#15803D' }} />
                   {metrics.isOverBudget ? 'Deficit' : 'Unspent Purse'}: ₹{metrics.purseRemaining} Cr
                 </span>
               </div>
@@ -475,7 +457,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
             <div style={{ width: '100%', height: '8px', background: 'var(--card-alt)', borderRadius: '4px', overflow: 'hidden', display: 'flex' }}>
               <div
                 title={`Retentions: ₹${metrics.retentionSpend} Cr (${retPct}%)`}
-                style={{ width: `${retPct}%`, height: '100%', background: '#2B6CB0', transition: 'width 0.3s ease' }}
+                style={{ width: `${retPct}%`, height: '100%', background: '#3366FF', transition: 'width 0.3s ease' }}
               />
               <div
                 title={`Auction Buys: ₹${metrics.auctionSpend} Cr (${aucPct}%)`}
@@ -483,7 +465,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
               />
               <div
                 title={`Remaining Purse: ₹${metrics.purseRemaining} Cr (${remPct}%)`}
-                style={{ width: `${remPct}%`, height: '100%', background: metrics.isOverBudget ? '#E5484D' : '#16A34A', opacity: 0.35, transition: 'width 0.3s ease' }}
+                style={{ width: `${remPct}%`, height: '100%', background: metrics.isOverBudget ? '#B8165A' : '#15803D', opacity: 0.35, transition: 'width 0.3s ease' }}
               />
             </div>
           </div>
@@ -512,9 +494,9 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
           <span
             className="pill"
             style={{
-              background: metrics.squadChecks.minSize ? 'rgba(59, 165, 92, 0.15)' : 'rgba(229, 72, 77, 0.12)',
-              color: metrics.squadChecks.minSize ? '#23733E' : '#C03036',
-              border: `1px solid ${metrics.squadChecks.minSize ? '#3BA55C' : '#E5484D'}`,
+              background: metrics.squadChecks.minSize ? 'rgba(43, 175, 102, 0.15)' : 'rgba(184, 22, 90, 0.12)',
+              color: metrics.squadChecks.minSize ? '#15803D' : '#A3124F',
+              border: `1px solid ${metrics.squadChecks.minSize ? '#2BAF66' : '#B8165A'}`,
             }}
           >
             {metrics.squadChecks.minSize ? '✓' : '✗'} Squad: {squad.length}/{IPL_RULES.MIN_SQUAD_SIZE} min (max 25)
@@ -523,9 +505,9 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
           <span
             className="pill"
             style={{
-              background: metrics.squadChecks.retentions ? 'rgba(59, 165, 92, 0.15)' : 'rgba(229, 72, 77, 0.12)',
-              color: metrics.squadChecks.retentions ? '#23733E' : '#C03036',
-              border: `1px solid ${metrics.squadChecks.retentions ? '#3BA55C' : '#E5484D'}`,
+              background: metrics.squadChecks.retentions ? 'rgba(43, 175, 102, 0.15)' : 'rgba(184, 22, 90, 0.12)',
+              color: metrics.squadChecks.retentions ? '#15803D' : '#A3124F',
+              border: `1px solid ${metrics.squadChecks.retentions ? '#2BAF66' : '#B8165A'}`,
             }}
           >
             {metrics.squadChecks.retentions ? '✓' : '✗'} Retentions: {metrics.squadCounts.Retained}/{IPL_RULES.MAX_RETENTIONS} max
@@ -534,9 +516,9 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
           <span
             className="pill"
             style={{
-              background: metrics.squadChecks.overseas ? 'rgba(59, 165, 92, 0.15)' : 'rgba(229, 72, 77, 0.12)',
-              color: metrics.squadChecks.overseas ? '#23733E' : '#C03036',
-              border: `1px solid ${metrics.squadChecks.overseas ? '#3BA55C' : '#E5484D'}`,
+              background: metrics.squadChecks.overseas ? 'rgba(43, 175, 102, 0.15)' : 'rgba(184, 22, 90, 0.12)',
+              color: metrics.squadChecks.overseas ? '#15803D' : '#A3124F',
+              border: `1px solid ${metrics.squadChecks.overseas ? '#2BAF66' : '#B8165A'}`,
             }}
           >
             {metrics.squadChecks.overseas ? '✓' : '✗'} Squad Overseas: {metrics.squadCounts.Overseas}/{IPL_RULES.MAX_OVERSEAS_SQUAD} max
@@ -545,9 +527,9 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
           <span
             className="pill"
             style={{
-              background: metrics.xiChecks.size ? 'rgba(59, 165, 92, 0.15)' : 'rgba(229, 72, 77, 0.12)',
-              color: metrics.xiChecks.size ? '#23733E' : '#C03036',
-              border: `1px solid ${metrics.xiChecks.size ? '#3BA55C' : '#E5484D'}`,
+              background: metrics.xiChecks.size ? 'rgba(43, 175, 102, 0.15)' : 'rgba(184, 22, 90, 0.12)',
+              color: metrics.xiChecks.size ? '#15803D' : '#A3124F',
+              border: `1px solid ${metrics.xiChecks.size ? '#2BAF66' : '#B8165A'}`,
             }}
           >
             {metrics.xiChecks.size ? '✓' : '✗'} Playing XI: {metrics.playingXI.length}/11
@@ -556,9 +538,9 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
           <span
             className="pill"
             style={{
-              background: metrics.xiChecks.overseas ? 'rgba(59, 165, 92, 0.15)' : 'rgba(229, 72, 77, 0.12)',
-              color: metrics.xiChecks.overseas ? '#23733E' : '#C03036',
-              border: `1px solid ${metrics.xiChecks.overseas ? '#3BA55C' : '#E5484D'}`,
+              background: metrics.xiChecks.overseas ? 'rgba(43, 175, 102, 0.15)' : 'rgba(184, 22, 90, 0.12)',
+              color: metrics.xiChecks.overseas ? '#15803D' : '#A3124F',
+              border: `1px solid ${metrics.xiChecks.overseas ? '#2BAF66' : '#B8165A'}`,
             }}
           >
             {metrics.xiChecks.overseas ? '✓' : '✗'} XI Overseas: {metrics.xiCounts.Overseas}/{IPL_RULES.MAX_OVERSEAS_XI} max
@@ -582,7 +564,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
               gap: '6px',
             }}
           >
-            ⚡ Auto-Draft with Auction Purse
+            Auto-draft with auction purse
           </button>
 
           <button
@@ -600,7 +582,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
               opacity: squad.length < 11 ? 0.5 : 1,
             }}
           >
-            🏏 Auto-Select Best XI
+            Auto-select best XI
           </button>
 
           <button
@@ -618,7 +600,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
               opacity: squad.length === 0 ? 0.5 : 1,
             }}
           >
-            📥 Export CSV
+            Export CSV
           </button>
 
           <button
@@ -636,7 +618,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
               opacity: squad.length === 0 ? 0.5 : 1,
             }}
           >
-            {copied ? '✓ Copied!' : '📋 Copy Summary'}
+            {copied ? 'Copied' : 'Copy summary'}
           </button>
 
           <button
@@ -647,8 +629,8 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
               padding: '6px 12px',
               borderRadius: 'var(--radius-pill)',
               background: 'transparent',
-              color: '#E5484D',
-              border: '1px solid rgba(229, 72, 77, 0.4)',
+              color: '#B8165A',
+              border: '1px solid rgba(184, 22, 90, 0.4)',
               fontSize: '0.8rem',
               fontWeight: 600,
               cursor: squad.length === 0 ? 'not-allowed' : 'pointer',
@@ -699,7 +681,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
             </div>
 
             {metrics.isPlayingXIValid && (
-              <span className="pill" style={{ background: '#3BA55C', color: '#fff', fontSize: '0.72rem', fontWeight: 700 }}>
+              <span className="pill" style={{ background: '#2BAF66', color: '#fff', fontSize: '0.72rem', fontWeight: 700 }}>
                 ✓ Valid XI Ready
               </span>
             )}
@@ -707,7 +689,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
 
           {squad.length === 0 ? (
             <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--muted)', background: 'var(--card-alt)', borderRadius: 'var(--radius-sm)', border: '1px dashed var(--line)' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '8px' }}>🏏</div>
+              
               <p style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--ink)' }}>Your franchise squad is currently empty</p>
               <p style={{ fontSize: '0.8rem', marginTop: '4px' }}>
                 Select a franchise preset above, or draft players from the marketplace pool!
@@ -748,7 +730,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                                 {p.name}
                               </span>
                               {p.isRetained && (
-                                <span className="pill" style={{ fontSize: '0.65rem', padding: '1px 6px', background: 'rgba(242, 201, 76, 0.25)', color: '#8B6914', fontWeight: 700 }}>
+                                <span className="pill" style={{ fontSize: '0.65rem', padding: '1px 6px', background: 'rgba(242, 201, 76, 0.25)', color: '#B4560B', fontWeight: 700 }}>
                                   Retained ({p.retentionType})
                                 </span>
                               )}
@@ -756,7 +738,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                             <div style={{ fontSize: '0.75rem', color: 'var(--muted)', display: 'flex', gap: '8px', alignItems: 'center', marginTop: '2px' }}>
                               <span>{p.team}</span>
                               <span>•</span>
-                              <span style={{ color: p.nationality === 'Overseas' ? '#2A68B0' : '#23733E', fontWeight: 600 }}>
+                              <span style={{ color: p.nationality === 'Overseas' ? '#1F48C7' : '#15803D', fontWeight: 600 }}>
                                 {p.nationality}
                               </span>
                               <span>•</span>
@@ -764,7 +746,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                               {p.valueIndex != null && (
                                 <>
                                   <span>•</span>
-                                  <span style={{ color: '#23733E', fontWeight: 700 }}>
+                                  <span style={{ color: '#15803D', fontWeight: 700 }}>
                                     VI: {formatVI(p.valueIndex)}
                                   </span>
                                 </>
@@ -836,15 +818,15 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                         alignItems: 'center',
                         justifyContent: 'space-between',
                         padding: '8px 12px',
-                        background: 'rgba(59, 165, 92, 0.05)',
+                        background: 'rgba(43, 175, 102, 0.05)',
                         borderRadius: 'var(--radius-sm)',
-                        border: '1px solid rgba(59, 165, 92, 0.3)',
+                        border: '1px solid rgba(43, 175, 102, 0.3)',
                       }}
                     >
                       <div>
                         <span style={{ fontWeight: 700, fontSize: '0.85rem' }}>{p.name}</span>
                         {p.isRetained && (
-                          <span style={{ fontSize: '0.68rem', marginLeft: '6px', color: '#8B6914', fontWeight: 700 }}>
+                          <span style={{ fontSize: '0.68rem', marginLeft: '6px', color: '#B4560B', fontWeight: 700 }}>
                             [Retained]
                           </span>
                         )}
@@ -873,7 +855,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                             fontSize: '0.7rem',
                             padding: '2px 6px',
                             borderRadius: 'var(--radius-pill)',
-                            color: '#E5484D',
+                            color: '#B8165A',
                           }}
                         >
                           ×
@@ -910,7 +892,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                         <div>
                           <span style={{ fontWeight: 600, fontSize: '0.85rem' }}>{p.name}</span>
                           {p.isRetained && (
-                            <span style={{ fontSize: '0.68rem', marginLeft: '6px', color: '#8B6914', fontWeight: 700 }}>
+                            <span style={{ fontSize: '0.68rem', marginLeft: '6px', color: '#B4560B', fontWeight: 700 }}>
                               [Retained]
                             </span>
                           )}
@@ -941,7 +923,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                               fontSize: '0.7rem',
                               padding: '2px 6px',
                               borderRadius: 'var(--radius-pill)',
-                              color: '#E5484D',
+                              color: '#B8165A',
                             }}
                           >
                             ×
@@ -1020,7 +1002,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
           {/* Search & Filters */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '16px' }}>
             <div className="search-box" style={{ maxWidth: '100%' }}>
-              <span className="search-box__icon">🔍</span>
+              <span className="search-box__icon"><Icon name="search" size={16} /></span>
               <input
                 type="text"
                 placeholder="Search player name (e.g. Kohli, Bumrah, Pant, Klaasen)…"
@@ -1082,11 +1064,11 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                 border: '1px solid rgba(43, 108, 176, 0.25)',
                 borderRadius: 'var(--radius-sm)',
                 fontSize: '0.78rem',
-                color: '#2B6CB0',
+                color: '#3366FF',
                 lineHeight: 1.4,
               }}
             >
-              <strong>📌 BCCI Retention Ladder:</strong> Retaining stars deducts their statutory price slab (₹18 Cr, ₹14 Cr, ₹11 Cr, ₹4 Cr uncapped) directly from your ₹120.0 Cr purse before auction hammer bidding starts. Maximum 6 retentions per franchise.
+              <strong>BCCI retention ladder:</strong> Retaining stars deducts their statutory price slab (₹18 Cr, ₹14 Cr, ₹11 Cr, ₹4 Cr uncapped) directly from your ₹120.0 Cr purse before auction hammer bidding starts. Maximum 6 retentions per franchise.
             </div>
           )}
 
@@ -1116,9 +1098,9 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                       alignItems: 'center',
                       justifyContent: 'space-between',
                       padding: '10px 14px',
-                      background: isDrafted ? 'rgba(59, 165, 92, 0.06)' : 'var(--card)',
+                      background: isDrafted ? 'rgba(43, 175, 102, 0.06)' : 'var(--card)',
                       borderRadius: 'var(--radius-sm)',
-                      border: `1px solid ${isDrafted ? '#3BA55C' : 'var(--line)'}`,
+                      border: `1px solid ${isDrafted ? '#2BAF66' : 'var(--line)'}`,
                       opacity: overseasSquadMaxed || squadMaxed ? 0.6 : 1,
                       transition: 'all 0.15s ease',
                     }}
@@ -1137,8 +1119,8 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                             style={{
                               fontSize: '0.65rem',
                               padding: '2px 6px',
-                              background: p.retentionType === 'Uncapped' ? 'rgba(59, 165, 92, 0.15)' : 'rgba(242, 201, 76, 0.25)',
-                              color: p.retentionType === 'Uncapped' ? '#23733E' : '#8B6914',
+                              background: p.retentionType === 'Uncapped' ? 'rgba(43, 175, 102, 0.15)' : 'rgba(242, 201, 76, 0.25)',
+                              color: p.retentionType === 'Uncapped' ? '#15803D' : '#B4560B',
                               fontWeight: 700,
                             }}
                           >
@@ -1150,7 +1132,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                           </span>
                         )}
                         {isOverseas && (
-                          <span className="pill" style={{ fontSize: '0.65rem', padding: '2px 6px', background: 'rgba(74, 144, 226, 0.12)', color: '#2A68B0' }}>
+                          <span className="pill" style={{ fontSize: '0.65rem', padding: '2px 6px', background: 'rgba(74, 144, 226, 0.12)', color: '#1F48C7' }}>
                             Overseas
                           </span>
                         )}
@@ -1161,7 +1143,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                         {p.valueIndex != null && (
                           <>
                             {' '}·{' '}
-                            <span style={{ color: '#23733E', fontWeight: 700 }}>
+                            <span style={{ color: '#15803D', fontWeight: 700 }}>
                               VI: {formatVI(p.valueIndex)}
                             </span>
                           </>
@@ -1180,7 +1162,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                             style={{
                               padding: '4px 8px',
                               borderRadius: 'var(--radius-pill)',
-                              background: isStarter ? '#3BA55C' : 'var(--card-alt)',
+                              background: isStarter ? '#2BAF66' : 'var(--card-alt)',
                               color: isStarter ? '#fff' : 'var(--muted)',
                               fontSize: '0.72rem',
                               fontWeight: 700,
@@ -1193,7 +1175,7 @@ ${bench.map((p, i) => `• ${p.name} (${p.role}, ${p.nationality}) — ₹${p.ef
                             type="button"
                             onClick={() => handleRemovePlayer(p.playerKey)}
                             style={{
-                              color: '#E5484D',
+                              color: '#B8165A',
                               fontSize: '0.85rem',
                               fontWeight: 700,
                               padding: '2px 6px',

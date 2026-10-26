@@ -1,136 +1,87 @@
 /**
- * Player Profile page — search + individual player profile.
- * Price bars vs Impact Points line per season.
- * Matches Power BI page 7 (Player Profile drill-through).
+ * Players — searchable directory (accepts ?q=) and a player profile with career KPIs,
+ * price and Impact Points per season (two aligned charts, never a dual axis), the
+ * season table and auction history.
  */
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, LabelList } from 'recharts';
 import { useApi } from '../hooks/useApi';
 import { formatMoney, formatVI, formatNum } from '../lib/format';
-import { quadrantHex } from '../lib/format';
+import { C, QUADRANT, axis, defs, tip } from '../lib/chart';
 import { API_BASE } from '../lib/api';
 import Loading from '../components/Loading';
-import {
-  ComposedChart, Bar, Line, XAxis, YAxis, CartesianGrid,
-  Tooltip, ResponsiveContainer, Legend,
-} from 'recharts';
+import Icon from '../components/Icon';
+import { PageHeader, CardHead, Kpi, Legend } from '../components/ui';
 
-/** Search view */
-/** Search and Directory view */
+const ROLES = ['All', 'Batter', 'Bowler', 'All-Rounder', 'Wicket-Keeper'];
+
 function PlayerSearch() {
-  const [query, setQuery] = useState('');
+  const [params, setParams] = useSearchParams();
+  const [query, setQuery] = useState(params.get('q') || '');
   const [role, setRole] = useState('All');
   const [sort, setSort] = useState('impact');
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  const ROLES = ['All', 'Batter', 'Bowler', 'All-Rounder', 'Wicket-Keeper'];
-
   useEffect(() => {
     let active = true;
-    const fetchPlayers = async () => {
+    const run = async () => {
       setLoading(true);
       try {
-        let url = `${API_BASE}/players`;
-        const params = new URLSearchParams();
-        if (query && query.trim().length >= 2) {
-          params.set('q', query.trim());
-        }
-        if (role !== 'All') params.set('role', role);
-        params.set('sort', sort);
-        params.set('limit', '50');
-
-        const fullUrl = `${url}?${params.toString()}`;
-        const res = await fetch(fullUrl);
-        if (res.ok) {
-          const data = await res.json();
-          if (active) setResults(data);
-        }
+        const q = new URLSearchParams();
+        if (query.trim().length >= 2) q.set('q', query.trim());
+        if (role !== 'All') q.set('role', role);
+        q.set('sort', sort);
+        q.set('limit', '50');
+        const res = await fetch(`${API_BASE}/players?${q}`);
+        if (res.ok && active) setResults(await res.json());
       } catch (err) {
         console.error('Failed to load players:', err);
       } finally {
         if (active) setLoading(false);
       }
     };
-
-    const timer = setTimeout(fetchPlayers, query ? 250 : 0);
-    return () => {
-      active = false;
-      clearTimeout(timer);
-    };
+    const t = setTimeout(run, query ? 250 : 0);
+    return () => { active = false; clearTimeout(t); };
   }, [query, role, sort]);
+
+  const onQuery = v => {
+    setQuery(v);
+    setParams(v ? { q: v } : {}, { replace: true });
+  };
 
   return (
     <div className="page" id="page-player-search">
-      <div className="page-header">
-        <h1 className="page-header__title">Player Directory & Profile</h1>
-        <p className="page-header__sub">
-          Search for any player or browse the top performers below. Click any row to view career charts, impact trends, and auction history.
-        </p>
-      </div>
+      <PageHeader
+        title="Players"
+        finding="Search any player or browse the leaders; open a row for career charts, value by season and auction history."
+        controls={
+          <label className="chip-select">
+            <Icon name="chevronDown" size={14} style={{ display: 'none' }} />
+            <select value={sort} onChange={e => setSort(e.target.value)} aria-label="Sort players" style={{ paddingLeft: 14 }}>
+              <option value="impact">Highest career impact</option>
+              <option value="vi">Highest career Value Index</option>
+              <option value="runs">Most runs</option>
+              <option value="wickets">Most wickets</option>
+              <option value="spend">Highest auction spend</option>
+            </select>
+            <Icon name="chevronDown" size={14} />
+          </label>
+        }
+      />
 
-      {/* Search & Filter Controls */}
-      <div className="card" style={{ marginBottom: '20px' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'center', justifyContent: 'space-between' }}>
-          <div className="search-box" id="player-search-box" style={{ flex: '1 1 280px', maxWidth: '450px' }}>
-            <span className="search-box__icon">🔍</span>
-            <input
-              type="text"
-              placeholder="Search by player name (e.g. Kohli, Pant, Bumrah)…"
-              value={query}
-              onChange={e => setQuery(e.target.value)}
-              autoFocus
-            />
-          </div>
-
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
-            {/* Role Pills */}
-            <div style={{ display: 'flex', gap: '6px', background: 'var(--card-alt)', padding: '4px', borderRadius: 'var(--radius-pill)', border: '1px solid var(--line)' }}>
-              {ROLES.map(r => (
-                <button
-                  key={r}
-                  type="button"
-                  onClick={() => setRole(r)}
-                  style={{
-                    padding: '6px 14px',
-                    borderRadius: 'var(--radius-pill)',
-                    fontSize: '0.8rem',
-                    fontWeight: 600,
-                    background: role === r ? 'var(--dark)' : 'transparent',
-                    color: role === r ? '#fff' : 'var(--muted)',
-                    transition: 'all var(--transition)',
-                  }}
-                >
-                  {r}
-                </button>
-              ))}
-            </div>
-
-            {/* Sort Selector */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '0.8rem', color: 'var(--muted)', fontWeight: 600 }}>Sort by:</span>
-              <select
-                value={sort}
-                onChange={e => setSort(e.target.value)}
-                style={{
-                  padding: '6px 12px',
-                  borderRadius: 'var(--radius-sm)',
-                  border: '1px solid var(--line)',
-                  background: 'var(--card)',
-                  fontSize: '0.85rem',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                }}
-              >
-                <option value="impact">Highest Career Impact</option>
-                <option value="vi">Highest Career Value Index</option>
-                <option value="runs">Most Runs</option>
-                <option value="wickets">Most Wickets</option>
-                <option value="spend">Total Auction Spend</option>
-              </select>
-            </div>
-          </div>
+      <div className="card" style={{ marginBottom: 16, display: 'flex', flexWrap: 'wrap', gap: 14, alignItems: 'center', justifyContent: 'space-between' }}>
+        <div className="search-box" id="player-search-box" style={{ flex: '1 1 300px' }}>
+          <span className="search-box__icon"><Icon name="search" size={17} /></span>
+          <input type="text" placeholder="Search by player name (e.g. Kohli, Pant, Bumrah)" value={query}
+            onChange={e => onQuery(e.target.value)} autoFocus aria-label="Search players" />
+        </div>
+        <div className="chip-group" role="group" aria-label="Role">
+          {ROLES.map(r => (
+            <button key={r} type="button" className={`chip${role === r ? ' chip--on' : ''}`} onClick={() => setRole(r)} aria-pressed={role === r}>{r}</button>
+          ))}
         </div>
       </div>
 
@@ -138,58 +89,36 @@ function PlayerSearch() {
 
       {!loading && results.length === 0 && (
         <div className="card" style={{ textAlign: 'center', padding: '48px 24px', color: 'var(--muted)' }}>
-          <p style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '6px' }}>No players found matching your search</p>
-          <p style={{ fontSize: '0.85rem' }}>Try clearing your filters or searching for another name.</p>
+          <p style={{ fontSize: '1.05rem', fontWeight: 500, color: 'var(--ink)', marginBottom: 6 }}>No players match “{query}”</p>
+          <p style={{ fontSize: '0.85rem' }}>Try another spelling, or clear the role filter.</p>
         </div>
       )}
 
       {!loading && results.length > 0 && (
-        <div className="card" style={{ padding: '0', overflow: 'hidden' }}>
-          <div style={{ padding: '16px 20px', borderBottom: '1px solid var(--line)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--ink)' }}>
-              Showing {results.length} {query ? `search results for "${query}"` : 'featured players'}
-            </span>
-            <span style={{ fontSize: '0.75rem', color: 'var(--muted)' }}>
-              Click any player row to view full profile & auction history
-            </span>
-          </div>
-          <div className="table-container" style={{ overflowX: 'auto' }}>
+        <div className="card">
+          <CardHead title={query ? `Results for “${query}”` : 'Leaders'} sub={`${results.length} players · click a row to open the profile`} />
+          <div className="table-container">
             <table className="data-table">
               <thead>
                 <tr>
-                  <th>Player</th>
-                  <th>Role</th>
-                  <th>Nationality</th>
-                  <th>Latest Team</th>
-                  <th className="num">Matches</th>
-                  <th className="num">Runs</th>
-                  <th className="num">Wickets</th>
-                  <th className="num">Impact Points</th>
-                  <th className="num">Auction Spend</th>
-                  <th className="num">Career VI</th>
+                  <th>Player</th><th>Role</th><th>Nationality</th><th>Latest team</th>
+                  <th className="num">Matches</th><th className="num">Runs</th><th className="num">Wickets</th>
+                  <th className="num">Impact</th><th className="num">Auction spend</th><th className="num">Career VI</th>
                 </tr>
               </thead>
               <tbody>
                 {results.map(p => (
-                  <tr
-                    key={p.PlayerID}
-                    onClick={() => navigate(`/players/${p.PlayerID}`)}
-                    style={{ cursor: 'pointer' }}
-                  >
-                    <td style={{ fontWeight: 700, color: 'var(--ink)' }}>{p.PlayerName}</td>
+                  <tr key={p.PlayerID} className="is-link" onClick={() => navigate(`/players/${p.PlayerID}`)}>
+                    <td className="cell--strong">{p.PlayerName}</td>
                     <td>{p.Role}</td>
-                    <td>
-                      <span className="pill" style={{ fontSize: '0.7rem', background: p.Nationality === 'Overseas' ? 'rgba(74, 144, 226, 0.12)' : 'rgba(59, 165, 92, 0.12)', color: p.Nationality === 'Overseas' ? '#2A68B0' : '#23733E' }}>
-                        {p.Nationality}
-                      </span>
-                    </td>
-                    <td style={{ fontWeight: 600 }}>{p.LatestTeamKey || '—'}</td>
+                    <td><span className={`pill ${p.Nationality === 'Overseas' ? 'pill--blue' : p.Nationality === 'Indian' ? 'pill--green' : 'pill--grey'}`}>{p.Nationality}</span></td>
+                    <td>{p.LatestTeamKey || '—'}</td>
                     <td className="num">{p.CareerMatches ?? '—'}</td>
                     <td className="num">{formatNum(p.CareerRuns)}</td>
                     <td className="num">{p.CareerWickets ?? 0}</td>
-                    <td className="num" style={{ fontWeight: 600 }}>{formatNum(p.CareerImpactPoints)}</td>
+                    <td className="num cell--strong">{formatNum(p.CareerImpactPoints)}</td>
                     <td className="num">{formatMoney(p.TotalAuctionSpendCr || p.CareerSpendCr)}</td>
-                    <td className="num cell--steal" style={{ fontWeight: 700 }}>{formatVI(p.CareerValueIndex)}</td>
+                    <td className={`num ${p.CareerValueIndex >= 1 ? 'cell--steal' : p.CareerValueIndex != null && p.CareerValueIndex < 0.9 ? 'cell--overpaid' : ''}`}>{formatVI(p.CareerValueIndex)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -201,7 +130,31 @@ function PlayerSearch() {
   );
 }
 
-/** Profile view */
+function SeasonBars({ id, data, dataKey, color, format, title, sub, colorBy, legend }) {
+  return (
+    <div className="card" id={id}>
+      <CardHead title={title} sub={sub} />
+      <div style={{ height: 260 }}>
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart data={data} margin={{ top: 20, right: 4, bottom: 0, left: -10 }} barCategoryGap="30%">
+            {defs(id, color)}
+            <CartesianGrid vertical={false} stroke={C.grid} />
+            <XAxis dataKey="season" {...axis} tick={{ fontSize: 11, fill: C.muted }} />
+            <YAxis {...axis} tickFormatter={format} />
+            <Tooltip cursor={{ fill: 'rgba(51,102,255,0.06)' }}
+              content={tip(s => ({ title: `${s.season} · ${s.team}`, rows: [['Price', s.price != null ? formatMoney(s.price) : 'Unpriced'], ['Impact', `${formatNum(s.impact)} pts`], ['Matches', s.matches], ['Quadrant', s.quadrant]] }))} />
+            <Bar dataKey={dataKey} radius={[4, 4, 0, 0]} isAnimationActive={false}>
+              {data.map(s => <Cell key={s.season + s.team} fill={colorBy ? colorBy(s) : `url(#stripe-${id})`} />)}
+              <LabelList dataKey={dataKey} position="top" formatter={v => (v == null ? '' : format(v))} style={{ fontSize: 11, fill: C.muted }} />
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+      {legend && <div style={{ marginTop: 10 }}>{legend}</div>}
+    </div>
+  );
+}
+
 function PlayerProfile() {
   const { id } = useParams();
   const { data, loading } = useApi(`/players/${id}`);
@@ -210,112 +163,53 @@ function PlayerProfile() {
   if (loading || !data) return <Loading />;
   const { player, seasons, auctions } = data;
 
-  // Chart data: per season
   const chartData = seasons.map(s => ({
-    season: s.Season,
-    impact: s.ImpactPoints,
-    price: s.PriceCr,
-    matches: s.Matches,
-    quadrant: s.ValueQuadrant,
+    season: String(s.Season), team: s.TeamKey, impact: s.ImpactPoints, price: s.PriceCr,
+    matches: s.Matches, quadrant: s.ValueQuadrant,
   }));
+  const quadrantsSeen = [...new Set(seasons.map(s => s.ValueQuadrant))].filter(Boolean);
 
   return (
     <div className="page" id="page-player-profile">
-      <button
-        onClick={() => navigate('/players')}
-        style={{
-          fontSize: '0.85rem', color: 'var(--muted)', marginBottom: '16px',
-          display: 'flex', alignItems: 'center', gap: '6px',
-        }}
-      >
-        ← Back to search
+      <button type="button" className="chip chip--solo" onClick={() => navigate('/players')} style={{ marginBottom: 14 }}>
+        <Icon name="arrowLeft" size={15} /> All players
       </button>
+      <PageHeader
+        title={player.PlayerName}
+        finding={<>{player.Role} · {player.Nationality} · {player.LatestTeamKey} · {player.SeasonsPlayed} seasons ({player.FirstSeason}–{player.LastSeason})</>}
+      />
 
-      <div className="page-header">
-        <h1 className="page-header__title">{player.PlayerName}</h1>
-        <p className="page-header__sub">
-          {player.Role} · {player.Nationality} · {player.LatestTeamKey} · {player.SeasonsPlayed} seasons ({player.FirstSeason}–{player.LastSeason})
-        </p>
-      </div>
-
-      {/* Career KPIs */}
       <div className="kpi-strip" id="player-kpis">
-        <div className="card kpi">
-          <div className="kpi__value">{player.CareerMatches}</div>
-          <div className="kpi__label">Matches</div>
-        </div>
-        <div className="card kpi">
-          <div className="kpi__value">{formatNum(player.CareerRuns)}</div>
-          <div className="kpi__label">Runs</div>
-        </div>
-        <div className="card kpi">
-          <div className="kpi__value">{player.CareerWickets}</div>
-          <div className="kpi__label">Wickets</div>
-        </div>
-        <div className="card kpi">
-          <div className="kpi__value">{formatNum(player.CareerImpactPoints)}</div>
-          <div className="kpi__label">Impact Points</div>
-        </div>
-        <div className="card kpi">
-          <div className="kpi__value">{formatMoney(player.CareerSpendCr)}</div>
-          <div className="kpi__label">Total auction cost</div>
-        </div>
-        <div className="card kpi">
-          <div className="kpi__value">{formatVI(player.CareerValueIndex)}</div>
-          <div className="kpi__label">Career Value Index</div>
-        </div>
+        <Kpi label="Matches" value={player.CareerMatches} />
+        <Kpi label="Runs" value={formatNum(player.CareerRuns)} />
+        <Kpi label="Wickets" value={player.CareerWickets} />
+        <Kpi label="Impact Points" value={formatNum(player.CareerImpactPoints)} />
+        <Kpi label="Auction cost (all seasons)" value={formatMoney(player.CareerSpendCr)} />
+        <Kpi label="Career Value Index" value={formatVI(player.CareerValueIndex)} />
       </div>
 
-      {/* Price vs Impact Chart */}
-      <div className="card" id="chart-player-seasons" style={{ marginBottom: '20px' }}>
-        <h3 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '16px' }}>
-          Price vs Impact by Season
-        </h3>
-        <ResponsiveContainer width="100%" height={350}>
-          <ComposedChart data={chartData} margin={{ top: 5, right: 20, bottom: 5, left: 10 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#ECE8DF" />
-            <XAxis dataKey="season" tick={{ fontSize: 12 }} />
-            <YAxis yAxisId="left" tick={{ fontSize: 12 }} tickFormatter={v => `₹${v}`} />
-            <YAxis yAxisId="right" orientation="right" tick={{ fontSize: 12 }} />
-            <Tooltip
-              formatter={(v, name) => [
-                name === 'price' ? formatMoney(v) : formatNum(v),
-                name === 'price' ? 'Auction Price' : 'Impact Points',
-              ]}
-              contentStyle={{ borderRadius: '12px', border: '1px solid #ECE8DF' }}
-            />
-            <Legend />
-            <Bar yAxisId="left" dataKey="price" fill="#F2C94C" radius={[6, 6, 0, 0]} name="Auction Price (Cr)" />
-            <Line yAxisId="right" type="monotone" dataKey="impact" stroke="#262626" strokeWidth={2} dot={{ r: 4 }} name="Impact Points" />
-          </ComposedChart>
-        </ResponsiveContainer>
+      <div className="grid-2">
+        <SeasonBars id="chart-player-price" data={chartData} dataKey="price" color={C.blue} format={v => `₹${v}`}
+          title="Price per season" sub="Auction price covering each season (₹ Cr) · blank = retained / unpriced" />
+        <SeasonBars id="chart-player-impact" data={chartData} dataKey="impact" color={C.blue} format={v => formatNum(v)}
+          title="Impact Points per season" sub="Bar colour = value quadrant that season" colorBy={s => QUADRANT[s.quadrant] || C.neutral}
+          legend={quadrantsSeen.length > 0 && <Legend items={quadrantsSeen.map(q => ({ label: q, color: QUADRANT[q] || C.neutral }))} />} />
       </div>
 
-      {/* Season-by-season table */}
-      <div className="card" id="table-player-seasons">
-        <h3 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '12px' }}>
-          Season-by-season breakdown
-        </h3>
-        <div style={{ overflowX: 'auto' }}>
+      <div className="card mt" id="table-player-seasons">
+        <CardHead title="Season by season" />
+        <div className="table-container">
           <table className="data-table">
             <thead>
               <tr>
-                <th>Season</th>
-                <th>Team</th>
-                <th className="num">Matches</th>
-                <th className="num">Runs</th>
-                <th className="num">Wickets</th>
-                <th className="num">Catches</th>
-                <th className="num">Impact</th>
-                <th className="num">Price</th>
-                <th>Quadrant</th>
-                <th className="num">Value Index</th>
+                <th>Season</th><th>Team</th><th className="num">Matches</th><th className="num">Runs</th><th className="num">Wickets</th>
+                <th className="num">Catches</th><th className="num">Impact</th><th className="num">Price</th><th>Quadrant</th><th className="num">Value Index</th>
               </tr>
             </thead>
             <tbody>
               {seasons.map(s => (
                 <tr key={s.PlayerSeasonKey}>
-                  <td style={{ fontWeight: 600 }}>{s.Season}</td>
+                  <td className="cell--strong">{s.Season}</td>
                   <td>{s.TeamKey}</td>
                   <td className="num">{s.Matches}</td>
                   <td className="num">{formatNum(s.Runs)}</td>
@@ -323,13 +217,7 @@ function PlayerProfile() {
                   <td className="num">{s.Catches}</td>
                   <td className="num">{formatNum(s.ImpactPoints)}</td>
                   <td className="num">{formatMoney(s.PriceCr)}</td>
-                  <td>
-                    <span style={{
-                      display: 'inline-block', width: 10, height: 10, borderRadius: '50%',
-                      background: quadrantHex(s.ValueQuadrant), marginRight: 6
-                    }} />
-                    {s.ValueQuadrant}
-                  </td>
+                  <td><span className="swatch" style={{ background: QUADRANT[s.ValueQuadrant] || C.neutral }} />{s.ValueQuadrant}</td>
                   <td className="num">{formatVI(s.ValueIndex)}</td>
                 </tr>
               ))}
@@ -338,43 +226,32 @@ function PlayerProfile() {
         </div>
       </div>
 
-      {/* Auction History */}
       {auctions.length > 0 && (
-        <div className="card" style={{ marginTop: '20px' }} id="table-auctions">
-          <h3 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '12px' }}>
-            Auction History
-          </h3>
-          <table className="data-table">
-            <thead>
-              <tr>
-                <th>Season</th>
-                <th>Team</th>
-                <th>Role</th>
-                <th className="num">Base Price</th>
-                <th className="num">Sold Price</th>
-                <th>Bracket</th>
-              </tr>
-            </thead>
-            <tbody>
-              {auctions.map(a => (
-                <tr key={a.AuctionKey}>
-                  <td style={{ fontWeight: 600 }}>{a.Season}</td>
-                  <td>{a.TeamKey}</td>
-                  <td>{a.AuctionRole}</td>
-                  <td className="num">{formatMoney(a.BasePriceCr)}</td>
-                  <td className="num" style={{ fontWeight: 600 }}>{formatMoney(a.PriceCr)}</td>
-                  <td>{a.PriceBracket}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="card mt" id="table-auctions">
+          <CardHead title="Auction history" />
+          <div className="table-container">
+            <table className="data-table">
+              <thead><tr><th>Season</th><th>Team</th><th>Role</th><th className="num">Base price</th><th className="num">Sold for</th><th>Bracket</th></tr></thead>
+              <tbody>
+                {auctions.map(a => (
+                  <tr key={a.AuctionKey}>
+                    <td className="cell--strong">{a.Season}</td>
+                    <td>{a.TeamKey}</td>
+                    <td>{a.AuctionRole}</td>
+                    <td className="num">{formatMoney(a.BasePriceCr)}</td>
+                    <td className="num cell--strong">{formatMoney(a.PriceCr)}</td>
+                    <td><span className="pill pill--grey">{a.PriceBracket}</span></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
     </div>
   );
 }
 
-/** Route wrapper — show search or profile */
 export default function Players() {
   const { id } = useParams();
   return id ? <PlayerProfile /> : <PlayerSearch />;
